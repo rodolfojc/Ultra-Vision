@@ -6,10 +6,13 @@ public class DebitCreditCard {
 	private String cardNumber;
 	private String cardHolderName;
 	private String expDate;
+	private String type;
 	private int cvvCode;
 	
+	
 	//CONTRUCTOR - FIELDS
-	public DebitCreditCard(String cardNumber, String cardHolderName, String expDate, int cvvCode) {
+	public DebitCreditCard(String type, String cardNumber, String cardHolderName, String expDate, int cvvCode) {
+		this.type = type;
 		this.cardNumber = cardNumber;
 		this.cardHolderName = cardHolderName;
 		this.expDate = expDate;

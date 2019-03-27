@@ -6,6 +6,8 @@ import customer.interfaces.Movies;
 
 public class VideoLovers extends Customer implements Movies{
 
+	private final String TYPE_SUB = "VideoLovers";
+	
 	//CONSTRUCTOR - FIELDS
 	public VideoLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
@@ -17,6 +19,10 @@ public class VideoLovers extends Customer implements Movies{
 	public String[] getTitles() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public String getTYPE_SUB() {
+		return TYPE_SUB;
 	}
 
 }

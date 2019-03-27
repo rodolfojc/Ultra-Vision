@@ -6,6 +6,8 @@ import customer.interfaces.BoxSets;
 
 public class TvLovers extends Customer implements BoxSets{
 
+	private final String TYPE_SUB = "TvLovers";
+	
 	//CONSTRUCTOR - FIELDS
 	public TvLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
@@ -17,6 +19,10 @@ public class TvLovers extends Customer implements BoxSets{
 	public String[] getTitles() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public String getTYPE_SUB() {
+		return TYPE_SUB;
 	}
 
 }

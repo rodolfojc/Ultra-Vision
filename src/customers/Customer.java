@@ -9,6 +9,8 @@ public abstract class Customer {
 	private String custName;
 	private String custSurname;
 	private String birthday;
+	private int numbRented;
+	private int id;
 	private MembershipCard myMemberCard;
 	private DebitCreditCard myCard;
 	
@@ -20,6 +22,7 @@ public abstract class Customer {
 		this.birthday = birthday;
 		this.myMemberCard = myMemberCard;
 		this.myCard = myCard;
+		this.numbRented = 0;
 	}
 
 	//GETTERS AND SETTERS
@@ -62,6 +65,20 @@ public abstract class Customer {
 	public void setMyCard(DebitCreditCard myCard) {
 		this.myCard = myCard;
 	}
+
+	public int getNumbRented() {
+		return numbRented;
+	}
+
+	public void setNumbRented(int numbRented) {
+		this.numbRented = numbRented;
+	}
+
+	public int getId() {
+		return id;
+	}
+	
+	
 	
 	
 	

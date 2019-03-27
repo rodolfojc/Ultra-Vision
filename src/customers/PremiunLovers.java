@@ -9,6 +9,8 @@ import customer.interfaces.MusicCds;
 
 public class PremiunLovers extends Customer implements MusicCds, LiveConcert, Movies, BoxSets{
 
+	private final String TYPE_SUB = "Premiun";
+	
 	//CONSTRUCTOR - FIELDS
 	public PremiunLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
@@ -20,6 +22,10 @@ public class PremiunLovers extends Customer implements MusicCds, LiveConcert, Mo
 	public String[] getTitles() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public String getTYPE_SUB() {
+		return TYPE_SUB;
 	}
 
 }

@@ -7,6 +7,8 @@ import customer.interfaces.MusicCds;
 
 public class MusicLovers extends Customer implements MusicCds, LiveConcert {
 
+	private final String TYPE_SUB = "MusicLovers";
+	
 	//CONSTRUCTOR - FIELDS
 	public MusicLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
@@ -18,6 +20,10 @@ public class MusicLovers extends Customer implements MusicCds, LiveConcert {
 	public String[] getTitles() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public String getTYPE_SUB() {
+		return TYPE_SUB;
 	}
 
 }
