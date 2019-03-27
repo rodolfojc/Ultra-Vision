@@ -9,6 +9,7 @@ import customer.interfaces.MusicCds;
 
 public class PremiunLovers extends Customer implements MusicCds, LiveConcert, Movies, BoxSets{
 
+	//CONSTRUCTOR - FIELDS
 	public PremiunLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
 		super(custName, custSurname, birthday, myMemberCard, myCard);

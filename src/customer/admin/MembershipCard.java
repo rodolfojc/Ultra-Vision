@@ -2,16 +2,30 @@ package customer.admin;
 
 public class MembershipCard {
 
+	//ATTRIBUTES
 	private int points;
 	private boolean freeRentAllowed;
-	   
-	   public void addPoints(int points){
+	private int memberNumb;
+	private DebitCreditCard myCard;
+	
+	//COSTRUCTOR - FIELDS   
+	public MembershipCard(int memberNumb, DebitCreditCard myCard, int points, boolean freeRentAllowed) {
+		this.points = points;
+		this.freeRentAllowed = freeRentAllowed;
+		this.memberNumb = memberNumb;
+		this.myCard = myCard;
+	}
+
+	//METHODS
+	
+	public void addPoints(int points){
 			this.points += points;
 			setRentAllowed();
-	   }
+	}
 	   
-	   public boolean availFreeRent(){
-			if(this.isfreeRentAllowed()){
+	public boolean availFreeRent(){
+	
+		if(this.isfreeRentAllowed()){
 				this.points -= 100;
 				setRentAllowed();
 				return true;

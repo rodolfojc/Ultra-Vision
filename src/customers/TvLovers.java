@@ -6,10 +6,11 @@ import customer.interfaces.BoxSets;
 
 public class TvLovers extends Customer implements BoxSets{
 
+	//CONSTRUCTOR - FIELDS
 	public TvLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
 		super(custName, custSurname, birthday, myMemberCard, myCard);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override

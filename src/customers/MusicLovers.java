@@ -7,6 +7,7 @@ import customer.interfaces.MusicCds;
 
 public class MusicLovers extends Customer implements MusicCds, LiveConcert {
 
+	//CONSTRUCTOR - FIELDS
 	public MusicLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
 		super(custName, custSurname, birthday, myMemberCard, myCard);

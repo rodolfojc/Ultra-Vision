@@ -6,6 +6,7 @@ import customer.interfaces.Movies;
 
 public class VideoLovers extends Customer implements Movies{
 
+	//CONSTRUCTOR - FIELDS
 	public VideoLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
 		super(custName, custSurname, birthday, myMemberCard, myCard);

@@ -5,12 +5,14 @@ import customer.admin.MembershipCard;
 
 public abstract class Customer {
 
+	//ATTRIBUTES
 	private String custName;
 	private String custSurname;
 	private String birthday;
 	private MembershipCard myMemberCard;
 	private DebitCreditCard myCard;
 	
+	//COSTRUCTOR - FIELDS
 	public Customer(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
 		this.custName = custName;
@@ -20,6 +22,7 @@ public abstract class Customer {
 		this.myCard = myCard;
 	}
 
+	//GETTERS AND SETTERS
 	public String getCustName() {
 		return custName;
 	}
