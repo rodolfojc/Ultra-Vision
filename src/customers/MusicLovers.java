@@ -26,4 +26,13 @@ public class MusicLovers extends Customer implements MusicCds, LiveConcert {
 		return TYPE_SUB;
 	}
 
+	@Override
+	public String toString() {
+		return "MusicLovers [TYPE_SUB=" + TYPE_SUB + ", getCustName()=" + getCustName() + ", getCustSurname()="
+				+ getCustSurname() + ", getBirthday()=" + getBirthday() + ", getMyMemberCard()=" + getMyMemberCard()
+				+ ", getMyCard()=" + getMyCard() + ", getNumbRented()=" + getNumbRented() + ", getId()=" + getId()
+				+ "]";
+	}
+	
+	
 }

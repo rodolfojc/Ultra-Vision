@@ -12,7 +12,7 @@ public class DebitCreditCard {
 	
 	//CONTRUCTOR - FIELDS
 	public DebitCreditCard(String type, String cardNumber, String cardHolderName, String expDate, int cvvCode) {
-		this.type = type;
+		this.setType(type);
 		this.cardNumber = cardNumber;
 		this.cardHolderName = cardHolderName;
 		this.expDate = expDate;
@@ -50,6 +50,20 @@ public class DebitCreditCard {
 
 	public void setCvvCode(int cvvCode) {
 		this.cvvCode = cvvCode;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	@Override
+	public String toString() {
+		return "DebitCreditCard [cardNumber=" + cardNumber + ", cardHolderName=" + cardHolderName + ", expDate="
+				+ expDate + ", type=" + type + ", cvvCode=" + cvvCode + "]";
 	}
 	
 	

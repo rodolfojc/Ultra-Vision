@@ -12,8 +12,8 @@ public class MembershipCard {
 	public MembershipCard(int memberNumb, DebitCreditCard myCard, int points, boolean freeRentAllowed) {
 		this.points = points;
 		this.freeRentAllowed = freeRentAllowed;
-		this.memberNumb = memberNumb;
-		this.myCard = myCard;
+		this.setMemberNumb(memberNumb);
+		this.setMyCard(myCard);
 	}
 
 	//METHODS
@@ -50,6 +50,29 @@ public class MembershipCard {
 			return freeRentAllowed;
 	   
 	   }
+
+	public DebitCreditCard getMyCard() {
+		return myCard;
+	}
+
+	public void setMyCard(DebitCreditCard myCard) {
+		this.myCard = myCard;
+	}
+
+	public int getMemberNumb() {
+		return memberNumb;
+	}
+
+	public void setMemberNumb(int memberNumb) {
+		this.memberNumb = memberNumb;
+	}
+
+	@Override
+	public String toString() {
+		return "MembershipCard [points=" + points + ", freeRentAllowed=" + freeRentAllowed + ", memberNumb="
+				+ memberNumb + ", myCard=" + myCard + "]";
+	}
+	
 	
 		
 }
