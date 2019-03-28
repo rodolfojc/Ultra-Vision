@@ -1,12 +1,12 @@
 package titles;
 
-public abstract class title {
+public abstract class Title {
 
 	private String title;
 	private String yearRelease;
 	private String genre;
 	
-	public title(String title, String yearRelease, String genre) {
+	public Title(String title, String yearRelease, String genre) {
 		this.title = title;
 		this.yearRelease = yearRelease;
 		this.genre = genre;

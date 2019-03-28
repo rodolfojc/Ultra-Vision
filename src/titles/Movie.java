@@ -3,7 +3,7 @@ package titles;
 import titles.interfaces.BlueRay;
 import titles.interfaces.DVD;
 
-public class Movie extends title implements DVD, BlueRay {
+public class Movie extends Title implements DVD, BlueRay {
 
 	private String director;
 	private String runningTime;
