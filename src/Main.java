@@ -11,6 +11,12 @@ public class Main {
 		MusicLovers myLover = new MusicLovers("Rodolfo", "Carvajal", "04/06/1987", myMembCard, myCard);
 
 		System.out.println(myLover);
+		
+		
+		
+		
+		
+		
 	}
 
 }
