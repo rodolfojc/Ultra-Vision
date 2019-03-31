@@ -2,7 +2,9 @@ import customer.admin.DebitCreditCard;
 import customer.admin.MembershipCard;
 import customers.MusicLovers;
 import titles.AudioMusic;
+import titles.BoxSet;
 import titles.ConcertVideos;
+import titles.Movie;
 
 public class Main {
 
@@ -20,6 +22,15 @@ public class Main {
 		
 		ConcertVideos concertOne = new ConcertVideos("Clasic's Rock", "2008", "Rock", "Heavy", "Mixed", true, false);
 		System.out.println(concertOne);
+		
+		Movie movieOne = new Movie("Harry Potter and the Chamber of Secrets", "Fantacy", "2002", "Chris Columbus", 
+				"161 min", "English", "United Kingdom", true, true);
+		System.out.println(movieOne);
+		
+		BoxSet bosexOne = new BoxSet("Breaking Bad - Season 1", "Crime drama", "2018", "Stewart A.", "43 - 58 min/epi", 
+				"English, Spanish", "United States", true, true);
+		System.out.println(bosexOne);
+		
 	}
 
 }

@@ -22,5 +22,15 @@ public class BoxSet extends Tv implements DVD, BlueRay {
 	public boolean isDVDformat() {
 		return this.isDvd();
 	}
+
+	@Override
+	public String toString() {
+		return "BoxSet [getDirector()=" + getDirector() + ", getRunningTime()=" + getRunningTime() + ", getLanguages()="
+				+ getLanguages() + ", getCountry()=" + getCountry() + ", isBlueRay()=" + isBlueRay() + ", isDvd()="
+				+ isDvd() + ", getTitle()=" + getTitle() + ", getYearRelease()=" + getYearRelease() + ", getGenre()="
+				+ getGenre() + "]";
+	}
+	
+	
 	
 }

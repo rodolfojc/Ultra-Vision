@@ -23,4 +23,13 @@ public class Movie extends Tv implements DVD, BlueRay {
 		return this.isDvd();
 	}
 
+	@Override
+	public String toString() {
+		return "Movie [getDirector()=" + getDirector() + ", getRunningTime()=" + getRunningTime() + ", getLanguages()="
+				+ getLanguages() + ", getCountry()=" + getCountry() + ", isBlueRay()=" + isBlueRay() + ", isDvd()="
+				+ isDvd() + ", getTitle()=" + getTitle() + ", getYearRelease()=" + getYearRelease() + ", getGenre()="
+				+ getGenre() + "]";
+	}
+
+	
 }
