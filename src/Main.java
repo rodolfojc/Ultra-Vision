@@ -1,6 +1,7 @@
 import customer.admin.DebitCreditCard;
 import customer.admin.MembershipCard;
 import customers.MusicLovers;
+import titles.AudioMusic;
 
 public class Main {
 
@@ -13,7 +14,8 @@ public class Main {
 		System.out.println(myLover);
 		
 		
-		
+		AudioMusic musicOne = new AudioMusic("Best Salsa", "2019", "Salsa", "Mixed", "Los latinos mixed");
+		System.out.println(musicOne);
 		
 		
 		

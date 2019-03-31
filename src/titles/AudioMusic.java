@@ -11,8 +11,13 @@ public class AudioMusic extends Music implements CD {
 
 	@Override
 	public boolean isCDFormat() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "AudioMusic [getAlbum()=" + getAlbum() + ", getBand()=" + getBand() + ", getTitle()=" + getTitle()
+				+ ", getYearRelease()=" + getYearRelease() + ", getGenre()=" + getGenre() + "]";
 	}
 
 	
