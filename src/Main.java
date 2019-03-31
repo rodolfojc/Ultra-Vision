@@ -2,6 +2,7 @@ import customer.admin.DebitCreditCard;
 import customer.admin.MembershipCard;
 import customers.MusicLovers;
 import titles.AudioMusic;
+import titles.ConcertVideos;
 
 public class Main {
 
@@ -17,8 +18,8 @@ public class Main {
 		AudioMusic musicOne = new AudioMusic("Best Salsa", "2019", "Salsa", "Mixed", "Los latinos mixed");
 		System.out.println(musicOne);
 		
-		
-		
+		ConcertVideos concertOne = new ConcertVideos("Clasic's Rock", "2008", "Rock", "Heavy", "Mixed", true, false);
+		System.out.println(concertOne);
 	}
 
 }

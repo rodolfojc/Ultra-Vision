@@ -24,5 +24,13 @@ public class ConcertVideos extends Music implements DVD, BlueRay {
 		return this.dvd;
 	}
 
+	@Override
+	public String toString() {
+		return "ConcertVideos [dvd=" + dvd + ", blueray=" + blueray + ", getAlbum()=" + getAlbum() + ", getBand()="
+				+ getBand() + ", getTitle()=" + getTitle() + ", getYearRelease()=" + getYearRelease() + ", getGenre()="
+				+ getGenre() + "]";
+	}
+
+	
 	
 }
