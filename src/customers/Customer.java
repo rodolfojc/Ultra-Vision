@@ -14,6 +14,7 @@ public abstract class Customer {
 	private MembershipCard myMemberCard;
 	private DebitCreditCard myCard;
 	
+	
 	//COSTRUCTOR - FIELDS
 	public Customer(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {

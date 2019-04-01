@@ -7,7 +7,7 @@ import customer.interfaces.MusicCds;
 
 public class MusicLovers extends Customer implements MusicCds, LiveConcert {
 
-	private final String TYPE_SUB = "MusicLovers";
+	final String TYPE_SUB = "MusicLovers";
 	
 	//CONSTRUCTOR - FIELDS
 	public MusicLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,

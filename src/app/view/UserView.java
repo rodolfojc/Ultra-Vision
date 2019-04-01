@@ -6,6 +6,9 @@ import customer.admin.DebitCreditCard;
 import customer.admin.MembershipCard;
 import customers.Customer;
 import customers.MusicLovers;
+import customers.PremiunLovers;
+import customers.TvLovers;
+import customers.VideoLovers;
 
 public class UserView {
 
@@ -24,7 +27,7 @@ public class UserView {
 		String name = myScanner.nextLine();
 				
 		System.out.println("Please, enter customer astname");
-		String lastName = myScanner.nextLine();
+		String surName = myScanner.nextLine();
 		
 		System.out.println("Please, enter date of birth (DD/MM/YYYY)");
 		String birthday = myScanner.nextLine();
@@ -66,7 +69,32 @@ public class UserView {
 			
 			this.myCard = new DebitCreditCard(cardType, card, nameHolder, expDate, cVV);
 			this.myMembCard = new MembershipCard(memb, myCard, 0, false);
-			this.myUser = new MusicLovers(name, lastName, birthday, myMembCard, myCard);
+			//this.myUser = new MusicLovers(name, surName, birthday, myMembCard, myCard);
+			MusicLovers tempMusicLover = new MusicLovers(name, surName, birthday, myMembCard, myCard);
+			System.out.println("Customer has been created! \n");
+			System.out.println(tempMusicLover.getTYPE_SUB());
+		}
+		else if (type.equals("2")) {
+			
+			this.myCard = new DebitCreditCard(cardType, card, nameHolder, expDate, cVV);
+			this.myMembCard = new MembershipCard(memb, myCard, 0, false);
+			this.myUser = new VideoLovers(name, surName, birthday, myMembCard, myCard);
+			System.out.println(myUser);
+		}
+		
+		else if (type.equals("3")) {
+			
+			this.myCard = new DebitCreditCard(cardType, card, nameHolder, expDate, cVV);
+			this.myMembCard = new MembershipCard(memb, myCard, 0, false);
+			this.myUser = new TvLovers(name, surName, birthday, myMembCard, myCard);
+			System.out.println(myUser);
+		}
+		
+		else if (type.equals("4")) {
+			
+			this.myCard = new DebitCreditCard(cardType, card, nameHolder, expDate, cVV);
+			this.myMembCard = new MembershipCard(memb, myCard, 0, false);
+			this.myUser = new PremiunLovers(name, surName, birthday, myMembCard, myCard);
 			System.out.println(myUser);
 		}
 		
