@@ -19,6 +19,17 @@ public class UserView {
 	public UserView() {
 		createUser();
 	}
+	
+	public void showWelcome() {
+		System.out.println("Welcome to UltraVision Management System");
+	}
+	
+	public void showMenu() {
+		System.out.println("Select an option");
+		System.out.println("(1) Create a customer");
+		System.out.println("(2) Menu for customer (registered)");
+		System.out.println("(3) Add a title");
+	}
 
 	public void createUser() {
 		
@@ -61,7 +72,7 @@ public class UserView {
 		int cVV = myScanner.nextInt();
 		
 		//MEMBERSHIP -CARD
-		System.out.println("Please, enter the registration membership number for customer\n");
+		System.out.println("Please, enter the registration membership number for customer");
 		int memb = myScanner.nextInt();
 		
 		//CREATING USER
@@ -70,7 +81,7 @@ public class UserView {
 			this.myCard = new DebitCreditCard(cardType, card, nameHolder, expDate, cVV);
 			this.myMembCard = new MembershipCard(memb, myCard, 0, false);
 			this.myUser = new MusicLovers(name, surName, birthday, myMembCard, myCard);
-			System.out.println("Customer has been created! \n");
+			System.out.println("\nCustomer has been created! \n");
 			System.out.println("Account type: "+myUser.getType());
 			System.out.println("Full name: "+myUser.getCustName()+" "+myUser.getCustSurname());
 			System.out.println("Date of birth: "+myUser.getBirthday());

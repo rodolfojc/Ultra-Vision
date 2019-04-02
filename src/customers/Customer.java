@@ -2,6 +2,7 @@ package customers;
 
 import customer.admin.DebitCreditCard;
 import customer.admin.MembershipCard;
+import titles.Title;
 
 public abstract class Customer {
 
@@ -11,6 +12,7 @@ public abstract class Customer {
 	private String birthday;
 	private int numbRented;
 	private int id;
+	private Title[] titleRented;
 	private MembershipCard myMemberCard;
 	private DebitCreditCard myCard;
 	
@@ -24,6 +26,7 @@ public abstract class Customer {
 		this.myMemberCard = myMemberCard;
 		this.myCard = myCard;
 		this.numbRented = 0;
+		this.setTitleRented(new Title[3]);
 	}
 
 	//GETTERS AND SETTERS
@@ -83,6 +86,16 @@ public abstract class Customer {
 	public String getType() {
 		return "Customer";
 	}
+
+	public Title[] getTitleRented() {
+		return titleRented;
+	}
+
+	public void setTitleRented(Title[] titleRented) {
+		this.titleRented = titleRented;
+	}
+
+	
 	
 	
 	
