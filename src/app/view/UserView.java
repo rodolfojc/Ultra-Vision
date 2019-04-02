@@ -25,10 +25,39 @@ public class UserView {
 	}
 	
 	public void showMenu() {
+		
 		System.out.println("Select an option");
-		System.out.println("(1) Create a customer");
-		System.out.println("(2) Menu for customer (registered)");
-		System.out.println("(3) Add a title");
+		System.out.println("(1) Search Title");
+		System.out.println("(2) Search Customer");
+		System.out.println("(3) Add new Title");
+		System.out.println("(4) Add new Customer");
+		System.out.println("(5) Menu for Customer (registered)");
+		
+	}
+	
+	public void selectedMenu(int option) {
+		
+		if (option == 1) {
+			//SEARCH TITLE
+			
+		}
+		else if (option == 2) {
+			//SEARCH CUSTOMER
+			
+		}
+		else if (option == 3) {
+			//ADD TITLE
+			
+		}
+		else if (option == 4) {
+			//ADD CUSTOMER
+			createUser();
+		}
+		else if (option == 5) {
+			//CUSTOMER MENU
+			
+		}
+		
 	}
 
 	public void createUser() {
@@ -72,7 +101,7 @@ public class UserView {
 		int cVV = myScanner.nextInt();
 		
 		//MEMBERSHIP -CARD
-		System.out.println("Please, enter the registration membership number for customer");
+		System.out.println("Please, enter the registration membershipcard number for customer");
 		int memb = myScanner.nextInt();
 		
 		//CREATING USER
