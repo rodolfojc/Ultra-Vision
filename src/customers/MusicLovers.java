@@ -18,7 +18,6 @@ public class MusicLovers extends Customer implements MusicCds, LiveConcert {
 
 	@Override
 	public String[] getTitles() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

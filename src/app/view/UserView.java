@@ -26,7 +26,7 @@ public class UserView {
 		Scanner myScanner = new Scanner(System.in);
 		String name = myScanner.nextLine();
 				
-		System.out.println("Please, enter customer astname");
+		System.out.println("Please, enter customer surname");
 		String surName = myScanner.nextLine();
 		
 		System.out.println("Please, enter date of birth (DD/MM/YYYY)");
@@ -69,17 +69,23 @@ public class UserView {
 			
 			this.myCard = new DebitCreditCard(cardType, card, nameHolder, expDate, cVV);
 			this.myMembCard = new MembershipCard(memb, myCard, 0, false);
-			//this.myUser = new MusicLovers(name, surName, birthday, myMembCard, myCard);
-			MusicLovers tempMusicLover = new MusicLovers(name, surName, birthday, myMembCard, myCard);
+			this.myUser = new MusicLovers(name, surName, birthday, myMembCard, myCard);
 			System.out.println("Customer has been created! \n");
-			System.out.println(tempMusicLover.getType());
+			System.out.println("Account type: "+myUser.getType());
+			System.out.println("Full name: "+myUser.getCustName()+" "+myUser.getCustSurname());
+			System.out.println("Date of birth: "+myUser.getBirthday());
+			System.out.println("Membership number: "+myUser.getMyMemberCard().getMemberNumb());
 		}
 		else if (type.equals("2")) {
 			
 			this.myCard = new DebitCreditCard(cardType, card, nameHolder, expDate, cVV);
 			this.myMembCard = new MembershipCard(memb, myCard, 0, false);
 			this.myUser = new VideoLovers(name, surName, birthday, myMembCard, myCard);
-			System.out.println(myUser);
+			System.out.println("Customer has been created! \n");
+			System.out.println("Account type: "+myUser.getType());
+			System.out.println("Full name: "+myUser.getCustName()+" "+myUser.getCustSurname());
+			System.out.println("Date of birth: "+myUser.getBirthday());
+			System.out.println("Membership number: "+myUser.getMyMemberCard().getMemberNumb());
 		}
 		
 		else if (type.equals("3")) {
@@ -87,7 +93,11 @@ public class UserView {
 			this.myCard = new DebitCreditCard(cardType, card, nameHolder, expDate, cVV);
 			this.myMembCard = new MembershipCard(memb, myCard, 0, false);
 			this.myUser = new TvLovers(name, surName, birthday, myMembCard, myCard);
-			System.out.println(myUser);
+			System.out.println("Customer has been created! \n");
+			System.out.println("Account type: "+myUser.getType());
+			System.out.println("Full name: "+myUser.getCustName()+" "+myUser.getCustSurname());
+			System.out.println("Date of birth: "+myUser.getBirthday());
+			System.out.println("Membership number: "+myUser.getMyMemberCard().getMemberNumb());
 		}
 		
 		else if (type.equals("4")) {
@@ -95,7 +105,11 @@ public class UserView {
 			this.myCard = new DebitCreditCard(cardType, card, nameHolder, expDate, cVV);
 			this.myMembCard = new MembershipCard(memb, myCard, 0, false);
 			this.myUser = new PremiunLovers(name, surName, birthday, myMembCard, myCard);
-			System.out.println(myUser);
+			System.out.println("Customer has been created! \n");
+			System.out.println("Account type: "+myUser.getType());
+			System.out.println("Full name: "+myUser.getCustName()+" "+myUser.getCustSurname());
+			System.out.println("Date of birth: "+myUser.getBirthday());
+			System.out.println("Membership number: "+myUser.getMyMemberCard().getMemberNumb());
 		}
 		
 		

@@ -15,7 +15,6 @@ public class TvLovers extends Customer implements BoxSets{
 		
 	}
 
-	
 	@Override
 	public String getType() {
 		return this.TYPE_SUB;

@@ -16,13 +16,13 @@ public class VideoLovers extends Customer implements Movies{
 	}
 
 	@Override
-	public String[] getTitles() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getType() {
+		return this.TYPE_SUB;
 	}
 
-	public String getTYPE_SUB() {
-		return TYPE_SUB;
+	@Override
+	public String[] getTitles() {
+		return null;
 	}
 
 }
