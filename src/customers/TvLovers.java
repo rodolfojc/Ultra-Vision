@@ -15,14 +15,17 @@ public class TvLovers extends Customer implements BoxSets{
 		
 	}
 
+	
+	@Override
+	public String getType() {
+		return this.TYPE_SUB;
+	}
+
 	@Override
 	public String[] getTitles() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public String getTYPE_SUB() {
-		return TYPE_SUB;
-	}
-
+	
 }

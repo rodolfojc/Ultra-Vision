@@ -22,8 +22,9 @@ public class MusicLovers extends Customer implements MusicCds, LiveConcert {
 		return null;
 	}
 
-	public String getTYPE_SUB() {
-		return TYPE_SUB;
+	@Override
+	public String getType() {
+		return this.TYPE_SUB;
 	}
 
 	@Override

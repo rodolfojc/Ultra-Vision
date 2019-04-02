@@ -51,7 +51,7 @@ public class UserView {
 		System.out.println("Please, introduce card number");
 		String card = myScanner.nextLine();
 		
-		System.out.println("Please, enter card holder name (as in printed in card)");
+		System.out.println("Please, enter card holder name (as is printed on the card)");
 		String nameHolder = myScanner.nextLine();
 		
 		System.out.println("Please, enter the expiration date on the card (MM/YY)");
@@ -61,7 +61,7 @@ public class UserView {
 		int cVV = myScanner.nextInt();
 		
 		//MEMBERSHIP -CARD
-		System.out.println("Please, enter the registration membership number for customer");
+		System.out.println("Please, enter the registration membership number for customer\n");
 		int memb = myScanner.nextInt();
 		
 		//CREATING USER
@@ -72,7 +72,7 @@ public class UserView {
 			//this.myUser = new MusicLovers(name, surName, birthday, myMembCard, myCard);
 			MusicLovers tempMusicLover = new MusicLovers(name, surName, birthday, myMembCard, myCard);
 			System.out.println("Customer has been created! \n");
-			System.out.println(tempMusicLover.getTYPE_SUB());
+			System.out.println(tempMusicLover.getType());
 		}
 		else if (type.equals("2")) {
 			

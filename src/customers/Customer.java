@@ -79,7 +79,10 @@ public abstract class Customer {
 		return id;
 	}
 	
-	
+	//METHOD
+	public String getType() {
+		return "Customer";
+	}
 	
 	
 	
