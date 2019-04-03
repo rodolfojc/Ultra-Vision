@@ -152,10 +152,40 @@ public class UserView {
 			System.out.println("Membership number: "+myUser.getMyMemberCard().getMemberNumb());
 		}
 		
+					
+		}
 		
+		public void addTitle() {
+			
+			//MENU
+			System.out.println("Welcome to add title!");
+			System.out.println("Select a option:");
+			System.out.println("(1)Music Title (MusicCD or ConcertVideos)");
+			System.out.println("(2)Tv Title (Movie or ConcertVideos)");
+			Scanner myScanner = new Scanner(System.in);
+			int myOption = myScanner.nextInt();
+			
+			//OPTION MENU
+			if (myOption == 1) {
+				//MENU FOR MUSIC OR CONCERT VIDEO
+				//OPTION MENU
+			}
+			else if (myOption == 2) {
+				createTvTitle();
+			}
+			
+			//ADD
+			
+		}
+
+		private void createTvTitle() {
+			
+			
+			
+		}
 		
 		
 	}
 	
 	
-}
+
