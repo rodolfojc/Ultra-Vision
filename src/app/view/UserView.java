@@ -171,14 +171,37 @@ public class UserView {
 				//OPTION MENU
 			}
 			else if (myOption == 2) {
-				createTvTitle();
+				createTitle();
 			}
 			
 			//ADD
 			
 		}
 
-		private void createTvTitle() {
+		private void createTitle() {
+			
+			System.out.println("Please, enter type of title: ");
+			System.out.println("(1) Movie Title ");
+			System.out.println("(2) Box Set Title ");
+			Scanner myScan = new Scanner(System.in);
+			int myOpt = myScan.nextInt();
+			
+			System.out.print("Please, enter the title name");
+			String title = myScan.nextLine();
+			System.out.println("Please, enter year of release");
+			String year = myScan.nextLine();
+			System.out.println("Please, enter genre");
+			String genre = myScan.nextLine();
+			System.out.println("Please, enter director name");
+			String direntor = myScan.nextLine();
+			System.out.print("Please, enter running time in min");
+			String runT = myScan.nextLine();
+			System.out.println("Please, enter language(s)");
+			String lang = myScan.nextLine();
+			System.out.print("Is it in DVD format available (Yes/No)?");
+			String dvd = myScan.nextLine();
+			System.out.print("Is it in BlueRay format available (Yes/No)?");
+			String blueRay = myScan.nextLine();
 			
 			
 			
