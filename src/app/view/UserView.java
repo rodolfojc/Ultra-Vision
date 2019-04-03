@@ -180,6 +180,8 @@ public class UserView {
 
 		private void createTitle() {
 			
+			boolean isDVD, isBlueRay;
+			
 			System.out.println("Please, enter type of title: ");
 			System.out.println("(1) Movie Title ");
 			System.out.println("(2) Box Set Title ");
@@ -203,10 +205,21 @@ public class UserView {
 			System.out.print("Is it in BlueRay format available (Yes/No)?");
 			String blueRay = myScan.nextLine();
 			
+			if (dvd.equals("Yes")) {
+				isDVD = true;
+			}else {
+				isDVD = false;
+			}
+			
+			if (blueRay.equals("Yes")) {
+				isBlueRay = true;
+			}else {
+				isBlueRay = false;
+			}
 			
 			
-		}
 		
+		}
 		
 	}
 	
