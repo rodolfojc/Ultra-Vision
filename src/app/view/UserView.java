@@ -9,12 +9,16 @@ import customers.MusicLovers;
 import customers.PremiunLovers;
 import customers.TvLovers;
 import customers.VideoLovers;
+import titles.BoxSet;
+import titles.Movie;
+import titles.Title;
 
 public class UserView {
 
 	private Customer myUser;
+	private Title myTitle;
 	private DebitCreditCard myCard;
-	MembershipCard myMembCard;
+	private MembershipCard myMembCard;
 	
 	public UserView() {
 		createUser();
@@ -188,6 +192,7 @@ public class UserView {
 			Scanner myScan = new Scanner(System.in);
 			int myOpt = myScan.nextInt();
 			
+			//MOVIE - BOXSET - ENTER DETAILS
 			System.out.print("Please, enter the title name");
 			String title = myScan.nextLine();
 			System.out.println("Please, enter year of release");
@@ -195,16 +200,19 @@ public class UserView {
 			System.out.println("Please, enter genre");
 			String genre = myScan.nextLine();
 			System.out.println("Please, enter director name");
-			String direntor = myScan.nextLine();
+			String director = myScan.nextLine();
 			System.out.print("Please, enter running time in min");
 			String runT = myScan.nextLine();
 			System.out.println("Please, enter language(s)");
 			String lang = myScan.nextLine();
+			System.out.println("Please, enter country");
+			String country = myScan.nextLine();
 			System.out.print("Is it in DVD format available (Yes/No)?");
 			String dvd = myScan.nextLine();
 			System.out.print("Is it in BlueRay format available (Yes/No)?");
 			String blueRay = myScan.nextLine();
 			
+			//BOOLEAN FOR DVD AND BLUERAY FORMATS
 			if (dvd.equals("Yes")) {
 				isDVD = true;
 			}else {
@@ -217,7 +225,18 @@ public class UserView {
 				isBlueRay = false;
 			}
 			
+			if (myOpt == 1 ) {
+				
+				//CREATE AN INSTANCE OF MOVIE 
+				this.myTitle = new Movie (title, year, genre, director, runT, lang, country, isBlueRay, isDVD);
+				
+			}else {
+				//CEATE AN INSTANCE OF BOX SET
+				this.myTitle = new BoxSet (title, year, genre, director, runT, lang, country, isBlueRay, isDVD);
+				
+			}
 			
+			myScan.close();
 		
 		}
 		
