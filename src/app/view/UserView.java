@@ -58,7 +58,7 @@ public class UserView {
 		}
 		else if (option == 3) {
 			//ADD TITLE
-			
+			addTitle();
 		}
 		else if (option == 4) {
 			//ADD CUSTOMER
@@ -179,11 +179,11 @@ public class UserView {
 			
 			//OPTION MENU
 			if (myOption == 1) {
-				//MENU FOR MUSIC OR CONCERT VIDEO
-				//OPTION MENU
+				//MUSIC OR CONCERTVIDEOS TITLES
 				createMusicTitle();
 			}
 			else if (myOption == 2) {
+				//MOVIE OR BOX SET TITLES
 				createTvTitle();
 			}
 			
