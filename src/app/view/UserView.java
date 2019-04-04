@@ -1,5 +1,6 @@
 package app.view;
 
+import java.util.List;
 import java.util.Scanner;
 
 import customer.admin.DebitCreditCard;
@@ -9,7 +10,9 @@ import customers.MusicLovers;
 import customers.PremiunLovers;
 import customers.TvLovers;
 import customers.VideoLovers;
+import titles.AudioMusic;
 import titles.BoxSet;
+import titles.ConcertVideos;
 import titles.Movie;
 import titles.Title;
 
@@ -17,11 +20,15 @@ public class UserView {
 
 	private Customer myUser;
 	private Title myTitle;
+	private List<Title> myTitles;
 	private DebitCreditCard myCard;
 	private MembershipCard myMembCard;
 	
 	public UserView() {
-		createUser();
+		
+		//createUser();
+		createTvTitle();
+		
 	}
 	
 	public void showWelcome() {
@@ -156,7 +163,8 @@ public class UserView {
 			System.out.println("Membership number: "+myUser.getMyMemberCard().getMemberNumb());
 		}
 		
-					
+		myScanner.close();
+							
 		}
 		
 		public void addTitle() {
@@ -173,44 +181,106 @@ public class UserView {
 			if (myOption == 1) {
 				//MENU FOR MUSIC OR CONCERT VIDEO
 				//OPTION MENU
+				createMusicTitle();
 			}
 			else if (myOption == 2) {
-				createTitle();
+				createTvTitle();
 			}
 			
 			//ADD
 			
+			myScanner.close();
 		}
 
-		private void createTitle() {
+		public void createMusicTitle() {
+			
+			boolean isDVD = false;
+			boolean isBlueRay = false;
+			
+			System.out.println("Please, enter type of Music title: ");
+			System.out.println("(1) MusicCD Title ");
+			System.out.println("(2) Music Concert Videos Title ");
+			Scanner myScanInt = new Scanner(System.in);
+			Scanner myScanString = new Scanner(System.in);
+			int myOpt = myScanInt.nextInt();
+			
+			//MUSICCD - CONCERTVIDEOS - ENTER DETAILS
+			System.out.println("Please, enter the title name");
+			String title = myScanString.nextLine();
+			System.out.println("Please, enter year of release");
+			String year = myScanString.nextLine();
+			System.out.println("Please, enter genre");
+			String genre = myScanString.nextLine();
+			System.out.println("Please, enter album");
+			String album = myScanString.nextLine();
+			System.out.println("Please, enter band");
+			String band = myScanString.nextLine();
+			
+			if(myOpt == 2) {
+				
+				System.out.println("Is it in DVD format available (Yes/No)?");
+				String dvd = myScanString.nextLine();
+				if (dvd.equals("Yes")) {
+					isDVD = true;
+				}else {
+					isDVD = false;
+				}
+					
+				System.out.println("Is it in BlueRay format available (Yes/No)?");
+				String blueRay = myScanString.nextLine();
+				if (blueRay.equals("Yes")) {
+					isBlueRay = true;
+				}else {
+					isBlueRay = false;
+				}
+								
+			}
+			
+			if(myOpt == 1) {
+				
+				this.myTitle = new AudioMusic(title, year, genre, album, band);
+			}
+			else {
+				
+				this.myTitle = new ConcertVideos(title, year, genre, album, band, isDVD, isBlueRay);
+				
+			}
+			
+			myScanInt.close();
+			myScanString.close();
+			
+		}
+
+		public void createTvTitle() {
 			
 			boolean isDVD, isBlueRay;
 			
-			System.out.println("Please, enter type of title: ");
+			System.out.println("Please, enter type of Tv title: ");
 			System.out.println("(1) Movie Title ");
 			System.out.println("(2) Box Set Title ");
-			Scanner myScan = new Scanner(System.in);
-			int myOpt = myScan.nextInt();
+			Scanner myScanInt = new Scanner(System.in);
+			Scanner myScanString = new Scanner(System.in);
+			int myOpt = myScanInt.nextInt();
 			
 			//MOVIE - BOXSET - ENTER DETAILS
-			System.out.print("Please, enter the title name");
-			String title = myScan.nextLine();
+			System.out.println("Please, enter the title name");
+			String title = myScanString.nextLine();
 			System.out.println("Please, enter year of release");
-			String year = myScan.nextLine();
+			String year = myScanString.nextLine();
 			System.out.println("Please, enter genre");
-			String genre = myScan.nextLine();
+			String genre = myScanString.nextLine();
 			System.out.println("Please, enter director name");
-			String director = myScan.nextLine();
-			System.out.print("Please, enter running time in min");
-			String runT = myScan.nextLine();
+			String director = myScanString.nextLine();
+			System.out.println("Please, enter running time in min");
+			String runT = myScanString.nextLine();
 			System.out.println("Please, enter language(s)");
-			String lang = myScan.nextLine();
+			String lang = myScanString.nextLine();
 			System.out.println("Please, enter country");
-			String country = myScan.nextLine();
-			System.out.print("Is it in DVD format available (Yes/No)?");
-			String dvd = myScan.nextLine();
-			System.out.print("Is it in BlueRay format available (Yes/No)?");
-			String blueRay = myScan.nextLine();
+			String country = myScanString.nextLine();
+			System.out.println("Is it in DVD format available (Yes/No)?");
+			String dvd = myScanString.nextLine();
+			System.out.println("Is it in BlueRay format available (Yes/No)?");
+			String blueRay = myScanString.nextLine();
 			
 			//BOOLEAN FOR DVD AND BLUERAY FORMATS
 			if (dvd.equals("Yes")) {
@@ -229,15 +299,19 @@ public class UserView {
 				
 				//CREATE AN INSTANCE OF MOVIE 
 				this.myTitle = new Movie (title, year, genre, director, runT, lang, country, isBlueRay, isDVD);
+				//TEST
+				System.out.println(myTitle);
 				
 			}else {
 				//CEATE AN INSTANCE OF BOX SET
 				this.myTitle = new BoxSet (title, year, genre, director, runT, lang, country, isBlueRay, isDVD);
-				
+				//TEST
+				System.out.println(myTitle);
 			}
 			
-			myScan.close();
-		
+			myScanInt.close();
+			myScanString.close();
+			
 		}
 		
 	}
