@@ -1,5 +1,6 @@
 package app.view;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -34,6 +35,11 @@ public class UserView {
 		     	"English, Spanish", "United States", true, true);
 		//createUser();
 		//createTvTitle();
+		this.myTitles = new ArrayList<Title>();
+		this.myTitles.add(bosexOne);
+		this.myTitles.add(musicOne);
+		this.myTitles.add(concertOne);
+		this.myTitles.add(movieOne);
 		showWelcome();
 		selectedMenu(showMenu());
 	}
@@ -52,7 +58,7 @@ public class UserView {
 		System.out.println("(5) Menu for Customer (registered)");
 		Scanner myScan = new Scanner(System.in);
 		int tempOpt = myScan.nextInt();
-		myScan.close();
+		//myScan.close();
 		
 		return tempOpt;
 	}
@@ -90,7 +96,7 @@ public class UserView {
 		Scanner myScanner = new Scanner(System.in);
 		String tempTitle = myScanner.nextLine();
 		
-		System.out.println("\n Searching...");
+		System.out.println("\nSearching...");
 		for (Title t : this.myTitles) {
 			if(t.getTitle().contains(tempTitle)) {
 				System.out.println(t.getTitle()+" "+t.getGenre());
