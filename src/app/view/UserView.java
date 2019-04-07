@@ -23,19 +23,26 @@ public class UserView {
 	private List<Title> myTitles;
 	private DebitCreditCard myCard;
 	private MembershipCard myMembCard;
-	
+		
 	public UserView() {
 		
+		AudioMusic musicOne = new AudioMusic("Best Salsa", "2019", "Salsa", "Mixed", "Los latinos mixed");
+		ConcertVideos concertOne = new ConcertVideos("Clasic's Rock", "2008", "Rock", "Heavy", "Mixed", true, false);
+		Movie movieOne = new Movie("Harry Potter and the Chamber of Secrets", "Fantacy", "2002", "Chris Columbus", 
+		    	"161 min", "English", "United Kingdom", true, true);
+		BoxSet bosexOne = new BoxSet("Breaking Bad - Season 1", "Crime drama", "2018", "Stewart A.", "43 - 58 min/epi", 
+		     	"English, Spanish", "United States", true, true);
 		//createUser();
-		createTvTitle();
-		
+		//createTvTitle();
+		showWelcome();
+		selectedMenu(showMenu());
 	}
 	
 	public void showWelcome() {
 		System.out.println("Welcome to UltraVision Management System");
 	}
 	
-	public void showMenu() {
+	public int showMenu() {
 		
 		System.out.println("Select an option");
 		System.out.println("(1) Search Title");
@@ -43,13 +50,19 @@ public class UserView {
 		System.out.println("(3) Add new Title");
 		System.out.println("(4) Add new Customer");
 		System.out.println("(5) Menu for Customer (registered)");
+		Scanner myScan = new Scanner(System.in);
+		int tempOpt = myScan.nextInt();
+		myScan.close();
 		
+		return tempOpt;
 	}
 	
 	public void selectedMenu(int option) {
 		
+		
 		if (option == 1) {
 			//SEARCH TITLE
+			searchTitle();
 			
 		}
 		else if (option == 2) {
@@ -65,9 +78,33 @@ public class UserView {
 			createUser();
 		}
 		else if (option == 5) {
-			//CUSTOMER MENU
+			menuCustomer();
 			
 		}
+		
+	}
+
+	private void searchTitle() {
+
+		System.out.println("Enter title name: ");
+		Scanner myScanner = new Scanner(System.in);
+		String tempTitle = myScanner.nextLine();
+		
+		System.out.println("\n Searching...");
+		for (Title t : this.myTitles) {
+			if(t.getTitle().contains(tempTitle)) {
+				System.out.println(t.getTitle()+" "+t.getGenre());
+			}
+			
+		}
+		
+	}
+
+	private void menuCustomer() {
+		
+		System.out.println("Please, enter customer membership number: ");
+		Scanner myScanner = new Scanner(System.in);
+		String membershipNum = myScanner.nextLine();
 		
 	}
 
@@ -239,11 +276,12 @@ public class UserView {
 			if(myOpt == 1) {
 				
 				this.myTitle = new AudioMusic(title, year, genre, album, band);
+				this.myTitles.add(myTitle);
 			}
 			else {
 				
 				this.myTitle = new ConcertVideos(title, year, genre, album, band, isDVD, isBlueRay);
-				
+				this.myTitles.add(myTitle);
 			}
 			
 			myScanInt.close();
@@ -299,12 +337,14 @@ public class UserView {
 				
 				//CREATE AN INSTANCE OF MOVIE 
 				this.myTitle = new Movie (title, year, genre, director, runT, lang, country, isBlueRay, isDVD);
+				this.myTitles.add(myTitle);
 				//TEST
 				System.out.println(myTitle);
 				
 			}else {
 				//CEATE AN INSTANCE OF BOX SET
 				this.myTitle = new BoxSet (title, year, genre, director, runT, lang, country, isBlueRay, isDVD);
+				this.myTitles.add(myTitle);
 				//TEST
 				System.out.println(myTitle);
 			}
