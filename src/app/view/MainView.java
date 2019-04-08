@@ -26,11 +26,16 @@ public class MainView extends GuiView {
 		JLabel myLabel = this.addLabel("MAIN MENU", this.panel);
 		myLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		myLabel.setFont(new Font("Serif", Font.PLAIN, 45));
-		this.addButton("Search Title", this.panel);
-		this.addButton("Search Member", this.panel);
-		this.addButton("Add title", this.panel);
-		this.addButton("Add Member", this.panel);
-		this.addButton("Menu for Members", this.panel);
+		JButton searchTitle = this.addButton("Search Title", this.panel);
+		searchTitle.setFont(new Font("Serif", Font.PLAIN, 28));
+		JButton searchMember = this.addButton("Search Member", this.panel);
+		searchMember.setFont(new Font("Serif", Font.PLAIN, 28));
+		JButton addTitle = this.addButton("Add Title", this.panel);
+		addTitle.setFont(new Font("Serif", Font.PLAIN, 28));
+		JButton addMember = this.addButton("Add Member", this.panel);
+		addMember.setFont(new Font("Serif", Font.PLAIN, 28));
+		JButton menuMember = this.addButton("Menu for Members", this.panel);
+		menuMember.setFont(new Font("Serif", Font.PLAIN, 28));
 		this.panel.setBorder(new EmptyBorder(new Insets(25, 25, 25, 25)));
 		//this.panel.add(center);
 		
