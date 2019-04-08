@@ -1,19 +1,23 @@
 package app.view;
 
-import java.awt.BorderLayout;
+
 import java.awt.Font;
 import java.awt.Insets;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class MainView extends GuiView {
+import app.controller.Controller;
 
-	public MainView(String name, int width, int height, boolean Resizable) {
+public class MainView extends GuiView {
+	
+		Controller myController;
+
+	public MainView(String name, int width, int height, boolean Resizable, Controller myController) {
 		super(name, width, height, Resizable);
+		this.myController = myController;
 		setFrame();
 	}
 	
@@ -21,8 +25,6 @@ public class MainView extends GuiView {
 		
 		this.setGrid(6, 1, this.panel);
 		
-		//JPanel center = new JPanel();
-		//this.setBox(center, 1);
 		JLabel myLabel = this.addLabel("MAIN MENU", this.panel);
 		myLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		myLabel.setFont(new Font("Serif", Font.PLAIN, 45));
@@ -37,9 +39,7 @@ public class MainView extends GuiView {
 		JButton menuMember = this.addButton("Menu for Members", this.panel);
 		menuMember.setFont(new Font("Serif", Font.PLAIN, 28));
 		this.panel.setBorder(new EmptyBorder(new Insets(25, 25, 25, 25)));
-		//this.panel.add(center);
 		
-	
 		this.repaint();
 		this.validate();
 	}
