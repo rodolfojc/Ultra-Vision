@@ -27,7 +27,7 @@ public class GuiView extends JFrame{
 	JPanel panel;
 	JMenuBar menu;
 	JTable[] myTable;
-	
+		
 	//CONSTRUCTOR
 	
 	public GuiView(String name, int width, int height, boolean Resizable) {
