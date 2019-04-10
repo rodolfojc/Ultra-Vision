@@ -28,7 +28,7 @@ public class MainViewController implements ActionListener {
 		
 		}
 		
-		if (e.getActionCommand().equals("Search Title")) {
+		if (e.getActionCommand().equals("Search Customer")) {
 			
 			new SearchCustomerView("Search a Customer", 500, 800, true, searchCustomerController);
 		

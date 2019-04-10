@@ -36,7 +36,7 @@ public class MainView extends GuiView {
 		searchTitle.addActionListener(myController);
 		JButton searchMember = this.addButton("Search Member", this.panel);
 		searchMember.setFont(new Font("Serif", Font.PLAIN, 28));
-		searchMember.setActionCommand("Search Member");
+		searchMember.setActionCommand("Search Customer");
 		searchMember.addActionListener(myController);
 		JButton addTitle = this.addButton("Add Title", this.panel);
 		addTitle.setFont(new Font("Serif", Font.PLAIN, 28));
