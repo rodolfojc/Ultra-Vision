@@ -8,13 +8,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import app.controller.Controller;
+import app.controller.SearchTitleController;
 
 public class SearchTitleView extends GuiView {
 
-	Controller myController;
+	SearchTitleController myController;
 	
-	public SearchTitleView(String name, int width, int height, boolean Resizable, Controller myController) {
+	public SearchTitleView(String name, int width, int height, boolean Resizable, SearchTitleController myController) {
 		super(name, width, height, Resizable);
 		this.myController = myController;
 		setFrame();

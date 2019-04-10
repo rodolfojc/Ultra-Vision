@@ -10,12 +10,13 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import app.controller.Controller;
+import app.controller.MainViewController;
 
 public class MainView extends GuiView {
 	
-		Controller myController;
+		MainViewController myController;
 
-	public MainView(String name, int width, int height, boolean Resizable, Controller myController) {
+	public MainView(String name, int width, int height, boolean Resizable, MainViewController myController) {
 		super(name, width, height, Resizable);
 		this.myController = myController;
 		setFrame();
