@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import app.view.MainView;
-import app.view.SearchTitle;
+import app.view.SearchTitleView;
 
 
 public class Controller implements ActionListener {
@@ -21,7 +21,7 @@ public class Controller implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		if (e.getActionCommand().equals("Search Title")) {
-			new SearchTitle("Search a Title", 500, 800, true, this);
+			new SearchTitleView("Search a Title", 500, 800, true, this);
 		}
 	}
 	

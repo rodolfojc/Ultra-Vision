@@ -1,16 +1,20 @@
 package app.view;
 
 import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.Insets;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
 import app.controller.Controller;
 
-public class SearchTitle extends GuiView {
+public class SearchTitleView extends GuiView {
 
 	Controller myController;
 	
-	public SearchTitle(String name, int width, int height, boolean Resizable, Controller myController) {
+	public SearchTitleView(String name, int width, int height, boolean Resizable, Controller myController) {
 		super(name, width, height, Resizable);
 		this.myController = myController;
 		setFrame();
@@ -23,19 +27,21 @@ public class SearchTitle extends GuiView {
 		
 		this.setBox(this.panel,1);
 		
+		JPanel titleTop = new JPanel();
 		JPanel top = new JPanel();
-		this.addLabel("Title name: ", top);
+		JLabel title = this.addLabel("Title Name ", titleTop);
+		title.setFont(new Font("Serif", Font.BOLD, 40));
 		this.addTextField(20, top);
 		this.addButton("Search", top);
+		titleTop.setBorder(new EmptyBorder(new Insets(40, 0, 0, 0)));
 		
 		JPanel center = new JPanel();
 		this.addTableS(0, data, columns, center, "Titles");
 		
+		this.panel.add(titleTop);
 		this.panel.add(top);
 		this.panel.add(center);
-		//this.panel.add(top, BorderLayout.LINE_START);
-		//this.panel.add(center, BorderLayout.LINE_END);
-		
+				
 		this.repaint();
 		this.validate();
 		
