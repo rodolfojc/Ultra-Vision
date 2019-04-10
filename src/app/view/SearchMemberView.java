@@ -7,13 +7,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import app.controller.SearchCustomerController;
+import app.controller.SearchMemberController;
 
-public class SearchCustomerView extends GuiView{
+public class SearchMemberView extends GuiView{
 
-	SearchCustomerController myController;
+	SearchMemberController myController;
 	
-	public SearchCustomerView(String name, int width, int height, boolean Resizable, SearchCustomerController myController) {
+	public SearchMemberView(String name, int width, int height, boolean Resizable, SearchMemberController myController) {
 		super(name, width, height, Resizable);
 		this.myController = myController;
 		setFrame();
@@ -22,7 +22,7 @@ public class SearchCustomerView extends GuiView{
 	private void setFrame() {
 		
 		String[][] data = new String[50][50];
-		String[] columns = {"Memberchip", "Customer"};
+		String[] columns = {"Memberchip", "Customer", "Account Type"};
 		
 		this.setBox(this.panel,1);
 		

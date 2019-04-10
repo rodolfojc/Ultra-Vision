@@ -3,19 +3,19 @@ package app.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import app.view.SearchCustomerView;
+import app.view.SearchMemberView;
 import app.view.SearchTitleView;
 
 public class MainViewController implements ActionListener {
 
 	SearchTitleController  searchTitleController;
-	SearchCustomerController searchCustomerController;
+	SearchMemberController searchCustomerController;
 
 	
 	public MainViewController() {
 		
 		this.searchTitleController = new SearchTitleController();
-		this.searchCustomerController = new SearchCustomerController();
+		this.searchCustomerController = new SearchMemberController();
 		
 	} 
 	
@@ -30,7 +30,7 @@ public class MainViewController implements ActionListener {
 		
 		if (e.getActionCommand().equals("Search Customer")) {
 			
-			new SearchCustomerView("Search a Customer", 500, 800, true, searchCustomerController);
+			new SearchMemberView("Search a Customer", 500, 800, true, searchCustomerController);
 		
 		}
 
