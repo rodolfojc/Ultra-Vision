@@ -1,7 +1,10 @@
 package app.view;
 
+import java.awt.Insets;
+
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
 import app.controller.AddTitleController;
 
@@ -21,14 +24,13 @@ public class AddTitleView extends GuiView {
 		String[] myOpts = {"MusicCD", "Video Concert"};
 		String[] myOptsTwo = {"TV/Boxset", "Movie"};
 		String[] format = {"CD"};
-		String[] yesOrNo = {"Yes","No"};
+		String[] yesOrNo = {"Yes","No","N/A"};
 		
 		JPanel type = new JPanel();
 		this.setGrid(16, 0, type);
 		
 		this.addLabel("Select Type", type);
 		JComboBox myBox = this.addComboB(myOpts, type);
-		
 		this.addLabel("Title name", type);
 		this.addTextField(20, type);
 		this.addLabel("Band", type);
@@ -40,7 +42,15 @@ public class AddTitleView extends GuiView {
 		this.addLabel("Genre", type);
 		this.addTextField(20, type);
 		this.addLabel("Format", type);
-		JComboBox myBoxTwo = this.addComboB(format, type);
+		JPanel formatPanelOne = new JPanel();
+		this.addLabel("CD", formatPanelOne);
+		JComboBox myBoxTwo = this.addComboB(yesOrNo, formatPanelOne);
+		this.addLabel("(for Video Concert, )", formatPanelOne);
+		this.addLabel("DVD", formatPanelOne);
+		JComboBox myBoxSix = this.addComboB(yesOrNo, formatPanelOne);
+		this.addLabel("Blue-Ray", formatPanelOne);
+		JComboBox myBoxSeven = this.addComboB(yesOrNo, formatPanelOne);
+		type.add(formatPanelOne);
 		
 		JPanel typeTwo = new JPanel();
 		this.setGrid(16, 0, typeTwo);
@@ -60,15 +70,16 @@ public class AddTitleView extends GuiView {
 		this.addLabel("Country", typeTwo);
 		this.addTextField(20, typeTwo);
 		this.addLabel("Format", typeTwo);
-		JPanel formatPanel = new JPanel();
-		this.addLabel("DVD", formatPanel);
-		JComboBox myBoxFour = this.addComboB(yesOrNo, formatPanel);
-		this.addLabel("Blue-Ray", formatPanel);
-		JComboBox myBoxFive = this.addComboB(yesOrNo, formatPanel);
-		typeTwo.add(formatPanel);
+		JPanel formatPanelTwo = new JPanel();
+		this.addLabel("DVD", formatPanelTwo);
+		JComboBox myBoxFour = this.addComboB(yesOrNo, formatPanelTwo);
+		this.addLabel("Blue-Ray", formatPanelTwo);
+		JComboBox myBoxFive = this.addComboB(yesOrNo, formatPanelTwo);
+		typeTwo.add(formatPanelTwo);
 		
 		this.panel.add(type);
 		this.panel.add(typeTwo);
+		this.panel.setBorder(new EmptyBorder(new Insets(25, 60, 45, 60)));
 		
 		this.validate();
 		this.repaint();
