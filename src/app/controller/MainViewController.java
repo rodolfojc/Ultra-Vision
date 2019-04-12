@@ -39,7 +39,7 @@ public class MainViewController implements ActionListener {
 
 		if (e.getActionCommand().equals("Add Title")) {
 			
-			new AddTitleView("Add Title Manager", 1000, 600, true, this.addTitleController);
+			new AddTitleView("Add Title Manager", 1200, 750, true, this.addTitleController);
 		
 		}
 

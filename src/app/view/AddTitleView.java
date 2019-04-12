@@ -3,6 +3,7 @@ package app.view;
 import java.awt.Font;
 import java.awt.Insets;
 
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -42,9 +43,9 @@ public class AddTitleView extends GuiView {
 		String[] yesOrNo = {"Yes","No","N/A"};
 		
 		JPanel type = new JPanel();
-		this.setGrid(16, 0, type);
+		this.setGrid(20, 0, type);
 		JLabel musicTitle = this.addLabel("Music (Type)", type);
-		musicTitle.setFont(new Font("Serif", Font.BOLD, 18));
+		musicTitle.setFont(new Font("Serif", Font.BOLD, 24));
 		musicTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		JComboBox myBox = this.addComboB(myOpts, type);
 		this.addLabel("Title name", type);
@@ -69,12 +70,17 @@ public class AddTitleView extends GuiView {
 		this.addLabel("Blue-Ray ", formatPanelOne);
 		JComboBox myBoxSeven = this.addComboB(yesOrNo, formatPanelOne);
 		type.add(formatPanelOne);
+		this.addLabel("", type);
+		this.addLabel("", type);
+		JButton addTitle = this.addButton("Add", type);
+		this.addLabel("", type);
 		type.setBorder(new EmptyBorder(new Insets(0, 0, 0, 25)));
 		
+		
 		JPanel typeTwo = new JPanel();
-		this.setGrid(16, 0, typeTwo);
-		JLabel tvType = this.addLabel("Select Type", typeTwo);
-		tvType.setFont(new Font("Serif", Font.BOLD, 18));
+		this.setGrid(20, 0, typeTwo);
+		JLabel tvType = this.addLabel("TV (Type)", typeTwo);
+		tvType.setFont(new Font("Serif", Font.BOLD, 24));
 		tvType.setHorizontalAlignment(SwingConstants.CENTER);
 		JComboBox myBoxThree = this.addComboB(myOptsTwo, typeTwo);
 		this.addLabel("Title name", typeTwo);
@@ -96,6 +102,10 @@ public class AddTitleView extends GuiView {
 		this.addLabel("Blue-Ray ", formatPanelTwo);
 		JComboBox myBoxFive = this.addComboB(yesOrNo, formatPanelTwo);
 		typeTwo.add(formatPanelTwo);
+		this.addLabel("", typeTwo);
+		this.addLabel("", typeTwo);
+		JButton addTitleTwo = this.addButton("Add", typeTwo);
+		this.addLabel("", typeTwo);
 		typeTwo.setBorder(new EmptyBorder(new Insets(0, 25, 0, 0)));
 		
 		this.panel.add(type);
