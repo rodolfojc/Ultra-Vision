@@ -15,6 +15,7 @@ public class AddMemberView extends GuiView {
 	private void setFrame() {
 		
 		
+		
 	}
 
 }
