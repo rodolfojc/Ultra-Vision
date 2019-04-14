@@ -3,6 +3,7 @@ package app.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import app.view.AddMemberView;
 import app.view.AddTitleView;
 import app.view.SearchMemberView;
 import app.view.SearchTitleView;
@@ -12,6 +13,7 @@ public class MainViewController implements ActionListener {
 	SearchTitleController  searchTitleController;
 	SearchMemberController searchCustomerController;
 	AddTitleController addTitleController;
+	AddMemberController addMemberController;
 
 	
 	public MainViewController() {
@@ -19,6 +21,7 @@ public class MainViewController implements ActionListener {
 		this.searchTitleController = new SearchTitleController();
 		this.searchCustomerController = new SearchMemberController();
 		this.addTitleController = new AddTitleController();
+		this.addMemberController = new AddMemberController();
 	} 
 	
 	@Override
@@ -40,6 +43,12 @@ public class MainViewController implements ActionListener {
 		if (e.getActionCommand().equals("Add Title")) {
 			
 			new AddTitleView("Add Title Manager", 1200, 750, true, this.addTitleController);
+		
+		}
+		
+		if (e.getActionCommand().equals("Add Member")) {
+			
+			new AddMemberView("Add Member Manager", 1200, 750, true, this.addMemberController);
 		
 		}
 

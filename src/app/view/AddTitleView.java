@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
@@ -31,8 +32,25 @@ public class AddTitleView extends GuiView {
 		panel.add(myLabel);
 		return myLabel;
 	}
+	
+	@Override
+	public JTextField addTextField(int a, JPanel panel) {
+		
+		JTextField myText = new JTextField(a);
+		myText.setFont(new Font("Serif", Font.PLAIN, 20));
+		panel.add(myText);
+		return myText;
+	}
+		
 
-
+	@Override
+	public JComboBox addComboB(String[] options, JPanel panel) {
+		
+		JComboBox myComboBox = new JComboBox(options);
+		myComboBox.setFont(new Font("Serif", Font.PLAIN, 20));
+		panel.add(myComboBox);
+		return myComboBox;
+	}
 
 	private void setFrame() {
 		
