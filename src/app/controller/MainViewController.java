@@ -21,7 +21,7 @@ public class MainViewController implements ActionListener {
 		
 		this.searchTitleController = new SearchTitleController();
 		this.searchCustomerController = new SearchMemberController();
-		this.addTitleController = new AddTitleController(addTitleView);
+		
 		this.addMemberController = new AddMemberController();
 	} 
 	
@@ -43,8 +43,8 @@ public class MainViewController implements ActionListener {
 
 		if (e.getActionCommand().equals("Add Title")) {
 			
-			this.addTitleView = new AddTitleView("Add Title Manager", 1200, 750, true, this.addTitleController);
-		
+			this.addTitleView = new AddTitleView("Add Title Manager", 1200, 750, true);
+			
 		}
 		
 		if (e.getActionCommand().equals("Add Member")) {

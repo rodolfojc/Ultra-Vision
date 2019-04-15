@@ -38,13 +38,16 @@ public class AddTitleView extends GuiView {
 	private JComboBox isBlueTv;
 	
 	//OPTIONS
+	private String[] myOpts = {"MusicCD", "Video Concert"};
+	private String[] myOptsTwo = {"TV/Boxset", "Movie"};
+	private String[] yesOrNo = {"Yes","No","N/A"};
 	
 	AddTitleController myController;
 	
 	
-	public AddTitleView(String name, int width, int height, boolean Resizable, AddTitleController myController) {
+	public AddTitleView(String name, int width, int height, boolean Resizable) {
 		super(name, width, height, Resizable);
-		this.myController = myController;
+		this.myController = new AddTitleController(this);
 		setFrame();
 	}
 	
@@ -163,8 +166,8 @@ public class AddTitleView extends GuiView {
 
 
 
-	public JComboBox getMusicType() {
-		return musicType;
+	public String getMusicType() {
+		return this.myOpts[musicType.getSelectedIndex()];
 	}
 
 
@@ -298,11 +301,7 @@ public class AddTitleView extends GuiView {
 	private void setFrame() {
 		
 		this.setGrid(0, 2, this.panel);
-		String[] myOpts = {"MusicCD", "Video Concert"};
-		String[] myOptsTwo = {"TV/Boxset", "Movie"};
-		//String[] format = {"CD"};
-		String[] yesOrNo = {"Yes","No","N/A"};
-		
+				
 		JPanel type = new JPanel();
 		this.setGrid(20, 0, type);
 		JLabel musicTitle = this.addLabel("Music (Type)", type);
@@ -334,6 +333,8 @@ public class AddTitleView extends GuiView {
 		this.addLabel("", type);
 		this.addLabel("", type);
 		JButton addMusicTitle = this.addButton("Add Music", type);
+		addMusicTitle.setActionCommand("Add Music");
+		addMusicTitle.addActionListener(myController);
 		this.addLabel("", type);
 		type.setBorder(new EmptyBorder(new Insets(0, 0, 0, 25)));
 		

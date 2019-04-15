@@ -15,14 +15,34 @@ import javax.swing.JOptionPane;
 public class Database {
 
 	// GLOBAL VARIABLES - DECLARATION
-	Connection conn = null;
-	Statement stmt = null;
-	ResultSet rs = null;
+	private Connection conn = null;
+	private Statement stmt = null;
+	private ResultSet rs = null;
 	
 	// MAIN CONSTRUCTOR
 	public Database() {
 		connectDB();
 	}
+	
+	
+
+	public Connection getConn() {
+		return conn;
+	}
+
+
+
+	public Statement getStmt() {
+		return stmt;
+	}
+
+
+
+	public ResultSet getRs() {
+		return rs;
+	}
+
+
 
 	// DATABSE CONNECTION
 	public void connectDB() {
@@ -31,9 +51,9 @@ public class Database {
 			// Load the database driver
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-			String dbServer = "jdbc:mysql://localhost:3306/(####)"; //ADD NAME OF DATABASE
+			String dbServer = "jdbc:mysql://localhost:3306/ultravision"; //ADD NAME OF DATABASE
 			String user = "root";
-			String password = "admin";
+			String password = "";
 
 			// Get a connection to the database
 			conn = DriverManager.getConnection(dbServer, user, password);

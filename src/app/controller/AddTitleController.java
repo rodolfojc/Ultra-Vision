@@ -14,36 +14,28 @@ public class AddTitleController implements ActionListener{
 	private AddTitleView addTitleView;
 	private AddTitleModel addTitleModel;
 	private Database database;
-	private Title title;
+	//private Title title;
 	
 	
 	public AddTitleController(AddTitleView addTitleView) {
 		this.addTitleView = addTitleView;
 	}
 	
-	public Title getTitle() {
-		return title;
-	}
-
-	public void setTitle(Title title) {
-		this.title = title;
-	}
-		
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getActionCommand().equals("Add Music")) {
 			
-			if(addTitleView.getMusicType().getSelectedIndex() == 0) {
-				this.setTitle(new AudioMusic(this.addTitleView.getMusicTitleName().getText(),
+			if(addTitleView.getMusicType().equals("MusicCD")) {
+				AudioMusic tempAudio = new AudioMusic(this.addTitleView.getMusicTitleName().getText(),
 											this.addTitleView.getMusicYearRelease().getText(),
 											this.addTitleView.getMusicGenre().getText(),
 											this.addTitleView.getMusicAlbum().getText(),
-											this.addTitleView.getMusicBand().getText()));
+											this.addTitleView.getMusicBand().getText());
 				
 				this.database = new Database();
-				this.addTitleModel = new AddTitleModel(this.database, this.title);
-			
+				this.addTitleModel = new AddTitleModel(this.database, tempAudio, this.addTitleView);
+				this.addTitleModel.addAudioMusic();
 			}
 			
 		}
