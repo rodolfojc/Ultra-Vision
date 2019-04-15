@@ -5,6 +5,8 @@ import titles.interfaces.DVD;
 
 public class ConcertVideos extends Music implements DVD, BlueRay {
 
+	private final String _TYPE = "BoxSet";
+	
 	private boolean dvd;
 	private boolean blueray;
 	
@@ -12,6 +14,11 @@ public class ConcertVideos extends Music implements DVD, BlueRay {
 		super(title, yearRelease, genre, album, band);
 		this.dvd = dvd;
 		this.blueray = blueray;
+	}
+	
+	@Override
+	public String getType() {
+		return this._TYPE ;
 	}
 
 	@Override

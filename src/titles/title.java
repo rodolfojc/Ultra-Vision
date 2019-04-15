@@ -6,7 +6,7 @@ public abstract class Title {
 	private String yearRelease;
 	private String genre;
 	private String id;
-	private String type;
+	private String type = "Title";
 	
 	public Title(String title, String yearRelease, String genre) {
 		this.title = title;
