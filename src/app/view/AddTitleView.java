@@ -37,6 +37,8 @@ public class AddTitleView extends GuiView {
 	private JComboBox isDVDTv;
 	private JComboBox isBlueTv;
 	
+	//OPTIONS
+	
 	AddTitleController myController;
 	
 	

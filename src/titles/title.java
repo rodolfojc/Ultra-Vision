@@ -6,6 +6,7 @@ public abstract class Title {
 	private String yearRelease;
 	private String genre;
 	private String id;
+	private String type;
 	
 	public Title(String title, String yearRelease, String genre) {
 		this.title = title;
@@ -44,6 +45,14 @@ public abstract class Title {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 	
 	
