@@ -16,6 +16,16 @@ import app.controller.AddTitleController;
 public class AddTitleView extends GuiView {
 
 	AddTitleController myController;
+	//MUSIC ATTRIBUTES
+	private JTextField titleName;
+	private JTextField band;
+	private JTextField album;
+	private JTextField yearRelease;
+	private JTextField genre;
+	private JComboBox isDVDMusic;
+	private JComboBox isBlueMusic;
+	private JComboBox musicType;
+	
 	
 	public AddTitleView(String name, int width, int height, boolean Resizable, AddTitleController myController) {
 		super(name, width, height, Resizable);
@@ -65,28 +75,28 @@ public class AddTitleView extends GuiView {
 		JLabel musicTitle = this.addLabel("Music (Type)", type);
 		musicTitle.setFont(new Font("Serif", Font.BOLD, 24));
 		musicTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		JComboBox myBox = this.addComboB(myOpts, type);
+		this.musicType = this.addComboB(myOpts, type);
 		this.addLabel("Title name", type);
-		this.addTextField(20, type);
+		this.titleName = this.addTextField(20, type);
 		this.addLabel("Band", type);
-		this.addTextField(20, type);
+		this.band = this.addTextField(20, type);
 		this.addLabel("Album", type);
-		this.addTextField(20, type);
+		this.album = this.addTextField(20, type);
 		this.addLabel("Year release", type);
-		this.addTextField(20, type);
+		this.yearRelease = this.addTextField(20, type);
 		this.addLabel("Genre", type);
-		this.addTextField(20, type);
+		this.genre = this.addTextField(20, type);
 		this.addLabel("", type);
 		this.addLabel("", type);
 		this.addLabel("Format", type);
 		JPanel formatPanelOne = new JPanel();
-		this.addLabel("CD", formatPanelOne);
-		JComboBox myBoxTwo = this.addComboB(yesOrNo, formatPanelOne);
+		//this.addLabel("CD", formatPanelOne);
+		//JComboBox myBoxTwo = this.addComboB(yesOrNo, formatPanelOne);
 		this.addLabel("     (for Video Concert) ", formatPanelOne);
 		this.addLabel("DVD ", formatPanelOne);
-		JComboBox myBoxSix = this.addComboB(yesOrNo, formatPanelOne);
+		this.isDVDMusic = this.addComboB(yesOrNo, formatPanelOne);
 		this.addLabel("Blue-Ray ", formatPanelOne);
-		JComboBox myBoxSeven = this.addComboB(yesOrNo, formatPanelOne);
+		this.isBlueMusic = this.addComboB(yesOrNo, formatPanelOne);
 		type.add(formatPanelOne);
 		this.addLabel("", type);
 		this.addLabel("", type);

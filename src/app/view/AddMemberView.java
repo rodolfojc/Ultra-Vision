@@ -59,7 +59,7 @@ public class AddMemberView extends GuiView {
 	public JButton addButton(String name, JPanel panel) {
 		
 		JButton myButton= new JButton(name);
-		myButton.setFont(new Font("Serif", Font.PLAIN, 20));
+		myButton.setFont(new Font("Serif", Font.BOLD, 20));
 		panel.add(myButton);
 		return myButton;
 	}
@@ -110,7 +110,7 @@ public class AddMemberView extends GuiView {
 		this.addLabel("CVV (3 digits) ", center);
 		this.addTextField(20, center);
 		this.addLabel("", center);
-		JButton submit = this.addButton("Submit", center);
+		JButton submit = this.addButton("SUBMIT", center);
 		
 		center.setBorder(new EmptyBorder(new Insets(0, 25, 0, 0)));
 		
