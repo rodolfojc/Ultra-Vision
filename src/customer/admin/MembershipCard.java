@@ -9,10 +9,9 @@ public class MembershipCard {
 	private DebitCreditCard myCard;
 	
 	//COSTRUCTOR - FIELDS   
-	public MembershipCard(int memberNumb, DebitCreditCard myCard, int points, boolean freeRentAllowed) {
+	public MembershipCard(DebitCreditCard myCard, int points, boolean freeRentAllowed) {
 		this.points = points;
 		this.freeRentAllowed = freeRentAllowed;
-		this.setMemberNumb(memberNumb);
 		this.setMyCard(myCard);
 	}
 

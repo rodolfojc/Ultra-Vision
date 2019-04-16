@@ -28,6 +28,10 @@ public class AddMemberView extends GuiView {
 	private JTextField cardExp;
 	private JTextField cardCVV;
 	
+	//OPTIONS
+	private String[] cardTypeOpt = {"Mastercard", "Visa", "Other"};
+	private String[] memberType = {"MusicLovers", "VideoLovers", "TvLovers", "Premiun"};
+	
 	//CONTROLLER
 	AddMemberController myController;
 	
@@ -104,16 +108,16 @@ public class AddMemberView extends GuiView {
 		this.birthday = birthday;
 	}
 
-	public JComboBox getMembType() {
-		return membType;
+	public String getMembType() {
+		return this.memberType[membType.getSelectedIndex()];
 	}
 
 	public void setMembType(JComboBox membType) {
 		this.membType = membType;
 	}
 
-	public JComboBox getCardType() {
-		return cardType;
+	public String getCardType() {
+		return this.cardTypeOpt[cardType.getSelectedIndex()];
 	}
 
 	public void setCardType(JComboBox cardType) {
@@ -154,9 +158,6 @@ public class AddMemberView extends GuiView {
 
 	private void setFrame() {
 		
-		String[] cardType = {"Mastercard", "Visa", "Other"};
-		String[] memberType = {"MusicLovers", "VideoLovers", "TvLovers", "Premiun"};
-		
 		this.setGrid(0, 2,this.panel);
 		
 		//PERSONAL DETAILS
@@ -190,7 +191,7 @@ public class AddMemberView extends GuiView {
 		paymentDetails.setFont(new Font("Serif", Font.BOLD, 35));
 		this.addLabel("", center);
 		this.addLabel("Type ", center);
-		this.cardType = this.addComboB(cardType, center);
+		this.cardType = this.addComboB(cardTypeOpt, center);
 		this.addLabel("Card Number ", center);
 		this.cardNumber = this.addTextField(20, center);
 		this.addLabel("Card holder name (as printed on card) ", center);

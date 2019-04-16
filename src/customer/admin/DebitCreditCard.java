@@ -7,11 +7,11 @@ public class DebitCreditCard {
 	private String cardHolderName;
 	private String expDate;
 	private String type;
-	private int cvvCode;
+	private String cvvCode;
 	
 	
 	//CONTRUCTOR - FIELDS
-	public DebitCreditCard(String type, String cardNumber, String cardHolderName, String expDate, int cvvCode) {
+	public DebitCreditCard(String type, String cardNumber, String cardHolderName, String expDate, String cvvCode) {
 		this.setType(type);
 		this.cardNumber = cardNumber;
 		this.cardHolderName = cardHolderName;
@@ -44,11 +44,11 @@ public class DebitCreditCard {
 		this.expDate = expDate;
 	}
 
-	public int getCvvCode() {
+	public String getCvvCode() {
 		return cvvCode;
 	}
 
-	public void setCvvCode(int cvvCode) {
+	public void setCvvCode(String cvvCode) {
 		this.cvvCode = cvvCode;
 	}
 

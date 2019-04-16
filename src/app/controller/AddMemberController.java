@@ -4,6 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import app.view.AddMemberView;
+import customer.admin.DebitCreditCard;
+import customer.admin.MembershipCard;
+import customers.MusicLovers;
 
 public class AddMemberController implements ActionListener{
 
@@ -17,6 +20,30 @@ public class AddMemberController implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
+		if(e.getActionCommand().equals("Submit")) {
+		
+			if (this.addMemberView.getMembType().equals("MusicLovers")) {
+				
+				DebitCreditCard tempDebitCreditCard = new DebitCreditCard(this.addMemberView.getCardType(),
+																		  this.addMemberView.getCardNumber().getText(),
+																		  this.addMemberView.getCardHolder().getText(),
+																		  this.addMemberView.getCardExp().getText(),
+																		  this.addMemberView.getCardCVV().getText());
+				MembershipCard tempCard = new MembershipCard(tempDebitCreditCard, 0, false);
+				MusicLovers tempMusicLovers = new MusicLovers(this.addMemberView.getCustName().getText(),
+															  this.addMemberView.getCustSurname().getText(),
+															  this.addMemberView.getBirthday().getText(),
+															  tempCard,
+															  tempDebitCreditCard);
+				
+			}
+			
+			
+			
+			
+		}
+		
 		
 		
 	}
