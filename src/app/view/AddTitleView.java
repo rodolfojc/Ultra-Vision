@@ -178,8 +178,8 @@ public class AddTitleView extends GuiView {
 
 
 
-	public JComboBox getTvType() {
-		return tvType;
+	public String getTvType() {
+		return this.myOptsTwo[tvType.getSelectedIndex()];
 	}
 
 
@@ -274,8 +274,8 @@ public class AddTitleView extends GuiView {
 
 
 
-	public JComboBox getIsDVDTv() {
-		return isDVDTv;
+	public String getIsDVDTv() {
+		return this.yesOrNo[isDVDTv.getSelectedIndex()];
 	}
 
 
@@ -286,8 +286,8 @@ public class AddTitleView extends GuiView {
 
 
 
-	public JComboBox getIsBlueTv() {
-		return isBlueTv;
+	public String getIsBlueTv() {
+		return this.yesOrNo[isBlueTv.getSelectedIndex()];
 	}
 
 
@@ -322,8 +322,6 @@ public class AddTitleView extends GuiView {
 		this.addLabel("", type);
 		this.addLabel("Format", type);
 		JPanel formatPanelOne = new JPanel();
-		//this.addLabel("CD", formatPanelOne);
-		//JComboBox myBoxTwo = this.addComboB(yesOrNo, formatPanelOne);
 		this.addLabel("     (for Video Concert) ", formatPanelOne);
 		this.addLabel("DVD ", formatPanelOne);
 		this.isDVDMusic = this.addComboB(yesOrNo, formatPanelOne);
@@ -369,6 +367,8 @@ public class AddTitleView extends GuiView {
 		this.addLabel("", typeTwo);
 		this.addLabel("", typeTwo);
 		JButton addTvTitle = this.addButton("Add Tv", typeTwo);
+		addTvTitle.setActionCommand("Add Tv");
+		addTvTitle.addActionListener(myController);
 		this.addLabel("", typeTwo);
 		typeTwo.setBorder(new EmptyBorder(new Insets(0, 25, 0, 0)));
 		

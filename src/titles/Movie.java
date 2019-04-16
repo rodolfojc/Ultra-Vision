@@ -5,7 +5,7 @@ import titles.interfaces.DVD;
 
 public class Movie extends Tv implements DVD, BlueRay {
 
-	private final String _TYPE = "BoxSet";
+	private final String _TYPE = "Movie";
 	
 	public Movie(String title, String yearRelease, String genre, String director, String runningTime, String languages,
 			String country, String blueRay, String dvd) {

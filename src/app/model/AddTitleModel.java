@@ -8,14 +8,16 @@ import app.database.Database;
 import app.view.AddTitleView;
 import titles.AudioMusic;
 import titles.ConcertVideos;
+import titles.Movie;
 import titles.Title;
 
 public class AddTitleModel {
 
-	private Database myDB;
 	private AudioMusic audioMusic;
 	private ConcertVideos concertVideos;
+	private Movie movie;
 	private AddTitleView addTitleView;
+	private Database myDB;
 	
 	
 	public AddTitleModel(Database database, AudioMusic audioMusic, AddTitleView addTitleView) {
@@ -33,6 +35,14 @@ public class AddTitleModel {
 		this.addTitleView = addTitleView;
 		
 	}
+	
+	public AddTitleModel(Database database, Movie movie, AddTitleView addTitleView) {
+		
+		this.myDB = database;
+		this.movie = movie;
+		this.addTitleView = addTitleView;
+		
+	}
 
 
 	public void addAudioMusic() {
@@ -42,7 +52,7 @@ public class AddTitleModel {
 							
 		try {
 
-			String query = "INSERT INTO titles (type, title_name, year_rel, album, genre, band)"
+			String query = "INSERT INTO titles (type, title_name, year_rel, album, genre, band, cd)"
 						+ "VALUES (?, ?, ?, ?, ?, ?)";
 
 				
@@ -54,7 +64,8 @@ public class AddTitleModel {
 				preparedStmt.setString(4, this.audioMusic.getAlbum());
 				preparedStmt.setString(5, this.audioMusic.getGenre());
 				preparedStmt.setString(6, this.audioMusic.getBand());
-
+				preparedStmt.setString(7, "Yes");
+				
 				preparedStmt.execute();
 				this.myDB.getConn().close();
 
@@ -111,6 +122,49 @@ public class AddTitleModel {
 		if (flag == true)
 			JOptionPane.showMessageDialog(this.addTitleView,
 					"The Title: "+this.concertVideos.getTitle()+" has been ADDED SUCCESSFUL");
+		this.addTitleView.dispose();
+
+	}
+	
+	public void addMovieTv() {
+
+		// FLAG FOR JOPTIONPANE MESSAGES
+		boolean flag = true;
+						
+		try {
+
+		String query = "INSERT INTO titles (type, title_name, year_rel, genre, director, runn_time, lang, country, dvd, blue_ray)"
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+			
+			// PREPARATION
+			PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
+			preparedStmt.setString(1, this.movie.getType());
+			preparedStmt.setString(2, this.movie.getTitle());
+			preparedStmt.setString(3, this.movie.getYearRelease());
+			preparedStmt.setString(4, this.movie.getGenre());
+			preparedStmt.setString(5, this.movie.getDirector());
+			preparedStmt.setString(6, this.movie.getRunningTime());
+			preparedStmt.setString(7, this.movie.getLanguages());
+			preparedStmt.setString(8, this.movie.getCountry());
+			preparedStmt.setString(9, this.movie.isDVDformat());
+			preparedStmt.setString(10, this.movie.isBlueRayFormat());
+			
+			preparedStmt.execute();
+			this.myDB.getConn().close();
+
+		} catch (Exception e) {
+			// ERROR MESSAGES
+			JOptionPane.showMessageDialog(this.addTitleView, "Ups, there is a problem, try again!");
+			flag = false;
+			System.err.println("Got an exception!");
+			System.err.println(e.getMessage());
+		}
+
+		// NO ERRORS
+		if (flag == true)
+			JOptionPane.showMessageDialog(this.addTitleView,
+					"The title: "+this.movie.getTitle()+" has been ADDED SUCCESSFUL");
 		this.addTitleView.dispose();
 
 	}
