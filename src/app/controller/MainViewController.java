@@ -15,6 +15,7 @@ public class MainViewController implements ActionListener {
 	private AddTitleController addTitleController;
 	private AddMemberController addMemberController;
 	private AddTitleView addTitleView;
+	private AddMemberView addMemberView;
 
 	
 	public MainViewController() {
@@ -22,7 +23,6 @@ public class MainViewController implements ActionListener {
 		this.searchTitleController = new SearchTitleController();
 		this.searchCustomerController = new SearchMemberController();
 		
-		this.addMemberController = new AddMemberController();
 	} 
 	
 	@Override
@@ -49,7 +49,7 @@ public class MainViewController implements ActionListener {
 		
 		if (e.getActionCommand().equals("Add Member")) {
 			
-			new AddMemberView("Add Member Manager", 1200, 750, true, this.addMemberController);
+			this.addMemberView = new AddMemberView("Add Member Manager", 1200, 750, true);
 		
 		}
 

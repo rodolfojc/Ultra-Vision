@@ -17,9 +17,9 @@ public class AddMemberView extends GuiView {
 
 	AddMemberController myController;
 	
-	public AddMemberView(String name, int width, int height, boolean Resizable, AddMemberController myController) {
+	public AddMemberView(String name, int width, int height, boolean Resizable) {
 		super(name, width, height, Resizable);
-		this.myController = myController;
+		this.myController = new AddMemberController(this);;
 		setFrame();
 	}
 	
@@ -111,6 +111,8 @@ public class AddMemberView extends GuiView {
 		this.addTextField(20, center);
 		this.addLabel("", center);
 		JButton submit = this.addButton("SUBMIT", center);
+		submit.setActionCommand("Submit");
+		submit.addActionListener(myController);
 		
 		center.setBorder(new EmptyBorder(new Insets(0, 25, 0, 0)));
 		
