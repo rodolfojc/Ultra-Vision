@@ -7,6 +7,7 @@ import app.database.Database;
 import app.model.AddTitleModel;
 import app.view.AddTitleView;
 import titles.AudioMusic;
+import titles.BoxSet;
 import titles.ConcertVideos;
 import titles.Movie;
 import titles.Title;
@@ -69,6 +70,24 @@ public class AddTitleController implements ActionListener{
 				this.database = new Database();
 				this.addTitleModel = new AddTitleModel(this.database, tempMovie, this.addTitleView);
 				this.addTitleModel.addMovieTv();
+			
+			}else {
+				
+				BoxSet tempBox = new BoxSet(this.addTitleView.getTvTitleName().getText(), 
+						this.addTitleView.getTvYearRelease().getText(), 
+						this.addTitleView.getTvGenre().getText(), 
+						this.addTitleView.getTvDirector().getText(), 
+						this.addTitleView.getTvRunningTime().getText(), 
+						this.addTitleView.getLanguage().getText(), 
+						this.addTitleView.getCountry().getText(), 
+						this.addTitleView.getIsBlueTv(), 
+						this.addTitleView.getIsDVDTv());
+				
+				this.database = new Database();
+				this.addTitleModel = new AddTitleModel(this.database, tempBox, this.addTitleView);
+				this.addTitleModel.addBoxTv();
+				
+				
 			}
 				
 			

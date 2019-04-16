@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 import app.database.Database;
 import app.view.AddTitleView;
 import titles.AudioMusic;
+import titles.BoxSet;
 import titles.ConcertVideos;
 import titles.Movie;
 import titles.Title;
@@ -16,6 +17,7 @@ public class AddTitleModel {
 	private AudioMusic audioMusic;
 	private ConcertVideos concertVideos;
 	private Movie movie;
+	private BoxSet boxSet;
 	private AddTitleView addTitleView;
 	private Database myDB;
 	
@@ -40,6 +42,14 @@ public class AddTitleModel {
 		
 		this.myDB = database;
 		this.movie = movie;
+		this.addTitleView = addTitleView;
+		
+	}
+	
+	public AddTitleModel(Database database, BoxSet boxSet, AddTitleView addTitleView) {
+		
+		this.myDB = database;
+		this.boxSet = boxSet;
 		this.addTitleView = addTitleView;
 		
 	}
@@ -169,6 +179,48 @@ public class AddTitleModel {
 
 	}
 	
+	public void addBoxTv() {
+
+		// FLAG FOR JOPTIONPANE MESSAGES
+		boolean flag = true;
+						
+		try {
+
+		String query = "INSERT INTO titles (type, title_name, year_rel, genre, director, runn_time, lang, country, dvd, blue_ray)"
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+			
+			// PREPARATION
+			PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
+			preparedStmt.setString(1, this.boxSet.getType());
+			preparedStmt.setString(2, this.boxSet.getTitle());
+			preparedStmt.setString(3, this.boxSet.getYearRelease());
+			preparedStmt.setString(4, this.boxSet.getGenre());
+			preparedStmt.setString(5, this.boxSet.getDirector());
+			preparedStmt.setString(6, this.boxSet.getRunningTime());
+			preparedStmt.setString(7, this.boxSet.getLanguages());
+			preparedStmt.setString(8, this.boxSet.getCountry());
+			preparedStmt.setString(9, this.boxSet.isDVDformat());
+			preparedStmt.setString(10, this.boxSet.isBlueRayFormat());
+			
+			preparedStmt.execute();
+			this.myDB.getConn().close();
+
+		} catch (Exception e) {
+			// ERROR MESSAGES
+			JOptionPane.showMessageDialog(this.addTitleView, "Ups, there is a problem, try again!");
+			flag = false;
+			System.err.println("Got an exception!");
+			System.err.println(e.getMessage());
+		}
+
+		// NO ERRORS
+		if (flag == true)
+			JOptionPane.showMessageDialog(this.addTitleView,
+					"The title: "+this.boxSet.getTitle()+" has been ADDED SUCCESSFUL");
+		this.addTitleView.dispose();
+
+	}
 	
 	
 	
