@@ -1,0 +1,73 @@
+package app.model;
+
+import java.sql.PreparedStatement;
+
+import javax.swing.JOptionPane;
+
+import app.database.Database;
+import app.view.AddMemberView;
+import customers.Customer;
+import customers.MusicLovers;
+import titles.Title;
+
+public class AddMemberModel {
+
+	private Database myDB;
+	private AddMemberView addMemberView;
+	private Customer customer;
+	
+	public AddMemberModel(Database myDB, AddMemberView addMemberView, Customer customer) {
+		
+		this.myDB = myDB;
+		this.addMemberView = addMemberView;
+		this.customer = customer;
+		
+	}
+	
+	public void AddMember() {
+		
+				// FLAG FOR JOPTIONPANE MESSAGES
+				boolean flag = true;
+
+				try {
+
+					String query = "INSERT INTO customers (mem_type, cust_name, cust_surname, birthday, card_type, "
+							+ "card_num, card_holder, exp_day, card_cvv)"
+								+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+						
+						// PREPARATION
+						PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
+						preparedStmt.setString(1, this.customer.getType());
+						preparedStmt.setString(2, this.customer.getCustName());
+						preparedStmt.setString(3, this.customer.getCustSurname());
+						preparedStmt.setString(4, this.customer.getBirthday());
+						preparedStmt.setString(5, this.customer.getMyCard().getType());
+						preparedStmt.setString(6, this.customer.getMyCard().getCardNumber());
+						preparedStmt.setString(7, this.customer.getMyCard().getCardHolderName());
+						preparedStmt.setString(8, this.customer.getMyCard().getExpDate());
+						preparedStmt.setString(9, this.customer.getMyCard().getCvvCode());
+												
+						preparedStmt.execute();
+						this.myDB.getConn().close();
+
+					} catch (Exception e) {
+						// ERROR MESSAGES
+						JOptionPane.showMessageDialog(this.addMemberView, "Ups, there is a problem, try again!");
+						flag = false;
+						System.err.println("Got an exception!");
+						System.err.println(e.getMessage());
+					}
+
+					// NO ERRORS
+					if (flag == true)
+						JOptionPane.showMessageDialog(this.addMemberView,
+								"The Member: "+this.customer.getCustName()+" "+this.customer.getCustSurname()+" has been ADDED SUCCESSFUL");
+					this.addMemberView.dispose();
+		
+				
+	}
+	
+	
+	
+}
