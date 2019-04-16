@@ -15,8 +15,23 @@ import app.controller.AddMemberController;
 
 public class AddMemberView extends GuiView {
 
+	// PERSONAL ATTRIBUTES
+	private JTextField custName;
+	private JTextField custSurname;
+	private JTextField birthday;
+	private JComboBox membType;
+	
+	// PAYMENT ATTRIBUTES
+	private JComboBox cardType;
+	private JTextField cardNumber;
+	private JTextField cardHolder;
+	private JTextField cardExp;
+	private JTextField cardCVV;
+	
+	//CONTROLLER
 	AddMemberController myController;
 	
+	//CONSTRUCTOR
 	public AddMemberView(String name, int width, int height, boolean Resizable) {
 		super(name, width, height, Resizable);
 		this.myController = new AddMemberController(this);;
@@ -63,6 +78,79 @@ public class AddMemberView extends GuiView {
 		panel.add(myButton);
 		return myButton;
 	}
+	
+	//SETTER AND GETTER
+	public JTextField getCustName() {
+		return custName;
+	}
+
+	public void setCustName(JTextField custName) {
+		this.custName = custName;
+	}
+
+	public JTextField getCustSurname() {
+		return custSurname;
+	}
+
+	public void setCustSurname(JTextField custSurname) {
+		this.custSurname = custSurname;
+	}
+
+	public JTextField getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(JTextField birthday) {
+		this.birthday = birthday;
+	}
+
+	public JComboBox getMembType() {
+		return membType;
+	}
+
+	public void setMembType(JComboBox membType) {
+		this.membType = membType;
+	}
+
+	public JComboBox getCardType() {
+		return cardType;
+	}
+
+	public void setCardType(JComboBox cardType) {
+		this.cardType = cardType;
+	}
+
+	public JTextField getCardNumber() {
+		return cardNumber;
+	}
+
+	public void setCardNumber(JTextField cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public JTextField getCardHolder() {
+		return cardHolder;
+	}
+
+	public void setCardHolder(JTextField cardHolder) {
+		this.cardHolder = cardHolder;
+	}
+
+	public JTextField getCardExp() {
+		return cardExp;
+	}
+
+	public void setCardExp(JTextField cardExp) {
+		this.cardExp = cardExp;
+	}
+
+	public JTextField getCardCVV() {
+		return cardCVV;
+	}
+
+	public void setCardCVV(JTextField cardCVV) {
+		this.cardCVV = cardCVV;
+	}
 
 	private void setFrame() {
 		
@@ -79,17 +167,19 @@ public class AddMemberView extends GuiView {
 		personalDetails.setFont(new Font("Serif", Font.BOLD, 35));
 		this.addLabel("", left);
 		this.addLabel("Name ", left);
-		this.addTextField(20, left);
+		this.custName = this.addTextField(20, left);
 		this.addLabel("Surname ", left);
-		this.addTextField(20, left);
+		this.custSurname = this.addTextField(20, left);
 		this.addLabel("Birthday DD/MM/YYYY", left);
-		this.addTextField(20, left);
+		this.birthday = this.addTextField(20, left);
 		this.addLabel("Membership type ", left);
-		this.addComboB(memberType, left);
+		this.membType = this.addComboB(memberType, left);
 		this.addLabel("", left);
 		this.addLabel("", left);
 		this.addLabel("", left);
 		JButton goBack = this.addButton("Go Back", left);
+		goBack.setActionCommand("Go back");
+		goBack.addActionListener(myController);
 		left.setBorder(new EmptyBorder(new Insets(0, 0, 0, 25)));
 		
 		//PAYMENT
@@ -100,15 +190,15 @@ public class AddMemberView extends GuiView {
 		paymentDetails.setFont(new Font("Serif", Font.BOLD, 35));
 		this.addLabel("", center);
 		this.addLabel("Type ", center);
-		this.addComboB(cardType, center);
+		this.cardType = this.addComboB(cardType, center);
 		this.addLabel("Card Number ", center);
-		this.addTextField(20, center);
+		this.cardNumber = this.addTextField(20, center);
 		this.addLabel("Card holder name (as printed on card) ", center);
-		this.addTextField(20, center);
+		this.cardHolder = this.addTextField(20, center);
 		this.addLabel("Expire date ", center);
-		this.addTextField(20, center);
+		this.cardExp = this.addTextField(20, center);
 		this.addLabel("CVV (3 digits) ", center);
-		this.addTextField(20, center);
+		this.cardCVV = this.addTextField(20, center);
 		this.addLabel("", center);
 		JButton submit = this.addButton("SUBMIT", center);
 		submit.setActionCommand("Submit");

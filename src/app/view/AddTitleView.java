@@ -80,6 +80,14 @@ public class AddTitleView extends GuiView {
 		return myComboBox;
 	}
 	
+	@Override
+	public JButton addButton(String name, JPanel panel) {
+		
+		JButton myButton= new JButton(name);
+		myButton.setFont(new Font("Serif", Font.BOLD, 20));
+		panel.add(myButton);
+		return myButton;
+	}
 	
 
 	public JTextField getMusicTitleName() {
