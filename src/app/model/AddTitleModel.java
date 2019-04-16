@@ -7,12 +7,14 @@ import javax.swing.JOptionPane;
 import app.database.Database;
 import app.view.AddTitleView;
 import titles.AudioMusic;
+import titles.ConcertVideos;
 import titles.Title;
 
 public class AddTitleModel {
 
 	private Database myDB;
 	private AudioMusic audioMusic;
+	private ConcertVideos concertVideos;
 	private AddTitleView addTitleView;
 	
 	
@@ -20,6 +22,14 @@ public class AddTitleModel {
 		
 		this.myDB = database;
 		this.audioMusic = audioMusic;
+		this.addTitleView = addTitleView;
+		
+	}
+	
+	public AddTitleModel(Database database, ConcertVideos concertVideos, AddTitleView addTitleView) {
+		
+		this.myDB = database;
+		this.concertVideos = concertVideos;
 		this.addTitleView = addTitleView;
 		
 	}
@@ -59,12 +69,51 @@ public class AddTitleModel {
 			// NO ERRORS
 			if (flag == true)
 				JOptionPane.showMessageDialog(this.addTitleView,
-						"The Title: "+this.audioMusic.getTitle()+" has been ADDED SUCCESSFUL");
+						"The title: "+this.audioMusic.getTitle()+" has been ADDED SUCCESSFUL");
 			this.addTitleView.dispose();
 
 		}
 	
-	
+	public void addVideoMusic() {
+
+		// FLAG FOR JOPTIONPANE MESSAGES
+		boolean flag = true;
+						
+	try {
+
+		String query = "INSERT INTO titles (type, title_name, year_rel, album, genre, band, dvd, blue_ray)"
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+			
+			// PREPARATION
+			PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
+			preparedStmt.setString(1, this.concertVideos.getType());
+			preparedStmt.setString(2, this.concertVideos.getTitle());
+			preparedStmt.setString(3, this.concertVideos.getYearRelease());
+			preparedStmt.setString(4, this.concertVideos.getAlbum());
+			preparedStmt.setString(5, this.concertVideos.getGenre());
+			preparedStmt.setString(6, this.concertVideos.getBand());
+			preparedStmt.setString(7, this.concertVideos.isDVDformat());
+			preparedStmt.setString(8, this.concertVideos.isBlueRayFormat());
+
+			preparedStmt.execute();
+			this.myDB.getConn().close();
+
+		} catch (Exception e) {
+			// ERROR MESSAGES
+			JOptionPane.showMessageDialog(this.addTitleView, "Ups, there is a problem, try again!");
+			flag = false;
+			System.err.println("Got an exception!");
+			System.err.println(e.getMessage());
+		}
+
+		// NO ERRORS
+		if (flag == true)
+			JOptionPane.showMessageDialog(this.addTitleView,
+					"The Title: "+this.concertVideos.getTitle()+" has been ADDED SUCCESSFUL");
+		this.addTitleView.dispose();
+
+	}
 	
 	
 	

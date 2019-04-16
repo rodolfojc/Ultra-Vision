@@ -6,11 +6,11 @@ public abstract class Tv extends Title{
 	private String runningTime;
 	private String languages;
 	private String country;
-	private boolean blueRay;
-	private boolean dvd;
+	private String blueRay;
+	private String dvd;
 	
 	public Tv(String title, String yearRelease, String genre, String director, String runningTime, 
-			String languages, String country, boolean blueRay, boolean dvd) {
+			String languages, String country, String blueRay, String dvd) {
 		super(title, yearRelease, genre);
 		this.director = director;
 		this.runningTime = runningTime;
@@ -52,19 +52,19 @@ public abstract class Tv extends Title{
 		this.country = country;
 	}
 
-	public boolean isBlueRay() {
-		return blueRay;
+	public String isBlueRay() {
+		return this.blueRay;
 	}
 
-	public void setBlueRay(boolean blueRay) {
+	public void setBlueRay(String blueRay) {
 		this.blueRay = blueRay;
 	}
 
-	public boolean isDvd() {
-		return dvd;
+	public String isDvd() {
+		return this.dvd;
 	}
 
-	public void setDvd(boolean dvd) {
+	public void setDvd(String dvd) {
 		this.dvd = dvd;
 	}
 	

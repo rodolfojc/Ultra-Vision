@@ -8,7 +8,7 @@ public class BoxSet extends Tv implements DVD, BlueRay {
 	private final String _TYPE = "BoxSet";
 	
 	public BoxSet(String title, String yearRelease, String genre, String director, String runningTime, String languages,
-			String country, boolean blueRay, boolean dvd) {
+			String country, String blueRay, String dvd) {
 		super(title, yearRelease, genre, director, runningTime, languages, country, blueRay, dvd);
 		this.setBlueRay(blueRay);
 		this.setDvd(dvd);
@@ -22,12 +22,12 @@ public class BoxSet extends Tv implements DVD, BlueRay {
 	}
 
 	@Override
-	public boolean isBlueRayFormat() {
+	public String isBlueRayFormat() {
 		return this.isBlueRay();
 	}
 
 	@Override
-	public boolean isDVDformat() {
+	public String isDVDformat() {
 		return this.isDvd();
 	}
 

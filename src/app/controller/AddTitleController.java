@@ -7,6 +7,7 @@ import app.database.Database;
 import app.model.AddTitleModel;
 import app.view.AddTitleView;
 import titles.AudioMusic;
+import titles.ConcertVideos;
 import titles.Title;
 
 public class AddTitleController implements ActionListener{
@@ -36,9 +37,24 @@ public class AddTitleController implements ActionListener{
 				this.database = new Database();
 				this.addTitleModel = new AddTitleModel(this.database, tempAudio, this.addTitleView);
 				this.addTitleModel.addAudioMusic();
+			}else {
+				ConcertVideos tempVideo = new ConcertVideos(this.addTitleView.getMusicTitleName().getText(),
+						this.addTitleView.getMusicYearRelease().getText(),
+						this.addTitleView.getMusicGenre().getText(),
+						this.addTitleView.getMusicAlbum().getText(),
+						this.addTitleView.getMusicBand().getText(),
+						this.addTitleView.getIsDVDMusic(),
+						this.addTitleView.getIsBlueMusic());
+				this.database = new Database();
+				this.addTitleModel = new AddTitleModel(this.database, tempVideo, this.addTitleView);
+				this.addTitleModel.addVideoMusic();
 			}
 			
 		}
+		
+		
+		
+		
 		
 	}
 

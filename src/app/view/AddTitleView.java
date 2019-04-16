@@ -142,8 +142,8 @@ public class AddTitleView extends GuiView {
 
 
 
-	public JComboBox getIsDVDMusic() {
-		return isDVDMusic;
+	public String getIsDVDMusic() {
+		return this.yesOrNo[isDVDMusic.getSelectedIndex()];
 	}
 
 
@@ -154,8 +154,8 @@ public class AddTitleView extends GuiView {
 
 
 
-	public JComboBox getIsBlueMusic() {
-		return isBlueMusic;
+	public String getIsBlueMusic() {
+		return this.yesOrNo[isBlueMusic.getSelectedIndex()];
 	}
 
 

@@ -5,12 +5,12 @@ import titles.interfaces.DVD;
 
 public class ConcertVideos extends Music implements DVD, BlueRay {
 
-	private final String _TYPE = "BoxSet";
+	private final String _TYPE = "ConcertVideo";
 	
-	private boolean dvd;
-	private boolean blueray;
+	private String dvd;
+	private String blueray;
 	
-	public ConcertVideos(String title, String yearRelease, String genre, String album, String band, boolean dvd, boolean blueray) {
+	public ConcertVideos(String title, String yearRelease, String genre, String album, String band, String dvd, String blueray) {
 		super(title, yearRelease, genre, album, band);
 		this.dvd = dvd;
 		this.blueray = blueray;
@@ -22,12 +22,12 @@ public class ConcertVideos extends Music implements DVD, BlueRay {
 	}
 
 	@Override
-	public boolean isBlueRayFormat() {
+	public String isBlueRayFormat() {
 		return this.blueray;
 	}
 
 	@Override
-	public boolean isDVDformat() {
+	public String isDVDformat() {
 		return this.dvd;
 	}
 
