@@ -10,6 +10,9 @@ import customer.admin.DebitCreditCard;
 import customer.admin.MembershipCard;
 import customers.Customer;
 import customers.MusicLovers;
+import customers.PremiunLovers;
+import customers.TvLovers;
+import customers.VideoLovers;
 
 public class AddMemberController implements ActionListener{
 
@@ -49,30 +52,46 @@ public class AddMemberController implements ActionListener{
 		
 			this.debitCreditCard = createPaymentCard(addMemberView);
 			this.membershipCard = createMemberCard(debitCreditCard);
+			this.database = new Database();
 			
 			if (this.addMemberView.getMembType().equals("MusicLovers")) {
 				
 				this.customer = new MusicLovers(this.addMemberView.getCustName().getText(),
-															  this.addMemberView.getCustSurname().getText(),
-															  this.addMemberView.getBirthday().getText(),
-															  this.membershipCard,
-															  this.debitCreditCard);
+												this.addMemberView.getCustSurname().getText(),
+												this.addMemberView.getBirthday().getText(),
+												this.membershipCard,
+												this.debitCreditCard);
 				
-				this.database = new Database();
-				this.addMemberModel = new AddMemberModel(database, addMemberView, this.customer);
-				this.addMemberModel.AddMember();
+			} else if (this.addMemberView.getMembType().equals("VideoLovers")) {
 				
-			} else if (this.addMemberView.getMembType().equals("MusicLovers")) {
+				this.customer = new VideoLovers(this.addMemberView.getCustName().getText(),
+												this.addMemberView.getCustSurname().getText(),
+												this.addMemberView.getBirthday().getText(),
+												this.membershipCard,
+												this.debitCreditCard);
 				
+			}else if (this.addMemberView.getMembType().equals("TvLovers")) {
 				
+				this.customer = new TvLovers(this.addMemberView.getCustName().getText(),
+											 this.addMemberView.getCustSurname().getText(),
+											 this.addMemberView.getBirthday().getText(),
+											 this.membershipCard,
+											 this.debitCreditCard);
+								
+			}else {
 				
-				
+				this.customer = new PremiunLovers(this.addMemberView.getCustName().getText(),
+												this.addMemberView.getCustSurname().getText(),
+												this.addMemberView.getBirthday().getText(),
+												this.membershipCard,
+												this.debitCreditCard);
 				
 			}
+		
+			this.addMemberModel = new AddMemberModel(database, addMemberView, this.customer);
+			this.addMemberModel.AddMember();
 			
-			
-			
-			
+						
 		}
 		
 		
