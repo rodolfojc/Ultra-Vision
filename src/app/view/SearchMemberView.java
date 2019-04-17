@@ -2,6 +2,7 @@ package app.view;
 
 import java.awt.Font;
 import java.awt.Insets;
+import java.util.Arrays;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -11,14 +12,34 @@ import app.controller.SearchMemberController;
 
 public class SearchMemberView extends GuiView{
 
+	
+	//DATA - DATABASE
+	private String[][] data;
+	
+	//CONTROLLER
 	SearchMemberController myController;
 	
 	public SearchMemberView(String name, int width, int height, boolean Resizable) {
 		super(name, width, height, Resizable);
 		this.myController = new SearchMemberController(this);
+		this.data = new String[1000][3];
 		setFrame();
 	}
+	
+	
+	//GETTER AND SETTER
+	public String[][] getData() {
+		return data;
+	}
+	
+	public String getDataStr(int a, int b) {
+		return this.data[a][b];
+	}
 
+	public void setData(String[][] data) {
+		this.data = Arrays.copyOf(data, data.length);;
+	}
+	
 	private void setFrame() {
 		
 		String[][] data = new String[50][50];
