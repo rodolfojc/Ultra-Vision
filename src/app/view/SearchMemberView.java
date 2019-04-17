@@ -13,9 +13,9 @@ public class SearchMemberView extends GuiView{
 
 	SearchMemberController myController;
 	
-	public SearchMemberView(String name, int width, int height, boolean Resizable, SearchMemberController myController) {
+	public SearchMemberView(String name, int width, int height, boolean Resizable) {
 		super(name, width, height, Resizable);
-		this.myController = myController;
+		this.myController = new SearchMemberController(this);
 		setFrame();
 	}
 
@@ -37,10 +37,12 @@ public class SearchMemberView extends GuiView{
 		JPanel center = new JPanel();
 		this.addTableS(0, data, columns, center, "Customers");
 		
+		this.addButton("Go back", center);
+		
 		this.panel.add(titleTop);
 		this.panel.add(top);
 		this.panel.add(center);
-				
+		
 		this.repaint();
 		this.validate();
 		

@@ -14,9 +14,9 @@ public class SearchTitleView extends GuiView {
 
 	SearchTitleController myController;
 	
-	public SearchTitleView(String name, int width, int height, boolean Resizable, SearchTitleController myController) {
+	public SearchTitleView(String name, int width, int height, boolean Resizable) {
 		super(name, width, height, Resizable);
-		this.myController = myController;
+		this.myController = new SearchTitleController(this);
 		setFrame();
 	}
 

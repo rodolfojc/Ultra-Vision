@@ -16,13 +16,12 @@ public class MainViewController implements ActionListener {
 	private AddMemberController addMemberController;
 	private AddTitleView addTitleView;
 	private AddMemberView addMemberView;
+	private SearchTitleView searchTitleView;
+	private SearchMemberView searchMemberView;
 
 	
 	public MainViewController() {
-		
-		this.searchTitleController = new SearchTitleController();
-		this.searchCustomerController = new SearchMemberController();
-		
+				
 	} 
 	
 	@Override
@@ -30,13 +29,13 @@ public class MainViewController implements ActionListener {
 		
 		if (e.getActionCommand().equals("Search Title")) {
 			
-			new SearchTitleView("Search a Title", 500, 800, true, this.searchTitleController);
+			this.searchTitleView = new SearchTitleView("Search a Title", 500, 800, true);
 		
 		}
 		
 		if (e.getActionCommand().equals("Search Customer")) {
 			
-			new SearchMemberView("Search a Customer", 500, 800, true, this.searchCustomerController);
+			this.searchMemberView = new SearchMemberView("Search a Customer", 500, 800, true);
 		
 		}
 		
