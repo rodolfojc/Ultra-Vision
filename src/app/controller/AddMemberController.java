@@ -15,13 +15,31 @@ public class AddMemberController implements ActionListener{
 
 	private AddMemberView addMemberView;
 	private AddMemberModel addMemberModel;
+	private DebitCreditCard debitCreditCard;
+	private MembershipCard membershipCard;
 	private Customer customer;
 	private Database database;
 	
 	public AddMemberController(AddMemberView addMemberView) {
 		
 		this.addMemberView = addMemberView;
+				
+	}
+	
+	public DebitCreditCard createPaymentCard(AddMemberView addMemberView) {
 		
+		return this.debitCreditCard = new DebitCreditCard(this.addMemberView.getCardType(),
+				  								   this.addMemberView.getCardNumber().getText(),
+				  								   this.addMemberView.getCardHolder().getText(),
+				  								   this.addMemberView.getCardExp().getText(),
+				  								   this.addMemberView.getCardCVV().getText());
+		
+	}
+	
+	public MembershipCard createMemberCard(DebitCreditCard debitCreditCard) {
+		
+		return this.membershipCard = new MembershipCard(debitCreditCard, 0, false);
+				
 	}
 	
 	@Override
@@ -29,23 +47,26 @@ public class AddMemberController implements ActionListener{
 		
 		if(e.getActionCommand().equals("Submit")) {
 		
+			this.debitCreditCard = createPaymentCard(addMemberView);
+			this.membershipCard = createMemberCard(debitCreditCard);
+			
 			if (this.addMemberView.getMembType().equals("MusicLovers")) {
 				
-				DebitCreditCard tempDebitCreditCard = new DebitCreditCard(this.addMemberView.getCardType(),
-																		  this.addMemberView.getCardNumber().getText(),
-																		  this.addMemberView.getCardHolder().getText(),
-																		  this.addMemberView.getCardExp().getText(),
-																		  this.addMemberView.getCardCVV().getText());
-				MembershipCard tempCard = new MembershipCard(tempDebitCreditCard, 0, false);
 				this.customer = new MusicLovers(this.addMemberView.getCustName().getText(),
 															  this.addMemberView.getCustSurname().getText(),
 															  this.addMemberView.getBirthday().getText(),
-															  tempCard,
-															  tempDebitCreditCard);
+															  this.membershipCard,
+															  this.debitCreditCard);
 				
 				this.database = new Database();
 				this.addMemberModel = new AddMemberModel(database, addMemberView, this.customer);
 				this.addMemberModel.AddMember();
+				
+			} else if (this.addMemberView.getMembType().equals("MusicLovers")) {
+				
+				
+				
+				
 				
 			}
 			

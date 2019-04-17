@@ -7,8 +7,6 @@ import javax.swing.JOptionPane;
 import app.database.Database;
 import app.view.AddMemberView;
 import customers.Customer;
-import customers.MusicLovers;
-import titles.Title;
 
 public class AddMemberModel {
 
