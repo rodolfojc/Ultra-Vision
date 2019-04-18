@@ -2,6 +2,7 @@ package app.view;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -117,6 +118,17 @@ public class GuiView extends JFrame{
 		//myButton.setOpaque(true);
 		panel.add(myButton);
 		return myButton;
+	}
+	
+	//CREATE A BUTTON WITN NAME, PANEL, ACTION COMMAND Y CONTROLLER
+	public JButton addButtonPanelCommandController(String name, JPanel panel, String command, ActionListener controller) {
+		
+		JButton myButton = new JButton(name);
+		myButton.setActionCommand(command);
+		myButton.addActionListener(controller);
+		panel.add(myButton);
+		return myButton;
+				
 	}
 	
 	//CREATE A JLABEL WITH TEXT AND ADD TO A PANEL
