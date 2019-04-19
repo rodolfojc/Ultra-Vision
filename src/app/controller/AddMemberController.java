@@ -59,6 +59,7 @@ public class AddMemberController implements ActionListener{
 				this.customer = new MusicLovers(this.addMemberView.getCustName().getText(),
 												this.addMemberView.getCustSurname().getText(),
 												this.addMemberView.getBirthday().getText(),
+												this.addMemberView.getEmail().getText(),
 												this.membershipCard,
 												this.debitCreditCard);
 				
@@ -67,6 +68,7 @@ public class AddMemberController implements ActionListener{
 				this.customer = new VideoLovers(this.addMemberView.getCustName().getText(),
 												this.addMemberView.getCustSurname().getText(),
 												this.addMemberView.getBirthday().getText(),
+												this.addMemberView.getEmail().getText(),
 												this.membershipCard,
 												this.debitCreditCard);
 				
@@ -75,6 +77,7 @@ public class AddMemberController implements ActionListener{
 				this.customer = new TvLovers(this.addMemberView.getCustName().getText(),
 											 this.addMemberView.getCustSurname().getText(),
 											 this.addMemberView.getBirthday().getText(),
+											 this.addMemberView.getEmail().getText(),
 											 this.membershipCard,
 											 this.debitCreditCard);
 								
@@ -83,6 +86,7 @@ public class AddMemberController implements ActionListener{
 				this.customer = new PremiunLovers(this.addMemberView.getCustName().getText(),
 												this.addMemberView.getCustSurname().getText(),
 												this.addMemberView.getBirthday().getText(),
+												this.addMemberView.getEmail().getText(),
 												this.membershipCard,
 												this.debitCreditCard);
 				

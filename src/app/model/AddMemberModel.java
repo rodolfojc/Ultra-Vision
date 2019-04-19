@@ -29,9 +29,9 @@ public class AddMemberModel {
 
 				try {
 
-					String query = "INSERT INTO customers (mem_type, cust_name, cust_surname, birthday, card_type, "
+					String query = "INSERT INTO customers (mem_type, cust_name, cust_surname, birthday, email, card_type, "
 							+ "card_num, card_holder, exp_day, card_cvv)"
-								+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+								+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 						
 						// PREPARATION
@@ -40,11 +40,12 @@ public class AddMemberModel {
 						preparedStmt.setString(2, this.customer.getCustName());
 						preparedStmt.setString(3, this.customer.getCustSurname());
 						preparedStmt.setString(4, this.customer.getBirthday());
-						preparedStmt.setString(5, this.customer.getMyCard().getType());
-						preparedStmt.setString(6, this.customer.getMyCard().getCardNumber());
-						preparedStmt.setString(7, this.customer.getMyCard().getCardHolderName());
-						preparedStmt.setString(8, this.customer.getMyCard().getExpDate());
-						preparedStmt.setString(9, this.customer.getMyCard().getCvvCode());
+						preparedStmt.setString(5, this.customer.getEmail());
+						preparedStmt.setString(6, this.customer.getMyCard().getType());
+						preparedStmt.setString(7, this.customer.getMyCard().getCardNumber());
+						preparedStmt.setString(8, this.customer.getMyCard().getCardHolderName());
+						preparedStmt.setString(9, this.customer.getMyCard().getExpDate());
+						preparedStmt.setString(10, this.customer.getMyCard().getCvvCode());
 												
 						preparedStmt.execute();
 						this.myDB.getConn().close();

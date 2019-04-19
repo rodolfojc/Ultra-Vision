@@ -109,6 +109,14 @@ public class AddMemberView extends GuiView {
 	public void setBirthday(JTextField birthday) {
 		this.birthday = birthday;
 	}
+	
+	public JTextField getEmail() {
+		return email;
+	}
+
+	public void setEmail(JTextField email) {
+		this.email = email;
+	}
 
 	public String getMembType() {
 		return this.memberType[membType.getSelectedIndex()];
@@ -176,7 +184,7 @@ public class AddMemberView extends GuiView {
 		this.addLabel("Birthday DD/MM/YYYY", left);
 		this.birthday = this.addTextField(20, left);
 		this.addLabel("Email", left);
-		this.email = this.addTextField(20, left);
+		this.setEmail(this.addTextField(20, left));
 		this.addLabel("Membership type ", left);
 		this.membType = this.addComboB(memberType, left);
 		this.addLabel("", left);
@@ -217,5 +225,7 @@ public class AddMemberView extends GuiView {
 		this.repaint();
 		
 	}
+
+	
 
 }
