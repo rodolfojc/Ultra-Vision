@@ -10,10 +10,6 @@ import app.view.SearchTitleView;
 
 public class MainViewController implements ActionListener {
 
-	private SearchTitleController  searchTitleController;
-	private SearchMemberController searchCustomerController;
-	private AddTitleController addTitleController;
-	private AddMemberController addMemberController;
 	private AddTitleView addTitleView;
 	private AddMemberView addMemberView;
 	private SearchTitleView searchTitleView;

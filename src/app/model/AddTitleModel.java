@@ -63,7 +63,7 @@ public class AddTitleModel {
 		try {
 
 			String query = "INSERT INTO titles (type, title_name, year_rel, album, genre, band, cd)"
-						+ "VALUES (?, ?, ?, ?, ?, ?)";
+						+ "VALUES (?, ?, ?, ?, ?, ?, ?)";
 
 				
 				// PREPARATION

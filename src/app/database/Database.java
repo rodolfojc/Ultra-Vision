@@ -26,6 +26,24 @@ public class Database {
 	
 	
 
+	public void setConn(Connection conn) {
+		this.conn = conn;
+	}
+
+
+
+	public void setStmt(Statement stmt) {
+		this.stmt = stmt;
+	}
+
+
+
+	public void setRs(ResultSet rs) {
+		this.rs = rs;
+	}
+
+
+
 	public Connection getConn() {
 		return conn;
 	}
