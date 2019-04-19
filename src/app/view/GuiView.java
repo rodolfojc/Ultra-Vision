@@ -121,7 +121,7 @@ public class GuiView extends JFrame{
 	}
 	
 	//CREATE A BUTTON WITN NAME, PANEL, ACTION COMMAND Y CONTROLLER
-	public JButton addButtonPanelCommandController(String name, JPanel panel, String command, ActionListener controller) {
+	public JButton addButtonAll(String name, String command, JPanel panel, ActionListener controller) {
 		
 		JButton myButton = new JButton(name);
 		myButton.setActionCommand(command);

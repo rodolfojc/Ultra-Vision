@@ -19,6 +19,7 @@ public class AddMemberView extends GuiView {
 	private JTextField custName;
 	private JTextField custSurname;
 	private JTextField birthday;
+	private JTextField email;
 	private JComboBox membType;
 	
 	// PAYMENT ATTRIBUTES
@@ -34,6 +35,7 @@ public class AddMemberView extends GuiView {
 	
 	//CONTROLLER
 	AddMemberController myController;
+	
 	
 	//CONSTRUCTOR
 	public AddMemberView(String name, int width, int height, boolean Resizable) {
@@ -173,10 +175,10 @@ public class AddMemberView extends GuiView {
 		this.custSurname = this.addTextField(20, left);
 		this.addLabel("Birthday DD/MM/YYYY", left);
 		this.birthday = this.addTextField(20, left);
+		this.addLabel("Email", left);
+		this.email = this.addTextField(20, left);
 		this.addLabel("Membership type ", left);
 		this.membType = this.addComboB(memberType, left);
-		this.addLabel("", left);
-		this.addLabel("", left);
 		this.addLabel("", left);
 		JButton goBack = this.addButton("Go Back", left);
 		goBack.setActionCommand("Go back");

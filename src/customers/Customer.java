@@ -10,6 +10,7 @@ public abstract class Customer {
 	private String custName;
 	private String custSurname;
 	private String birthday;
+	private String email;
 	private int numbRented;
 	private int id;
 	private Title[] titleRented;
@@ -18,11 +19,12 @@ public abstract class Customer {
 	
 	
 	//COSTRUCTOR - FIELDS
-	public Customer(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
+	public Customer(String custName, String custSurname, String birthday, String email, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
 		this.custName = custName;
 		this.custSurname = custSurname;
 		this.birthday = birthday;
+		this.email = email;
 		this.myMemberCard = myMemberCard;
 		this.myCard = myCard;
 		this.numbRented = 0;
@@ -82,6 +84,14 @@ public abstract class Customer {
 		return id;
 	}
 	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
 	//METHOD
 	public String getType() {
 		return "Customer";
@@ -94,6 +104,8 @@ public abstract class Customer {
 	public void setTitleRented(Title[] titleRented) {
 		this.titleRented = titleRented;
 	}
+
+	
 
 	
 	

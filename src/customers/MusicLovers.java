@@ -10,12 +10,12 @@ public class MusicLovers extends Customer implements MusicCds, LiveConcert {
 	private final String TYPE_SUB = "MusicLovers";
 	
 	//CONSTRUCTOR - FIELDS
-	public MusicLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
+	public MusicLovers(String custName, String custSurname, String birthday, String email, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
-		super(custName, custSurname, birthday, myMemberCard, myCard);
+		super(custName, custSurname, birthday, email, myMemberCard, myCard);
 		
 	}
-
+	
 	@Override
 	public String[] getTitles() {
 		return null;

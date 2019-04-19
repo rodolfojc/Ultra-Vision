@@ -23,8 +23,6 @@ public class MainView extends GuiView {
 		setFrame();
 	}
 	
-	
-	
 	@Override
 	public JButton addButton(String name, JPanel panel) {
 		JButton myButton= new JButton(name);
@@ -32,7 +30,6 @@ public class MainView extends GuiView {
 		panel.add(myButton);
 		return myButton;
 	}
-
 
 
 	public void setFrame() {
@@ -45,6 +42,7 @@ public class MainView extends GuiView {
 		myLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		myLabel.setFont(new Font("Serif", Font.BOLD, 45));
 		JButton searchTitle = this.addButton("Search Title", this.panel);
+		//JButton searchTitle = this.addButtonAll("Search Title", "Search Title", this.panel, this.myController);
 		searchTitle.setActionCommand("Search Title");
 		searchTitle.addActionListener(myController);
 		this.addLabel("", this.panel);

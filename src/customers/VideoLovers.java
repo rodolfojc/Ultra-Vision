@@ -9,9 +9,9 @@ public class VideoLovers extends Customer implements Movies{
 	private final String TYPE_SUB = "VideoLovers";
 	
 	//CONSTRUCTOR - FIELDS
-	public VideoLovers(String custName, String custSurname, String birthday, MembershipCard myMemberCard,
+	public VideoLovers(String custName, String custSurname, String birthday, String email, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
-		super(custName, custSurname, birthday, myMemberCard, myCard);
+		super(custName, custSurname, birthday, email, myMemberCard, myCard);
 		
 	}
 
