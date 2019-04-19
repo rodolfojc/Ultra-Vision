@@ -16,6 +16,10 @@ import app.model.SearchMemberModel;
 
 public class SearchMemberView extends GuiView{
 
+	//ATTRIBUTES
+	private JButton search;
+	private JTextField searchName;
+	private JButton goBack;
 	
 	//DATA - DATABASE
 	private Database myBD;
@@ -27,9 +31,7 @@ public class SearchMemberView extends GuiView{
 	//MODEL
 	private SearchMemberModel myModel;
 
-	private JButton search;
-	private JTextField searchName;
-	
+	//CONTRUCTOR	
 	public SearchMemberView(String name, int width, int height, boolean Resizable) {
 		super(name, width, height, Resizable);
 		this.myController = new SearchMemberController(this);
@@ -88,7 +90,7 @@ public class SearchMemberView extends GuiView{
 		JPanel center = new JPanel();
 		this.addTableS(0, this.data, columns, center, "Customers");
 		
-		this.addButton("Go back", center);
+		this.goBack = this.addButtonAll("Go back", "Go back", center, myController);
 		
 		this.panel.add(titleTop);
 		this.panel.add(top);

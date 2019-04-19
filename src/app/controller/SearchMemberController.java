@@ -11,7 +11,7 @@ public class SearchMemberController implements ActionListener {
 
 	private SearchMemberModel searchMemberModel;
 	private SearchMemberView searchMemberView;
-	private Database databse;
+	private Database database;
 	
 	public SearchMemberController(SearchMemberView searchMemberView) {
 		
@@ -26,11 +26,16 @@ public class SearchMemberController implements ActionListener {
 			
 			String query = "SELECT mem_numb, mem_type, cust_name, cust_surname "
 						 + "FROM customers WHERE cust_name='"+this.searchMemberView.getSearchName().getText()+"';";
-			this.databse = new Database();
-			this.searchMemberModel = new SearchMemberModel(this.databse, this.searchMemberView);
+			this.database = new Database();
+			this.searchMemberModel = new SearchMemberModel(this.database, this.searchMemberView);
 			this.searchMemberModel.getData(query);
 			this.searchMemberView.UpdateFrame();
 			
+		}
+		
+		if (e.getActionCommand().equals("Go back")) {
+			
+			this.searchMemberView.dispose();
 		}
 		
 		

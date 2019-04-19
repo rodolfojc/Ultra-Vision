@@ -346,7 +346,7 @@ public class AddTitleView extends GuiView {
 		
 		
 		JPanel typeTwo = new JPanel();
-		this.setGrid(22, 0, typeTwo);
+		this.setGrid(21, 0, typeTwo);
 		JLabel tvTypeTitle = this.addLabel("TV (Type)", typeTwo);
 		tvTypeTitle.setFont(new Font("Serif", Font.BOLD, 24));
 		tvTypeTitle.setHorizontalAlignment(SwingConstants.CENTER);
@@ -373,7 +373,6 @@ public class AddTitleView extends GuiView {
 		this.isBlueTv = this.addComboB(yesOrNo, formatPanelTwo);
 		typeTwo.add(formatPanelTwo);
 		this.addLabel("", typeTwo);
-		this.addLabel("", typeTwo);
 		JButton addTvTitle = this.addButton("Add Tv", typeTwo);
 		addTvTitle.setActionCommand("Add Tv");
 		addTvTitle.addActionListener(myController);
@@ -382,7 +381,7 @@ public class AddTitleView extends GuiView {
 		
 		this.panel.add(type);
 		this.panel.add(typeTwo);
-		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 45, 65)));
+		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 0, 65)));
 		
 		this.validate();
 		this.repaint();

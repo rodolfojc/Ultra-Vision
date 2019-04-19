@@ -52,11 +52,6 @@ public class SearchMemberModel {
 		
 	}
 
-	public void searchByName() {
-		
-		
-		
-	}
 	
 	
 	
