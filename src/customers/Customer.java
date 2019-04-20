@@ -32,6 +32,8 @@ public abstract class Customer {
 	}
 
 	//GETTERS AND SETTERS
+	
+	
 	public String getCustName() {
 		return custName;
 	}
@@ -101,8 +103,8 @@ public abstract class Customer {
 		return titleRented;
 	}
 
-	public void setTitleRented(int[] titleRented) {
-		this.titleRented = titleRented;
+	public void setTitleRented(int a, int titleRented) {
+		this.titleRented[a] = titleRented;
 	}
 
 	

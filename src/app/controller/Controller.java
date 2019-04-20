@@ -10,11 +10,12 @@ import app.view.MainView;
 public class Controller implements ActionListener {
 
 	private MainViewController mainViewControler;
+	private MainView mainView;
 	
 	public Controller() {
 		
 		//NEW INSTANCE OF MAIN VIEW
-		new MainView("Welcome to Ultravision System", 500,700, true);
+		this.mainView = new MainView("Welcome to Ultravision System", 500,700, true);
 		
 	}
 	

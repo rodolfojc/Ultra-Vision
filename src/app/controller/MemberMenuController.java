@@ -8,7 +8,13 @@ import app.view.MemberMenuView;
 
 public class MemberMenuController implements ActionListener{
 
+	private MemberMenuView memberMenuView;
+	private MainView mainView;
+	
 	public MemberMenuController(MemberMenuView memberMenuView, MainView mainView) {
+		
+		this.memberMenuView = memberMenuView;
+		this.mainView = mainView;
 		
 	}
 

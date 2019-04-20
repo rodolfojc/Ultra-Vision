@@ -20,7 +20,7 @@ public class SearchMemberView extends GuiView{
 
 	//ATTRIBUTES
 	private JButton search;
-	private JTextField searchName;
+	private JTextField searchID;
 	private JButton goBack;
 		
 	//DATA - DATABASE
@@ -67,12 +67,12 @@ public class SearchMemberView extends GuiView{
 	}
 	
 	public JTextField getSearchName() {
-		return searchName;
+		return searchID;
 	}
 
 
 	public void setSearchName(JTextField searchName) {
-		this.searchName = searchName;
+		this.searchID = searchName;
 	}
 	
 	private void setFrame() {
