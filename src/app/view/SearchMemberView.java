@@ -7,6 +7,8 @@ import java.util.Arrays;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
@@ -20,7 +22,7 @@ public class SearchMemberView extends GuiView{
 	private JButton search;
 	private JTextField searchName;
 	private JButton goBack;
-	
+		
 	//DATA - DATABASE
 	private Database myBD;
 	private String[][] data;
@@ -30,6 +32,7 @@ public class SearchMemberView extends GuiView{
 	
 	//MODEL
 	private SearchMemberModel myModel;
+	
 
 	//CONTRUCTOR	
 	public SearchMemberView(String name, int width, int height, boolean Resizable, MainView mainView) {
@@ -89,7 +92,13 @@ public class SearchMemberView extends GuiView{
 		
 		JPanel center = new JPanel();
 		this.addTableS(0, this.data, columns, center, "Customers");
+		//this.myTable[0].setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+		this.myTable[0].getTableHeader().setReorderingAllowed(false);
+		this.myTable[0].getTableHeader().setEnabled(false);
+		this.myTable[0].getColumnModel().getColumn(0).setPreferredWidth(30);
+		this.myTable[0].setEnabled(false);
 		
+		;		
 		this.goBack = this.addButtonAll("Go back", "Go back", center, myController);
 		
 		this.panel.add(titleTop);

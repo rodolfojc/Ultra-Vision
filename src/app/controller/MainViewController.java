@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import app.view.AddMemberView;
 import app.view.AddTitleView;
 import app.view.MainView;
+import app.view.MemberMenuView;
 import app.view.SearchMemberView;
 import app.view.SearchTitleView;
 
@@ -15,6 +16,7 @@ public class MainViewController implements ActionListener {
 	private AddMemberView addMemberView;
 	private SearchTitleView searchTitleView;
 	private SearchMemberView searchMemberView;
+	private MemberMenuView memberMenuView;
 	private MainView mainView;
 	
 	public MainViewController(MainView mainView ) {
@@ -52,6 +54,13 @@ public class MainViewController implements ActionListener {
 			this.addMemberView = new AddMemberView("Add Member Manager", 1200, 750, true, this.mainView);
 			this.mainView.setVisible(false);
 		
+		}
+		
+		if (e.getActionCommand().equals("Add Member")) {
+			
+			this.memberMenuView = new MemberMenuView("Member Manager", 900, 900, true, this.mainView);
+			this.mainView.setVisible(false);
+			
 		}
 		
 		if (e.getActionCommand().equals("EXIT")) {
