@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import app.database.Database;
 import app.model.AddMemberModel;
 import app.view.AddMemberView;
+import app.view.MainView;
 import customer.admin.DebitCreditCard;
 import customer.admin.MembershipCard;
 import customers.Customer;
@@ -20,12 +21,14 @@ public class AddMemberController implements ActionListener{
 	private AddMemberModel addMemberModel;
 	private DebitCreditCard debitCreditCard;
 	private MembershipCard membershipCard;
+	private MainView mainView;
 	private Customer customer;
 	private Database database;
 	
-	public AddMemberController(AddMemberView addMemberView) {
+	public AddMemberController(AddMemberView addMemberView, MainView mainView) {
 		
 		this.addMemberView = addMemberView;
+		this.mainView = mainView;
 				
 	}
 	
@@ -94,8 +97,16 @@ public class AddMemberController implements ActionListener{
 		
 			this.addMemberModel = new AddMemberModel(database, addMemberView, this.customer);
 			this.addMemberModel.AddMember();
-			
+			this.addMemberView.dispose();
+			this.mainView.setVisible(true);
 						
+		}
+		
+		if(e.getActionCommand().equals("Go back")) {
+			
+			this.addMemberView.dispose();
+			this.mainView.setVisible(true);
+			
 		}
 		
 		

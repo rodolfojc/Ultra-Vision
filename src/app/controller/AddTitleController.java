@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import app.database.Database;
 import app.model.AddTitleModel;
 import app.view.AddTitleView;
+import app.view.MainView;
 import titles.AudioMusic;
 import titles.BoxSet;
 import titles.ConcertVideos;
@@ -16,12 +17,15 @@ public class AddTitleController implements ActionListener{
 
 	private AddTitleView addTitleView;
 	private AddTitleModel addTitleModel;
+	private MainView mainView;
 	private Database database;
-	//private Title title;
 	
 	
-	public AddTitleController(AddTitleView addTitleView) {
+	
+	public AddTitleController(AddTitleView addTitleView, MainView mainView) {
+		
 		this.addTitleView = addTitleView;
+		this.mainView = mainView;
 	}
 	
 	@Override
@@ -91,6 +95,13 @@ public class AddTitleController implements ActionListener{
 			}
 				
 			
+			
+		}
+		
+		if(e.getActionCommand().equals("Go back")) {
+			
+			this.addTitleView.dispose();
+			this.mainView.setVisible(true);
 			
 		}
 		

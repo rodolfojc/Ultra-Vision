@@ -5,18 +5,20 @@ import java.awt.event.ActionListener;
 
 import app.database.Database;
 import app.model.SearchMemberModel;
+import app.view.MainView;
 import app.view.SearchMemberView;
 
 public class SearchMemberController implements ActionListener {
 
 	private SearchMemberModel searchMemberModel;
 	private SearchMemberView searchMemberView;
+	private MainView mainView;
 	private Database database;
 	
-	public SearchMemberController(SearchMemberView searchMemberView) {
+	public SearchMemberController(SearchMemberView searchMemberView, MainView mainView) {
 		
 		this.searchMemberView = searchMemberView;
-	
+		this.mainView = mainView;
 	}
 
 	@Override
@@ -36,6 +38,8 @@ public class SearchMemberController implements ActionListener {
 		if (e.getActionCommand().equals("Go back")) {
 			
 			this.searchMemberView.dispose();
+			this.mainView.setVisible(true);
+			
 		}
 		
 		

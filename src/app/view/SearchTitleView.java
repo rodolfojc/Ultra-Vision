@@ -32,9 +32,9 @@ public class SearchTitleView extends GuiView {
 
 	
 	
-	public SearchTitleView(String name, int width, int height, boolean Resizable) {
+	public SearchTitleView(String name, int width, int height, boolean Resizable, MainView mainView) {
 		super(name, width, height, Resizable);
-		this.myController = new SearchTitleController(this);
+		this.myController = new SearchTitleController(this, mainView);
 		getStartingData();
 		setFrame();
 	}
@@ -73,7 +73,7 @@ public class SearchTitleView extends GuiView {
 		
 		JPanel titleTop = new JPanel();
 		JPanel top = new JPanel();
-		JLabel title = this.addLabel("Title Name ", titleTop);
+		JLabel title = this.addLabel("Title (by name) ", titleTop);
 		title.setFont(new Font("Serif", Font.BOLD, 40));
 		this.setSearchTitle(this.addTextField(20, top));
 		this.search = this.addButtonAll("Search", "Search", top, myController);

@@ -15,11 +15,11 @@ import app.controller.MainViewController;
 
 public class MainView extends GuiView {
 	
-		MainViewController myController;
+		private MainViewController myController;
 
-	public MainView(String name, int width, int height, boolean Resizable, MainViewController myController) {
+	public MainView(String name, int width, int height, boolean Resizable) {
 		super(name, width, height, Resizable);
-		this.myController = myController;
+		this.myController = new MainViewController(this);
 		setFrame();
 	}
 	
@@ -64,7 +64,6 @@ public class MainView extends GuiView {
 		this.addLabel("", this.panel);
 		this.addLabel("", this.panel);
 		JButton exit = this.addButton("EXIT", this.panel);
-		//exit.setFont(new Font("Serif", Font.PLAIN, 28));
 		exit.setActionCommand("EXIT");
 		exit.addActionListener(myController);
 		this.panel.setBorder(new EmptyBorder(new Insets(25, 60, 45, 60)));

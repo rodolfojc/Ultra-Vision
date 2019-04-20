@@ -38,9 +38,9 @@ public class AddMemberView extends GuiView {
 	
 	
 	//CONSTRUCTOR
-	public AddMemberView(String name, int width, int height, boolean Resizable) {
+	public AddMemberView(String name, int width, int height, boolean Resizable, MainView mainView) {
 		super(name, width, height, Resizable);
-		this.myController = new AddMemberController(this);;
+		this.myController = new AddMemberController(this, mainView);;
 		setFrame();
 	}
 	

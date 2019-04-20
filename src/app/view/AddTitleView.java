@@ -45,9 +45,9 @@ public class AddTitleView extends GuiView {
 	AddTitleController myController;
 	
 	
-	public AddTitleView(String name, int width, int height, boolean Resizable) {
+	public AddTitleView(String name, int width, int height, boolean Resizable, MainView mainView) {
 		super(name, width, height, Resizable);
-		this.myController = new AddTitleController(this);
+		this.myController = new AddTitleController(this, mainView);
 		setFrame();
 	}
 	
@@ -326,8 +326,6 @@ public class AddTitleView extends GuiView {
 		this.musicYearRelease = this.addTextField(20, type);
 		this.addLabel("Genre", type);
 		this.musicGenre = this.addTextField(20, type);
-		this.addLabel("", type);
-		this.addLabel("", type);
 		this.addLabel("Format", type);
 		JPanel formatPanelOne = new JPanel();
 		this.addLabel("     (for Video Concert) ", formatPanelOne);
@@ -341,6 +339,8 @@ public class AddTitleView extends GuiView {
 		JButton addMusicTitle = this.addButton("Add Music", type);
 		addMusicTitle.setActionCommand("Add Music");
 		addMusicTitle.addActionListener(myController);
+		this.addLabel("", type);
+		this.addButtonAll("Go back", "Go back", type, this.myController);
 		this.addLabel("", type);
 		type.setBorder(new EmptyBorder(new Insets(0, 0, 0, 25)));
 		

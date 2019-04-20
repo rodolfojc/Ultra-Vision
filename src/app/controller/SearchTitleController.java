@@ -6,17 +6,20 @@ import java.awt.event.ActionListener;
 import app.database.Database;
 import app.model.SearchMemberModel;
 import app.model.SearchTitleModel;
+import app.view.MainView;
 import app.view.SearchTitleView;
 
 public class SearchTitleController implements ActionListener{
 
 	private SearchTitleView searchTitleView;
 	private SearchTitleModel searchTitleModel;
+	private MainView mainView;
 	private Database database;
 		
-	public SearchTitleController(SearchTitleView searchTitleView) {
+	public SearchTitleController(SearchTitleView searchTitleView, MainView mainView) {
 		
 		this.searchTitleView = searchTitleView;
+		this.mainView = mainView;
 	}
 
 	@Override
@@ -36,6 +39,8 @@ public class SearchTitleController implements ActionListener{
 		if (e.getActionCommand().equals("Go back")) {
 			
 			this.searchTitleView.dispose();
+			this.mainView.setVisible(true);
+			
 		}
 		
 	}

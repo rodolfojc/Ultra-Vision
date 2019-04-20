@@ -32,9 +32,9 @@ public class SearchMemberView extends GuiView{
 	private SearchMemberModel myModel;
 
 	//CONTRUCTOR	
-	public SearchMemberView(String name, int width, int height, boolean Resizable) {
+	public SearchMemberView(String name, int width, int height, boolean Resizable, MainView mainView) {
 		super(name, width, height, Resizable);
-		this.myController = new SearchMemberController(this);
+		this.myController = new SearchMemberController(this, mainView);
 		this.data = new String[1000][4];
 		getStartingData();
 		setFrame();

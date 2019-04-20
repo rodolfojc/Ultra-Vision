@@ -62,7 +62,7 @@ public class AddMemberModel {
 					if (flag == true)
 						JOptionPane.showMessageDialog(this.addMemberView,
 								"The Member: "+this.customer.getCustName()+" "+this.customer.getCustSurname()+" has been ADDED SUCCESSFUL");
-					this.addMemberView.dispose();
+					
 		
 				
 	}
