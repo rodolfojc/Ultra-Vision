@@ -23,6 +23,33 @@ public class FindMemberModel {
 		
 	}
 	
+	public boolean checkId(int id) {
+		
+			String query = "SELECT * FROM customers WHERE mem_numb = "+id+";";
+
+			try {
+				this.myBD.setRs(this.myBD.getStmt().executeQuery(query));
+
+				if (this.myBD.getRs().isBeforeFirst()) {
+					return true;
+				}
+
+				this.myBD.getRs().close();
+				this.myBD.getStmt().close();
+				this.myBD.getConn().close();
+
+			} catch (SQLException e) {
+				
+				e.printStackTrace();
+			}
+		
+			return false;
+		
+	}
+	
+	
+	
+	
 	public Customer findId(int id) {
 		
 				// LOCAL DATA STORAGE
