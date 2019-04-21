@@ -16,12 +16,11 @@ public class FindMemberView extends GuiView {
 
 	private FindMemberController myController;
 	
-	
-
 	private JButton goBtn;
-
 	private JTextField findId;
 	private JTextField resultField;
+	private boolean buttonFlag = true;
+	private String user = "Searching Member...";
 	
 	public FindMemberView(String name, int width, int height, boolean Resizable, MainView mainView) {
 		super(name, width, height, Resizable);
@@ -31,16 +30,44 @@ public class FindMemberView extends GuiView {
 	
 	
 	//SETTER AND GETTERS
-	
-	
+		
 	public JTextField getResultField() {
 		return resultField;
 	}
 
+	public String getUser() {
+		return user;
+	}
+
+
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+
+	public boolean isButtonFlag() {
+		return buttonFlag;
+	}
+
+
+	public void setButtonFlag(boolean buttonFlag) {
+		this.buttonFlag = buttonFlag;
+	}
+
+
+	public JButton getGoBtn() {
+		return goBtn;
+	}
+
+
+	public void setGoBtn(JButton goBtn) {
+		this.goBtn = goBtn;
+	}
+
+
 	public JTextField getFindId() {
 		return findId;
 	}
-
 
 	public void setFindId(JTextField findId) {
 		this.findId = findId;
@@ -69,11 +96,11 @@ public class FindMemberView extends GuiView {
 		this.addButtonAll("Search", "Search", search, this.myController);
 		this.panel.add(search);
 		this.resultField = this.addTextField(20, result);
-		this.resultField.setText("Searching Member...");
+		this.resultField.setText(this.user);
 		this.resultField.setEditable(false);
 		this.addLabel("", this.panel);
 		this.goBtn = this.addButtonAll("Go", "Go", result, this.myController);
-		this.goBtn.setEnabled(false);
+		if (this.buttonFlag) {this.goBtn.setEnabled(false);};
 		this.panel.add(result);
 		this.addLabel("", this.panel);
 		this.addButtonAll("Go back", "Go back", this.panel, this.myController);

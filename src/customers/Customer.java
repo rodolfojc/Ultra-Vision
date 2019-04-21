@@ -28,7 +28,7 @@ public abstract class Customer {
 		this.myMemberCard = myMemberCard;
 		this.myCard = myCard;
 		this.numbRented = 0;
-		this.titleRented = new int[3];
+		this.titleRented = new int[4];
 	}
 
 	//GETTERS AND SETTERS

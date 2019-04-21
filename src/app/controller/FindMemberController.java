@@ -31,7 +31,11 @@ public class FindMemberController implements ActionListener {
 			
 			this.myDB = new Database();
 			this.findMemberModel = new FindMemberModel(this.myDB);
-			this.customer = this.findMemberModel.findId(this.findMemberView.getFindId().getText());
+			this.customer = this.findMemberModel.findId(Integer.parseInt(this.findMemberView.getFindId().getText()));
+			this.findMemberView.setUser(this.customer.getCustName()+" "+this.customer.getCustSurname());
+			//this.findMemberView.getGoBtn().setEnabled(true);
+			this.findMemberView.setButtonFlag(false);
+			this.findMemberView.UpdateFrame();
 			
 		}
 

@@ -23,16 +23,20 @@ public class FindMemberModel {
 		
 	}
 	
-	public Customer findId(String id) {
+	public Customer findId(int id) {
 		
 				// LOCAL DATA STORAGE
-				
 				String[] dataStr = new String[10];
 				int[] dataInt = new int[5];
+				
+				String query = "SELECT * FROM customers WHERE mem_numb = "+id+";";
+				
 				try {
 					
-						this.myBD.setRs(this.myBD.getStmt().executeQuery(id));
-
+						this.myBD.setRs(this.myBD.getStmt().executeQuery(query));
+						
+						while (this.myBD.getRs().next()) {
+						
 						dataStr[0] = this.myBD.getRs().getString("mem_type");
 						dataStr[1] = this.myBD.getRs().getString("cust_name");
 						dataStr[2] = this.myBD.getRs().getString("cust_surname");
@@ -48,6 +52,8 @@ public class FindMemberModel {
 						dataInt[2] = this.myBD.getRs().getInt("title_two");
 						dataInt[3] = this.myBD.getRs().getInt("title_three");
 						dataInt[4] = this.myBD.getRs().getInt("title_four");
+						
+						}
 					
 					DebitCreditCard tempCard = new DebitCreditCard(dataStr[5],
 																   dataStr[6],
@@ -95,10 +101,10 @@ public class FindMemberModel {
 						
 					}
 					
-					this.tempMember.setTitleRented(1, dataInt[1]);
-					this.tempMember.setTitleRented(2, dataInt[2]);
-					this.tempMember.setTitleRented(3, dataInt[3]);
-					this.tempMember.setTitleRented(4, dataInt[4]);
+					this.tempMember.setTitleRented(0, dataInt[1]);
+					this.tempMember.setTitleRented(1, dataInt[2]);
+					this.tempMember.setTitleRented(2, dataInt[3]);
+					this.tempMember.setTitleRented(3, dataInt[4]);
 					
 					this.myBD.getRs().close();
 					this.myBD.getStmt().close();
