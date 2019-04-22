@@ -7,12 +7,14 @@ import app.database.Database;
 import app.model.FindMemberModel;
 import app.view.FindMemberView;
 import app.view.MainView;
+import app.view.MemberMenuView;
 import customers.Customer;
 
 public class FindMemberController implements ActionListener {
 
 	private FindMemberView findMemberView;
 	private FindMemberModel findMemberModel;
+	private MemberMenuView memberMenuView;
 	private Customer customer;
 	private MainView mainView;
 	private Database myDB;
@@ -52,6 +54,7 @@ public class FindMemberController implements ActionListener {
 		if (e.getActionCommand().equals("Go")) {
 			
 			
+			this.memberMenuView = new MemberMenuView("Member Manager", 900, 900, true, this.mainView, this.customer);
 			
 			
 		}
