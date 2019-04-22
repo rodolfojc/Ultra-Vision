@@ -15,6 +15,7 @@ public class MemberMenuView extends GuiView {
 	private JTextField custBirth;
 	private JTextField custEmail;
 	private JTextField custMembType;
+	private JTextField custPoints;
 	
 	
 	public MemberMenuView(String name, int width, int height, boolean Resizable, MainView mainView, Customer customer) {
@@ -28,10 +29,10 @@ public class MemberMenuView extends GuiView {
 
 	public void setFrame() {
 		
-		this.setGrid(1, 0, this.panel);
+		this.setGrid(3, 0, this.panel);
 		
 		JPanel myCustDetails = new JPanel();
-		this.setGrid(5, 2, myCustDetails);
+		this.setGrid(6, 2, myCustDetails);
 		
 		JPanel title = new JPanel();
 		this.addLabel("Personal details", title);
@@ -53,12 +54,33 @@ public class MemberMenuView extends GuiView {
 		this.custEmail.setText(this.myCustomer.getEmail());
 		this.custEmail.setEditable(false);
 		
-		this.addLabel("Membership Type: ", myCustDetails);
+		this.addLabel("Membership type: ", myCustDetails);
 		this.custMembType = this.addTextField(20, myCustDetails);
 		this.custMembType.setText(this.myCustomer.getType());
 		this.custMembType.setEditable(false);
-				
+		
+		this.addLabel("Member points", myCustDetails);
+		this.custPoints = this.addTextField(20, myCustDetails);
+		this.custPoints.setText(String.valueOf(this.myCustomer.getMyMemberCard().getPoints()));
+		this.custPoints.setEditable(false);
+		
+		JPanel titlesRented = new JPanel();
+		String[][] titlesRentedData = new String[4][4];
+		String[] columnsNameRented = {"1", "2", "3", "4"};
+		this.addTableS(0, titlesRentedData, columnsNameRented, titlesRented, "Titles Rented");
+		
+		JPanel searchTitles = new JPanel();
+		String[][] titlesData = new String[4][4];
+		String[] columnsName = {"1", "2", "3", "4"};
+		this.addTableS(0, titlesData, columnsName, searchTitles, "Titles for "+this.myCustomer.getType());
+		
+		
+		
+		
+		
 		this.panel.add(myCustDetails);
+		this.panel.add(titlesRented);
+		this.panel.add(searchTitles);
 		
 		this.repaint();
 		this.validate();
