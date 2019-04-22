@@ -40,10 +40,24 @@ public class FindMemberController implements ActionListener {
 				this.findMemberView.setButtonFlag(false);
 				this.findMemberView.UpdateFrame();
 				
+			}else {
+				this.findMemberView.setUser("Member " + id + " is not valid, try again!");
+				this.findMemberView.setButtonFlag(true);
+				this.findMemberView.UpdateFrame();
 			}
 			
 			
 		}
+		
+		if (e.getActionCommand().equals("Go")) {
+			
+			
+			
+			
+		}
+		
+		
+		
 
 	}
 
