@@ -102,6 +102,10 @@ public abstract class Customer {
 	public int[] getTitleRented() {
 		return titleRented;
 	}
+	
+	public int getTitleRentedInt(int a) {
+		return titleRented[a];
+	}
 
 	public void setTitleRented(int a, int titleRented) {
 		this.titleRented[a] = titleRented;

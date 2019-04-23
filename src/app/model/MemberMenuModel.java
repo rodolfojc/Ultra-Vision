@@ -20,7 +20,10 @@ public class MemberMenuModel {
 	public void getData(String type) {
 		
 		if (type.equals("MusicLovers")) {
-			this.getDataMusicLovers();
+			this.getDataMusicLovers(this.memberMenuView.getMyCustomer().getTitleRentedInt(0),
+									this.memberMenuView.getMyCustomer().getTitleRentedInt(1), 
+									this.memberMenuView.getMyCustomer().getTitleRentedInt(2),
+									this.memberMenuView.getMyCustomer().getTitleRentedInt(3)	);
 			
 		}else if (type.equals("VideoLovers") || type.equals("TvLovers") ) {
 			this.getDataVideoOrTVLovers(type);
@@ -32,10 +35,11 @@ public class MemberMenuModel {
 		
 	}
 	
-	public void getDataMusicLovers() {
+	public void getDataMusicLovers(int idOne, int idTwo, int idThree, int idFour ) {
 		
 		// LOCAL DATA STORAGE
 		String[][] tempData = new String[1000][8];
+		String[][] tempDataRented = new String[4][8];
 		
 		//QUERY
 		String query = "SELECT title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
@@ -60,20 +64,50 @@ public class MemberMenuModel {
 				tempData[i][7] = this.myDB.getRs().getString("blue_ray");
 				i++;
 			}
-
-			this.myDB.getRs().close();
-			this.myDB.getStmt().close();
-			this.myDB.getConn().close();
-
-			// THIS CREATE A COPY OF THE LOCAL DATA TO THE ARRAY[][] SETTER IN MEMBER MENU
 			
-			this.memberMenuView.setTitles(tempData);
-
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+			
+		String queryTwo = "SELECT title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
+					+ "FROM titles "
+					+ "WHERE id = "+idOne+" "
+					+ "OR id = "+idTwo+" "
+					+ "OR id = "+idThree+" "
+					+ "OR id = "+idFour+";";
 		
+		try {
+			
+			this.myDB.setRs(this.myDB.getStmt().executeQuery(queryTwo));
+
+			int j = 0;
+
+			while (this.myDB.getRs().next()) {
+
+				tempDataRented[j][0] = this.myDB.getRs().getString("title_name");
+				tempDataRented[j][1] = this.myDB.getRs().getString("year_rel");
+				tempDataRented[j][2] = this.myDB.getRs().getString("album");
+				tempDataRented[j][3] = this.myDB.getRs().getString("band");
+				tempDataRented[j][4] = this.myDB.getRs().getString("genre");
+				tempDataRented[j][5] = this.myDB.getRs().getString("cd");
+				tempDataRented[j][6] = this.myDB.getRs().getString("dvd");
+				tempDataRented[j][7] = this.myDB.getRs().getString("blue_ray");
+				j++;
+			}
+			
+			this.myDB.getRs().close();
+			this.myDB.getStmt().close();
+			this.myDB.getConn().close();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+			// THIS CREATE A COPY OF THE LOCAL DATA TO THE ARRAY[][] SETTER IN MEMBER MENU
+			this.memberMenuView.setTitles(tempData);
+			this.memberMenuView.setTitlesRentedData(tempDataRented);	
 	}
 	
 	public void getDataVideoOrTVLovers(String type) {

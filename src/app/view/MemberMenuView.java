@@ -27,6 +27,7 @@ public class MemberMenuView extends GuiView {
 	//DATA
 	private Database myDB;
 	private String[][] titles;
+	private String[][] titlesRentedData;
 	
 		
 	public MemberMenuView(String name, int width, int height, boolean Resizable, MainView mainView, Customer customer) {
@@ -40,6 +41,22 @@ public class MemberMenuView extends GuiView {
 	}
 	
 	//GETTER AND SETTERS
+	public String getTitlesRentedDataStr(int a, int b) {
+		return this.titlesRentedData[a][b];
+	}
+
+	public Customer getMyCustomer() {
+		return myCustomer;
+	}
+
+	public void setMyCustomer(Customer myCustomer) {
+		this.myCustomer = myCustomer;
+	}
+
+	public void setTitlesRentedData(String[][] data) {
+		this.titlesRentedData = Arrays.copyOf(data, data.length);;
+	}
+	
 	public String getTitlesStr(int a, int b) {
 		return this.titles[a][b];
 	}
@@ -47,6 +64,7 @@ public class MemberMenuView extends GuiView {
 	public void setTitles(String[][] data) {
 		this.titles = Arrays.copyOf(data, data.length);;
 	}
+	
 	
 	//METHODS
 	private void getStartingData() {
@@ -94,36 +112,38 @@ public class MemberMenuView extends GuiView {
 		this.custPoints.setText(String.valueOf(this.myCustomer.getMyMemberCard().getPoints()));
 		this.custPoints.setEditable(false);
 		
-		JPanel titlesRented = new JPanel();
-		String[][] titlesRentedData = new String[4][4];
-		String[] columnsNameRented = {"1", "2", "3", "4"};
-		this.addTableS(0, titlesRentedData, columnsNameRented, titlesRented, "Titles Rented");
-		
-		JPanel searchTitles = new JPanel();
-		
+		//JPanel titlesRented = new JPanel();
+		//String[][] titlesRentedData = new String[4][4];
+		//String[] columnsNameRented = {"1", "2", "3", "4"};
+		//this.addTableS(0, this.titlesRentedData, columnsNameRented, titlesRented, "Titles Rented");
+		//JPanel searchTitles = new JPanel();
+		this.panel.add(myCustDetails);
+		//this.panel.add(titlesRented);
+				
 		if (this.myCustomer.getType().equals("MusicLovers")) {
 			
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
-			this.addTableS(1, this.titles, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
+			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
+			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
 		
 		}else if (this.myCustomer.getType().equals("VideoLovers") || (this.myCustomer.getType().equals("TvLovers"))) {
 			
 			String[] columnsNameTitles = {"Title", "Year", "Genre", "Director", "Running Time", "Languages", "Country", "DVD", "BlueRay"};
-			this.addTableS(1, this.titles, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
+			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
+			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
 			
 		} else {
 			
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "Director", "Running Time", "Languages", "Country", "CD", "DVD", "BlueRay"};
-			this.addTableS(1, this.titles, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
+			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
+			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
 			
 		}
 				
 		//this.addTableS(1, titlesData, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
-		
-				
-		this.panel.add(myCustDetails);
-		this.panel.add(titlesRented);
-		this.panel.add(searchTitles);
+		//this.panel.add(myCustDetails);
+		//this.panel.add(titlesRented);
+		//this.panel.add(searchTitles);
 		
 		this.repaint();
 		this.validate();
