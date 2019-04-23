@@ -34,6 +34,7 @@ public class MemberMenuView extends GuiView {
 		
 		this.myController = new MemberMenuController(this, mainView);
 		this.myCustomer = customer;
+		this.getStartingData();
 		setFrame();
 		
 	}
@@ -50,10 +51,9 @@ public class MemberMenuView extends GuiView {
 	//METHODS
 	private void getStartingData() {
 		
-		String query = "SELECT mem_numb, mem_type, cust_name, cust_surname FROM customers";
 		this.myDB = new Database();
 		this.myModel = new MemberMenuModel(this.myDB, this);
-		this.myModel.getData(query);
+		this.myModel.getData(this.myCustomer.getType());
 	}
 	
 
@@ -103,27 +103,18 @@ public class MemberMenuView extends GuiView {
 		
 		if (this.myCustomer.getType().equals("MusicLovers")) {
 			
-			String[][] titlesData = new String[6][1000];
-			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD"};
-			this.addTableS(1, titlesData, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
+			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
+			this.addTableS(1, this.titles, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
 		
-		}else if (this.myCustomer.getType().equals("VideoLovers")) {
+		}else if (this.myCustomer.getType().equals("VideoLovers") || (this.myCustomer.getType().equals("TvLovers"))) {
 			
-			String[][] titlesData = new String[7][1000];
-			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "DVD", "BlueRay"};
-			this.addTableS(1, titlesData, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
-			
-		}else if (this.myCustomer.getType().equals("TvLovers")) {
-		
-			String[][] titlesData = new String[10][1000];
 			String[] columnsNameTitles = {"Title", "Year", "Genre", "Director", "Running Time", "Languages", "Country", "DVD", "BlueRay"};
-			this.addTableS(1, titlesData, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
-		
+			this.addTableS(1, this.titles, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
+			
 		} else {
 			
-			String[][] titlesData = new String[12][1000];
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "Director", "Running Time", "Languages", "Country", "CD", "DVD", "BlueRay"};
-			this.addTableS(1, titlesData, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
+			this.addTableS(1, this.titles, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
 			
 		}
 				
