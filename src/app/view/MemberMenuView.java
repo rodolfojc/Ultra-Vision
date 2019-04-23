@@ -1,23 +1,34 @@
 package app.view;
 
+import java.util.Arrays;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import app.controller.MemberMenuController;
+import app.database.Database;
+import app.model.MemberMenuModel;
+import app.model.SearchMemberModel;
 import customers.Customer;
 
 public class MemberMenuView extends GuiView {
 
 	private MemberMenuController myController;
+	private MemberMenuModel myModel;
 	private Customer myCustomer;
+	
 	private JTextField fullName;
 	private JTextField custBirth;
 	private JTextField custEmail;
 	private JTextField custMembType;
 	private JTextField custPoints;
 	
+	//DATA
+	private Database myDB;
+	private String[][] titles;
 	
+		
 	public MemberMenuView(String name, int width, int height, boolean Resizable, MainView mainView, Customer customer) {
 		super(name, width, height, Resizable);
 		
@@ -26,6 +37,25 @@ public class MemberMenuView extends GuiView {
 		setFrame();
 		
 	}
+	
+	//GETTER AND SETTERS
+	public String getTitlesStr(int a, int b) {
+		return this.titles[a][b];
+	}
+
+	public void setTitles(String[][] data) {
+		this.titles = Arrays.copyOf(data, data.length);;
+	}
+	
+	//METHODS
+	private void getStartingData() {
+		
+		String query = "SELECT mem_numb, mem_type, cust_name, cust_surname FROM customers";
+		this.myDB = new Database();
+		this.myModel = new MemberMenuModel(this.myDB, this);
+		this.myModel.getData(query);
+	}
+	
 
 	public void setFrame() {
 		
@@ -70,14 +100,26 @@ public class MemberMenuView extends GuiView {
 		this.addTableS(0, titlesRentedData, columnsNameRented, titlesRented, "Titles Rented");
 		
 		JPanel searchTitles = new JPanel();
-		String[][] titlesData = new String[4][4];
-		String[] columnsName = {"1", "2", "3", "4"};
-		this.addTableS(0, titlesData, columnsName, searchTitles, "Titles for "+this.myCustomer.getType());
+		
+		if (this.myCustomer.getType().equals("MusicLovers")) {
+			
+			String[][] titlesData = new String[6][1000];
+			String[] columnsNameTitles = {"Title", "Year", "Album", "Genre", "Band", "CD"};
+			this.addTableS(1, titlesData, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
+		
+		}else if (this.myCustomer.getType().equals("MusicLovers")) {
+			
+			
+			
+			
+		}
 		
 		
 		
 		
+		//this.addTableS(1, titlesData, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
 		
+				
 		this.panel.add(myCustDetails);
 		this.panel.add(titlesRented);
 		this.panel.add(searchTitles);
