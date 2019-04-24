@@ -30,8 +30,8 @@ public class AddMemberModel {
 				try {
 
 					String query = "INSERT INTO customers (mem_type, cust_name, cust_surname, birthday, email, card_type, "
-							+ "card_num, card_holder, exp_day, card_cvv)"
-								+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+								 + "card_num, card_holder, exp_day, card_cvv)"
+							 	 + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 						
 						// PREPARATION

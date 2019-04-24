@@ -23,13 +23,20 @@ public class MemberMenuModel {
 			this.getDataMusicLovers(this.memberMenuView.getMyCustomer().getTitleRentedInt(0),
 									this.memberMenuView.getMyCustomer().getTitleRentedInt(1), 
 									this.memberMenuView.getMyCustomer().getTitleRentedInt(2),
-									this.memberMenuView.getMyCustomer().getTitleRentedInt(3)	);
+									this.memberMenuView.getMyCustomer().getTitleRentedInt(3));
 			
 		}else if (type.equals("VideoLovers") || type.equals("TvLovers") ) {
-			this.getDataVideoOrTVLovers(type);
+			this.getDataVideoOrTVLovers(type, 
+										this.memberMenuView.getMyCustomer().getTitleRentedInt(0),
+										this.memberMenuView.getMyCustomer().getTitleRentedInt(1), 
+										this.memberMenuView.getMyCustomer().getTitleRentedInt(2),
+										this.memberMenuView.getMyCustomer().getTitleRentedInt(3));
 		
 		}else {
-			this.getDataPremiunLovers();
+			this.getDataPremiunLovers(this.memberMenuView.getMyCustomer().getTitleRentedInt(0),
+									  this.memberMenuView.getMyCustomer().getTitleRentedInt(1), 
+									  this.memberMenuView.getMyCustomer().getTitleRentedInt(2),
+									  this.memberMenuView.getMyCustomer().getTitleRentedInt(3));
 		}
 		
 		
@@ -43,8 +50,8 @@ public class MemberMenuModel {
 		
 		//QUERY
 		String query = "SELECT title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
-				+ "FROM titles "
-				+ "WHERE type = 'AudioMusic' OR type = 'ConcertVideo';";
+					 + "FROM titles "
+					 + "WHERE type = 'AudioMusic' OR type = 'ConcertVideo';";
 		
 		try {
 			
@@ -71,11 +78,11 @@ public class MemberMenuModel {
 		}
 			
 		String queryTwo = "SELECT title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
-					+ "FROM titles "
-					+ "WHERE id = "+idOne+" "
-					+ "OR id = "+idTwo+" "
-					+ "OR id = "+idThree+" "
-					+ "OR id = "+idFour+";";
+						+ "FROM titles "
+						+ "WHERE id = "+idOne+" "
+						+ "OR id = "+idTwo+" "
+						+ "OR id = "+idThree+" "
+						+ "OR id = "+idFour+";";
 		
 		try {
 			
@@ -110,7 +117,7 @@ public class MemberMenuModel {
 			this.memberMenuView.setTitlesRentedData(tempDataRented);	
 	}
 	
-	public void getDataVideoOrTVLovers(String type) {
+	public void getDataVideoOrTVLovers(String type, int idOne, int idTwo, int idThree, int idFour) {
 		
 		String typeQuery;
 		
@@ -122,60 +129,90 @@ public class MemberMenuModel {
 		
 		// LOCAL DATA STORAGE
 		String[][] tempData = new String[1000][9];
+		String[][] tempDataRented = new String[4][9];
 		
-		//{"Title", "Year", "Genre", "Director", "Running Time", "Languages", "Country", "DVD", "BlueRay"}
 		//QUERY
 		String query = "SELECT title_name, year_rel, genre, director, runn_time, lang, country, dvd, blue_ray "
-				+ "FROM titles "
-				+ "WHERE type = '"+typeQuery+"';";
+					 + "FROM titles "
+					 + "WHERE type = '"+typeQuery+"';";
 		
 		try {
 			
 			this.myDB.setRs(this.myDB.getStmt().executeQuery(query));
 
-			int i = 0;
+			int j = 0;
 
 			while (this.myDB.getRs().next()) {
 
-				tempData[i][0] = this.myDB.getRs().getString("title_name");
-				tempData[i][1] = this.myDB.getRs().getString("year_rel");
-				tempData[i][2] = this.myDB.getRs().getString("genre");
-				tempData[i][3] = this.myDB.getRs().getString("director");
-				tempData[i][4] = this.myDB.getRs().getString("runn_time");
-				tempData[i][5] = this.myDB.getRs().getString("lang");
-				tempData[i][6] = this.myDB.getRs().getString("country");
-				tempData[i][7] = this.myDB.getRs().getString("dvd");
-				tempData[i][8] = this.myDB.getRs().getString("blue_ray");
-				i++;
+				tempData[j][0] = this.myDB.getRs().getString("title_name");
+				tempData[j][1] = this.myDB.getRs().getString("year_rel");
+				tempData[j][2] = this.myDB.getRs().getString("genre");
+				tempData[j][3] = this.myDB.getRs().getString("director");
+				tempData[j][4] = this.myDB.getRs().getString("runn_time");
+				tempData[j][5] = this.myDB.getRs().getString("lang");
+				tempData[j][6] = this.myDB.getRs().getString("country");
+				tempData[j][7] = this.myDB.getRs().getString("dvd");
+				tempData[j][8] = this.myDB.getRs().getString("blue_ray");
+				j++;
 			}
 
-			this.myDB.getRs().close();
-			this.myDB.getStmt().close();
-			this.myDB.getConn().close();
-
-			// THIS CREATE A COPY OF THE LOCAL DATA TO THE ARRAY[][] SETTER IN MEMBER MENU
-			this.memberMenuView.setTitles(tempData);
-
-		} catch (SQLException e) {
+			} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-	}
-	
-	public void getDataTvLovers() {
+		String queryTwo = "SELECT title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
+						+ "FROM titles "
+						+ "WHERE id = "+idOne+" "
+						+ "OR id = "+idTwo+" "
+						+ "OR id = "+idThree+" "
+						+ "OR id = "+idFour+";";
+				
+				try {
+					
+					this.myDB.setRs(this.myDB.getStmt().executeQuery(queryTwo));
+
+					int i = 0;
+
+					while (this.myDB.getRs().next()) {
+
+						tempDataRented[i][0] = this.myDB.getRs().getString("title_name");
+						tempDataRented[i][1] = this.myDB.getRs().getString("year_rel");
+						tempDataRented[i][2] = this.myDB.getRs().getString("genre");
+						tempDataRented[i][3] = this.myDB.getRs().getString("director");
+						tempDataRented[i][4] = this.myDB.getRs().getString("runn_time");
+						tempDataRented[i][5] = this.myDB.getRs().getString("lang");
+						tempDataRented[i][6] = this.myDB.getRs().getString("country");
+						tempDataRented[i][7] = this.myDB.getRs().getString("dvd");
+						tempDataRented[i][8] = this.myDB.getRs().getString("blue_ray");
+						i++;
+					}
+
+					this.myDB.getRs().close();
+					this.myDB.getStmt().close();
+					this.myDB.getConn().close();
+
+					// THIS CREATE A COPY OF THE LOCAL DATA TO THE ARRAY[][] SETTER IN MEMBER MENU
+					this.memberMenuView.setTitles(tempData);
+					this.memberMenuView.setTitlesRentedData(tempDataRented);
+
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 		
-	
 	}
 	
-	public void getDataPremiunLovers() {
+		
+	public void getDataPremiunLovers(int idOne, int idTwo, int idThree, int idFour) {
 		
 		// LOCAL DATA STORAGE
 		String[][] tempData = new String[1000][12];
+		String[][] tempDataRented = new String[4][12];
 		
 		//QUERY
 		String query = "SELECT title_name, year_rel, album, band, genre, director, runn_time, lang, country, cd, dvd, blue_ray "
-				+ "FROM titles;";
+					 + "FROM titles;";
 		
 		try {
 			
@@ -200,19 +237,56 @@ public class MemberMenuModel {
 				i++;
 			}
 
-			this.myDB.getRs().close();
-			this.myDB.getStmt().close();
-			this.myDB.getConn().close();
-
-			// THIS CREATE A COPY OF THE LOCAL DATA TO THE ARRAY[][] SETTER IN MEMBER MENU
-			this.memberMenuView.setTitles(tempData);
-
-		} catch (SQLException e) {
+			} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-	}
+				//QUERY TWO
+				String queryTwo = "SELECT title_name, year_rel, album, band, genre, director, runn_time, lang, country, cd, dvd, blue_ray "
+								+ "FROM titles "
+								+ "WHERE id = "+idOne+" "
+								+ "OR id = "+idTwo+" " 
+								+ "OR id = "+idThree+" "
+								+ "OR id = "+idFour+";";
+				
+				try {
+					
+					this.myDB.setRs(this.myDB.getStmt().executeQuery(queryTwo));
+
+					int j = 0;
+
+					while (this.myDB.getRs().next()) {
+
+						tempDataRented[j][0] = this.myDB.getRs().getString("title_name");
+						tempDataRented[j][1] = this.myDB.getRs().getString("year_rel");
+						tempDataRented[j][2] = this.myDB.getRs().getString("album");
+						tempDataRented[j][3] = this.myDB.getRs().getString("band");
+						tempDataRented[j][4] = this.myDB.getRs().getString("genre");
+						tempDataRented[j][5] = this.myDB.getRs().getString("director");
+						tempDataRented[j][6] = this.myDB.getRs().getString("runn_time");
+						tempDataRented[j][7] = this.myDB.getRs().getString("lang");
+						tempDataRented[j][8] = this.myDB.getRs().getString("country");
+						tempDataRented[j][9] = this.myDB.getRs().getString("cd");
+						tempDataRented[j][10] = this.myDB.getRs().getString("dvd");
+						tempDataRented[j][11] = this.myDB.getRs().getString("blue_ray");
+						j++;
+					}
+
+					this.myDB.getRs().close();
+					this.myDB.getStmt().close();
+					this.myDB.getConn().close();
+
+					// THIS CREATE A COPY OF THE LOCAL DATA TO THE ARRAY[][] SETTER IN MEMBER MENU
+					this.memberMenuView.setTitles(tempData);
+					this.memberMenuView.setTitlesRentedData(tempDataRented);
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		
+		}
 	
 		
 }
