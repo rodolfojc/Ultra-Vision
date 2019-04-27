@@ -17,7 +17,6 @@ public class MainViewController implements ActionListener {
 	private AddMemberView addMemberView;
 	private SearchTitleView searchTitleView;
 	private SearchMemberView searchMemberView;
-	//private MemberMenuView memberMenuView;
 	private FindMemberView findMemberView;
 	private MainView mainView;
 	

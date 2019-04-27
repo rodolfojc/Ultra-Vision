@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.3" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="app.controller.FindMemberController" project="UltraVision" 
+    file="/UltraVision/src/app/controller/FindMemberController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="306" x="2805" y="167"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="app.model.AddMemberModel" project="UltraVision" 
+    file="/UltraVision/src/app/model/AddMemberModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="339" x="3723" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="app.view.MainView" project="UltraVision" 
+    file="/UltraVision/src/app/view/MainView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="120" width="207" x="2803" y="2267"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="app.controller.Controller" project="UltraVision" 
+    file="/UltraVision/src/app/controller/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="213" x="3151" y="167"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="customer.interfaces.BoxSets" project="UltraVision" 
+    file="/UltraVision/src/customer/interfaces/BoxSets.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="84" width="122" x="4834" y="2571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" language="java" name="titles.Title" project="UltraVision" file="/UltraVision/src/titles/Title.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="354" width="179" x="261" y="167"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="app.controller.MemberMenuController" project="UltraVision" 
+    file="/UltraVision/src/app/controller/MemberMenuController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="318" x="2927" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="8" language="java" name="customer.interfaces.Movies" project="UltraVision" 
+    file="/UltraVision/src/customer/interfaces/Movies.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="84" width="122" x="4306" y="2571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="9" language="java" name="customer.admin.DebitCreditCard" project="UltraVision" 
+    file="/UltraVision/src/customer/admin/DebitCreditCard.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="372" width="295" x="4794" y="2929"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="titles.AudioMusic" project="UltraVision" 
+    file="/UltraVision/src/titles/AudioMusic.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="269" x="-294" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="titles.ConcertVideos" project="UltraVision" 
+    file="/UltraVision/src/titles/ConcertVideos.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="210" width="357" x="432" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="app.controller.MainViewController" project="UltraVision" 
+    file="/UltraVision/src/app/controller/MainViewController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="213" x="2612" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="app.view.FindMemberView" project="UltraVision" 
+    file="/UltraVision/src/app/view/FindMemberView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="390" width="296" x="2486" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="14" language="java" name="titles.interfaces.BlueRay" project="UltraVision" 
+    file="/UltraVision/src/titles/interfaces/BlueRay.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="84" width="164" x="324" y="2267"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="15" language="java" name="app.view.AddTitleView" project="UltraVision" 
+    file="/UltraVision/src/app/view/AddTitleView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1200" width="282" x="1358" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="16" language="java" name="customer.interfaces.LiveConcert" project="UltraVision" 
+    file="/UltraVision/src/customer/interfaces/LiveConcert.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="84" width="122" x="4651" y="2571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="17" language="java" name="customers.VideoLovers" project="UltraVision" 
+    file="/UltraVision/src/customers/VideoLovers.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="138" width="430" x="3655" y="2267"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="titles.Movie" project="UltraVision" file="/UltraVision/src/titles/Movie.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="174" width="377" x="15" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="app.model.FindMemberModel" project="UltraVision" 
+    file="/UltraVision/src/app/model/FindMemberModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="120" width="190" x="3472" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="app.view.AddMemberView" project="UltraVision" 
+    file="/UltraVision/src/app/view/AddMemberView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="750" width="446" x="3411" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="titles.Tv" project="UltraVision" file="/UltraVision/src/titles/Tv.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="408" width="358" x="410" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="customers.PremiunLovers" project="UltraVision" 
+    file="/UltraVision/src/customers/PremiunLovers.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="138" width="446" x="4167" y="2267"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="customers.Customer" project="UltraVision" 
+    file="/UltraVision/src/customers/Customer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="552" width="417" x="4146" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="24" language="java" name="titles.interfaces.CD" project="UltraVision" 
+    file="/UltraVision/src/titles/interfaces/CD.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="84" width="149" x="-294" y="2267"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="25" language="java" name="customers.MusicLovers" project="UltraVision" 
+    file="/UltraVision/src/customers/MusicLovers.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="431" x="4653" y="2267"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="customers.TvLovers" project="UltraVision" 
+    file="/UltraVision/src/customers/TvLovers.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="138" width="411" x="5124" y="2267"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="app.controller.AddTitleController" project="UltraVision" 
+    file="/UltraVision/src/app/controller/AddTitleController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="256" x="1172" y="167"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="app.view.SearchTitleView" project="UltraVision" 
+    file="/UltraVision/src/app/view/SearchTitleView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="264" width="289" x="2094" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="titles.Music" project="UltraVision" file="/UltraVision/src/titles/Music.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="192" width="238" x="111" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="app.controller.SearchMemberController" project="UltraVision" 
+    file="/UltraVision/src/app/controller/SearchMemberController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="336" x="1718" y="167"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="app.database.Database" project="UltraVision" 
+    file="/UltraVision/src/app/database/Database.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="264" width="169" x="2094" y="2267"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="app.view.SearchMemberView" project="UltraVision" 
+    file="/UltraVision/src/app/view/SearchMemberView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="300" width="311" x="1701" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="33" language="java" name="titles.interfaces.DVD" project="UltraVision" 
+    file="/UltraVision/src/titles/interfaces/DVD.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="84" width="139" x="528" y="2267"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="34" language="java" name="app.controller.Main" project="UltraVision" 
+    file="/UltraVision/src/app/controller/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="125" x="3151" y="25"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="app.view.MemberMenuView" project="UltraVision" 
+    file="/UltraVision/src/app/view/MemberMenuView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="354" width="359" x="2907" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="app.model.AddTitleModel" project="UltraVision" 
+    file="/UltraVision/src/app/model/AddTitleModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="210" width="322" x="829" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="app.controller.SearchTitleController" project="UltraVision" 
+    file="/UltraVision/src/app/controller/SearchTitleController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="292" x="2094" y="167"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="titles.BoxSet" project="UltraVision" file="/UltraVision/src/titles/BoxSet.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="174" width="384" x="829" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="customer.admin.MembershipCard" project="UltraVision" 
+    file="/UltraVision/src/customer/admin/MembershipCard.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="318" width="283" x="3983" y="2571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="app.model.MemberMenuModel" project="UltraVision" 
+    file="/UltraVision/src/app/model/MemberMenuModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="300" x="3404" y="167"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="app.controller.AddMemberController" project="UltraVision" 
+    file="/UltraVision/src/app/controller/AddMemberController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="138" width="328" x="4125" y="167"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="app.model.SearchMemberModel" project="UltraVision" 
+    file="/UltraVision/src/app/model/SearchMemberModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="318" x="1379" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="43" language="java" name="customer.interfaces.MusicCds" project="UltraVision" 
+    file="/UltraVision/src/customer/interfaces/MusicCds.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="84" width="122" x="4489" y="2571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="44" language="java" name="app.model.SearchTitleModel" project="UltraVision" 
+    file="/UltraVision/src/app/model/SearchTitleModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="274" x="2025" y="579"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="45" language="java" name="app.view.GuiView" project="UltraVision" 
+    file="/UltraVision/src/app/view/GuiView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="372" width="339" x="2426" y="167"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="46">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="47" name="mainViewControler"/>      
+      <multiplicity id="48" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="49">    
+    <bendpoint x="3420" y="579"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="50" name="addMemberView"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="52">    
+    <bendpoint x="2455" y="579"/>    
+    <bendpoint x="2455" y="1027"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="53" name="mainView"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="55">    
+    <bendpoint x="1243" y="1027"/>    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="56" name="myDB"/>      
+      <multiplicity id="57" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="58">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="59" name="searchMemberModel"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="61">    
+    <bendpoint x="3952" y="2571"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <association id="62">    
+    <bendpoint x="2876" y="579"/>    
+    <bendpoint x="2854" y="1027"/>    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="63" name="myDB"/>      
+      <multiplicity id="64" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="65">    
+    <bendpoint x="3317" y="1027"/>    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="66" name="myBD"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="68">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="69">    
+    <bendpoint x="2581" y="579"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="70" name="myController"/>      
+      <multiplicity id="71" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="72">    
+    <bendpoint x="3950" y="1027"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <realization id="73">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <realization id="74">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <dependency id="75">    
+    <bendpoint x="3908" y="1027"/>    
+    <bendpoint x="3624" y="2267"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <dependency id="76">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="77">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="78" name="searchTitleModel"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="44" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="80">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="81" name="audioMusic"/>      
+      <multiplicity id="82" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="83">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="84" name="boxSet"/>      
+      <multiplicity id="85" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="86">    
+    <bendpoint x="1670" y="1027"/>    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="87" name="myBD"/>      
+      <multiplicity id="88" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="89">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
+  <association id="90">    
+    <bendpoint x="3692" y="579"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="91" name="customer"/>      
+      <multiplicity id="92" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="93">    
+    <bendpoint x="1994" y="579"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <generalization id="94">    
+    <bendpoint x="2476" y="579"/>    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <association id="95">    
+    <bendpoint x="1348" y="579"/>    
+    <bendpoint x="1327" y="1027"/>    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="96" name="database"/>      
+      <multiplicity id="97" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="98">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <association id="99">    
+    <bendpoint x="2812" y="1027"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="100" name="mainView"/>      
+      <multiplicity id="101" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="102">    
+    <bendpoint x="4986" y="2571"/>    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <generalization id="103">    
+    <bendpoint x="3317" y="579"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <association id="104">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="105" name="addMemberView"/>      
+      <multiplicity id="106" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="107">    
+    <bendpoint x="4155" y="579"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="108" name="customer"/>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="110">    
+    <bendpoint x="5112" y="579"/>    
+    <bendpoint x="5112" y="1027"/>    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <association id="111">    
+    <bendpoint x="1243" y="579"/>    
+    <bendpoint x="1264" y="1027"/>    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="112" name="database"/>      
+      <multiplicity id="113" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="114">    
+    <bendpoint x="1748" y="579"/>    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="115" name="myController"/>      
+      <multiplicity id="116" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="117">    
+    <bendpoint x="4136" y="2267"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="118" name="myMemberCard"/>      
+      <multiplicity id="119" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="39" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="120">    
+    <bendpoint x="2350" y="579"/>    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="121" name="myController"/>      
+      <multiplicity id="122" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="123">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="124" name="searchTitleView"/>      
+      <multiplicity id="125" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="126">    
+    <bendpoint x="4092" y="579"/>    
+    <bendpoint x="4073" y="1027"/>    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <generalization id="127">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <realization id="128">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <dependency id="129">    
+    <bendpoint x="798" y="579"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <association id="130">    
+    <bendpoint x="1327" y="579"/>    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="131" name="myController"/>      
+      <multiplicity id="132" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="133">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <dependency id="134">    
+    <bendpoint x="3275" y="1027"/>    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="135">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="136" name="myController"/>      
+      <multiplicity id="137" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="138">    
+    <bendpoint x="3971" y="1027"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="22"/>  
+  </dependency>  
+  <realization id="139">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="140">    
+    <bendpoint x="3441" y="579"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="141" name="myController"/>      
+      <multiplicity id="142" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="143">    
+    <bendpoint x="4094" y="1027"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <generalization id="144">    
+    <bendpoint x="2371" y="579"/>    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <generalization id="145">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="146">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="147" name="myModel"/>      
+      <multiplicity id="148" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="44" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="149">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="43"/>  
+  </realization>  
+  <association id="150">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="151" name="myModel"/>      
+      <multiplicity id="152" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="153">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <dependency id="154">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="155">    
+    <bendpoint x="2560" y="579"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="156" name="findMemberView"/>      
+      <multiplicity id="157" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="158">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="159" name="searchMemberView"/>      
+      <multiplicity id="160" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="161">    
+    <bendpoint x="2434" y="579"/>    
+    <bendpoint x="2413" y="1027"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="162" name="myDB"/>      
+      <multiplicity id="163" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="164">    
+    <bendpoint x="5607" y="579"/>    
+    <bendpoint x="5607" y="1027"/>    
+    <bendpoint x="5607" y="2267"/>    
+    <bendpoint x="5607" y="2571"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="165" name="debitCreditCard"/>      
+      <multiplicity id="166" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="167">    
+    <bendpoint x="5133" y="579"/>    
+    <bendpoint x="5133" y="1027"/>    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <association id="168">    
+    <bendpoint x="3929" y="1027"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="169" name="myDB"/>      
+      <multiplicity id="170" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="171">    
+    <bendpoint x="4458" y="2571"/>    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <association id="172">    
+    <bendpoint x="3296" y="579"/>    
+    <bendpoint x="3296" y="1027"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="173" name="mainView"/>      
+      <multiplicity id="174" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="175">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="176">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="177" name="myCard"/>      
+      <multiplicity id="178" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="179">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <association id="180">    
+    <bendpoint x="2063" y="1027"/>    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="181" name="myBD"/>      
+      <multiplicity id="182" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="183">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
+  <dependency id="184">    
+    <bendpoint x="4113" y="579"/>    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <association id="185">    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="186" name="searchMemberView"/>      
+      <multiplicity id="187" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="188">    
+    <bendpoint x="379" y="579"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="189">    
+    <bendpoint x="4052" y="1027"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <association id="190">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="191" name="tempMember"/>      
+      <multiplicity id="192" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="193">    
+    <bendpoint x="2413" y="579"/>    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <association id="194">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="195" name="findMemberModel"/>      
+      <multiplicity id="196" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="197">    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="198" name="searchTitleView"/>      
+      <multiplicity id="199" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="200">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="201" name="myCustomer"/>      
+      <multiplicity id="202" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="203">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="204">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="205" name="customer"/>      
+      <multiplicity id="206" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="207">    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="208" name="addMemberModel"/>      
+      <multiplicity id="209" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="210">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="211" name="movie"/>      
+      <multiplicity id="212" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="213">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="214" name="memberMenuView"/>      
+      <multiplicity id="215" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="216">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="217">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="218" name="addTitleView"/>      
+      <multiplicity id="219" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="220">    
+    <bendpoint x="1306" y="579"/>    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="221" name="addTitleView"/>      
+      <multiplicity id="222" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="223">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="224" name="addMemberView"/>      
+      <multiplicity id="225" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="226">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="24"/>  
+  </realization>  
+  <association id="227">    
+    <bendpoint x="2329" y="579"/>    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="228" name="searchTitleView"/>      
+      <multiplicity id="229" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="230">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="231" name="memberMenuView"/>      
+      <multiplicity id="232" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="233">    
+    <bendpoint x="5565" y="2267"/>    
+    <bendpoint x="5565" y="2571"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="234" name="myCard"/>      
+      <multiplicity id="235" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="236">    
+    <bendpoint x="4593" y="579"/>    
+    <bendpoint x="4593" y="1027"/>    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="22"/>  
+  </dependency>  
+  <association id="237">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="238" name="myBD"/>      
+      <multiplicity id="239" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="240">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="241" name="myBD"/>      
+      <multiplicity id="242" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="243">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="244" name="addTitleModel"/>      
+      <multiplicity id="245" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="246">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <dependency id="247">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <association id="248">    
+    <bendpoint x="1727" y="579"/>    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="249" name="searchMemberView"/>      
+      <multiplicity id="250" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="251">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="252" name="addTitleView"/>      
+      <multiplicity id="253" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="254">    
+    <bendpoint x="4134" y="579"/>    
+    <bendpoint x="4115" y="1027"/>    
+    <bendpoint x="4115" y="2267"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="255" name="membershipCard"/>      
+      <multiplicity id="256" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="39" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="257">    
+    <bendpoint x="2833" y="1027"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="258" name="myController"/>      
+      <multiplicity id="259" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="260">    
+    <bendpoint x="3380" y="579"/>    
+    <bendpoint x="3380" y="1027"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="261" name="mainView"/>      
+      <multiplicity id="262" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="263">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="264" name="findMemberView"/>      
+      <multiplicity id="265" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="266">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <generalization id="267">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <dependency id="268">    
+    <bendpoint x="3887" y="1027"/>    
+    <bendpoint x="3582" y="2267"/>    
+    <bendpoint x="3582" y="2571"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <association id="269">    
+    <bendpoint x="1264" y="579"/>    
+    <bendpoint x="1306" y="1027"/>    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="270" name="mainView"/>      
+      <multiplicity id="271" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="272">    
+    <bendpoint x="80" y="579"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="273">    
+    <bendpoint x="5091" y="1027"/>    
+    <bendpoint x="5586" y="2267"/>    
+    <bendpoint x="5586" y="2571"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <generalization id="274">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="275">    
+    <bendpoint x="1973" y="579"/>    
+    <bendpoint x="2042" y="1027"/>    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="276" name="mainView"/>      
+      <multiplicity id="277" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="278">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="279" name="mainView"/>      
+      <multiplicity id="280" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="281">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="282" name="concertVideos"/>      
+      <multiplicity id="283" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="284">    
+    <bendpoint x="2896" y="1027"/>    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="285" name="myDB"/>      
+      <multiplicity id="286" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="287">    
+    <bendpoint x="3338" y="1027"/>    
+    <bendpoint x="3603" y="2267"/>    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <association id="288">    
+    <bendpoint x="2392" y="579"/>    
+    <bendpoint x="2434" y="1027"/>    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="289" name="mainView"/>      
+      <multiplicity id="290" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="291">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <dependency id="292">    
+    <bendpoint x="1181" y="579"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <association id="293">    
+    <bendpoint x="1285" y="579"/>    
+    <bendpoint x="1285" y="1027"/>    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="294" name="database"/>      
+      <multiplicity id="295" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="296">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <generalization id="297">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="29"/>  
+  </generalization>  
+  <association id="298">    
+    <bendpoint x="3359" y="579"/>    
+    <bendpoint x="3359" y="1027"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="299" name="database"/>      
+      <multiplicity id="300" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="301">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <dependency id="302">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <generalization id="303">    
+    <bendpoint x="2875" y="1027"/>    
+    <bendpoint x="2855" y="579"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <generalization id="304">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <dependency id="305">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <association id="306">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="307" name="memberMenuView"/>      
+      <multiplicity id="308" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="309">    
+    <bendpoint x="4803" y="2571"/>    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="310">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="311">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="312" name="myModel"/>      
+      <multiplicity id="313" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="314">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <realization id="315">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="43"/>  
+  </realization>  
+  <generalization id="316">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="29"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

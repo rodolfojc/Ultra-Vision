@@ -1,10 +1,12 @@
 package app.view;
 
+import java.awt.Insets;
 import java.util.Arrays;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 import app.controller.MemberMenuController;
 import app.database.Database;
@@ -139,7 +141,9 @@ public class MemberMenuView extends GuiView {
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
 			
 		}
-				
+		
+		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 45, 65)));
+		
 		//this.addTableS(1, titlesData, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
 		//this.panel.add(myCustDetails);
 		//this.panel.add(titlesRented);

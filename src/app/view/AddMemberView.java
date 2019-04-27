@@ -34,7 +34,7 @@ public class AddMemberView extends GuiView {
 	private String[] memberType = {"MusicLovers", "VideoLovers", "TvLovers", "Premiun"};
 	
 	//CONTROLLER
-	AddMemberController myController;
+	private AddMemberController myController;
 	
 	
 	//CONSTRUCTOR
