@@ -18,7 +18,8 @@ import customers.Customer;
 public class MemberMenuView extends GuiView {
 
 	//OTHERS
-	private ListSelectionModel myTableModel;
+	private ListSelectionModel myTableModelTitles;
+	private ListSelectionModel myTableModelRented;
 	private MemberMenuController myController;
 	private MemberMenuModel myModel;
 	private Customer myCustomer;
@@ -29,11 +30,13 @@ public class MemberMenuView extends GuiView {
 	private JTextField custEmail;
 	private JTextField custMembType;
 	private JTextField custPoints;
+	private int selectedRowTitles, selectedRowRented;
 	
 	//DATA
 	private Database myDB;
 	private String[][] titles;
 	private String[][] titlesRentedData;
+	
 	
 		
 	
@@ -50,6 +53,38 @@ public class MemberMenuView extends GuiView {
 	//GETTER AND SETTERS
 	public String getTitlesRentedDataStr(int a, int b) {
 		return this.titlesRentedData[a][b];
+	}
+
+	public ListSelectionModel getMyTableModelRented() {
+		return myTableModelRented;
+	}
+
+	public void setMyTableModelRented(ListSelectionModel myTableModelRented) {
+		this.myTableModelRented = myTableModelRented;
+	}
+
+	public int getSelectedRowRented() {
+		return selectedRowRented;
+	}
+
+	public void setSelectedRowRented(int selectedRowRented) {
+		this.selectedRowRented = selectedRowRented;
+	}
+
+	public int getSelectedRowTitles() {
+		return selectedRowTitles;
+	}
+
+	public void setSelectedRowTitles(int selectedRow) {
+		this.selectedRowTitles = selectedRow;
+	}
+
+	public ListSelectionModel getMyTableModelTitles() {
+		return myTableModelTitles;
+	}
+
+	public void setMyTableModelTitles(ListSelectionModel myTableModel) {
+		this.myTableModelTitles = myTableModel;
 	}
 
 	public Customer getMyCustomer() {
@@ -132,8 +167,12 @@ public class MemberMenuView extends GuiView {
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
 			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
-			this.myTableModel = this.myTable[0].getSelectionModel();
-			this.myTableModel.addListSelectionListener(this.myController);
+			
+			this.myTableModelRented = this.myTable[0].getSelectionModel();
+			this.myTableModelRented.addListSelectionListener(this.myController);
+			
+			this.myTableModelTitles = this.myTable[1].getSelectionModel();
+			this.myTableModelTitles.addListSelectionListener(this.myController);
 		
 		}else if (this.myCustomer.getType().equals("VideoLovers") || (this.myCustomer.getType().equals("TvLovers"))) {
 			

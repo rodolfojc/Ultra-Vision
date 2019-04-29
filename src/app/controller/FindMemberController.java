@@ -55,7 +55,7 @@ public class FindMemberController implements ActionListener {
 			
 			
 			this.memberMenuView = new MemberMenuView("Member Manager", 900, 900, true, this.mainView, this.customer);
-			
+			this.findMemberView.dispose();
 			
 		}
 		

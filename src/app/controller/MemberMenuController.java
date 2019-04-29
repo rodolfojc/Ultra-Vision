@@ -3,6 +3,7 @@ package app.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
@@ -29,7 +30,28 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 
 	@Override
 	public void valueChanged(ListSelectionEvent arg0) {
-		// TODO Auto-generated method stub
+		
+		//RENTED TABLE LISTENER
+		if (!this.memberMenuView.getMyTableModelRented().isSelectionEmpty()) {
+			this.memberMenuView.setSelectedRowRented(this.memberMenuView.getMyTableModelRented().getMinSelectionIndex());
+			JOptionPane.showMessageDialog(this.memberMenuView,
+					"Title selected: " + this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0) + ", " + ""
+							+ this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 1) + " " 
+							+"" + this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 2) +" "
+							+". If you want to release it, press return!");
+
+		}
+		
+		//TITLES TABLE LISTENER
+		if (!this.memberMenuView.getMyTableModelTitles().isSelectionEmpty()) {
+			this.memberMenuView.setSelectedRowTitles(this.memberMenuView.getMyTableModelTitles().getMinSelectionIndex());
+			JOptionPane.showMessageDialog(this.memberMenuView,
+					"Title selected: ID " + this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 0) + ", " + ""
+							+ this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 1) + " " 
+							+"" + this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 2) +" "
+							+". If you want rent it, press rent!");
+
+		}
 		
 	}
 

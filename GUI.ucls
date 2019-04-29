@@ -65,26 +65,26 @@
     </display>  
   </class>  
   <generalization id="8">    
-    <bendpoint x="189" y="-308"/>    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <generalization id="9">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
-  <generalization id="10">    
-    <bendpoint x="511" y="-277"/>    
-    <end type="SOURCE" refId="2"/>    
+  <generalization id="9">    
+    <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
-  <generalization id="11">    
+  <generalization id="10">    
     <bendpoint x="2047" y="-352"/>    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
+  <generalization id="11">    
+    <bendpoint x="189" y="-308"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
   <generalization id="12">    
-    <end type="SOURCE" refId="4"/>    
+    <bendpoint x="511" y="-277"/>    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
   <generalization id="13">    
