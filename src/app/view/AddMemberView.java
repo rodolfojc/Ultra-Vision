@@ -166,7 +166,7 @@ public class AddMemberView extends GuiView {
 		this.cardCVV = cardCVV;
 	}
 
-	private void setFrame() {
+	public void setFrame() {
 		
 		this.setGrid(0, 2,this.panel);
 		

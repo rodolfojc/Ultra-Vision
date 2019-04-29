@@ -2,7 +2,7 @@ package customer.admin;
 
 public class MembershipCard {
 
-	//ATTRIBUTES
+	//ATTRIBUTES FOR MEMBERSHIP CLASS
 	private int points;
 	private boolean freeRentAllowed;
 	private int memberNumb;

@@ -44,7 +44,7 @@ public class SearchMemberView extends GuiView{
 	}
 	
 	
-	private void getStartingData() {
+	public void getStartingData() {
 		
 		String query = "SELECT mem_numb, mem_type, cust_name, cust_surname FROM customers";
 		this.myBD = new Database();
@@ -75,7 +75,7 @@ public class SearchMemberView extends GuiView{
 		this.searchID = searchName;
 	}
 	
-	private void setFrame() {
+	public void setFrame() {
 		
 		
 		String[] columns = {"Memberchip", "Account Type", "Name", "Surname"};

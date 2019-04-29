@@ -39,7 +39,7 @@ public class SearchTitleView extends GuiView {
 		setFrame();
 	}
 	
-	private void getStartingData() {
+	public void getStartingData() {
 		
 	String query = "SELECT id, type, title_name, year_rel FROM titles";
 	this.myBD = new Database();
@@ -65,7 +65,7 @@ public class SearchTitleView extends GuiView {
 	}
 	
 		
-	private void setFrame() {
+	public void setFrame() {
 		
 		String[] columns = {"ID", "Type", "Title", "Year"};
 		

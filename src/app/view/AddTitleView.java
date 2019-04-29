@@ -42,7 +42,7 @@ public class AddTitleView extends GuiView {
 	private String[] myOptsTwo = {"TV/Boxset", "Movie"};
 	private String[] yesOrNo = {"Yes","No","N/A"};
 	
-	AddTitleController myController;
+	private AddTitleController myController;
 	
 	
 	public AddTitleView(String name, int width, int height, boolean Resizable, MainView mainView) {
@@ -306,7 +306,7 @@ public class AddTitleView extends GuiView {
 
 
 
-	private void setFrame() {
+	public void setFrame() {
 		
 		this.setGrid(0, 2, this.panel);
 				

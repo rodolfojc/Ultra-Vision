@@ -69,7 +69,7 @@ public class MemberMenuView extends GuiView {
 	
 	
 	//METHODS
-	private void getStartingData() {
+	public void getStartingData() {
 		
 		this.myDB = new Database();
 		this.myModel = new MemberMenuModel(this.myDB, this);
