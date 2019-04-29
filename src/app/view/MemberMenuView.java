@@ -6,6 +6,7 @@ import java.util.Arrays;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
 import javax.swing.border.EmptyBorder;
 
 import app.controller.MemberMenuController;
@@ -16,10 +17,13 @@ import customers.Customer;
 
 public class MemberMenuView extends GuiView {
 
+	//OTHERS
+	private ListSelectionModel myTableModel;
 	private MemberMenuController myController;
 	private MemberMenuModel myModel;
 	private Customer myCustomer;
 	
+	//ATTRIBUTES
 	private JTextField fullName;
 	private JTextField custBirth;
 	private JTextField custEmail;
@@ -32,6 +36,7 @@ public class MemberMenuView extends GuiView {
 	private String[][] titlesRentedData;
 	
 		
+	
 	public MemberMenuView(String name, int width, int height, boolean Resizable, MainView mainView, Customer customer) {
 		super(name, width, height, Resizable);
 		
@@ -127,6 +132,8 @@ public class MemberMenuView extends GuiView {
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
 			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
+			this.myTableModel = this.myTable[0].getSelectionModel();
+			this.myTableModel.addListSelectionListener(this.myController);
 		
 		}else if (this.myCustomer.getType().equals("VideoLovers") || (this.myCustomer.getType().equals("TvLovers"))) {
 			
