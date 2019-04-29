@@ -116,6 +116,14 @@ public class MemberMenuView extends GuiView {
 		this.myModel.getData(this.myCustomer.getType());
 	}
 	
+	public void setTablesListeners() {
+		
+		this.myTableModelRented = this.myTable[0].getSelectionModel();
+		this.myTableModelRented.addListSelectionListener(this.myController);
+		this.myTableModelTitles = this.myTable[1].getSelectionModel();
+		this.myTableModelTitles.addListSelectionListener(this.myController);
+	}
+	
 
 	public void setFrame() {
 		
@@ -167,12 +175,6 @@ public class MemberMenuView extends GuiView {
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
 			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
-			
-			this.myTableModelRented = this.myTable[0].getSelectionModel();
-			this.myTableModelRented.addListSelectionListener(this.myController);
-			
-			this.myTableModelTitles = this.myTable[1].getSelectionModel();
-			this.myTableModelTitles.addListSelectionListener(this.myController);
 		
 		}else if (this.myCustomer.getType().equals("VideoLovers") || (this.myCustomer.getType().equals("TvLovers"))) {
 			
@@ -187,6 +189,8 @@ public class MemberMenuView extends GuiView {
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
 			
 		}
+		
+		this.setTablesListeners();
 		
 		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 45, 65)));
 		
