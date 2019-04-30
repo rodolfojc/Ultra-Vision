@@ -235,11 +235,6 @@ public class MemberMenuView extends GuiView {
 		
 		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 25, 65)));
 		
-		//this.addTableS(1, titlesData, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
-		//this.panel.add(myCustDetails);
-		//this.panel.add(titlesRented);
-		//this.panel.add(searchTitles);
-		
 		this.repaint();
 		this.validate();
 		
