@@ -41,6 +41,7 @@ public class MemberMenuView extends GuiView {
 	private JButton searchTitle;
 	private JButton release;
 	private JTextField searchTitleName;
+	private JButton freeRentalBtn;
 	
 	
 		
@@ -179,13 +180,20 @@ public class MemberMenuView extends GuiView {
 			
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
 			this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
+			
 			JPanel myBtnRentPanel = new JPanel();
 			this.searchTitleName = this.addTextField(20, myBtnRentPanel);
 			this.searchTitle = this.addButtonAll("Searh", "Search", myBtnRentPanel, this.myController);
 			this.panel.add(myBtnRentPanel);
+			
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
+			
 			JPanel myBtnRentRealasePanel = new JPanel();
 			this.rent = this.addButtonAll("Rent", "Rent", myBtnRentRealasePanel, this.myController);
+			this.freeRentalBtn = this.addButtonAll("FREE RENTAL", "FREE", myBtnRentRealasePanel, this.myController);
+			if (!this.myCustomer.getMyMemberCard().availFreeRent()) {
+				freeRentalBtn.setEnabled(false);
+			}
 			this.panel.add(myBtnRentRealasePanel);
 			
 			this.addLabel("Titles rented", this.panel);
