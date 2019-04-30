@@ -406,719 +406,716 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="46">    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="47" name="myModel">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="48" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="42" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="49">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <generalization id="50">    
+  <generalization id="46">    
     <bendpoint x="2476" y="579"/>    
     <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="45"/>  
   </generalization>  
-  <association id="51">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="52" name="concertVideos">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="53" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="54">    
-    <bendpoint x="4052" y="1027"/>    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="25"/>  
-  </dependency>  
-  <association id="55">    
-    <end type="SOURCE" refId="42" navigable="false">      
-      <attribute id="56" name="searchMemberView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="57" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="58">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="59" name="mainView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="60" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="61">    
-    <bendpoint x="3359" y="579"/>    
-    <bendpoint x="3359" y="1027"/>    
-    <end type="SOURCE" refId="41" navigable="false">      
-      <attribute id="62" name="database">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="63" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="64">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="39"/>  
-  </dependency>  
-  <association id="65">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="66" name="memberMenuView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="67" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="35" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="68">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="69" name="audioMusic">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="70" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="71">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="16"/>  
-  </realization>  
-  <realization id="72">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="43"/>  
-  </realization>  
-  <generalization id="73">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <dependency id="74">    
-    <bendpoint x="3971" y="1027"/>    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="22"/>  
-  </dependency>  
-  <association id="75">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="76" name="myModel">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="77" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="44" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="78">    
-    <bendpoint x="4092" y="579"/>    
-    <bendpoint x="4073" y="1027"/>    
-    <end type="SOURCE" refId="41"/>    
-    <end type="TARGET" refId="17"/>  
-  </dependency>  
-  <realization id="79">    
-    <end type="SOURCE" refId="38"/>    
-    <end type="TARGET" refId="33"/>  
-  </realization>  
-  <association id="80">    
-    <bendpoint x="1243" y="1027"/>    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="81" name="myDB">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="82" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="83">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="84" name="searchTitleView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="85" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="28" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="86">    
-    <bendpoint x="4458" y="2571"/>    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <generalization id="87">    
-    <bendpoint x="1994" y="579"/>    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="45"/>  
-  </generalization>  
-  <association id="88">    
-    <end type="SOURCE" refId="37" navigable="false">      
-      <attribute id="89" name="searchTitleModel">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="90" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="44" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="91">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="92">    
-    <bendpoint x="4155" y="579"/>    
-    <end type="SOURCE" refId="41" navigable="false">      
-      <attribute id="93" name="customer">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="94" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="95">    
-    <bendpoint x="5607" y="579"/>    
-    <bendpoint x="5607" y="1027"/>    
-    <bendpoint x="5607" y="2267"/>    
-    <bendpoint x="5607" y="2571"/>    
-    <end type="SOURCE" refId="41" navigable="false">      
-      <attribute id="96" name="debitCreditCard">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="97" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="98">    
-    <end type="SOURCE" refId="38"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <generalization id="99">    
-    <end type="SOURCE" refId="17"/>    
+  <generalization id="47">    
+    <end type="SOURCE" refId="26"/>    
     <end type="TARGET" refId="23"/>  
   </generalization>  
-  <association id="100">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="101" name="addTitleView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="102" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="103">    
-    <bendpoint x="2560" y="579"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="104" name="findMemberView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="105" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="106">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="107" name="myModel">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="108" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="109">    
-    <bendpoint x="2063" y="1027"/>    
-    <end type="SOURCE" refId="44" navigable="false">      
-      <attribute id="110" name="myBD">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="111" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="112">    
-    <bendpoint x="4593" y="579"/>    
-    <bendpoint x="4593" y="1027"/>    
-    <end type="SOURCE" refId="41"/>    
-    <end type="TARGET" refId="22"/>  
+  <dependency id="48">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="4"/>  
   </dependency>  
-  <dependency id="113">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="39"/>  
-  </dependency>  
-  <association id="114">    
-    <end type="SOURCE" refId="44" navigable="false">      
-      <attribute id="115" name="searchTitleView">        
+  <association id="49">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="50" name="mainViewControler">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="116" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="28" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="117">    
-    <bendpoint x="2833" y="1027"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="118" name="myController">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="119" minimum="0" maximum="1">        
+      <multiplicity id="51" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="120">    
-    <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="39"/>  
-  </dependency>  
-  <association id="121">    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="122" name="addTitleModel">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="123" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="36" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="124">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="125" name="memberMenuView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="126" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="35" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="127">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="8"/>  
-  </realization>  
-  <association id="128">    
-    <bendpoint x="1748" y="579"/>    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="129" name="myController">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="130" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="131">    
+  <dependency id="52">    
     <bendpoint x="4803" y="2571"/>    
     <end type="SOURCE" refId="25"/>    
     <end type="TARGET" refId="9"/>  
   </dependency>  
-  <dependency id="132">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="133">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="39"/>  
-  </dependency>  
-  <association id="134">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="135" name="customer">        
+  <association id="53">    
+    <bendpoint x="3380" y="579"/>    
+    <bendpoint x="3380" y="1027"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="54" name="mainView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="136" minimum="0" maximum="1">        
+      <multiplicity id="55" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="137">    
-    <bendpoint x="2875" y="1027"/>    
-    <bendpoint x="2855" y="579"/>    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="45"/>  
-  </generalization>  
-  <generalization id="138">    
-    <end type="SOURCE" refId="22"/>    
+  <dependency id="56">    
+    <bendpoint x="4113" y="579"/>    
+    <end type="SOURCE" refId="40"/>    
     <end type="TARGET" refId="23"/>  
-  </generalization>  
-  <association id="139">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="140" name="addMemberView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="141" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="142">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="16"/>  
-  </realization>  
-  <dependency id="143">    
-    <bendpoint x="5112" y="579"/>    
-    <bendpoint x="5112" y="1027"/>    
-    <end type="SOURCE" refId="41"/>    
-    <end type="TARGET" refId="25"/>  
   </dependency>  
-  <dependency id="144">    
-    <bendpoint x="4094" y="1027"/>    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="26"/>  
-  </dependency>  
-  <generalization id="145">    
-    <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="45"/>  
-  </generalization>  
-  <realization id="146">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="8"/>  
-  </realization>  
-  <association id="147">    
-    <end type="SOURCE" refId="39" navigable="false">      
-      <attribute id="148" name="myCard">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="149" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="150">    
-    <bendpoint x="2371" y="579"/>    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="45"/>  
-  </generalization>  
-  <association id="151">    
-    <bendpoint x="1727" y="579"/>    
-    <end type="SOURCE" refId="30" navigable="false">      
-      <attribute id="152" name="searchMemberView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="153" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="154">    
-    <bendpoint x="2896" y="1027"/>    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="155" name="myDB">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="156" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="157">    
+  <association id="57">    
     <bendpoint x="4134" y="579"/>    
     <bendpoint x="4115" y="1027"/>    
     <bendpoint x="4115" y="2267"/>    
     <end type="SOURCE" refId="41" navigable="false">      
-      <attribute id="158" name="membershipCard">        
+      <attribute id="58" name="membershipCard">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="159" minimum="0" maximum="1">        
+      <multiplicity id="59" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="39" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="160">    
-    <bendpoint x="2329" y="579"/>    
-    <end type="SOURCE" refId="37" navigable="false">      
-      <attribute id="161" name="searchTitleView">        
+  <realization id="60">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
+  <association id="61">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="62" name="searchTitleView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="162" minimum="0" maximum="1">        
+      <multiplicity id="63" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="28" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="163">    
-    <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="39"/>  
-  </dependency>  
-  <dependency id="164">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <association id="165">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="166" name="addTitleView">        
+  <association id="64">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="65" name="myModel">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="167" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="168">    
-    <bendpoint x="3952" y="2571"/>    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <generalization id="169">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="29"/>  
-  </generalization>  
-  <realization id="170">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="171">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="172" name="myController">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="173" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="174">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="23"/>  
-  </generalization>  
-  <association id="175">    
-    <bendpoint x="1973" y="579"/>    
-    <bendpoint x="2042" y="1027"/>    
-    <end type="SOURCE" refId="30" navigable="false">      
-      <attribute id="176" name="mainView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="177" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="178">    
-    <end type="SOURCE" refId="40" navigable="false">      
-      <attribute id="179" name="memberMenuView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="180" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="35" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="181">    
-    <bendpoint x="2434" y="579"/>    
-    <bendpoint x="2413" y="1027"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="182" name="myDB">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="183" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="184">    
-    <end type="SOURCE" refId="38"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="185">    
-    <bendpoint x="1306" y="579"/>    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="186" name="addTitleView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="187" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="188">    
-    <bendpoint x="5091" y="1027"/>    
-    <bendpoint x="5586" y="2267"/>    
-    <bendpoint x="5586" y="2571"/>    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <dependency id="189">    
-    <bendpoint x="379" y="579"/>    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="18"/>  
-  </dependency>  
-  <dependency id="190">    
-    <bendpoint x="3950" y="1027"/>    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="17"/>  
-  </dependency>  
-  <association id="191">    
-    <bendpoint x="1327" y="579"/>    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="192" name="myController">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="193" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="27" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="194">    
-    <bendpoint x="2413" y="579"/>    
-    <end type="SOURCE" refId="28"/>    
-    <end type="TARGET" refId="45"/>  
-  </generalization>  
-  <association id="195">    
-    <end type="SOURCE" refId="30" navigable="false">      
-      <attribute id="196" name="searchMemberModel">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="197" minimum="0" maximum="1">        
+      <multiplicity id="66" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="42" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="198">    
-    <bendpoint x="3380" y="579"/>    
-    <bendpoint x="3380" y="1027"/>    
+  <dependency id="67">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="68">    
+    <bendpoint x="3420" y="579"/>    
     <end type="SOURCE" refId="41" navigable="false">      
-      <attribute id="199" name="mainView">        
+      <attribute id="69" name="addMemberView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="200" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="201">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="202" name="addMemberView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="203" minimum="0" maximum="1">        
+      <multiplicity id="70" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="20" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="204">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="205" name="movie">        
+  <association id="71">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="72" name="memberMenuView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="206" minimum="0" maximum="1">        
+      <multiplicity id="73" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="18" navigable="true"/>    
+    <end type="TARGET" refId="35" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="207">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="23"/>  
-  </generalization>  
-  <association id="208">    
-    <bendpoint x="3317" y="1027"/>    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="209" name="myBD">        
+  <association id="74">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="75" name="myBD">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="210" minimum="0" maximum="1">        
+      <multiplicity id="76" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="31" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="211">    
+  <association id="77">    
+    <bendpoint x="3317" y="1027"/>    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="78" name="myBD">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="79" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="80">    
+    <bendpoint x="1748" y="579"/>    
     <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="212" name="myBD">        
+      <attribute id="81" name="myController">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="82" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="84">    
+    <bendpoint x="3929" y="1027"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="85" name="myDB">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="86" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="87">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <realization id="88">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <dependency id="89">    
+    <bendpoint x="5112" y="579"/>    
+    <bendpoint x="5112" y="1027"/>    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="90">    
+    <bendpoint x="3950" y="1027"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <dependency id="91">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="92">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="93" name="boxSet">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="94" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="95">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="96" name="findMemberView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="97" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="99" name="myModel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="100" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="44" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="101">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <realization id="102">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="43"/>  
+  </realization>  
+  <realization id="103">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="43"/>  
+  </realization>  
+  <dependency id="104">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <dependency id="105">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="106">    
+    <bendpoint x="1973" y="579"/>    
+    <bendpoint x="2042" y="1027"/>    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="107" name="mainView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="108" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="109">    
+    <bendpoint x="4986" y="2571"/>    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <association id="110">    
+    <bendpoint x="1285" y="579"/>    
+    <bendpoint x="1285" y="1027"/>    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="111" name="database">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="112" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="113">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="114" name="addMemberView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="115" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="116">    
+    <bendpoint x="3692" y="579"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="117" name="customer">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="118" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="119">    
+    <bendpoint x="2350" y="579"/>    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="120" name="myController">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="121" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="122">    
+    <bendpoint x="2896" y="1027"/>    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="123" name="myDB">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="124" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="125">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="126">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="127" name="tempMember">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="128" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="129">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="130" name="memberMenuView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="131" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="132">    
+    <bendpoint x="3952" y="2571"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <realization id="133">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <association id="134">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="135" name="audioMusic">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="136" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="137">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <association id="138">    
+    <bendpoint x="2876" y="579"/>    
+    <bendpoint x="2854" y="1027"/>    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="139" name="myDB">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="140" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="141">    
+    <bendpoint x="4136" y="2267"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="142" name="myMemberCard">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="143" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="39" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="144">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <association id="145">    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="146" name="addMemberModel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="147" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="148">    
+    <bendpoint x="2812" y="1027"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="149" name="mainView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="150" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="151">    
+    <bendpoint x="3441" y="579"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="152" name="myController">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="153" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="154">    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="155" name="searchTitleView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="156" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="157">    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="158" name="searchMemberView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="159" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="160">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <dependency id="161">    
+    <bendpoint x="1181" y="579"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <association id="162">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="163" name="myModel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="164" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="165">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="166">    
+    <bendpoint x="5607" y="579"/>    
+    <bendpoint x="5607" y="1027"/>    
+    <bendpoint x="5607" y="2267"/>    
+    <bendpoint x="5607" y="2571"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="167" name="debitCreditCard">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="168" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="169">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="29"/>  
+  </generalization>  
+  <association id="170">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="171" name="searchMemberModel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="172" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="173">    
+    <bendpoint x="1327" y="579"/>    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="174" name="myController">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="175" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="176">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <generalization id="177">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <dependency id="178">    
+    <bendpoint x="3887" y="1027"/>    
+    <bendpoint x="3582" y="2267"/>    
+    <bendpoint x="3582" y="2571"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <association id="179">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="180" name="movie">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="181" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="182">    
+    <bendpoint x="80" y="579"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="183">    
+    <bendpoint x="1727" y="579"/>    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="184" name="searchMemberView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="185" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="186">    
+    <bendpoint x="2392" y="579"/>    
+    <bendpoint x="2434" y="1027"/>    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="187" name="mainView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="188" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="189">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="29"/>  
+  </generalization>  
+  <association id="190">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="191" name="findMemberModel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="192" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="193">    
+    <bendpoint x="798" y="579"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <association id="194">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="195" name="myController">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="196" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="197">    
+    <bendpoint x="3908" y="1027"/>    
+    <bendpoint x="3624" y="2267"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <association id="198">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="199" name="searchMemberView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="200" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="201">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="202" name="memberMenuView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="203" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="204">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="205" name="customer">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="206" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="207">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="208" name="addMemberView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="209" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="210">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="211">    
+    <bendpoint x="3359" y="579"/>    
+    <bendpoint x="3359" y="1027"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="212" name="database">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="213" minimum="0" maximum="1">        
@@ -1129,265 +1126,267 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="214">    
-    <bendpoint x="2455" y="579"/>    
-    <bendpoint x="2455" y="1027"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="215" name="mainView">        
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="215" name="myBD">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="216" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="31" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="217">    
-    <bendpoint x="4113" y="579"/>    
-    <end type="SOURCE" refId="40"/>    
-    <end type="TARGET" refId="23"/>  
+  <association id="217">    
+    <bendpoint x="2329" y="579"/>    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="218" name="searchTitleView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="219" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="220">    
+    <bendpoint x="4458" y="2571"/>    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="9"/>  
   </dependency>  
-  <association id="218">    
+  <dependency id="221">    
+    <bendpoint x="5091" y="1027"/>    
+    <bendpoint x="5586" y="2267"/>    
+    <bendpoint x="5586" y="2571"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="222">    
+    <bendpoint x="4052" y="1027"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <association id="223">    
     <bendpoint x="1243" y="579"/>    
     <bendpoint x="1264" y="1027"/>    
     <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="219" name="database">        
+      <attribute id="224" name="database">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="220" minimum="0" maximum="1">        
+      <multiplicity id="225" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="31" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="221">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="222" name="searchMemberView">        
+  <association id="226">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="227" name="addTitleView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="223" minimum="0" maximum="1">        
+      <multiplicity id="228" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
+    <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="224">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="225" name="findMemberModel">        
+  <dependency id="229">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <generalization id="230">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <dependency id="231">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="232">    
+    <bendpoint x="1670" y="1027"/>    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="233" name="myBD">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="226" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="227">    
-    <bendpoint x="3420" y="579"/>    
-    <end type="SOURCE" refId="41" navigable="false">      
-      <attribute id="228" name="addMemberView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="229" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="230">    
-    <end type="SOURCE" refId="41" navigable="false">      
-      <attribute id="231" name="addMemberModel">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="232" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="233">    
-    <bendpoint x="2876" y="579"/>    
-    <bendpoint x="2854" y="1027"/>    
-    <end type="SOURCE" refId="40" navigable="false">      
-      <attribute id="234" name="myDB">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="235" minimum="0" maximum="1">        
+      <multiplicity id="234" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="31" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="236">    
-    <bendpoint x="4136" y="2267"/>    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="237" name="myMemberCard">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="238" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="39" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="239">    
+  <generalization id="235">    
+    <bendpoint x="1994" y="579"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <dependency id="236">    
     <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="3"/>  
   </dependency>  
-  <dependency id="240">    
-    <bendpoint x="4986" y="2571"/>    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <generalization id="241">    
-    <bendpoint x="3317" y="579"/>    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="45"/>  
-  </generalization>  
-  <association id="242">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="243" name="boxSet">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="244" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="38" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="245">    
+  <realization id="237">    
     <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="33"/>  
+    <end type="TARGET" refId="14"/>  
   </realization>  
-  <association id="246">    
-    <bendpoint x="5565" y="2267"/>    
-    <bendpoint x="5565" y="2571"/>    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="247" name="myCard">        
+  <association id="238">    
+    <bendpoint x="1306" y="579"/>    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="239" name="addTitleView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="248" minimum="0" maximum="1">        
+      <multiplicity id="240" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
+    <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="249">    
-    <bendpoint x="2812" y="1027"/>    
+  <association id="241">    
+    <bendpoint x="1348" y="579"/>    
+    <bendpoint x="1327" y="1027"/>    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="242" name="database">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="243" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="244">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
+  <association id="245">    
     <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="250" name="mainView">        
+      <attribute id="246" name="addTitleView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="247" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="248">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="39"/>  
+  </dependency>  
+  <association id="249">    
+    <bendpoint x="2063" y="1027"/>    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="250" name="myBD">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="251" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="31" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="252">    
-    <bendpoint x="1181" y="579"/>    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="38"/>  
-  </dependency>  
-  <association id="253">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="254" name="myCustomer">        
+  <association id="252">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="253" name="concertVideos">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="255" minimum="0" maximum="1">        
+      <multiplicity id="254" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
+    <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="256">    
-    <bendpoint x="3296" y="579"/>    
-    <bendpoint x="3296" y="1027"/>    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="257" name="mainView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="258" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="259">    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="260">    
+  <generalization id="255">    
+    <bendpoint x="2875" y="1027"/>    
+    <bendpoint x="2855" y="579"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <dependency id="256">    
     <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <association id="261">    
-    <bendpoint x="1264" y="579"/>    
-    <bendpoint x="1306" y="1027"/>    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="262" name="mainView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="263" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="264">    
-    <end type="SOURCE" refId="25"/>    
     <end type="TARGET" refId="39"/>  
   </dependency>  
+  <association id="257">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="258" name="mainView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="259" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="260">    
+    <bendpoint x="2455" y="579"/>    
+    <bendpoint x="2455" y="1027"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="261" name="mainView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="262" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="263">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <dependency id="264">    
+    <bendpoint x="5133" y="579"/>    
+    <bendpoint x="5133" y="1027"/>    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
   <association id="265">    
-    <bendpoint x="1670" y="1027"/>    
-    <end type="SOURCE" refId="42" navigable="false">      
-      <attribute id="266" name="myBD">        
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="266" name="addTitleModel">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="267" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
+    <end type="TARGET" refId="36" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="268">    
-    <bendpoint x="2581" y="579"/>    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="269" name="myController">        
+    <bendpoint x="2434" y="579"/>    
+    <bendpoint x="2413" y="1027"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="269" name="myDB">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="270" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="31" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="271">    
+  <generalization id="271">    
+    <bendpoint x="2371" y="579"/>    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <realization id="272">    
     <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="24"/>  
   </realization>  
-  <realization id="272">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="43"/>  
-  </realization>  
   <association id="273">    
-    <bendpoint x="3441" y="579"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
+    <bendpoint x="2833" y="1027"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
       <attribute id="274" name="myController">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
@@ -1395,177 +1394,178 @@
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="41" navigable="true"/>    
+    <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="276">    
-    <bendpoint x="2392" y="579"/>    
-    <bendpoint x="2434" y="1027"/>    
-    <end type="SOURCE" refId="37" navigable="false">      
-      <attribute id="277" name="mainView">        
+  <realization id="276">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <realization id="277">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="278">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="279" name="myCard">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="278" minimum="0" maximum="1">        
+      <multiplicity id="280" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="281">    
+    <bendpoint x="3971" y="1027"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="22"/>  
+  </dependency>  
+  <generalization id="282">    
+    <bendpoint x="3317" y="579"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <association id="283">    
+    <bendpoint x="2581" y="579"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="284" name="myController">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="285" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="286">    
+    <bendpoint x="4593" y="579"/>    
+    <bendpoint x="4593" y="1027"/>    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="22"/>  
+  </dependency>  
+  <generalization id="287">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <generalization id="288">    
+    <bendpoint x="2413" y="579"/>    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <dependency id="289">    
+    <bendpoint x="4092" y="579"/>    
+    <bendpoint x="4073" y="1027"/>    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <association id="290">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="291" name="searchTitleModel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="292" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="44" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="293">    
+    <bendpoint x="3296" y="579"/>    
+    <bendpoint x="3296" y="1027"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="294" name="mainView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="295" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="279">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <generalization id="280">    
-    <end type="SOURCE" refId="29"/>    
-    <end type="TARGET" refId="6"/>  
+  <generalization id="296">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="23"/>  
   </generalization>  
-  <dependency id="281">    
-    <bendpoint x="5133" y="579"/>    
-    <bendpoint x="5133" y="1027"/>    
-    <end type="SOURCE" refId="41"/>    
-    <end type="TARGET" refId="26"/>  
-  </dependency>  
-  <association id="282">    
-    <bendpoint x="2350" y="579"/>    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="283" name="myController">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="284" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="37" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="285">    
-    <end type="SOURCE" refId="28"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="286">    
-    <bendpoint x="3887" y="1027"/>    
-    <bendpoint x="3582" y="2267"/>    
-    <bendpoint x="3582" y="2571"/>    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <association id="287">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="288" name="findMemberView">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="289" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="290">    
-    <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <generalization id="291">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="29"/>  
-  </generalization>  
-  <association id="292">    
-    <bendpoint x="3692" y="579"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="293" name="customer">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="294" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="295">    
-    <end type="SOURCE" refId="34"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <dependency id="296">    
-    <bendpoint x="80" y="579"/>    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="10"/>  
-  </dependency>  
   <association id="297">    
-    <bendpoint x="1285" y="579"/>    
-    <bendpoint x="1285" y="1027"/>    
-    <end type="SOURCE" refId="30" navigable="false">      
-      <attribute id="298" name="database">        
+    <bendpoint x="5565" y="2267"/>    
+    <bendpoint x="5565" y="2571"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="298" name="myCard">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="299" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="300">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="33"/>  
-  </realization>  
-  <association id="301">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="302" name="tempMember">        
+  <association id="300">    
+    <bendpoint x="1264" y="579"/>    
+    <bendpoint x="1306" y="1027"/>    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="301" name="mainView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="303" minimum="0" maximum="1">        
+      <multiplicity id="302" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="304">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
+  <realization id="303">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <dependency id="304">    
+    <bendpoint x="4094" y="1027"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
   <association id="305">    
-    <bendpoint x="1348" y="579"/>    
-    <bendpoint x="1327" y="1027"/>    
-    <end type="SOURCE" refId="37" navigable="false">      
-      <attribute id="306" name="database">        
+    <bendpoint x="4155" y="579"/>    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="306" name="customer">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="307" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
+    <end type="TARGET" refId="23" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="308">    
-    <bendpoint x="3908" y="1027"/>    
-    <bendpoint x="3624" y="2267"/>    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="39"/>  
-  </dependency>  
-  <association id="309">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="310" name="mainViewControler">        
+  <association id="308">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="309" name="myCustomer">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="311" minimum="0" maximum="1">        
+      <multiplicity id="310" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="23" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="311">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
   <dependency id="312">    
-    <bendpoint x="798" y="579"/>    
+    <bendpoint x="379" y="579"/>    
     <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="11"/>  
+    <end type="TARGET" refId="18"/>  
   </dependency>  
   <association id="313">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="314" name="myBD">        
+    <bendpoint x="1243" y="1027"/>    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="314" name="myDB">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="315" minimum="0" maximum="1">        
@@ -1576,16 +1576,16 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="316">    
-    <bendpoint x="3929" y="1027"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="317" name="myDB">        
+    <bendpoint x="2560" y="579"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="317" name="findMemberView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="318" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
+    <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 

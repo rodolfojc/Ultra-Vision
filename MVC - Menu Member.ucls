@@ -38,29 +38,28 @@
     </display>  
   </class>  
   <association id="5">    
-    <bendpoint x="665" y="235"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="6" name="memberMenuView">        
+    <bendpoint x="495" y="234"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="6" name="myController">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="7" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="8">    
-    <bendpoint x="495" y="234"/>    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="9" name="myController">        
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="9" name="myDB">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="10" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="11">    
@@ -76,40 +75,41 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="14">    
+    <bendpoint x="269" y="437"/>    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="15" name="myDB">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="15" name="memberMenuView">        
+        <position height="19" width="111" x="288" y="429"/>      
       </attribute>      
       <multiplicity id="16" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="17">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="18" name="myModel">        
+    <bendpoint x="665" y="235"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="18" name="memberMenuView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="19" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="20">    
-    <bendpoint x="269" y="437"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="21" name="memberMenuView">        
-        <position height="19" width="111" x="288" y="429"/>      
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="21" name="myModel">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="22" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 

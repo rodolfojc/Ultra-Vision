@@ -130,6 +130,32 @@ public class MemberMenuView extends GuiView {
 		this.myTableModelTitles.addListSelectionListener(this.myController);
 	}
 	
+	public void setBtnSearch() {
+		
+		JPanel myBtnRentPanel = new JPanel();
+		this.searchTitleName = this.addTextField(20, myBtnRentPanel);
+		this.searchTitle = this.addButtonAll("Searh", "Search", myBtnRentPanel, this.myController);
+		this.panel.add(myBtnRentPanel);
+	}
+	
+	public void setBtnTitles() {
+		
+		JPanel myBtnRentRealasePanel = new JPanel();
+		this.rent = this.addButtonAll("Rent", "Rent", myBtnRentRealasePanel, this.myController);
+		this.freeRentalBtn = this.addButtonAll("FREE RENTAL", "FREE", myBtnRentRealasePanel, this.myController);
+		if (!this.myCustomer.getMyMemberCard().availFreeRent()) {
+			freeRentalBtn.setEnabled(false);
+		}
+		this.panel.add(myBtnRentRealasePanel);
+		
+	}
+	
+	public void setBtnRented() {
+		
+		JPanel myBtnRentRelease = new JPanel();
+		this.release = this.addButtonAll("Release", "Release", myBtnRentRelease, this.myController);
+		this.panel.add(myBtnRentRelease);
+	}
 
 	public void setFrame() {
 		
@@ -180,27 +206,28 @@ public class MemberMenuView extends GuiView {
 			
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
 			this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
-			
-			JPanel myBtnRentPanel = new JPanel();
-			this.searchTitleName = this.addTextField(20, myBtnRentPanel);
-			this.searchTitle = this.addButtonAll("Searh", "Search", myBtnRentPanel, this.myController);
-			this.panel.add(myBtnRentPanel);
+			this.setBtnSearch();
+//			JPanel myBtnRentPanel = new JPanel();
+//			this.searchTitleName = this.addTextField(20, myBtnRentPanel);
+//			this.searchTitle = this.addButtonAll("Searh", "Search", myBtnRentPanel, this.myController);
+//			this.panel.add(myBtnRentPanel);
 			
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
-			
-			JPanel myBtnRentRealasePanel = new JPanel();
-			this.rent = this.addButtonAll("Rent", "Rent", myBtnRentRealasePanel, this.myController);
-			this.freeRentalBtn = this.addButtonAll("FREE RENTAL", "FREE", myBtnRentRealasePanel, this.myController);
-			if (!this.myCustomer.getMyMemberCard().availFreeRent()) {
-				freeRentalBtn.setEnabled(false);
-			}
-			this.panel.add(myBtnRentRealasePanel);
+			this.setBtnTitles();
+//			JPanel myBtnRentRealasePanel = new JPanel();
+//			this.rent = this.addButtonAll("Rent", "Rent", myBtnRentRealasePanel, this.myController);
+//			this.freeRentalBtn = this.addButtonAll("FREE RENTAL", "FREE", myBtnRentRealasePanel, this.myController);
+//			if (!this.myCustomer.getMyMemberCard().availFreeRent()) {
+//				freeRentalBtn.setEnabled(false);
+//			}
+//			this.panel.add(myBtnRentRealasePanel);
 			
 			this.addLabel("Titles rented", this.panel);
 			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
-			JPanel myBtnRentRelease = new JPanel();
-			this.release = this.addButtonAll("Release", "Release", myBtnRentRelease, this.myController);
-			this.panel.add(myBtnRentRelease);
+			this.setBtnRented();
+//			JPanel myBtnRentRelease = new JPanel();
+//			this.release = this.addButtonAll("Release", "Release", myBtnRentRelease, this.myController);
+//			this.panel.add(myBtnRentRelease);
 			
 		
 		}else if (this.myCustomer.getType().equals("VideoLovers") || (this.myCustomer.getType().equals("TvLovers"))) {
