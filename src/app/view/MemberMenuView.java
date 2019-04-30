@@ -3,6 +3,7 @@ package app.view;
 import java.awt.Insets;
 import java.util.Arrays;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -36,6 +37,9 @@ public class MemberMenuView extends GuiView {
 	private Database myDB;
 	private String[][] titles;
 	private String[][] titlesRentedData;
+	private JButton rent;
+	private JButton searchTitle;
+	private JButton release;
 	
 	
 		
@@ -127,7 +131,7 @@ public class MemberMenuView extends GuiView {
 
 	public void setFrame() {
 		
-		this.setGrid(3, 0, this.panel);
+		this.setGrid(7, 0, this.panel);
 		
 		JPanel myCustDetails = new JPanel();
 		this.setGrid(6, 2, myCustDetails);
@@ -173,8 +177,18 @@ public class MemberMenuView extends GuiView {
 		if (this.myCustomer.getType().equals("MusicLovers")) {
 			
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
-			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
+			this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
+			JPanel myBtnRentPanel = new JPanel();
+			this.searchTitle = this.addButtonAll("Searh", "Search", myBtnRentPanel, this.myController);
+			this.rent = this.addButtonAll("Rent", "Rent", myBtnRentPanel, this.myController);
+			this.panel.add(myBtnRentPanel);
+			this.addLabel("Titles rented", this.panel);
+			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
+			JPanel myBtnRentRelease = new JPanel();
+			this.release = this.addButtonAll("Release", "Release", myBtnRentRelease, this.myController);
+			this.panel.add(myBtnRentRelease);
+			
 		
 		}else if (this.myCustomer.getType().equals("VideoLovers") || (this.myCustomer.getType().equals("TvLovers"))) {
 			
