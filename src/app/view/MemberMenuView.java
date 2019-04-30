@@ -40,6 +40,7 @@ public class MemberMenuView extends GuiView {
 	private JButton rent;
 	private JButton searchTitle;
 	private JButton release;
+	private JTextField searchTitleName;
 	
 	
 		
@@ -131,7 +132,7 @@ public class MemberMenuView extends GuiView {
 
 	public void setFrame() {
 		
-		this.setGrid(7, 0, this.panel);
+		this.setGrid(8, 0, this.panel);
 		
 		JPanel myCustDetails = new JPanel();
 		this.setGrid(6, 2, myCustDetails);
@@ -178,11 +179,15 @@ public class MemberMenuView extends GuiView {
 			
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
 			this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
-			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
 			JPanel myBtnRentPanel = new JPanel();
+			this.searchTitleName = this.addTextField(20, myBtnRentPanel);
 			this.searchTitle = this.addButtonAll("Searh", "Search", myBtnRentPanel, this.myController);
-			this.rent = this.addButtonAll("Rent", "Rent", myBtnRentPanel, this.myController);
 			this.panel.add(myBtnRentPanel);
+			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
+			JPanel myBtnRentRealasePanel = new JPanel();
+			this.rent = this.addButtonAll("Rent", "Rent", myBtnRentRealasePanel, this.myController);
+			this.panel.add(myBtnRentRealasePanel);
+			
 			this.addLabel("Titles rented", this.panel);
 			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
 			JPanel myBtnRentRelease = new JPanel();
@@ -206,7 +211,7 @@ public class MemberMenuView extends GuiView {
 		
 		this.setTablesListeners();
 		
-		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 45, 65)));
+		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 25, 65)));
 		
 		//this.addTableS(1, titlesData, columnsNameTitles, searchTitles, "Titles for "+this.myCustomer.getType());
 		//this.panel.add(myCustDetails);
