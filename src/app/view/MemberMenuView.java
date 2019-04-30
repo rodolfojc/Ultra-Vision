@@ -194,54 +194,41 @@ public class MemberMenuView extends GuiView {
 		this.custPoints.setText(String.valueOf(this.myCustomer.getMyMemberCard().getPoints()));
 		this.custPoints.setEditable(false);
 		
-		//JPanel titlesRented = new JPanel();
-		//String[][] titlesRentedData = new String[4][4];
-		//String[] columnsNameRented = {"1", "2", "3", "4"};
-		//this.addTableS(0, this.titlesRentedData, columnsNameRented, titlesRented, "Titles Rented");
-		//JPanel searchTitles = new JPanel();
 		this.panel.add(myCustDetails);
-		//this.panel.add(titlesRented);
-				
+						
 		if (this.myCustomer.getType().equals("MusicLovers")) {
 			
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
 			this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
 			this.setBtnSearch();
-//			JPanel myBtnRentPanel = new JPanel();
-//			this.searchTitleName = this.addTextField(20, myBtnRentPanel);
-//			this.searchTitle = this.addButtonAll("Searh", "Search", myBtnRentPanel, this.myController);
-//			this.panel.add(myBtnRentPanel);
-			
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
 			this.setBtnTitles();
-//			JPanel myBtnRentRealasePanel = new JPanel();
-//			this.rent = this.addButtonAll("Rent", "Rent", myBtnRentRealasePanel, this.myController);
-//			this.freeRentalBtn = this.addButtonAll("FREE RENTAL", "FREE", myBtnRentRealasePanel, this.myController);
-//			if (!this.myCustomer.getMyMemberCard().availFreeRent()) {
-//				freeRentalBtn.setEnabled(false);
-//			}
-//			this.panel.add(myBtnRentRealasePanel);
-			
 			this.addLabel("Titles rented", this.panel);
 			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
 			this.setBtnRented();
-//			JPanel myBtnRentRelease = new JPanel();
-//			this.release = this.addButtonAll("Release", "Release", myBtnRentRelease, this.myController);
-//			this.panel.add(myBtnRentRelease);
-			
+		
 		
 		}else if (this.myCustomer.getType().equals("VideoLovers") || (this.myCustomer.getType().equals("TvLovers"))) {
 			
 			String[] columnsNameTitles = {"Title", "Year", "Genre", "Director", "Running Time", "Languages", "Country", "DVD", "BlueRay"};
-			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
+			this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
+			this.setBtnSearch();
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
+			this.setBtnTitles();
+			this.addLabel("Titles rented", this.panel);
+			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
+			this.setBtnRented();
 			
 		} else {
 			
 			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "Director", "Running Time", "Languages", "Country", "CD", "DVD", "BlueRay"};
-			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
+			this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
+			this.setBtnSearch();
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
-			
+			this.setBtnTitles();
+			this.addLabel("Titles rented", this.panel);
+			this.addTableS(0, this.titlesRentedData, columnsNameTitles, this.panel, "Titles Rented");
+			this.setBtnRented();
 		}
 		
 		this.setTablesListeners();
