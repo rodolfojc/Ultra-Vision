@@ -38,40 +38,51 @@
     </display>  
   </class>  
   <association id="5">    
-    <bendpoint x="288" y="459"/>    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="6" name="searchTitleView">        
-        <position height="19" width="95" x="324" y="442"/>      
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="6" name="searchTitleModel">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="7" minimum="0" maximum="1"/>    
+      <multiplicity id="7" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="8">    
+    <bendpoint x="477" y="266"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="9" name="searchTitleView">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="10" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="8">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="9" name="database">        
-        <position height="19" width="60" x="747" y="241"/>      
-      </attribute>      
-      <multiplicity id="10" minimum="0" maximum="1">        
-        <position height="17" width="25" x="766" y="269"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <association id="11">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="12" name="searchTitleModel"/>      
-      <multiplicity id="13" minimum="0" maximum="1"/>    
+    <bendpoint x="391" y="410"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="12" name="myModel">        
+        <position height="19" width="57" x="290" y="373"/>      
+      </attribute>      
+      <multiplicity id="13" minimum="0" maximum="1">        
+        <position height="17" width="25" x="355" y="361"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="14">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="15" name="myBD"/>      
-      <multiplicity id="16" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="15" name="myBD">        
+        <position height="19" width="41" x="751" y="285"/>      
+      </attribute>      
+      <multiplicity id="16" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
@@ -79,42 +90,51 @@
   <association id="17">    
     <bendpoint x="646" y="262"/>    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="18" name="myController"/>      
-      <multiplicity id="19" minimum="0" maximum="1"/>    
+      <attribute id="18" name="myController">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="19" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="20">    
-    <bendpoint x="391" y="410"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="21" name="myModel">        
-        <position height="19" width="57" x="290" y="373"/>      
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="21" name="database">        
+        <position height="19" width="60" x="747" y="241"/>      
       </attribute>      
       <multiplicity id="22" minimum="0" maximum="1">        
-        <position height="17" width="25" x="355" y="361"/>      
+        <position height="17" width="25" x="766" y="269"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="23">    
-    <bendpoint x="477" y="266"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="24" name="searchTitleView"/>      
-      <multiplicity id="25" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="24" name="myBD">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="25" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="26">    
+    <bendpoint x="288" y="459"/>    
     <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="27" name="myBD">        
-        <position height="19" width="41" x="751" y="285"/>      
+      <attribute id="27" name="searchTitleView">        
+        <position height="19" width="95" x="324" y="442"/>      
       </attribute>      
-      <multiplicity id="28" minimum="0" maximum="1"/>    
+      <multiplicity id="28" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
