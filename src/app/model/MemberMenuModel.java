@@ -24,7 +24,7 @@ public class MemberMenuModel {
 									this.memberMenuView.getMyCustomer().getTitleRentedInt(1), 
 									this.memberMenuView.getMyCustomer().getTitleRentedInt(2),
 									this.memberMenuView.getMyCustomer().getTitleRentedInt(3),
-									Query);
+									"AND title_name LIKE '%"+Query+"%'");
 			
 		}else if (type.equals("VideoLovers") || type.equals("TvLovers") ) {
 			this.getDataVideoOrTVLovers(type, 
@@ -32,14 +32,14 @@ public class MemberMenuModel {
 										this.memberMenuView.getMyCustomer().getTitleRentedInt(1), 
 										this.memberMenuView.getMyCustomer().getTitleRentedInt(2),
 										this.memberMenuView.getMyCustomer().getTitleRentedInt(3),
-										Query);
+										"AND title_name LIKE '%"+Query+"%'");
 		
 		}else {
 			this.getDataPremiunLovers(this.memberMenuView.getMyCustomer().getTitleRentedInt(0),
 									  this.memberMenuView.getMyCustomer().getTitleRentedInt(1), 
 									  this.memberMenuView.getMyCustomer().getTitleRentedInt(2),
 									  this.memberMenuView.getMyCustomer().getTitleRentedInt(3),
-									  Query);
+									  "WHERE title_name LIKE '%"+Query+"%'");
 		}
 		
 		
