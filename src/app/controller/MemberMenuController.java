@@ -7,6 +7,9 @@ import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import app.database.Database;
+import app.model.MemberMenuModel;
+import app.model.SearchTitleModel;
 import app.view.MainView;
 import app.view.MemberMenuView;
 
@@ -14,6 +17,8 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 
 	private MemberMenuView memberMenuView;
 	private MainView mainView;
+	private Database database;
+	private MemberMenuModel memberMenuModel;
 	
 	public MemberMenuController(MemberMenuView memberMenuView, MainView mainView) {
 		
@@ -23,8 +28,17 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent e) {
 		
+		if (e.getActionCommand().equals("Search")) {
+			
+		String query = "SELECT id, type, title_name, year_rel "
+					 + "FROM titles WHERE title_name LIKE '%"+this.memberMenuView.getSearchTitleName().getText()+"%';";
+		this.database = new Database();
+		this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
+		this.memberMenuModel.getData(query);
+		this.memberMenuView.UpdateFrame();
+		}
 		
 	}
 

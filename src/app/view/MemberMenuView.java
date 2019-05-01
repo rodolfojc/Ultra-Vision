@@ -57,8 +57,18 @@ public class MemberMenuView extends GuiView {
 	}
 	
 	//GETTER AND SETTERS
+	
+	
 	public String getTitlesRentedDataStr(int a, int b) {
 		return this.titlesRentedData[a][b];
+	}
+
+	public JTextField getSearchTitleName() {
+		return searchTitleName;
+	}
+
+	public void setSearchTitleName(JTextField searchTitleName) {
+		this.searchTitleName = searchTitleName;
 	}
 
 	public ListSelectionModel getMyTableModelRented() {
@@ -238,6 +248,11 @@ public class MemberMenuView extends GuiView {
 		this.repaint();
 		this.validate();
 		
+	}
+	
+	public void UpdateFrame() {
+		this.panel.removeAll();
+		setFrame();
 	}
 
 }
