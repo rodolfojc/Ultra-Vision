@@ -17,41 +17,43 @@ public class MemberMenuModel {
 		
 	}
 
-	public void getData(String type) {
+	public void getData(String type, String Query) {
 		
 		if (type.equals("MusicLovers")) {
 			this.getDataMusicLovers(this.memberMenuView.getMyCustomer().getTitleRentedInt(0),
 									this.memberMenuView.getMyCustomer().getTitleRentedInt(1), 
 									this.memberMenuView.getMyCustomer().getTitleRentedInt(2),
-									this.memberMenuView.getMyCustomer().getTitleRentedInt(3));
+									this.memberMenuView.getMyCustomer().getTitleRentedInt(3),
+									Query);
 			
 		}else if (type.equals("VideoLovers") || type.equals("TvLovers") ) {
 			this.getDataVideoOrTVLovers(type, 
 										this.memberMenuView.getMyCustomer().getTitleRentedInt(0),
 										this.memberMenuView.getMyCustomer().getTitleRentedInt(1), 
 										this.memberMenuView.getMyCustomer().getTitleRentedInt(2),
-										this.memberMenuView.getMyCustomer().getTitleRentedInt(3));
+										this.memberMenuView.getMyCustomer().getTitleRentedInt(3),
+										Query);
 		
 		}else {
 			this.getDataPremiunLovers(this.memberMenuView.getMyCustomer().getTitleRentedInt(0),
 									  this.memberMenuView.getMyCustomer().getTitleRentedInt(1), 
 									  this.memberMenuView.getMyCustomer().getTitleRentedInt(2),
-									  this.memberMenuView.getMyCustomer().getTitleRentedInt(3));
+									  this.memberMenuView.getMyCustomer().getTitleRentedInt(3),
+									  Query);
 		}
 		
 		
 	}
 	
-	public void getDataMusicLovers(int idOne, int idTwo, int idThree, int idFour ) {
+	public void getDataMusicLovers(int idOne, int idTwo, int idThree, int idFour, String Query ) {
 		
 		// LOCAL DATA STORAGE
 		String[][] tempData = new String[1000][8];
 		String[][] tempDataRented = new String[4][8];
-		
-		//QUERY
+				
 		String query = "SELECT title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
-					 + "FROM titles "
-					 + "WHERE type = 'AudioMusic' OR type = 'ConcertVideo';";
+				 + "FROM titles "
+				 + "WHERE type = 'AudioMusic' OR type = 'ConcertVideo' "+Query+";";
 		
 		try {
 			
@@ -117,25 +119,24 @@ public class MemberMenuModel {
 			this.memberMenuView.setTitlesRentedData(tempDataRented);	
 	}
 	
-	public void getDataVideoOrTVLovers(String type, int idOne, int idTwo, int idThree, int idFour) {
+	public void getDataVideoOrTVLovers(String type, int idOne, int idTwo, int idThree, int idFour, String Query) {
 		
+		// LOCAL DATA STORAGE
+		String[][] tempData = new String[1000][9];
+		String[][] tempDataRented = new String[4][9];
 		String typeQuery;
-		
+			
 		if (type.equals("VideoLovers")) {
 			typeQuery = "Movie";
 		}else {
 			typeQuery = "BoxSet";
 		}
 		
-		// LOCAL DATA STORAGE
-		String[][] tempData = new String[1000][9];
-		String[][] tempDataRented = new String[4][9];
-		
 		//QUERY
 		String query = "SELECT title_name, year_rel, genre, director, runn_time, lang, country, dvd, blue_ray "
 					 + "FROM titles "
-					 + "WHERE type = '"+typeQuery+"';";
-		
+					 + "WHERE type = '"+typeQuery+"' "+Query+";";
+					
 		try {
 			
 			this.myDB.setRs(this.myDB.getStmt().executeQuery(query));
@@ -204,16 +205,17 @@ public class MemberMenuModel {
 	}
 	
 		
-	public void getDataPremiunLovers(int idOne, int idTwo, int idThree, int idFour) {
+	public void getDataPremiunLovers(int idOne, int idTwo, int idThree, int idFour, String Query) {
 		
 		// LOCAL DATA STORAGE
 		String[][] tempData = new String[1000][12];
 		String[][] tempDataRented = new String[4][12];
 		
-		//QUERY
+		//Query		
 		String query = "SELECT title_name, year_rel, album, band, genre, director, runn_time, lang, country, cd, dvd, blue_ray "
-					 + "FROM titles;";
+					 + "FROM titles "+Query+";";
 		
+				
 		try {
 			
 			this.myDB.setRs(this.myDB.getStmt().executeQuery(query));

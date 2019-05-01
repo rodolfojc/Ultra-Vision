@@ -129,7 +129,7 @@ public class MemberMenuView extends GuiView {
 		
 		this.myDB = new Database();
 		this.myModel = new MemberMenuModel(this.myDB, this);
-		this.myModel.getData(this.myCustomer.getType());
+		this.myModel.getData(this.myCustomer.getType(), "");
 	}
 	
 	public void setTablesListeners() {
@@ -144,7 +144,7 @@ public class MemberMenuView extends GuiView {
 		
 		JPanel myBtnRentPanel = new JPanel();
 		this.searchTitleName = this.addTextField(20, myBtnRentPanel);
-		this.searchTitle = this.addButtonAll("Searh", "Search", myBtnRentPanel, this.myController);
+		this.searchTitle = this.addButtonAll("Search", "Search", myBtnRentPanel, this.myController);
 		this.panel.add(myBtnRentPanel);
 	}
 	

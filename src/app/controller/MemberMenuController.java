@@ -32,11 +32,10 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		
 		if (e.getActionCommand().equals("Search")) {
 			
-		String query = "SELECT id, type, title_name, year_rel "
-					 + "FROM titles WHERE title_name LIKE '%"+this.memberMenuView.getSearchTitleName().getText()+"%';";
+		String query = "AND title_name LIKE '%"+this.memberMenuView.getSearchTitleName().getText()+"%' ";
 		this.database = new Database();
 		this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
-		this.memberMenuModel.getData(query);
+		this.memberMenuModel.getData(this.memberMenuView.getMyCustomer().getType(), query);
 		this.memberMenuView.UpdateFrame();
 		}
 		
