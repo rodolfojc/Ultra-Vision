@@ -208,7 +208,7 @@ public class MemberMenuView extends GuiView {
 						
 		if (this.myCustomer.getType().equals("MusicLovers")) {
 			
-			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
+			String[] columnsNameTitles = {"ID","Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
 			this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
 			this.setBtnSearch();
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
@@ -220,7 +220,7 @@ public class MemberMenuView extends GuiView {
 		
 		}else if (this.myCustomer.getType().equals("VideoLovers") || (this.myCustomer.getType().equals("TvLovers"))) {
 			
-			String[] columnsNameTitles = {"Title", "Year", "Genre", "Director", "Running Time", "Languages", "Country", "DVD", "BlueRay"};
+			String[] columnsNameTitles = {"ID","Title", "Year", "Genre", "Director", "Running Time", "Languages", "Country", "DVD", "BlueRay"};
 			this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
 			this.setBtnSearch();
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
@@ -231,7 +231,7 @@ public class MemberMenuView extends GuiView {
 			
 		} else {
 			
-			String[] columnsNameTitles = {"Title", "Year", "Album", "Band", "Genre", "Director", "Running Time", "Languages", "Country", "CD", "DVD", "BlueRay"};
+			String[] columnsNameTitles = {"ID","Title", "Year", "Album", "Band", "Genre", "Director", "Running Time", "Languages", "Country", "CD", "DVD", "BlueRay"};
 			this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
 			this.setBtnSearch();
 			this.addTableS(1, this.titles, columnsNameTitles, this.panel, "Titles for "+this.myCustomer.getType());
