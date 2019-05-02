@@ -15,7 +15,7 @@ public class Controller implements ActionListener {
 	public Controller() {
 		
 		//NEW INSTANCE OF MAIN VIEW
-		this.mainView = new MainView("Welcome to Ultravision System", 500,700, true);
+		this.mainView = new MainView("Welcome to Ultravision System", 700,700, true);
 		
 	}
 	
