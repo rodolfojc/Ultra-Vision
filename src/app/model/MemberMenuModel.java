@@ -48,10 +48,10 @@ public class MemberMenuModel {
 	public void getDataMusicLovers(int idOne, int idTwo, int idThree, int idFour, String Query ) {
 		
 		// LOCAL DATA STORAGE
-		String[][] tempData = new String[1000][8];
-		String[][] tempDataRented = new String[4][8];
+		String[][] tempData = new String[1000][9];
+		String[][] tempDataRented = new String[4][9];
 				
-		String query = "SELECT title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
+		String query = "SELECT id, title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
 				 + "FROM titles "
 				 + "WHERE (type = 'AudioMusic' OR type = 'ConcertVideo') "+Query+";";
 		
@@ -63,14 +63,15 @@ public class MemberMenuModel {
 
 			while (this.myDB.getRs().next()) {
 
-				tempData[i][0] = this.myDB.getRs().getString("title_name");
-				tempData[i][1] = this.myDB.getRs().getString("year_rel");
-				tempData[i][2] = this.myDB.getRs().getString("album");
-				tempData[i][3] = this.myDB.getRs().getString("band");
-				tempData[i][4] = this.myDB.getRs().getString("genre");
-				tempData[i][5] = this.myDB.getRs().getString("cd");
-				tempData[i][6] = this.myDB.getRs().getString("dvd");
-				tempData[i][7] = this.myDB.getRs().getString("blue_ray");
+				tempData[i][0] = this.myDB.getRs().getString("id");
+				tempData[i][1] = this.myDB.getRs().getString("title_name");
+				tempData[i][2] = this.myDB.getRs().getString("year_rel");
+				tempData[i][3] = this.myDB.getRs().getString("album");
+				tempData[i][4] = this.myDB.getRs().getString("band");
+				tempData[i][5] = this.myDB.getRs().getString("genre");
+				tempData[i][6] = this.myDB.getRs().getString("cd");
+				tempData[i][7] = this.myDB.getRs().getString("dvd");
+				tempData[i][8] = this.myDB.getRs().getString("blue_ray");
 				i++;
 			}
 			
@@ -79,7 +80,7 @@ public class MemberMenuModel {
 			e.printStackTrace();
 		}
 			
-		String queryTwo = "SELECT title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
+		String queryTwo = "SELECT id, title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
 						+ "FROM titles "
 						+ "WHERE id = "+idOne+" "
 						+ "OR id = "+idTwo+" "
@@ -94,14 +95,15 @@ public class MemberMenuModel {
 
 			while (this.myDB.getRs().next()) {
 
-				tempDataRented[j][0] = this.myDB.getRs().getString("title_name");
-				tempDataRented[j][1] = this.myDB.getRs().getString("year_rel");
-				tempDataRented[j][2] = this.myDB.getRs().getString("album");
-				tempDataRented[j][3] = this.myDB.getRs().getString("band");
-				tempDataRented[j][4] = this.myDB.getRs().getString("genre");
-				tempDataRented[j][5] = this.myDB.getRs().getString("cd");
-				tempDataRented[j][6] = this.myDB.getRs().getString("dvd");
-				tempDataRented[j][7] = this.myDB.getRs().getString("blue_ray");
+				tempDataRented[j][0] = this.myDB.getRs().getString("id");
+				tempDataRented[j][1] = this.myDB.getRs().getString("title_name");
+				tempDataRented[j][2] = this.myDB.getRs().getString("year_rel");
+				tempDataRented[j][3] = this.myDB.getRs().getString("album");
+				tempDataRented[j][4] = this.myDB.getRs().getString("band");
+				tempDataRented[j][5] = this.myDB.getRs().getString("genre");
+				tempDataRented[j][6] = this.myDB.getRs().getString("cd");
+				tempDataRented[j][7] = this.myDB.getRs().getString("dvd");
+				tempDataRented[j][8] = this.myDB.getRs().getString("blue_ray");
 				j++;
 			}
 			
@@ -122,8 +124,8 @@ public class MemberMenuModel {
 	public void getDataVideoOrTVLovers(String type, int idOne, int idTwo, int idThree, int idFour, String Query) {
 		
 		// LOCAL DATA STORAGE
-		String[][] tempData = new String[1000][9];
-		String[][] tempDataRented = new String[4][9];
+		String[][] tempData = new String[1000][10];
+		String[][] tempDataRented = new String[4][10];
 		String typeQuery;
 			
 		if (type.equals("VideoLovers")) {
@@ -133,7 +135,7 @@ public class MemberMenuModel {
 		}
 		
 		//QUERY
-		String query = "SELECT title_name, year_rel, genre, director, runn_time, lang, country, dvd, blue_ray "
+		String query = "SELECT id, title_name, year_rel, genre, director, runn_time, lang, country, dvd, blue_ray "
 					 + "FROM titles "
 					 + "WHERE type = '"+typeQuery+"' "+Query+";";
 					
@@ -144,16 +146,17 @@ public class MemberMenuModel {
 			int j = 0;
 
 			while (this.myDB.getRs().next()) {
-
-				tempData[j][0] = this.myDB.getRs().getString("title_name");
-				tempData[j][1] = this.myDB.getRs().getString("year_rel");
-				tempData[j][2] = this.myDB.getRs().getString("genre");
-				tempData[j][3] = this.myDB.getRs().getString("director");
-				tempData[j][4] = this.myDB.getRs().getString("runn_time");
-				tempData[j][5] = this.myDB.getRs().getString("lang");
-				tempData[j][6] = this.myDB.getRs().getString("country");
-				tempData[j][7] = this.myDB.getRs().getString("dvd");
-				tempData[j][8] = this.myDB.getRs().getString("blue_ray");
+				
+				tempData[j][0] = this.myDB.getRs().getString("id");
+				tempData[j][1] = this.myDB.getRs().getString("title_name");
+				tempData[j][2] = this.myDB.getRs().getString("year_rel");
+				tempData[j][3] = this.myDB.getRs().getString("genre");
+				tempData[j][4] = this.myDB.getRs().getString("director");
+				tempData[j][5] = this.myDB.getRs().getString("runn_time");
+				tempData[j][6] = this.myDB.getRs().getString("lang");
+				tempData[j][7] = this.myDB.getRs().getString("country");
+				tempData[j][8] = this.myDB.getRs().getString("dvd");
+				tempData[j][9] = this.myDB.getRs().getString("blue_ray");
 				j++;
 			}
 
@@ -162,7 +165,7 @@ public class MemberMenuModel {
 			e.printStackTrace();
 		}
 		
-		String queryTwo = "SELECT title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
+		String queryTwo = "SELECT id, title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
 						+ "FROM titles "
 						+ "WHERE id = "+idOne+" "
 						+ "OR id = "+idTwo+" "
@@ -176,16 +179,17 @@ public class MemberMenuModel {
 					int i = 0;
 
 					while (this.myDB.getRs().next()) {
-
-						tempDataRented[i][0] = this.myDB.getRs().getString("title_name");
-						tempDataRented[i][1] = this.myDB.getRs().getString("year_rel");
-						tempDataRented[i][2] = this.myDB.getRs().getString("genre");
-						tempDataRented[i][3] = this.myDB.getRs().getString("director");
-						tempDataRented[i][4] = this.myDB.getRs().getString("runn_time");
-						tempDataRented[i][5] = this.myDB.getRs().getString("lang");
-						tempDataRented[i][6] = this.myDB.getRs().getString("country");
-						tempDataRented[i][7] = this.myDB.getRs().getString("dvd");
-						tempDataRented[i][8] = this.myDB.getRs().getString("blue_ray");
+						
+						tempDataRented[i][0] = this.myDB.getRs().getString("id");
+						tempDataRented[i][1] = this.myDB.getRs().getString("title_name");
+						tempDataRented[i][2] = this.myDB.getRs().getString("year_rel");
+						tempDataRented[i][3] = this.myDB.getRs().getString("genre");
+						tempDataRented[i][4] = this.myDB.getRs().getString("director");
+						tempDataRented[i][5] = this.myDB.getRs().getString("runn_time");
+						tempDataRented[i][6] = this.myDB.getRs().getString("lang");
+						tempDataRented[i][7] = this.myDB.getRs().getString("country");
+						tempDataRented[i][8] = this.myDB.getRs().getString("dvd");
+						tempDataRented[i][9] = this.myDB.getRs().getString("blue_ray");
 						i++;
 					}
 
@@ -208,11 +212,11 @@ public class MemberMenuModel {
 	public void getDataPremiunLovers(int idOne, int idTwo, int idThree, int idFour, String Query) {
 		
 		// LOCAL DATA STORAGE
-		String[][] tempData = new String[1000][12];
-		String[][] tempDataRented = new String[4][12];
+		String[][] tempData = new String[1000][13];
+		String[][] tempDataRented = new String[4][13];
 		
 		//Query		
-		String query = "SELECT title_name, year_rel, album, band, genre, director, runn_time, lang, country, cd, dvd, blue_ray "
+		String query = "SELECT id, title_name, year_rel, album, band, genre, director, runn_time, lang, country, cd, dvd, blue_ray "
 					 + "FROM titles "+Query+";";
 		
 				
@@ -224,18 +228,19 @@ public class MemberMenuModel {
 
 			while (this.myDB.getRs().next()) {
 
-				tempData[i][0] = this.myDB.getRs().getString("title_name");
-				tempData[i][1] = this.myDB.getRs().getString("year_rel");
-				tempData[i][2] = this.myDB.getRs().getString("album");
-				tempData[i][3] = this.myDB.getRs().getString("band");
-				tempData[i][4] = this.myDB.getRs().getString("genre");
-				tempData[i][5] = this.myDB.getRs().getString("director");
-				tempData[i][6] = this.myDB.getRs().getString("runn_time");
-				tempData[i][7] = this.myDB.getRs().getString("lang");
-				tempData[i][8] = this.myDB.getRs().getString("country");
-				tempData[i][9] = this.myDB.getRs().getString("cd");
-				tempData[i][10] = this.myDB.getRs().getString("dvd");
-				tempData[i][11] = this.myDB.getRs().getString("blue_ray");
+				tempData[i][0] = this.myDB.getRs().getString("id");
+				tempData[i][1] = this.myDB.getRs().getString("title_name");
+				tempData[i][2] = this.myDB.getRs().getString("year_rel");
+				tempData[i][3] = this.myDB.getRs().getString("album");
+				tempData[i][4] = this.myDB.getRs().getString("band");
+				tempData[i][5] = this.myDB.getRs().getString("genre");
+				tempData[i][6] = this.myDB.getRs().getString("director");
+				tempData[i][7] = this.myDB.getRs().getString("runn_time");
+				tempData[i][8] = this.myDB.getRs().getString("lang");
+				tempData[i][9] = this.myDB.getRs().getString("country");
+				tempData[i][10] = this.myDB.getRs().getString("cd");
+				tempData[i][11] = this.myDB.getRs().getString("dvd");
+				tempData[i][12] = this.myDB.getRs().getString("blue_ray");
 				i++;
 			}
 
@@ -245,7 +250,7 @@ public class MemberMenuModel {
 		}
 		
 				//QUERY TWO
-				String queryTwo = "SELECT title_name, year_rel, album, band, genre, director, runn_time, lang, country, cd, dvd, blue_ray "
+				String queryTwo = "SELECT id, title_name, year_rel, album, band, genre, director, runn_time, lang, country, cd, dvd, blue_ray "
 								+ "FROM titles "
 								+ "WHERE id = "+idOne+" "
 								+ "OR id = "+idTwo+" " 
@@ -261,17 +266,18 @@ public class MemberMenuModel {
 					while (this.myDB.getRs().next()) {
 
 						tempDataRented[j][0] = this.myDB.getRs().getString("title_name");
-						tempDataRented[j][1] = this.myDB.getRs().getString("year_rel");
-						tempDataRented[j][2] = this.myDB.getRs().getString("album");
-						tempDataRented[j][3] = this.myDB.getRs().getString("band");
-						tempDataRented[j][4] = this.myDB.getRs().getString("genre");
-						tempDataRented[j][5] = this.myDB.getRs().getString("director");
-						tempDataRented[j][6] = this.myDB.getRs().getString("runn_time");
-						tempDataRented[j][7] = this.myDB.getRs().getString("lang");
-						tempDataRented[j][8] = this.myDB.getRs().getString("country");
-						tempDataRented[j][9] = this.myDB.getRs().getString("cd");
-						tempDataRented[j][10] = this.myDB.getRs().getString("dvd");
-						tempDataRented[j][11] = this.myDB.getRs().getString("blue_ray");
+						tempDataRented[j][1] = this.myDB.getRs().getString("title_name");
+						tempDataRented[j][2] = this.myDB.getRs().getString("year_rel");
+						tempDataRented[j][3] = this.myDB.getRs().getString("album");
+						tempDataRented[j][4] = this.myDB.getRs().getString("band");
+						tempDataRented[j][5] = this.myDB.getRs().getString("genre");
+						tempDataRented[j][6] = this.myDB.getRs().getString("director");
+						tempDataRented[j][7] = this.myDB.getRs().getString("runn_time");
+						tempDataRented[j][8] = this.myDB.getRs().getString("lang");
+						tempDataRented[j][9] = this.myDB.getRs().getString("country");
+						tempDataRented[j][10] = this.myDB.getRs().getString("cd");
+						tempDataRented[j][11] = this.myDB.getRs().getString("dvd");
+						tempDataRented[j][12] = this.myDB.getRs().getString("blue_ray");
 						j++;
 					}
 

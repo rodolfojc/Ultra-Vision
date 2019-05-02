@@ -39,7 +39,16 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		this.memberMenuView.UpdateFrame();
 		}
 		
+		if (e.getActionCommand().equals("Rent")) {
+			
+			
+			
+		}
+		
+		
 	}
+	
+		
 
 	@Override
 	public void valueChanged(ListSelectionEvent arg0) {
