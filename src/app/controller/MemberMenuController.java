@@ -32,17 +32,19 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		
 		if (e.getActionCommand().equals("Search")) {
 			
-		String query = this.memberMenuView.getSearchTitleName().getText();
-		this.database = new Database();
-		this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
-		this.memberMenuModel.getData(this.memberMenuView.getMyCustomer().getType(), query);
-		this.memberMenuView.UpdateFrame();
+			String query = this.memberMenuView.getSearchTitleName().getText();
+			this.database = new Database();
+			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
+			this.memberMenuModel.getData(this.memberMenuView.getMyCustomer().getType(), query);
+			this.memberMenuView.UpdateFrame();
 		}
 		
 		if (e.getActionCommand().equals("Rent")) {
 			
-			
-			
+			String id = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 0);
+			this.database = new Database();
+			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
+			this.memberMenuModel.setData();
 		}
 		
 		

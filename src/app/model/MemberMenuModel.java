@@ -295,6 +295,11 @@ public class MemberMenuModel {
 				}
 		
 		}
+
+	public void setData() {
+		
+		
+	}
 	
 		
 }
