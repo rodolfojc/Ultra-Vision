@@ -53,7 +53,7 @@ public class MemberMenuModel {
 				
 		String query = "SELECT title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
 				 + "FROM titles "
-				 + "WHERE type = 'AudioMusic' OR type = 'ConcertVideo' "+Query+";";
+				 + "WHERE (type = 'AudioMusic' OR type = 'ConcertVideo') "+Query+";";
 		
 		try {
 			
