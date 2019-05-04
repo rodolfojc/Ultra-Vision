@@ -2,6 +2,8 @@ package app.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
@@ -55,7 +57,9 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 	@Override
 	public void valueChanged(ListSelectionEvent arg0) {
 		
-		String isCD, isDVD, isBlueRay;
+		String isCD="";
+		String isDVD="";
+		String isBlueRay="";
 		
 		
 		//RENTED TABLE LISTENER
@@ -78,17 +82,56 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 							+ this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 1) + " " 
 							+"" + this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 2) +" "
 							+". If you want to release it, press return!");
-
+			
+					
+			
 		}
 		
 		//TITLES TABLE LISTENER
 		if (!this.memberMenuView.getMyTableModelTitles().isSelectionEmpty()) {
 			this.memberMenuView.setSelectedRowTitles(this.memberMenuView.getMyTableModelTitles().getMinSelectionIndex());
+			
+			if (this.memberMenuView.getMyCustomer().getType().equals("MusicLovers")) {
+				isCD = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 6);
+				isDVD = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 7);
+				isBlueRay = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 8);
+			}else if (this.memberMenuView.getMyCustomer().getType().equals("VideoLovers") || (this.memberMenuView.getMyCustomer().getType().equals("TvLovers"))) {
+				isDVD = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 8);
+				isBlueRay = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 9);
+			}else {
+				isCD = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 10);
+				isDVD = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 11);
+				isBlueRay = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 12);
+			}
+			
 			JOptionPane.showMessageDialog(this.memberMenuView,
 					"Title selected: ID " + this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 0) + ", " + ""
 							+ this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 1) + " " 
 							+"" + this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 2) +" "
 							+". If you want rent it, press rent!");
+			
+			List<String> optionsList = new ArrayList<>();
+			
+			optionsList.add("No availale");
+			
+			if (isCD.equals("Yes")) {
+				optionsList.add("CD");
+			}
+			
+			if (isDVD.equals("Yes")) {
+				optionsList.add("DVD");
+			}
+			
+			if (isBlueRay.equals("Yes")) {
+				optionsList.add("BlueRay");
+			}
+			
+			Object[] optionArray = optionsList.toArray();
+			
+			
+			int response = JOptionPane.showOptionDialog(this.memberMenuView, "Select a format", "Format",
+			        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
+			        null, optionArray, optionArray[0]);
 
 		}
 		
