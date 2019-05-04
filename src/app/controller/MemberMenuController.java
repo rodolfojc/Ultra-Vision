@@ -55,9 +55,24 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 	@Override
 	public void valueChanged(ListSelectionEvent arg0) {
 		
+		String isCD, isDVD, isBlueRay;
+		
+		
 		//RENTED TABLE LISTENER
 		if (!this.memberMenuView.getMyTableModelRented().isSelectionEmpty()) {
 			this.memberMenuView.setSelectedRowRented(this.memberMenuView.getMyTableModelRented().getMinSelectionIndex());
+			
+			if (this.memberMenuView.getMyCustomer().getType().equals("MusicLovers")) {
+				isCD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 6);
+			}else if (this.memberMenuView.getMyCustomer().getType().equals("VideoLovers") || (this.memberMenuView.getMyCustomer().getType().equals("TvLovers"))) {
+				isDVD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 8);
+				isBlueRay = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 9);
+			}else {
+				isCD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 10);
+				isDVD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 11);
+				isBlueRay = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 12);
+			}
+			
 			JOptionPane.showMessageDialog(this.memberMenuView,
 					"Title selected: " + this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0) + ", " + ""
 							+ this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 1) + " " 
