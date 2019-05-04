@@ -22,6 +22,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 	private Database database;
 	private MemberMenuModel memberMenuModel;
 	
+	
 	public MemberMenuController(MemberMenuView memberMenuView, MainView mainView) {
 		
 		this.memberMenuView = memberMenuView;
@@ -108,31 +109,37 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 					"Title selected: ID " + this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 0) + ", " + ""
 							+ this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 1) + " " 
 							+"" + this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 2) +" "
-							+". If you want rent it, press rent!");
+							+". Please press ok to continue");
 			
 			List<String> optionsList = new ArrayList<>();
+			List<String> optionsListDB = new ArrayList<>();
 			
 			optionsList.add("No availale");
 			
 			if (isCD.equals("Yes")) {
 				optionsList.add("CD");
+				optionsListDB.add("cd");
 			}
 			
 			if (isDVD.equals("Yes")) {
 				optionsList.add("DVD");
+				optionsListDB.add("dvd");
 			}
 			
 			if (isBlueRay.equals("Yes")) {
 				optionsList.add("BlueRay");
+				optionsListDB.add("blue_ray");
 			}
 			
 			Object[] optionArray = optionsList.toArray();
+			Object[] optionDB = optionsListDB.toArray();
 			
-			
-			int response = JOptionPane.showOptionDialog(this.memberMenuView, "Select a format", "Format",
+			int format = JOptionPane.showOptionDialog(this.memberMenuView, "Select a FORMAT", "Format",
 			        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
 			        null, optionArray, optionArray[0]);
 
+			String isFormatDB = (String) optionDB[format];
+			System.out.println(isFormatDB);
 		}
 		
 	}
