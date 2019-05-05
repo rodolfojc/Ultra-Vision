@@ -132,6 +132,7 @@ public class FindMemberModel {
 					this.tempMember.setTitleRented(1, dataInt[2]);
 					this.tempMember.setTitleRented(2, dataInt[3]);
 					this.tempMember.setTitleRented(3, dataInt[4]);
+					this.tempMember.setId(id);
 					
 					this.myBD.getRs().close();
 					this.myBD.getStmt().close();

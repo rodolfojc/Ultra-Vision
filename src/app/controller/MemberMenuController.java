@@ -132,14 +132,22 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			}
 			
 			Object[] optionArray = optionsList.toArray();
-			Object[] optionDB = optionsListDB.toArray();
-			
+						
 			int format = JOptionPane.showOptionDialog(this.memberMenuView, "Select a FORMAT", "Format",
-			        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
-			        null, optionArray, optionArray[0]);
+			        JOptionPane.DEFAULT_OPTION, 
+			        JOptionPane.PLAIN_MESSAGE,
+			        null, 
+			        optionArray,
+			        optionArray[0]);
 
-			String isFormatDB = (String) optionDB[format];
-			System.out.println(isFormatDB);
+			String isFormatDB = optionArray[format].toString();
+			
+			this.database = new Database();
+			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
+			this.memberMenuModel.setRent(this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 0),
+										 this.memberMenuView.getMyCustomer().getId(),
+										 isFormatDB);
+						
 		}
 		
 	}

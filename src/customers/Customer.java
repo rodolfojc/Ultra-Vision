@@ -32,7 +32,13 @@ public abstract class Customer {
 	}
 
 	//GETTERS AND SETTERS
-	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}	
 	
 	public String getCustName() {
 		return custName;
@@ -82,10 +88,7 @@ public abstract class Customer {
 		this.numbRented = numbRented;
 	}
 
-	public int getId() {
-		return id;
-	}
-	
+		
 	public String getEmail() {
 		return email;
 	}
@@ -110,6 +113,8 @@ public abstract class Customer {
 	public void setTitleRented(int a, int titleRented) {
 		this.titleRented[a] = titleRented;
 	}
+
+	
 
 	
 

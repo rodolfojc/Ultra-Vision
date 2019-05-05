@@ -296,8 +296,9 @@ public class MemberMenuModel {
 		
 		}
 
-	public void setData() {
-		
+
+	public void setRent(String titlesStr, int id, String isFormatDB) {
+		// TODO Auto-generated method stub
 		
 	}
 	
