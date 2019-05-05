@@ -252,6 +252,7 @@ public class MemberMenuView extends GuiView {
 	
 	public void UpdateFrame() {
 		this.panel.removeAll();
+		this.getStartingData();
 		setFrame();
 	}
 
