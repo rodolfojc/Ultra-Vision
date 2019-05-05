@@ -1,5 +1,6 @@
 package app.model;
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import app.database.Database;
@@ -298,7 +299,32 @@ public class MemberMenuModel {
 
 
 	public void setRent(String titlesStr, int id, String isFormatDB) {
-		// TODO Auto-generated method stub
+		
+		if (isFormatDB.equals("CD")) {
+			isFormatDB = "cd";
+		}else if(isFormatDB.equals("DVD")) {
+			isFormatDB = "dvd";
+		}else {
+			isFormatDB = "blue_ray";
+		}
+		
+		String custIDStr = Integer.toString(id);
+		
+		try {
+
+			String query = "UPDATE titles SET "+isFormatDB+"='"+custIDStr+"' WHERE id='"+titlesStr+"';";
+
+			PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
+			preparedStmt.execute();
+			this.myDB.getConn().close();
+
+		} catch (Exception e) {
+
+			System.err.println("Got an exception!");
+			System.err.println(e.getMessage());
+		}
+		this.memberMenuView.UpdateFrame();
+		
 		
 	}
 	

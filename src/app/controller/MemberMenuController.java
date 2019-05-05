@@ -21,6 +21,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 	private MainView mainView;
 	private Database database;
 	private MemberMenuModel memberMenuModel;
+	private String isFormatDB;
 	
 	
 	public MemberMenuController(MemberMenuView memberMenuView, MainView mainView) {
@@ -44,10 +45,11 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		
 		if (e.getActionCommand().equals("Rent")) {
 			
-			String id = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 0);
+			String TitleID = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 0);
+			int custID = this.memberMenuView.getMyCustomer().getId();
 			this.database = new Database();
 			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
-			this.memberMenuModel.setData();
+			this.memberMenuModel.setRent(TitleID, custID, isFormatDB);
 		}
 		
 		
@@ -139,14 +141,10 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			        null, 
 			        optionArray,
 			        optionArray[0]);
-
-			String isFormatDB = optionArray[format].toString();
 			
-			this.database = new Database();
-			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
-			this.memberMenuModel.setRent(this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 0),
-										 this.memberMenuView.getMyCustomer().getId(),
-										 isFormatDB);
+			this.isFormatDB = optionArray[format].toString();
+			
+						
 						
 		}
 		
