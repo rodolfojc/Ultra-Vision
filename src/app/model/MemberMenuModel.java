@@ -309,6 +309,7 @@ public class MemberMenuModel {
 		}
 		
 		String custIDStr = Integer.toString(id);
+		int titleInt = Integer.parseInt(titlesStr);
 		
 		try {
 
@@ -316,6 +317,11 @@ public class MemberMenuModel {
 
 			PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
 			preparedStmt.execute();
+			
+			String queryTwo= "UPDATE customers SET title_one ="+titleInt+" WHERE mem_numb = "+id+" ";
+			PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
+			preparedStmtTwo.execute();
+			
 			this.myDB.getConn().close();
 
 		} catch (Exception e) {
@@ -323,7 +329,7 @@ public class MemberMenuModel {
 			System.err.println("Got an exception!");
 			System.err.println(e.getMessage());
 		}
-		this.memberMenuView.UpdateFrame();
+		
 		
 		
 	}

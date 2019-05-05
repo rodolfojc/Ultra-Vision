@@ -50,6 +50,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			this.database = new Database();
 			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
 			this.memberMenuModel.setRent(TitleID, custID, isFormatDB);
+			this.memberMenuView.UpdateFrame();
 		}
 		
 		
