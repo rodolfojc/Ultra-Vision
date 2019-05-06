@@ -298,7 +298,9 @@ public class MemberMenuModel {
 		}
 
 
-	public void setRent(String titlesStr, int id, String isFormatDB) {
+	public void setRent(String titlesStr, int id, int slotForRented, String isFormatDB) {
+		
+		String titleSlot;
 		
 		if (isFormatDB.equals("CD")) {
 			isFormatDB = "cd";
@@ -307,6 +309,16 @@ public class MemberMenuModel {
 		}else {
 			isFormatDB = "blue_ray";
 		}
+		
+		if (slotForRented == 0) {
+			titleSlot = "title_one";
+		} else if (slotForRented == 1) {
+			titleSlot = "title_two";
+		} else if (slotForRented == 2) {
+			titleSlot = "title_three";
+		} else {
+			titleSlot = "title_four";
+		} 
 		
 		String custIDStr = Integer.toString(id);
 		int titleInt = Integer.parseInt(titlesStr);
@@ -318,9 +330,11 @@ public class MemberMenuModel {
 			PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
 			preparedStmt.execute();
 			
-			String queryTwo= "UPDATE customers SET title_one ="+titleInt+" WHERE mem_numb = "+id+" ";
+			String queryTwo= "UPDATE customers SET "+titleSlot+" = "+titleInt+" WHERE mem_numb = "+id+" ";
 			PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
 			preparedStmtTwo.execute();
+			
+			this.memberMenuView.getMyCustomer().setTitleRented(slotForRented, titleInt);
 			
 			this.myDB.getConn().close();
 

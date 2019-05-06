@@ -49,8 +49,33 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			int custID = this.memberMenuView.getMyCustomer().getId();
 			this.database = new Database();
 			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
-			this.memberMenuModel.setRent(TitleID, custID, isFormatDB);
+			
+			int slotForRented = -1;
+			boolean titlesRentedFull = false;
+			
+			if(this.memberMenuView.getMyCustomer().getTitleRentedInt(0) == 0) {
+				slotForRented = 0;
+			}else if (this.memberMenuView.getMyCustomer().getTitleRentedInt(1) == 0) {
+				slotForRented = 1;
+			}else if (this.memberMenuView.getMyCustomer().getTitleRentedInt(2) == 0) {
+				slotForRented = 2;
+			}else if (this.memberMenuView.getMyCustomer().getTitleRentedInt(3) == 0) {
+				slotForRented = 3;
+			}else {
+				titlesRentedFull = true;
+			}
+			
+			if (!titlesRentedFull) {
+			this.memberMenuModel.setRent(TitleID, custID, slotForRented, isFormatDB);
 			this.memberMenuView.UpdateFrame();
+			}else {
+				JOptionPane.showMessageDialog(this.memberMenuView, 
+											  "More than 4 titles have been rented by Member", 
+											  "Error", 
+											  JOptionPane.ERROR_MESSAGE);
+			}
+			
+			
 		}
 		
 		
