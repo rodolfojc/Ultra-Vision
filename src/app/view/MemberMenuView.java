@@ -2,6 +2,7 @@ package app.view;
 
 import java.awt.Insets;
 import java.util.Arrays;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -37,6 +38,7 @@ public class MemberMenuView extends GuiView {
 	private Database myDB;
 	private String[][] titles;
 	private String[][] titlesRentedData;
+	private Date[] dates;
 	private JButton rent;
 	private JButton searchTitle;
 	private JButton release;
@@ -121,6 +123,10 @@ public class MemberMenuView extends GuiView {
 
 	public void setTitles(String[][] data) {
 		this.titles = Arrays.copyOf(data, data.length);;
+	}
+	
+	public void setDates(Date[] dates) {
+		this.dates = Arrays.copyOf(dates, dates.length);;
 	}
 	
 	

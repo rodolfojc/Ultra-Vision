@@ -2,6 +2,7 @@ package app.model;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Date;
 
 import javax.swing.JOptionPane;
 
@@ -217,6 +218,7 @@ public class MemberMenuModel {
 		// LOCAL DATA STORAGE
 		String[][] tempData = new String[1000][13];
 		String[][] tempDataRented = new String[4][13];
+		Date[] dates = new Date[4];
 		
 		//Query		
 		String query = "SELECT id, title_name, year_rel, album, band, genre, director, runn_time, lang, country, cd, dvd, blue_ray "
@@ -250,7 +252,7 @@ public class MemberMenuModel {
 			} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+			}
 		
 				//QUERY TWO
 				String queryTwo = "SELECT id, title_name, year_rel, album, band, genre, director, runn_time, lang, country, cd, dvd, blue_ray "
@@ -284,18 +286,49 @@ public class MemberMenuModel {
 						j++;
 					}
 
-					this.myDB.getRs().close();
-					this.myDB.getStmt().close();
-					this.myDB.getConn().close();
-
-					// THIS CREATE A COPY OF THE LOCAL DATA TO THE ARRAY[][] SETTER IN MEMBER MENU
-					this.memberMenuView.setTitles(tempData);
-					this.memberMenuView.setTitlesRentedData(tempDataRented);
 					
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				
+				//QUERY TWO
+				String queryThree = "SELECT one_date, two_date, three_date, four_date "
+								  + "FROM customers WHERE id = "+this.memberMenuView.getMyCustomer().getId()+";";
+								
+				
+				try {
+					
+					this.myDB.setRs(this.myDB.getStmt().executeQuery(queryThree));
+
+					int j = 0;
+
+					while (this.myDB.getRs().next()) {
+						
+						dates[0] = this.myDB.getRs().getDate("one_date");
+						dates[1] = this.myDB.getRs().getDate("two_date");
+						dates[2] = this.myDB.getRs().getDate("three_date");
+						dates[3] = this.myDB.getRs().getDate("four_date");
+					
+					}
+					
+					this.myDB.getRs().close();
+					this.myDB.getStmt().close();
+					this.myDB.getConn().close();
+				
+					
+					// THIS CREATE A COPY OF THE LOCAL DATA TO THE ARRAY[][] SETTER IN MEMBER MENU
+					this.memberMenuView.setTitles(tempData);
+					this.memberMenuView.setTitlesRentedData(tempDataRented);
+					this.memberMenuView.setDates(dates);
+				
+				} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				}
+				
+						
+				
 		
 		}
 
@@ -355,9 +388,9 @@ public class MemberMenuModel {
 			System.err.println("Got an exception!");
 			System.err.println(e.getMessage());
 		}
-		
+	
 		JOptionPane.showMessageDialog(this.memberMenuView, 
-									  "The title have been rented, total cost 2 EUR ", 
+									  "The title have been rented, TOTAL = €2.50 ", 
 									  "Confirm", 
 									  JOptionPane.INFORMATION_MESSAGE);
 		
