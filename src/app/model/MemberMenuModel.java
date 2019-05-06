@@ -3,6 +3,8 @@ package app.model;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
 import app.database.Database;
 import app.view.MemberMenuView;
 
@@ -334,7 +336,12 @@ public class MemberMenuModel {
 			PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
 			preparedStmtTwo.execute();
 			
+			String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
+			PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
+			preparedStmtThree.execute();
+			
 			this.memberMenuView.getMyCustomer().setTitleRented(slotForRented, titleInt);
+			this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(10);
 			
 			this.myDB.getConn().close();
 
@@ -343,6 +350,11 @@ public class MemberMenuModel {
 			System.err.println("Got an exception!");
 			System.err.println(e.getMessage());
 		}
+		
+		JOptionPane.showMessageDialog(this.memberMenuView, 
+									  "The title have been rented, total cost 2 EUR ", 
+									  "Confirm", 
+									  JOptionPane.INFORMATION_MESSAGE);
 		
 		
 		
