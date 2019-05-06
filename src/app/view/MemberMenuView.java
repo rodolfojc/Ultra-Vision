@@ -59,8 +59,6 @@ public class MemberMenuView extends GuiView {
 	}
 	
 	//GETTER AND SETTERS
-	
-	
 	public String getTitlesRentedDataStr(int a, int b) {
 		return this.titlesRentedData[a][b];
 	}

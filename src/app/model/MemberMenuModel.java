@@ -387,10 +387,7 @@ public class MemberMenuModel {
 				e.printStackTrace();
 				}
 				
-						
-				
-		
-		}
+			}
 
 
 	public void setRent(String titlesStr, int id, int slotForRented, String isFormatDB) {

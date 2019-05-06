@@ -41,7 +41,7 @@ public class SearchTitleView extends GuiView {
 	
 	public void getStartingData() {
 		
-	String query = "SELECT id, type, title_name, year_rel FROM titles";
+	String query = "SELECT * FROM titles";
 	this.myBD = new Database();
 	this.myModel = new SearchTitleModel(this.myBD, this);
 	this.myModel.getData(query);
@@ -67,25 +67,27 @@ public class SearchTitleView extends GuiView {
 		
 	public void setFrame() {
 		
-		String[] columns = {"ID", "Type", "Title", "Year"};
+		String[] columnsNameTitles = {"Type","ID","Title", "Year", "Album", "Band", "Genre", "Director", "Running Time", "Languages", "Country", "CD", "DVD", "BlueRay"};
 		
 		this.setBox(this.panel,1);
 		
 		JPanel titleTop = new JPanel();
 		JPanel top = new JPanel();
-		JLabel title = this.addLabel("Title (by name) ", titleTop);
+		JLabel title = this.addLabel("Titles ", titleTop);
 		title.setFont(new Font("Serif", Font.BOLD, 40));
+		this.addLabel("By name: ", top);
 		this.setSearchTitle(this.addTextField(20, top));
 		this.search = this.addButtonAll("Search", "Search", top, myController);
 		titleTop.setBorder(new EmptyBorder(new Insets(40, 0, 0, 0)));
-		
-		JPanel center = new JPanel();
-		this.addTableS(0, this.data, columns, center, "Titles");
-		this.addButtonAll("Go back", "Go back", center, myController);
-		
 		this.panel.add(titleTop);
 		this.panel.add(top);
-		this.panel.add(center);
+		
+		//JPanel center = new JPanel();
+		this.addTableS(0, this.data, columnsNameTitles, this.panel, "Titles");
+		this.addButtonAll("Go back", "Go back", this.panel, myController);
+		
+		
+		//this.panel.add(center);
 				
 		this.repaint();
 		this.validate();

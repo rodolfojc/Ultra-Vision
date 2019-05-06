@@ -151,7 +151,16 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			}
 			
 			
+		} 
+		
+		if (e.getActionCommand().equals("FREE")) {
+			
+			
+		
 		}
+		
+		
+		
 		
 	}
 	
