@@ -115,6 +115,42 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 					  options,
 					  options[0]);
 			
+			if (opt == 0) {
+				
+				String isCD="";
+				String isDVD="";
+				String isBlueRay="";
+				String format;
+				
+				if (this.memberMenuView.getMyCustomer().getType().equals("MusicLovers")) {
+					isCD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 6);
+				}else if (this.memberMenuView.getMyCustomer().getType().equals("VideoLovers") || (this.memberMenuView.getMyCustomer().getType().equals("TvLovers"))) {
+					isDVD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 8);
+					isBlueRay = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 9);
+				}else {
+					isCD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 10);
+					isDVD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 11);
+					isBlueRay = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 12);
+				}
+				
+				if(isCD.equals(String.valueOf(this.memberMenuView.getMyCustomer().getId()))) {
+					format = "cd";
+				}else if(isDVD.equals(String.valueOf(this.memberMenuView.getMyCustomer().getId()))) {
+					format = "dvd";
+				}else {
+					format = "blue_ray";
+				}
+				
+				int selectedRow = this.memberMenuView.getSelectedRowRented();
+				String TitleID = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0);
+				int custID = this.memberMenuView.getMyCustomer().getId();
+				this.database = new Database();
+				this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
+				this.memberMenuModel.setReturn(TitleID, format, custID, selectedRow);
+				this.memberMenuView.UpdateFrame();
+			}
+			
+			
 		}
 		
 	}

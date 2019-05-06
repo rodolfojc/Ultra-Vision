@@ -270,7 +270,7 @@ public class MemberMenuModel {
 
 					while (this.myDB.getRs().next()) {
 
-						tempDataRented[j][0] = this.myDB.getRs().getString("title_name");
+						tempDataRented[j][0] = this.myDB.getRs().getString("id");
 						tempDataRented[j][1] = this.myDB.getRs().getString("title_name");
 						tempDataRented[j][2] = this.myDB.getRs().getString("year_rel");
 						tempDataRented[j][3] = this.myDB.getRs().getString("album");
@@ -404,6 +404,59 @@ public class MemberMenuModel {
 					  "Confirm", 
 					  JOptionPane.INFORMATION_MESSAGE);
 		}
+		
+	}
+
+	public void setReturn(String titleID, String format, int custID, int selectedRow) {
+		
+		String slotRented;
+		String titleRefDate;
+		
+		if(selectedRow == 0) {
+			slotRented = "title_one";
+			titleRefDate = "one_date";
+		} else if (selectedRow == 1) {
+			slotRented = "title_two";
+			titleRefDate = "two_date";
+		} else if (selectedRow == 2) {
+			slotRented = "title_three";
+			titleRefDate = "three_date";
+		} else {
+			slotRented = "title_four";
+			titleRefDate = "four_date";
+		}
+		
+		
+		try {
+
+			String query = "UPDATE titles SET "+format+"='Yes' WHERE id='"+titleID+"';";
+
+			PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
+			preparedStmt.execute();
+			
+			String queryTwo= "UPDATE customers SET "+slotRented+" = 0 , "+titleRefDate+" = NULL WHERE mem_numb = "+custID+" ";
+			PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
+			preparedStmtTwo.execute();
+			
+//			String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
+//			PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
+//			preparedStmtThree.execute();
+			
+			this.memberMenuView.getMyCustomer().setTitleRented(selectedRow, 0);
+//			this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(10);
+			
+			this.myDB.getConn().close();
+
+		} catch (Exception e) {
+
+			System.err.println("Got an exception!");
+			System.err.println(e.getMessage());
+		}
+	
+		JOptionPane.showMessageDialog(this.memberMenuView, 
+									  "The title have been set Returned) ", 
+									  "Confirm", 
+									  JOptionPane.INFORMATION_MESSAGE);
 		
 	}
 	
