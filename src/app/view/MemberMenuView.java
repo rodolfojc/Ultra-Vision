@@ -160,6 +160,7 @@ public class MemberMenuView extends GuiView {
 		JPanel myBtnRentRealasePanel = new JPanel();
 		this.rent = this.addButtonAll("Rent", "Rent", myBtnRentRealasePanel, this.myController);
 		this.freeRentalBtn = this.addButtonAll("FREE RENTAL", "FREE", myBtnRentRealasePanel, this.myController);
+		this.myCustomer.getMyMemberCard().setRentAllowed();
 		if (!this.myCustomer.getMyMemberCard().availFreeRent()) {
 			freeRentalBtn.setEnabled(false);
 		}
@@ -257,10 +258,16 @@ public class MemberMenuView extends GuiView {
 		
 	}
 	
-	public void UpdateFrame() {
+	public void UpdateFrame(boolean flag) {
+			
 		this.panel.removeAll();
-		this.getStartingData();
+		
+		if(flag) {
+			this.getStartingData();
+			setFrame();
+		}else {
 		setFrame();
+		}
 	}
 
 }

@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
 import javax.swing.border.EmptyBorder;
 
 import app.controller.SearchTitleController;
@@ -21,6 +22,7 @@ public class SearchTitleView extends GuiView {
 	//ATTRIBUTES
 	private JButton search;
 	private JTextField searchTitle;
+	private boolean memberFlag = false;
 	
 	//CONTROLLER
 	private SearchTitleController myController;
@@ -29,6 +31,8 @@ public class SearchTitleView extends GuiView {
 	//DATA - DATABASE
 	private Database myBD;
 	private String[][] data;
+	private ListSelectionModel myTableModel;
+	private int selectedRow;
 
 	
 	
@@ -39,6 +43,14 @@ public class SearchTitleView extends GuiView {
 		setFrame();
 	}
 	
+	public SearchTitleView(String name, int width, int height, boolean resizable, MemberMenuView memberMenuView) {
+		super(name, width, height, resizable);
+		this.myController = new SearchTitleController(this, memberMenuView);
+		this.memberFlag = true;
+		getStartingData();
+		setFrame();
+	}
+
 	public void getStartingData() {
 		
 	String query = "SELECT * FROM titles";
@@ -48,8 +60,28 @@ public class SearchTitleView extends GuiView {
 	}
 	
 	//GETTERS AND SETTERS
+	public String getTitlesStr(int a, int b) {
+		return this.data[a][b];
+	}
+	
 	public JTextField getSearchTitle() {
 		return searchTitle;
+	}
+
+	public int getSelectedRow() {
+		return selectedRow;
+	}
+
+	public void setSelectedRow(int selectedRow) {
+		this.selectedRow = selectedRow;
+	}
+
+	public ListSelectionModel getMyTableModel() {
+		return myTableModel;
+	}
+
+	public void setMyTableModel(ListSelectionModel myTableModel) {
+		this.myTableModel = myTableModel;
 	}
 
 	public void setSearchTitle(JTextField searchTitle) {
@@ -83,8 +115,19 @@ public class SearchTitleView extends GuiView {
 		this.panel.add(top);
 		
 		//JPanel center = new JPanel();
-		this.addTableS(0, this.data, columnsNameTitles, this.panel, "Titles");
-		this.addButtonAll("Go back", "Go back", this.panel, myController);
+		
+		
+		if (!this.memberFlag) {
+			this.addTableS(0, this.data, columnsNameTitles, this.panel, "Titles");
+			this.addButtonAll("Go back", "Go back", this.panel, myController);
+			
+				
+		} else {
+			this.addTableS(0, this.data, columnsNameTitles, this.panel, "Titles");
+			this.myTableModel = this.myTable[0].getSelectionModel();
+			this.myTableModel.addListSelectionListener(this.myController);
+			this.addButtonAll("Rent", "Rent", this.panel, myController);
+		}
 		
 		
 		//this.panel.add(center);

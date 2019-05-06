@@ -8,17 +8,27 @@ import javax.swing.JOptionPane;
 
 import app.database.Database;
 import app.view.MemberMenuView;
+import app.view.SearchTitleView;
 
 public class MemberMenuModel {
 
 	private Database myDB;
 	private MemberMenuView memberMenuView;
+	private SearchTitleView searchTitleView;
 	
 	public MemberMenuModel(Database myDB, MemberMenuView memberMenuView) {
 		
 		this.myDB = myDB;
 		this.memberMenuView = memberMenuView;
 		
+		
+	}
+
+	public MemberMenuModel(Database myDB, SearchTitleView searchTitleView, MemberMenuView memberMenuView) {
+		
+		this.myDB = myDB;
+		this.searchTitleView = searchTitleView;
+		this.memberMenuView = memberMenuView;
 	}
 
 	public void getData(String type, String Query) {
@@ -57,8 +67,8 @@ public class MemberMenuModel {
 		Date[] dates = new Date[4];
 				
 		String query = "SELECT id, title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
-				 + "FROM titles "
-				 + "WHERE (type = 'AudioMusic' OR type = 'ConcertVideo') "+Query+";";
+						+ "FROM titles "
+						+ "WHERE (type = 'AudioMusic' OR type = 'ConcertVideo') "+Query+";";
 		
 		try {
 			
@@ -390,7 +400,7 @@ public class MemberMenuModel {
 			}
 
 
-	public void setRent(String titlesStr, int id, int slotForRented, String isFormatDB) {
+	public void setRent(String titlesStr, int id, int slotForRented, String isFormatDB, boolean freeRent) {
 		
 		String titleSlot;
 		String titleRefDate;
@@ -435,12 +445,23 @@ public class MemberMenuModel {
 			PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
 			preparedStmtTwo.execute();
 			
-			String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
-			PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
-			preparedStmtThree.execute();
+//			String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
+//			PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
+//			preparedStmtThree.execute();
+			if(!freeRent) {
+				this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(10);
+				String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
+				PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
+				preparedStmtThree.execute();
+			
+			}else {
+				this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(-100);
+				String queryThree= "UPDATE customers SET points = (points-100) WHERE mem_numb = "+id+" ";
+				PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
+				preparedStmtThree.execute();
+			}
 			
 			this.memberMenuView.getMyCustomer().setTitleRented(slotForRented, titleInt);
-			this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(10);
 			
 			this.myDB.getConn().close();
 
@@ -449,11 +470,20 @@ public class MemberMenuModel {
 			System.err.println("Got an exception!");
 			System.err.println(e.getMessage());
 		}
-	
-		JOptionPane.showMessageDialog(this.memberMenuView, 
+		
+			if (!freeRent) {
+				JOptionPane.showMessageDialog(this.memberMenuView, 
 									  "The title have been rented, TOTAL = €2.50 (Direct debit - Card) ", 
 									  "Confirm", 
 									  JOptionPane.INFORMATION_MESSAGE);
+			}else {
+				JOptionPane.showMessageDialog(this.searchTitleView, 
+						  "The title have been rented for FREE", 
+						  "Confirm", 
+						  JOptionPane.INFORMATION_MESSAGE);
+				this.searchTitleView.dispose();
+				
+			}
 		
 		}else {
 			JOptionPane.showMessageDialog(this.memberMenuView, 
@@ -506,7 +536,7 @@ public class MemberMenuModel {
 		}
 	
 		JOptionPane.showMessageDialog(this.memberMenuView, 
-									  "The title have been set Returned) ", 
+									  "The title have been set Returned ", 
 									  "Confirm", 
 									  JOptionPane.INFORMATION_MESSAGE);
 		

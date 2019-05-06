@@ -18,6 +18,7 @@ import app.model.MemberMenuModel;
 import app.model.SearchTitleModel;
 import app.view.MainView;
 import app.view.MemberMenuView;
+import app.view.SearchTitleView;
 
 public class MemberMenuController implements ActionListener, ListSelectionListener{
 
@@ -44,7 +45,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			this.database = new Database();
 			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
 			this.memberMenuModel.getData(this.memberMenuView.getMyCustomer().getType(), query);
-			this.memberMenuView.UpdateFrame();
+			this.memberMenuView.UpdateFrame(false);
 		}
 		
 		if (e.getActionCommand().equals("Rent")) {
@@ -70,8 +71,8 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			}
 			
 			if (!titlesRentedFull) {
-			this.memberMenuModel.setRent(TitleID, custID, slotForRented, isFormatDB);
-			this.memberMenuView.UpdateFrame();
+			this.memberMenuModel.setRent(TitleID, custID, slotForRented, isFormatDB, false);
+			this.memberMenuView.UpdateFrame(true);
 			}else {
 				JOptionPane.showMessageDialog(this.memberMenuView, 
 											  "More than 4 titles have been rented by Member", 
@@ -147,7 +148,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 				this.database = new Database();
 				this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
 				this.memberMenuModel.setReturn(TitleID, format, custID, selectedRow);
-				this.memberMenuView.UpdateFrame();
+				this.memberMenuView.UpdateFrame(true);
 			}
 			
 			
@@ -155,7 +156,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		
 		if (e.getActionCommand().equals("FREE")) {
 			
-			
+			new SearchTitleView("Search a Title", 500, 800, true, this.memberMenuView);
 		
 		}
 		
@@ -177,7 +178,6 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		//RENTED TABLE LISTENER
 		if (!this.memberMenuView.getMyTableModelRented().isSelectionEmpty()) {
 			this.memberMenuView.setSelectedRowRented(this.memberMenuView.getMyTableModelRented().getMinSelectionIndex());
-			
 			JOptionPane.showMessageDialog(this.memberMenuView,
 					"Title selected: " + this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0) + ", " + ""
 							+ this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 1) + " " 

@@ -33,7 +33,7 @@ public class MembershipCard {
 			}
 	   }
 	   
-	   private void setRentAllowed(){
+	   public void setRentAllowed(){
 			if (this.points >= 100){
 				this.freeRentAllowed = true;
 			} else {
