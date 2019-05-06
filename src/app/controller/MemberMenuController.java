@@ -96,7 +96,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 				e1.printStackTrace();
 			}
 			
-								
+			
 			long diff = dataTwo.getTime() - this.memberMenuView.getDatesDate(this.memberMenuView.getSelectedRowRented()).getTime();
 			int diffDays = (int) (diff / (24 * 60 * 60 * 1000));
 
@@ -174,9 +174,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 							+ this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 1) + " " 
 							+"" + this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 2) +" "
 							+". If you want to release it, press Return to continue");
-			
 					
-			
 		}
 		
 		//TITLES TABLE LISTENER
