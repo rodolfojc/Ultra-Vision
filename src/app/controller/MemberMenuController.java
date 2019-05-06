@@ -2,7 +2,11 @@ package app.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -74,10 +78,44 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 											  "Error", 
 											  JOptionPane.ERROR_MESSAGE);
 			}
+		  }
+		
+		if (e.getActionCommand().equals("Return")) {
 			
+			int penalty = 0;
+			int daysPenalty = 0;
+			
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+			Date date = new Date();
+			String dateStr = dateFormat.format(date);
+			Date dataTwo = new Date();
+			
+			try {
+				dataTwo = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
+			} catch (ParseException e1) {
+				e1.printStackTrace();
+			}
+			
+								
+			long diff = dataTwo.getTime() - this.memberMenuView.getDatesDate(this.memberMenuView.getSelectedRowRented()).getTime();
+			int diffDays = (int) (diff / (24 * 60 * 60 * 1000));
+
+			if (diffDays >3) {
+				daysPenalty = (diffDays - 3);
+				penalty = daysPenalty*2;
+			}
+			
+			String[] options = {"Pay by Card", "Cancel"};
+			int opt = JOptionPane.showOptionDialog(this.memberMenuView, 
+					  "The title is with = "+daysPenalty+" days penalty, TOTAL EXTRAS = €"+penalty+" ", 
+					  "Confirm",
+					  JOptionPane.DEFAULT_OPTION, 
+				      JOptionPane.PLAIN_MESSAGE,
+				      null,
+					  options,
+					  options[0]);
 			
 		}
-		
 		
 	}
 	
@@ -95,22 +133,11 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		if (!this.memberMenuView.getMyTableModelRented().isSelectionEmpty()) {
 			this.memberMenuView.setSelectedRowRented(this.memberMenuView.getMyTableModelRented().getMinSelectionIndex());
 			
-			if (this.memberMenuView.getMyCustomer().getType().equals("MusicLovers")) {
-				isCD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 6);
-			}else if (this.memberMenuView.getMyCustomer().getType().equals("VideoLovers") || (this.memberMenuView.getMyCustomer().getType().equals("TvLovers"))) {
-				isDVD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 8);
-				isBlueRay = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 9);
-			}else {
-				isCD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 10);
-				isDVD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 11);
-				isBlueRay = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 12);
-			}
-			
 			JOptionPane.showMessageDialog(this.memberMenuView,
 					"Title selected: " + this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0) + ", " + ""
 							+ this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 1) + " " 
 							+"" + this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 2) +" "
-							+". If you want to release it, press return!");
+							+". If you want to release it, press Return to continue");
 			
 					
 			

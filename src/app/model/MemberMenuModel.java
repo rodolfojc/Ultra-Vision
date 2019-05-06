@@ -294,7 +294,7 @@ public class MemberMenuModel {
 				
 				//QUERY TWO
 				String queryThree = "SELECT one_date, two_date, three_date, four_date "
-								  + "FROM customers WHERE id = "+this.memberMenuView.getMyCustomer().getId()+";";
+								  + "FROM customers WHERE mem_numb = "+this.memberMenuView.getMyCustomer().getId()+";";
 								
 				
 				try {
@@ -342,9 +342,13 @@ public class MemberMenuModel {
 			isFormatDB = "cd";
 		}else if(isFormatDB.equals("DVD")) {
 			isFormatDB = "dvd";
-		}else {
+		}else if(isFormatDB.equals("BlueRay")){
 			isFormatDB = "blue_ray";
+		}else {
+			isFormatDB = "No Available";
 		}
+		
+		if (!isFormatDB.equals("No Available")) {
 		
 		if (slotForRented == 0) {
 			titleSlot = "title_one";
@@ -390,11 +394,16 @@ public class MemberMenuModel {
 		}
 	
 		JOptionPane.showMessageDialog(this.memberMenuView, 
-									  "The title have been rented, TOTAL = €2.50 ", 
+									  "The title have been rented, TOTAL = €2.50 (Direct debit - Card) ", 
 									  "Confirm", 
 									  JOptionPane.INFORMATION_MESSAGE);
 		
-		
+		}else {
+			JOptionPane.showMessageDialog(this.memberMenuView, 
+					  "The title is not Available ", 
+					  "Confirm", 
+					  JOptionPane.INFORMATION_MESSAGE);
+		}
 		
 	}
 	

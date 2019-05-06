@@ -129,6 +129,9 @@ public class MemberMenuView extends GuiView {
 		this.dates = Arrays.copyOf(dates, dates.length);;
 	}
 	
+	public Date getDatesDate(int a) {
+		return this.dates[a];
+	}
 	
 	//METHODS
 	public void getStartingData() {
@@ -169,7 +172,7 @@ public class MemberMenuView extends GuiView {
 	public void setBtnRented() {
 		
 		JPanel myBtnRentRelease = new JPanel();
-		this.release = this.addButtonAll("Release", "Release", myBtnRentRelease, this.myController);
+		this.release = this.addButtonAll("Return", "Return", myBtnRentRelease, this.myController);
 		this.panel.add(myBtnRentRelease);
 	}
 
