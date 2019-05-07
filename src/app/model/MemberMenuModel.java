@@ -448,13 +448,13 @@ public class MemberMenuModel {
 //			String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
 //			PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
 //			preparedStmtThree.execute();
-			if(!freeRent) {
+			if(freeRent == false) {
 				this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(10);
 				String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
 				PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
 				preparedStmtThree.execute();
 			
-			}else {
+			}else if (freeRent == true && this.memberMenuView.isFreeRentalFlag() == true) {
 				this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(-100);
 				String queryThree= "UPDATE customers SET points = (points-100) WHERE mem_numb = "+id+" ";
 				PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);

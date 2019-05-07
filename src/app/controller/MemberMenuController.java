@@ -97,6 +97,8 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 				e1.printStackTrace();
 			}
 			
+			System.out.println(dataTwo);
+			System.out.println(this.memberMenuView.getDatesDate(this.memberMenuView.getSelectedRowRented()));
 			
 			long diff = dataTwo.getTime() - this.memberMenuView.getDatesDate(this.memberMenuView.getSelectedRowRented()).getTime();
 			int diffDays = (int) (diff / (24 * 60 * 60 * 1000));
@@ -156,6 +158,8 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		
 		if (e.getActionCommand().equals("FREE")) {
 			
+			//FLAG
+			this.memberMenuView.setFreeRentalFlag(true);
 			new SearchTitleView("Search a Title", 500, 800, true, this.memberMenuView);
 		
 		}

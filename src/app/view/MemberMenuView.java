@@ -33,6 +33,7 @@ public class MemberMenuView extends GuiView {
 	private JTextField custMembType;
 	private JTextField custPoints;
 	private int selectedRowTitles, selectedRowRented;
+	private boolean freeRentalFlag;
 	
 	//DATA
 	private Database myDB;
@@ -59,8 +60,18 @@ public class MemberMenuView extends GuiView {
 	}
 	
 	//GETTER AND SETTERS
+	
+	
 	public String getTitlesRentedDataStr(int a, int b) {
 		return this.titlesRentedData[a][b];
+	}
+
+	public boolean isFreeRentalFlag() {
+		return freeRentalFlag;
+	}
+
+	public void setFreeRentalFlag(boolean freeRentalFlag) {
+		this.freeRentalFlag = freeRentalFlag;
 	}
 
 	public JTextField getSearchTitleName() {
