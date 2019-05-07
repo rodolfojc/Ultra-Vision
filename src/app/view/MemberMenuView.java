@@ -172,7 +172,7 @@ public class MemberMenuView extends GuiView {
 		this.rent = this.addButtonAll("Rent", "Rent", myBtnRentRealasePanel, this.myController);
 		this.freeRentalBtn = this.addButtonAll("FREE RENTAL", "FREE", myBtnRentRealasePanel, this.myController);
 		this.myCustomer.getMyMemberCard().setRentAllowed();
-		if (!this.myCustomer.getMyMemberCard().availFreeRent()) {
+		if (!this.myCustomer.getMyMemberCard().isfreeRentAllowed()) {
 			freeRentalBtn.setEnabled(false);
 		}
 		this.panel.add(myBtnRentRealasePanel);
@@ -221,6 +221,7 @@ public class MemberMenuView extends GuiView {
 		this.addLabel("Member points", myCustDetails);
 		this.custPoints = this.addTextField(20, myCustDetails);
 		this.custPoints.setText(String.valueOf(this.myCustomer.getMyMemberCard().getPoints()));
+		System.out.println(String.valueOf(this.myCustomer.getMyMemberCard().getPoints()));
 		this.custPoints.setEditable(false);
 		
 		this.panel.add(myCustDetails);
