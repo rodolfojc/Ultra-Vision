@@ -96,10 +96,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			} catch (ParseException e1) {
 				e1.printStackTrace();
 			}
-			
-			System.out.println(dataTwo);
-			System.out.println(this.memberMenuView.getDatesDate(this.memberMenuView.getSelectedRowRented()));
-			
+						
 			long diff = dataTwo.getTime() - this.memberMenuView.getDatesDate(this.memberMenuView.getSelectedRowRented()).getTime();
 			int diffDays = (int) (diff / (24 * 60 * 60 * 1000));
 

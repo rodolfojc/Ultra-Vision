@@ -221,7 +221,6 @@ public class MemberMenuView extends GuiView {
 		this.addLabel("Member points", myCustDetails);
 		this.custPoints = this.addTextField(20, myCustDetails);
 		this.custPoints.setText(String.valueOf(this.myCustomer.getMyMemberCard().getPoints()));
-		System.out.println(String.valueOf(this.myCustomer.getMyMemberCard().getPoints()));
 		this.custPoints.setEditable(false);
 		
 		this.panel.add(myCustDetails);

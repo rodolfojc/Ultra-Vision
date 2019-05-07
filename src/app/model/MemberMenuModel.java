@@ -499,13 +499,15 @@ public class MemberMenuModel {
 		String slotRented;
 		String titleRefDate;
 		
-		if(selectedRow == 0) {
+		//String titleIDTwo = String.valueOf(this.memberMenuView.getMyCustomer().getTitleRentedInt(0));
+		
+		if(titleID.equals(String.valueOf(this.memberMenuView.getMyCustomer().getTitleRentedInt(0)))) {
 			slotRented = "title_one";
 			titleRefDate = "one_date";
-		} else if (selectedRow == 1) {
+		} else if (titleID.equals(String.valueOf(this.memberMenuView.getMyCustomer().getTitleRentedInt(2)))) {
 			slotRented = "title_two";
 			titleRefDate = "two_date";
-		} else if (selectedRow == 2) {
+		} else if (titleID.equals(String.valueOf(this.memberMenuView.getMyCustomer().getTitleRentedInt(3)))) {
 			slotRented = "title_three";
 			titleRefDate = "three_date";
 		} else {
