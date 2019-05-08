@@ -1,6 +1,7 @@
 package app.view;
 
 import java.awt.BorderLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 
@@ -161,7 +162,12 @@ public class GuiView extends JFrame{
 		
 		myTable[tableNum] = new JTable(data, columnsName);
 		myTable[tableNum].setSize(100, 200);
+		myTable[tableNum].setFont(new Font("SERIF", Font.PLAIN, 20));
+		myTable[tableNum].setRowHeight(30);
+		myTable[tableNum].getTableHeader().setFont(new Font("SERIF", Font.BOLD, 20));
 		JScrollPane myScroll = new JScrollPane(myTable[tableNum]);
+		myScroll.setFont(new Font("SERIF", Font.PLAIN, 20));
+		
 		panel.setBorder(BorderFactory.createTitledBorder (BorderFactory.createEtchedBorder (),
                 title,
                 TitledBorder.CENTER,

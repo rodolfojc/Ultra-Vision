@@ -6,6 +6,7 @@ import java.awt.Insets;
 import java.util.Arrays;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -39,6 +40,7 @@ public class SearchTitleView extends GuiView {
 	public SearchTitleView(String name, int width, int height, boolean Resizable, MainView mainView) {
 		super(name, width, height, Resizable);
 		this.myController = new SearchTitleController(this, mainView);
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 		getStartingData();
 		setFrame();
 	}
@@ -47,6 +49,7 @@ public class SearchTitleView extends GuiView {
 		super(name, width, height, resizable);
 		this.myController = new SearchTitleController(this, memberMenuView);
 		this.memberFlag = true;
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 		getStartingData();
 		setFrame();
 	}
@@ -129,6 +132,7 @@ public class SearchTitleView extends GuiView {
 			this.addButtonAll("Rent", "Rent", this.panel, myController);
 		}
 		
+		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 100, 65)));
 		
 		//this.panel.add(center);
 				

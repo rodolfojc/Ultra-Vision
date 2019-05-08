@@ -26,7 +26,7 @@ public class MainView extends GuiView {
 	@Override
 	public JButton addButton(String name, JPanel panel) {
 		JButton myButton= new JButton(name);
-		myButton.setFont(new Font("Serif", Font.PLAIN, 28));
+		myButton.setFont(new Font("SERIF", Font.PLAIN, 28));
 		panel.add(myButton);
 		return myButton;
 	}
@@ -34,31 +34,35 @@ public class MainView extends GuiView {
 
 	public void setFrame() {
 		
-		this.setGrid(15, 1, this.panel);
+		this.setGrid(17, 1, this.panel);
 		
+		JLabel mainLabel = this.addLabel("Ultra-Vision", this.panel);
+		mainLabel.setFont(new Font("SERIF", Font.BOLD, 45));
+		mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		this.addLabel("", this.panel);
 		JLabel myLabel = this.addLabel("MAIN MENU", this.panel);
 		this.addLabel("", this.panel);
 		this.addLabel("", this.panel);
 		myLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		myLabel.setFont(new Font("Serif", Font.BOLD, 45));
-		JButton searchTitle = this.addButton("Search Title", this.panel);
+		myLabel.setFont(new Font("SERIF", Font.BOLD, 45));
+		JButton searchTitle = this.addButton("Search - Title", this.panel);
 		//JButton searchTitle = this.addButtonAll("Search Title", "Search Title", this.panel, this.myController);
 		searchTitle.setActionCommand("Search Title");
 		searchTitle.addActionListener(myController);
 		this.addLabel("", this.panel);
-		JButton searchMember = this.addButton("Search Member", this.panel);
+		JButton searchMember = this.addButton("Search - Member", this.panel);
 		searchMember.setActionCommand("Search Customer");
 		searchMember.addActionListener(myController);
 		this.addLabel("", this.panel);
-		JButton addTitle = this.addButton("Add Title", this.panel);
+		JButton addTitle = this.addButton("Add - Title", this.panel);
 		addTitle.setActionCommand("Add Title");
 		addTitle.addActionListener(myController);
 		this.addLabel("", this.panel);
-		JButton addMember = this.addButton("Add Member", this.panel);
+		JButton addMember = this.addButton("Add - Member", this.panel);
 		addMember.setActionCommand("Add Member");
 		addMember.addActionListener(myController);
 		this.addLabel("", this.panel);
-		JButton menuMember = this.addButton("Menu for Members", this.panel);
+		JButton menuMember = this.addButton("Menu - Members", this.panel);
 		menuMember.setActionCommand("Menu Members");
 		menuMember.addActionListener(myController);
 		this.addLabel("", this.panel);
@@ -66,7 +70,7 @@ public class MainView extends GuiView {
 		JButton exit = this.addButton("EXIT", this.panel);
 		exit.setActionCommand("EXIT");
 		exit.addActionListener(myController);
-		this.panel.setBorder(new EmptyBorder(new Insets(25, 200, 100, 200)));
+		this.panel.setBorder(new EmptyBorder(new Insets(50, 200, 100, 200)));
 		
 		this.repaint();
 		this.validate();
