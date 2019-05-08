@@ -148,7 +148,7 @@ public class AddMemberView extends GuiView {
 		this.addLabel("Membership type ", left);
 		this.membType = this.addComboB(memberType, left);
 		this.addLabel("", left);
-		this.addButtonAll("Go Back", "Go Back", left, this.myController);
+		this.addButtonAll("Go back", "Go back", left, this.myController);
 		
 		
 		left.setBorder(new EmptyBorder(new Insets(0, 0, 0, 25)));
