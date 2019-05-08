@@ -51,49 +51,9 @@ public class AddTitleView extends GuiView {
 		setFrame();
 	}
 	
-	
-
-	@Override
-	public JLabel addLabel(String text, JPanel panel) {
-		JLabel myLabel = new JLabel(text);
-		myLabel.setFont(new Font("Serif", Font.PLAIN, 18));
-		panel.add(myLabel);
-		return myLabel;
-	}
-	
-	@Override
-	public JTextField addTextField(int a, JPanel panel) {
-		
-		JTextField myText = new JTextField(a);
-		myText.setFont(new Font("Serif", Font.PLAIN, 20));
-		panel.add(myText);
-		return myText;
-	}
-		
-
-	@Override
-	public JComboBox addComboB(String[] options, JPanel panel) {
-		
-		JComboBox myComboBox = new JComboBox(options);
-		myComboBox.setFont(new Font("Serif", Font.PLAIN, 20));
-		panel.add(myComboBox);
-		return myComboBox;
-	}
-	
-	@Override
-	public JButton addButton(String name, JPanel panel) {
-		
-		JButton myButton= new JButton(name);
-		myButton.setFont(new Font("Serif", Font.BOLD, 20));
-		panel.add(myButton);
-		return myButton;
-	}
-	
-
 	public JTextField getMusicTitleName() {
 		return musicTitleName;
 	}
-
 
 
 	public void setMusicTitleName(JTextField musicTitleName) {
@@ -313,7 +273,7 @@ public class AddTitleView extends GuiView {
 		JPanel type = new JPanel();
 		this.setGrid(20, 0, type);
 		JLabel musicTitle = this.addLabel("Music (Type)", type);
-		musicTitle.setFont(new Font("Serif", Font.BOLD, 24));
+		musicTitle.setFont(new Font("Serif", Font.BOLD, 30));
 		musicTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		this.musicType = this.addComboB(myOpts, type);
 		this.addLabel("Title name", type);
@@ -336,9 +296,7 @@ public class AddTitleView extends GuiView {
 		type.add(formatPanelOne);
 		this.addLabel("", type);
 		this.addLabel("", type);
-		JButton addMusicTitle = this.addButton("Add Music", type);
-		addMusicTitle.setActionCommand("Add Music");
-		addMusicTitle.addActionListener(myController);
+		this.addButtonAll("Add Music", "Add Music", type, this.myController);
 		this.addLabel("", type);
 		this.addButtonAll("Go back", "Go back", type, this.myController);
 		this.addLabel("", type);
@@ -348,7 +306,7 @@ public class AddTitleView extends GuiView {
 		JPanel typeTwo = new JPanel();
 		this.setGrid(21, 0, typeTwo);
 		JLabel tvTypeTitle = this.addLabel("TV (Type)", typeTwo);
-		tvTypeTitle.setFont(new Font("Serif", Font.BOLD, 24));
+		tvTypeTitle.setFont(new Font("Serif", Font.BOLD, 30));
 		tvTypeTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		this.tvType = this.addComboB(myOptsTwo, typeTwo);
 		this.addLabel("Title name", typeTwo);
@@ -373,9 +331,7 @@ public class AddTitleView extends GuiView {
 		this.isBlueTv = this.addComboB(yesOrNo, formatPanelTwo);
 		typeTwo.add(formatPanelTwo);
 		this.addLabel("", typeTwo);
-		JButton addTvTitle = this.addButton("Add Tv", typeTwo);
-		addTvTitle.setActionCommand("Add Tv");
-		addTvTitle.addActionListener(myController);
+		this.addButtonAll("Add Tv", "Add Tv", typeTwo, this.myController);
 		this.addLabel("", typeTwo);
 		typeTwo.setBorder(new EmptyBorder(new Insets(0, 25, 0, 0)));
 		

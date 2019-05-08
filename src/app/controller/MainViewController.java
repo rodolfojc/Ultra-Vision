@@ -45,7 +45,7 @@ public class MainViewController implements ActionListener {
 
 		if (e.getActionCommand().equals("Add Title")) {
 			
-			this.addTitleView = new AddTitleView("Add Title Manager", 1200, 750, true, this.mainView);
+			this.addTitleView = new AddTitleView("Add Title Manager", 1200, 1000, true, this.mainView);
 			this.mainView.setVisible(false);
 			
 		}
