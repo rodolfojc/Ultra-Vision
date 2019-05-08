@@ -186,6 +186,7 @@ public class MemberMenuView extends GuiView {
 		
 		JPanel myBtnRentRelease = new JPanel();
 		this.release = this.addButtonAll("Return", "Return", myBtnRentRelease, this.myController);
+		this.addButtonAll("Go back", "Go back", myBtnRentRelease, this.myController);
 		myPanel.add(myBtnRentRelease);
 		
 	}
@@ -239,11 +240,9 @@ public class MemberMenuView extends GuiView {
 		if (this.myCustomer.getType().equals("MusicLovers")) {
 			
 			String[] columnsNameTitles = {"ID","Title", "Year", "Album", "Band", "Genre", "CD", "DVD", "BlueRay"};
-			//this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
 			this.setBtnSearch(myTitles);
-			this.addTableS(1, this.titles, columnsNameTitles, myTitles, "Titles for "+this.myCustomer.getType());
+			this.addTableS(1, this.titles, columnsNameTitles, myTitles, "Titles - "+this.myCustomer.getType());
 			this.setBtnTitles(myTitles);
-			//this.addLabel("Titles rented", this.panel);
 			this.addTableS(0, this.titlesRentedData, columnsNameTitles, myRented, "Titles - Rented");
 			this.setBtnRented(myRented);
 			
@@ -251,22 +250,18 @@ public class MemberMenuView extends GuiView {
 		}else if (this.myCustomer.getType().equals("VideoLovers") || (this.myCustomer.getType().equals("TvLovers"))) {
 			
 			String[] columnsNameTitles = {"ID","Title", "Year", "Genre", "Director", "Running Time", "Languages", "Country", "DVD", "BlueRay"};
-			//this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
 			this.setBtnSearch(myTitles);
-			this.addTableS(1, this.titles, columnsNameTitles, myTitles, "Titles for "+this.myCustomer.getType());
+			this.addTableS(1, this.titles, columnsNameTitles, myTitles, "Titles - "+this.myCustomer.getType());
 			this.setBtnTitles(myTitles);
-			//this.addLabel("Titles rented", this.panel);
 			this.addTableS(0, this.titlesRentedData, columnsNameTitles, myRented, "Titles - Rented");
 			this.setBtnRented(myRented);
 			
 		} else {
 			
 			String[] columnsNameTitles = {"ID","Title", "Year", "Album", "Band", "Genre", "Director", "Running Time", "Languages", "Country", "CD", "DVD", "BlueRay"};
-			//this.addLabel("Titles for "+this.myCustomer.getType(), this.panel);
 			this.setBtnSearch(myTitles);
-			this.addTableS(1, this.titles, columnsNameTitles, myTitles, "Titles for "+this.myCustomer.getType());
+			this.addTableS(1, this.titles, columnsNameTitles, myTitles, "Titles - "+this.myCustomer.getType());
 			this.setBtnTitles(myTitles);
-			//this.addLabel("Titles rented", this.panel);
 			this.addTableS(0, this.titlesRentedData, columnsNameTitles, myRented, "Titles - Rented");
 			this.setBtnRented(myRented);
 		}

@@ -59,6 +59,12 @@ public class FindMemberController implements ActionListener {
 			
 		}
 		
+		if (e.getActionCommand().equals("Go back")) {
+			
+			this.findMemberView.dispose();
+			this.mainView.setVisible(true);
+			
+		}
 		
 		
 

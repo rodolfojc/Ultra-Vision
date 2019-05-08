@@ -1,6 +1,7 @@
 package app.view;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
@@ -175,7 +176,10 @@ public class GuiView extends JFrame{
 		panel.setBorder(BorderFactory.createTitledBorder (BorderFactory.createEtchedBorder (),
                 title,
                 TitledBorder.CENTER,
-                TitledBorder.TOP));
+                TitledBorder.TOP,
+				new Font("Serif",Font.BOLD,20),
+				Color.BLACK));
+		
 		panel.add(myScroll);
 		return myScroll;
 		

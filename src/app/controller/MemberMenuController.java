@@ -161,6 +161,13 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		
 		}
 		
+		if (e.getActionCommand().equals("Go back")) {
+			
+			this.memberMenuView.dispose();
+			this.mainView.setVisible(true);
+			
+		}
+		
 		
 		
 		
