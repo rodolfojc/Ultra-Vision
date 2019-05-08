@@ -2,6 +2,7 @@ package app.view;
 
 import java.awt.Font;
 import java.awt.Insets;
+import java.text.SimpleDateFormat;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -10,6 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
+import com.toedter.calendar.JDateChooser;
 
 import app.controller.AddMemberController;
 
@@ -35,6 +38,7 @@ public class AddMemberView extends GuiView {
 	
 	//CONTROLLER
 	private AddMemberController myController;
+	private JDateChooser calendar;
 	
 	
 	//CONSTRUCTOR
@@ -62,13 +66,15 @@ public class AddMemberView extends GuiView {
 		this.custSurname = custSurname;
 	}
 
-	public JTextField getBirthday() {
-		return birthday;
+	public String getBirthday() {
+		SimpleDateFormat myDateSimp = new SimpleDateFormat("dd/MM/yyyy"); 
+		return myDateSimp.format(this.calendar.getDate());
+		 
 	}
 
-	public void setBirthday(JTextField birthday) {
-		this.birthday = birthday;
-	}
+//	public void setBirthday(JTextField birthday) {
+//		this.birthday = birthday;
+//	}
 	
 	public JTextField getEmail() {
 		return email;
@@ -142,7 +148,10 @@ public class AddMemberView extends GuiView {
 		this.addLabel("Surname ", left);
 		this.custSurname = this.addTextField(20, left);
 		this.addLabel("Birthday DD/MM/YYYY", left);
-		this.birthday = this.addTextField(20, left);
+		//JPanel birthPanel = new JPanel();
+		this.calendar = this.addCalen(left);
+		//this.birthday = this.addTextField(20, birthPanel);
+		//left.add(birthPanel);
 		this.addLabel("Email", left);
 		this.setEmail(this.addTextField(20, left));
 		this.addLabel("Membership type ", left);

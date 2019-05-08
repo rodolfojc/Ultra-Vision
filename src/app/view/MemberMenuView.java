@@ -199,13 +199,13 @@ public class MemberMenuView extends GuiView {
 		this.setGrid(8, 2, myCustDetails);
 		
 		JPanel title = new JPanel();
-		this.addLabel("Personal details", title);
+		this.addLabel("", title);
 		myCustDetails.add(title);
-		this.addLabel("", myCustDetails);
+		this.addLabel("Personal details", myCustDetails);
 		
 		this.addLabel("Member: ", myCustDetails);
 		this.fullName = this.addTextField(20, myCustDetails);
-		this.fullName.setText(this.myCustomer.getCustName()+" "+this.myCustomer.getCustSurname());
+		this.fullName.setText(this.myCustomer.getCustName()+" "+this.myCustomer.getCustSurname()+" ("+this.myCustomer.getId()+")");
 		this.fullName.setEditable(false);
 			
 		this.addLabel("Date of birth: ", myCustDetails);
