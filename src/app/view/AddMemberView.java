@@ -44,46 +44,6 @@ public class AddMemberView extends GuiView {
 		setFrame();
 	}
 	
-	@Override
-	public JLabel addLabel(String text, JPanel panel) {
-		
-		JLabel myLabel = new JLabel(text);
-		myLabel.setFont(new Font("Serif", Font.PLAIN, 20));
-		panel.add(myLabel);
-		return myLabel;
-	}
-	
-	
-	@Override
-	public JTextField addTextField(int a, JPanel panel) {
-		
-		JTextField myText = new JTextField(a);
-		myText.setFont(new Font("Serif", Font.PLAIN, 20));
-		panel.add(myText);
-		return myText;
-	}
-	
-	
-
-	@Override
-	public JComboBox addComboB(String[] options, JPanel panel) {
-		
-		JComboBox myComboBox = new JComboBox(options);
-		myComboBox.setFont(new Font("Serif", Font.PLAIN, 20));
-		panel.add(myComboBox);
-		return myComboBox;
-	}
-	
-	
-
-	@Override
-	public JButton addButton(String name, JPanel panel) {
-		
-		JButton myButton= new JButton(name);
-		myButton.setFont(new Font("Serif", Font.BOLD, 20));
-		panel.add(myButton);
-		return myButton;
-	}
 	
 	//SETTER AND GETTER
 	public JTextField getCustName() {
@@ -188,9 +148,9 @@ public class AddMemberView extends GuiView {
 		this.addLabel("Membership type ", left);
 		this.membType = this.addComboB(memberType, left);
 		this.addLabel("", left);
-		JButton goBack = this.addButton("Go Back", left);
-		goBack.setActionCommand("Go back");
-		goBack.addActionListener(myController);
+		this.addButtonAll("Go Back", "Go Back", left, this.myController);
+		
+		
 		left.setBorder(new EmptyBorder(new Insets(0, 0, 0, 25)));
 		
 		//PAYMENT
@@ -211,9 +171,8 @@ public class AddMemberView extends GuiView {
 		this.addLabel("CVV (3 digits) ", center);
 		this.cardCVV = this.addTextField(20, center);
 		this.addLabel("", center);
-		JButton submit = this.addButton("SUBMIT", center);
-		submit.setActionCommand("Submit");
-		submit.addActionListener(myController);
+		this.addButtonAll("SUBMIT", "Submit", center, this.myController);
+		
 		
 		center.setBorder(new EmptyBorder(new Insets(0, 25, 0, 0)));
 		

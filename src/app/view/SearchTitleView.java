@@ -123,6 +123,10 @@ public class SearchTitleView extends GuiView {
 		if (!this.memberFlag) {
 			this.addTableS(0, this.data, columnsNameTitles, this.panel, "Titles");
 			this.addButtonAll("Go back", "Go back", this.panel, myController);
+			this.myTable[0].getTableHeader().setReorderingAllowed(false);
+			//this.myTable[0].getTableHeader().setEnabled(false);
+			this.myTable[0].getColumnModel().getColumn(0).setPreferredWidth(30);
+			this.myTable[0].setEnabled(false);
 			
 				
 		} else {

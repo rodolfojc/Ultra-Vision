@@ -95,6 +95,7 @@ public class GuiView extends JFrame{
 	public JTextField addTextField(int a, JPanel panel) {
 		
 		JTextField myText = new JTextField(a);
+		myText.setFont(new Font("SERIF", Font.PLAIN, 20));
 		panel.add(myText);
 		return myText;
 		
@@ -125,6 +126,7 @@ public class GuiView extends JFrame{
 	public JButton addButtonAll(String name, String command, JPanel panel, ActionListener controller) {
 		
 		JButton myButton = new JButton(name);
+		myButton.setFont(new Font("SERIF", Font.PLAIN, 20));
 		myButton.setActionCommand(command);
 		myButton.addActionListener(controller);
 		panel.add(myButton);
@@ -136,6 +138,7 @@ public class GuiView extends JFrame{
 	public JLabel addLabel(String text, JPanel panel) {
 		
 		JLabel myLabel = new JLabel(text);
+		myLabel.setFont(new Font("SERIF", Font.BOLD, 20));
 		panel.add(myLabel);
 		return myLabel;
 	}
@@ -144,6 +147,7 @@ public class GuiView extends JFrame{
 	public JComboBox addComboB(String[] options, JPanel panel) {
 		
 		JComboBox myComboBox = new JComboBox(options);
+		myComboBox.setFont(new Font("Serif", Font.PLAIN, 20));
 		panel.add(myComboBox);
 		return myComboBox;
 	}
