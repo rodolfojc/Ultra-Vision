@@ -21,7 +21,6 @@ public class AddMemberView extends GuiView {
 	// PERSONAL ATTRIBUTES
 	private JTextField custName;
 	private JTextField custSurname;
-	private JTextField birthday;
 	private JTextField email;
 	private JComboBox membType;
 	
@@ -29,7 +28,6 @@ public class AddMemberView extends GuiView {
 	private JComboBox cardType;
 	private JTextField cardNumber;
 	private JTextField cardHolder;
-	private JTextField cardExp;
 	private JTextField cardCVV;
 	
 	//OPTIONS
@@ -38,7 +36,8 @@ public class AddMemberView extends GuiView {
 	
 	//CONTROLLER
 	private AddMemberController myController;
-	private JDateChooser calendar;
+	private JDateChooser birthCal;
+	private JDateChooser expCal;
 	
 	
 	//CONSTRUCTOR
@@ -68,14 +67,9 @@ public class AddMemberView extends GuiView {
 
 	public String getBirthday() {
 		SimpleDateFormat myDateSimp = new SimpleDateFormat("dd/MM/yyyy"); 
-		return myDateSimp.format(this.calendar.getDate());
-		 
+		return myDateSimp.format(this.birthCal.getDate());
 	}
 
-//	public void setBirthday(JTextField birthday) {
-//		this.birthday = birthday;
-//	}
-	
 	public JTextField getEmail() {
 		return email;
 	}
@@ -116,12 +110,9 @@ public class AddMemberView extends GuiView {
 		this.cardHolder = cardHolder;
 	}
 
-	public JTextField getCardExp() {
-		return cardExp;
-	}
-
-	public void setCardExp(JTextField cardExp) {
-		this.cardExp = cardExp;
+	public String getCardExp() {
+		SimpleDateFormat myDateSimp = new SimpleDateFormat("MM/yy"); 
+		return myDateSimp.format(this.expCal.getDate());
 	}
 
 	public JTextField getCardCVV() {
@@ -149,7 +140,7 @@ public class AddMemberView extends GuiView {
 		this.custSurname = this.addTextField(20, left);
 		this.addLabel("Birthday DD/MM/YYYY", left);
 		//JPanel birthPanel = new JPanel();
-		this.calendar = this.addCalen(left);
+		this.birthCal = this.addCalen(left);
 		//this.birthday = this.addTextField(20, birthPanel);
 		//left.add(birthPanel);
 		this.addLabel("Email", left);
@@ -176,7 +167,9 @@ public class AddMemberView extends GuiView {
 		this.addLabel("Card holder name (as printed on card) ", center);
 		this.cardHolder = this.addTextField(20, center);
 		this.addLabel("Expire date ", center);
-		this.cardExp = this.addTextField(20, center);
+		this.expCal = this.addCalen(center);
+		this.expCal.setDateFormatString("MM/yy");
+		//this.cardExp = this.addTextField(20, center);
 		this.addLabel("CVV (3 digits) ", center);
 		this.cardCVV = this.addTextField(20, center);
 		this.addLabel("", center);

@@ -37,7 +37,7 @@ public class AddMemberController implements ActionListener{
 		return this.debitCreditCard = new DebitCreditCard(this.addMemberView.getCardType(),
 				  								   this.addMemberView.getCardNumber().getText(),
 				  								   this.addMemberView.getCardHolder().getText(),
-				  								   this.addMemberView.getCardExp().getText(),
+				  								   this.addMemberView.getCardExp(),
 				  								   this.addMemberView.getCardCVV().getText());
 		
 	}
