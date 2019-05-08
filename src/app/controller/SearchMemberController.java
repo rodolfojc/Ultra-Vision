@@ -27,7 +27,7 @@ public class SearchMemberController implements ActionListener {
 		if (e.getActionCommand().equals("Search")) {
 			
 			String query = "SELECT mem_numb, mem_type, cust_name, cust_surname "
-						 + "FROM customers WHERE cust_name='"+this.searchMemberView.getSearchName().getText()+"';";
+						 + "FROM customers WHERE cust_name LIKE '%"+this.searchMemberView.getSearchName().getText()+"%';";
 			this.database = new Database();
 			this.searchMemberModel = new SearchMemberModel(this.database, this.searchMemberView);
 			this.searchMemberModel.getData(query);
