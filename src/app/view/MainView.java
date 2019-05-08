@@ -66,7 +66,7 @@ public class MainView extends GuiView {
 		JButton exit = this.addButton("EXIT", this.panel);
 		exit.setActionCommand("EXIT");
 		exit.addActionListener(myController);
-		this.panel.setBorder(new EmptyBorder(new Insets(25, 60, 45, 60)));
+		this.panel.setBorder(new EmptyBorder(new Insets(25, 200, 100, 200)));
 		
 		this.repaint();
 		this.validate();
