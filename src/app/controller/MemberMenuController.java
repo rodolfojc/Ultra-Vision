@@ -55,25 +55,14 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			this.database = new Database();
 			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
 			
-			int slotForRented = -1;
-			boolean titlesRentedFull = false;
-			
-			if(this.memberMenuView.getMyCustomer().getTitleRentedInt(0) == 0) {
-				slotForRented = 0;
-			}else if (this.memberMenuView.getMyCustomer().getTitleRentedInt(1) == 0) {
-				slotForRented = 1;
-			}else if (this.memberMenuView.getMyCustomer().getTitleRentedInt(2) == 0) {
-				slotForRented = 2;
-			}else if (this.memberMenuView.getMyCustomer().getTitleRentedInt(3) == 0) {
-				slotForRented = 3;
-			}else {
-				titlesRentedFull = true;
+			if (this.memberMenuView.getMyCustomer().getNumbRented() <= 3) {
+				
+				this.memberMenuModel.setRent(TitleID, custID, isFormatDB, false);
+				this.memberMenuView.UpdateFrame(true);
+				
 			}
 			
-			if (!titlesRentedFull) {
-			this.memberMenuModel.setRent(TitleID, custID, slotForRented, isFormatDB, false);
-			this.memberMenuView.UpdateFrame(true);
-			}else {
+			else {
 				JOptionPane.showMessageDialog(this.memberMenuView, 
 											  "More than 4 titles have been rented by Member", 
 											  "Error", 
@@ -97,11 +86,21 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 				e1.printStackTrace();
 			}
 			
-			String TitleID = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0);
-			int custID = this.memberMenuView.getMyCustomer().getId();
+			String refTitle;
+			
+			if (this.memberMenuView.getMyCustomer().getType().equals("MusicLovers")) {
+				refTitle = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 9);
+			}else if (this.memberMenuView.getMyCustomer().getType().equals("VideoLovers") || (this.memberMenuView.getMyCustomer().getType().equals("TvLovers"))) {
+				refTitle = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 10);
+			}else {
+				refTitle = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 13);
+			}
+						
+			//String TitleID = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0);
+			//int custID = this.memberMenuView.getMyCustomer().getId();
 			this.database = new Database();
 			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
-			Date titleDate = this.memberMenuModel.getTitleDate(TitleID, custID, this.isFormatDB);
+			Date titleDate = this.memberMenuModel.getTitleDate(refTitle);
 			
 			long diff = dataTwo.getTime() - titleDate.getTime();
 			int diffDays = (int) (diff / (24 * 60 * 60 * 1000));
@@ -146,12 +145,11 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 					format = "blue_ray";
 				}
 				
-				int selectedRow = this.memberMenuView.getSelectedRowRented();
-				//String TitleID = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0);
-				//int custID = this.memberMenuView.getMyCustomer().getId();
+				String TitleID = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0);
+				int custID = this.memberMenuView.getMyCustomer().getId();
 				this.database = new Database();
 				this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
-				this.memberMenuModel.setReturn(TitleID, format, custID, penalty);
+				this.memberMenuModel.setReturn(TitleID, format, custID, refTitle, penalty);
 				this.memberMenuView.UpdateFrame(true);
 			}
 			

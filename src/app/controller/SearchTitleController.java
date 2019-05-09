@@ -89,7 +89,7 @@ public class SearchTitleController implements ActionListener, ListSelectionListe
 			}
 			
 			if (!titlesRentedFull) {
-			this.memberMenuModel.setRent(TitleID, custID, slotForRented, isFormatDB, true);
+			//this.memberMenuModel.setRent(TitleID, custID, slotForRented, isFormatDB, true);
 			this.memberMenuView.UpdateFrame(true);
 			}else {
 				JOptionPane.showMessageDialog(this.memberMenuView, 

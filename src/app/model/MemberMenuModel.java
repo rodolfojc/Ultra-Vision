@@ -63,7 +63,7 @@ public class MemberMenuModel {
 		
 		// LOCAL DATA STORAGE
 		String[][] tempData = new String[1000][9];
-		String[][] tempDataRented = new String[4][9];
+		String[][] tempDataRented = new String[4][10];
 		//Date[] dates = new Date[4];
 				
 		String query = "SELECT id, title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
@@ -119,6 +119,7 @@ public class MemberMenuModel {
 				tempDataRented[j][6] = this.myDB.getRs().getString("cd");
 				tempDataRented[j][7] = this.myDB.getRs().getString("dvd");
 				tempDataRented[j][8] = this.myDB.getRs().getString("blue_ray");
+				tempDataRented[j][9] = this.myDB.getRs().getString("ref");
 				j++;
 			}
 			
@@ -400,10 +401,10 @@ public class MemberMenuModel {
 			}
 
 
-	public void setRent(String titlesStr, int id, int slotForRented, String isFormatDB, boolean freeRent) {
+	public void setRent(String titlesStr, int id, String isFormatDB, boolean freeRent) {
 		
-		String titleSlot;
-		String titleRefDate;
+		//String titleSlot;
+		//String titleRefDate;
 		
 		if (isFormatDB.equals("CD")) {
 			isFormatDB = "cd";
@@ -431,15 +432,25 @@ public class MemberMenuModel {
 //				titleRefDate = "four_date";
 //			} 
 		
-			String custIDStr = Integer.toString(id);
+			//String custIDStr = Integer.toString(id);
 			int titleInt = Integer.parseInt(titlesStr);
 		
 			try {
 
-				String query = "UPDATE titles SET "+isFormatDB+"='"+custIDStr+"' WHERE id='"+titlesStr+"';";
+				String query = "UPDATE titles SET "+isFormatDB+"="+id+" WHERE id="+titlesStr+";";
 
 				PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
 				preparedStmt.execute();
+			
+			} catch (Exception e) {
+				// ERROR MESSAGES
+				JOptionPane.showMessageDialog(this.memberMenuView, "Ups, there is a problem, try again!");
+				System.err.println("Got an exception!");
+				System.out.println("I am in sentRent() - query ");
+				System.err.println(e.getMessage());
+			}
+			
+			try {
 				
 				String queryTwo = "INSERT INTO rented (mem_numb, title_id, title_format, date, status) "
 							 	 + "VALUES (?, ?, ?, CURDATE(), ?)";
@@ -452,21 +463,17 @@ public class MemberMenuModel {
 						preparedStmtTwo.setString(3, isFormatDB);
 						//preparedStmtTwo.setDate(4, null);
 						preparedStmtTwo.setString(4, "Rented");
-																		
 						preparedStmtTwo.execute();
 						
-
-							
-//				String queryTwo= "UPDATE customers SET "+titleSlot+" = "+titleInt+", "+titleRefDate+" = CURDATE() WHERE mem_numb = "+id+" ";
-//				PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
-//				preparedStmtTwo.execute();
+			} catch (Exception e) {
+				// ERROR MESSAGES
+				JOptionPane.showMessageDialog(this.memberMenuView, "Ups, there is a problem, try again!");
+				System.err.println("Got an exception!");
+				System.out.println("I am in sentRent() - queryTwo ");
+				System.err.println(e.getMessage());
+			}
 			
-//				String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
-//				PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
-//				preparedStmtThree.execute();
-				
-				
-				
+			try {
 				
 				if(freeRent == false) {
 					this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(10);
@@ -481,7 +488,20 @@ public class MemberMenuModel {
 					preparedStmtThree.execute();
 				}
 				
-				//this.memberMenuView.getMyCustomer().setTitleRented(slotForRented, titleInt);
+			} catch (Exception e) {
+				// ERROR MESSAGES
+				JOptionPane.showMessageDialog(this.memberMenuView, "Ups, there is a problem, try again!");
+				//flag = false;
+				System.err.println("Got an exception!");
+				System.out.println("I am in sentRent() - queryThree ");
+				System.err.println(e.getMessage());
+			}
+				
+			try {
+				String queryFour= "UPDATE customers SET titles_rented = (titles_rented + 1) WHERE mem_numb = "+id+" ";
+				PreparedStatement preparedStmtFour = this.myDB.getConn().prepareStatement(queryFour);
+				preparedStmtFour.execute();
+				
 				this.myDB.getRs().close();
 				this.myDB.getStmt().close();
 				this.myDB.getConn().close();
@@ -489,14 +509,14 @@ public class MemberMenuModel {
 			} catch (Exception e) {
 				// ERROR MESSAGES
 				JOptionPane.showMessageDialog(this.memberMenuView, "Ups, there is a problem, try again!");
-				//flag = false;
 				System.err.println("Got an exception!");
+				System.out.println("I am in sentRent() - queryFour ");
 				System.err.println(e.getMessage());
 			}
 		
 				if (!freeRent) {
 					JOptionPane.showMessageDialog(this.memberMenuView, 
-										  "The title have been rented, TOTAL = €2.50 (Direct debit - Card) ", 
+										  "The title have been rented, TOTAL = €2 (Direct debit - Card) ", 
 										  "Confirm", 
 										  JOptionPane.INFORMATION_MESSAGE);
 				}else {
@@ -517,7 +537,7 @@ public class MemberMenuModel {
 		
 	}
 
-	public void setReturn(String titleID, String format, int custID, int paid) {
+	public void setReturn(String titleID, String format, int custID, String ref, int paid) {
 		
 				
 		try {
@@ -526,18 +546,34 @@ public class MemberMenuModel {
 
 			PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
 			preparedStmt.execute();
+		
+		} catch (Exception e) {
+
+			System.err.println("Got an exception!");
+			System.err.println(e.getMessage());
+		}
 			
+		try {
 			String queryTwo = "UPDATE rented SET status = 'Returned', "
 							+ "paid_eur = (paid_eur + "+paid+") "
-							+ "WHERE mem_numb = "+custID+" "
-							+ "AND title_id = "+titleID+" "
-							+ "AND title_format = '"+format+"';";
+							+ "WHERE ref = "+ref+";";
 			
-//			String queryTwo= "UPDATE customers SET "+slotRented+" = 0 , "+titleRefDate+" = NULL WHERE mem_numb = "+custID+" ";
 			PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
 			preparedStmtTwo.execute();
 			
-			//this.memberMenuView.getMyCustomer().setTitleRented(selectedRow, 0);
+		} catch (Exception e) {
+
+			System.err.println("Got an exception!");
+			System.err.println(e.getMessage());
+		}
+			
+		try {
+			
+			String queryThree = "UPDATE customers SET titles_rented = (titles_rented - 1) WHERE mem_numb = "+custID+";";
+			PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
+			preparedStmtThree.execute();
+			
+			
 			
 			this.myDB.getConn().close();
 
@@ -554,37 +590,32 @@ public class MemberMenuModel {
 		
 	}
 
-	public Date getTitleDate(String titleID, int custID, String isFormatDB) {
+	public Date getTitleDate(String refTitle) {
 		
-		if (isFormatDB.equals("CD")) {
-			isFormatDB = "cd";
-		}else if(isFormatDB.equals("DVD")) {
-			isFormatDB = "dvd";
-		}else if(isFormatDB.equals("BlueRay")){
-			isFormatDB = "blue_ray";
-		}else {
-			isFormatDB = "No Available";
-		}
+//		if (isFormatDB.equals("CD")) {
+//			isFormatDB = "cd";
+//		}else if(isFormatDB.equals("DVD")) {
+//			isFormatDB = "dvd";
+//		}else if(isFormatDB.equals("BlueRay")){
+//			isFormatDB = "blue_ray";
+//		}else {
+//			isFormatDB = "No Available";
+//		}
 		
 		Date myDate = new Date();
 		
-		String queryThree = "SELECT date "
-						  + "FROM rented "
-						  + "WHERE mem_numb = "+custID+" "
-						  + "AND title_id = "+titleID+" "
-						  + "AND title_format = "+isFormatDB+""
-						  + "AND status = 'Rented' ;";
+		String query = "SELECT date FROM rented WHERE ref = "+refTitle+";";
 				
 
 				try {
 					
-					this.myDB.setRs(this.myDB.getStmt().executeQuery(queryThree));
+					this.myDB.setRs(this.myDB.getStmt().executeQuery(query));
 				
 					int j = 0;
 				
 					while (this.myDB.getRs().next()) {
 						
-						myDate = this.myDB.getRs().getDate("one_date");
+						myDate = this.myDB.getRs().getDate("date");
 											
 					}
 					
