@@ -332,6 +332,7 @@ public class MemberMenuModel {
 
 				PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
 				preparedStmt.execute();
+				preparedStmt.close();
 			
 			} catch (Exception e) {
 				// ERROR MESSAGES
@@ -347,13 +348,14 @@ public class MemberMenuModel {
 							 	 + "VALUES (?, ?, ?, CURDATE(), ?)";
 
 						
-						// PREPARATION
-						PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
-						preparedStmtTwo.setInt(1, id);
-						preparedStmtTwo.setInt(2, titleInt);
-						preparedStmtTwo.setString(3, isFormatDB);
-						preparedStmtTwo.setString(4, "Rented");
-						preparedStmtTwo.execute();
+				// PREPARATION
+				PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
+				preparedStmtTwo.setInt(1, id);
+				preparedStmtTwo.setInt(2, titleInt);
+				preparedStmtTwo.setString(3, isFormatDB);
+				preparedStmtTwo.setString(4, "Rented");
+				preparedStmtTwo.execute();
+				preparedStmtTwo.close();
 						
 			} catch (Exception e) {
 				// ERROR MESSAGES
@@ -370,12 +372,14 @@ public class MemberMenuModel {
 					String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
 					PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
 					preparedStmtThree.execute();
+					preparedStmtThree.close();
 			
 				}else if (freeRent == true && this.memberMenuView.isFreeRentalFlag() == true) {
 					this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(-100);
 					String queryThree= "UPDATE customers SET points = (points-100) WHERE mem_numb = "+id+" ";
 					PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
 					preparedStmtThree.execute();
+					preparedStmtThree.close();
 				}
 				
 			} catch (Exception e) {
@@ -388,12 +392,11 @@ public class MemberMenuModel {
 			}
 				
 			try {
+				this.memberMenuView.getMyCustomer().addNumbRented(1);
 				String queryFour= "UPDATE customers SET titles_rented = (titles_rented + 1) WHERE mem_numb = "+id+" ";
 				PreparedStatement preparedStmtFour = this.myDB.getConn().prepareStatement(queryFour);
 				preparedStmtFour.execute();
 				
-				this.myDB.getRs().close();
-				this.myDB.getStmt().close();
 				this.myDB.getConn().close();
 	
 			} catch (Exception e) {
@@ -458,12 +461,10 @@ public class MemberMenuModel {
 		}
 			
 		try {
-			
+			this.memberMenuView.getMyCustomer().addNumbRented(-1);
 			String queryThree = "UPDATE customers SET titles_rented = (titles_rented - 1) WHERE mem_numb = "+custID+";";
 			PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
 			preparedStmtThree.execute();
-			
-			
 			
 			this.myDB.getConn().close();
 

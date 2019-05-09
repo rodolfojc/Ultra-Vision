@@ -127,7 +127,7 @@ public class FindMemberModel {
 					}
 					
 					this.tempMember.setId(id);
-					this.tempMember.setNumbRented(dataInt[0]);
+					this.tempMember.setNumbRented(dataInt[1]);
 					
 					this.myBD.getRs().close();
 					this.myBD.getStmt().close();

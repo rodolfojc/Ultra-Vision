@@ -102,6 +102,11 @@ public abstract class Customer {
 		return "Customer";
 	}
 
+	public void addNumbRented(int i) {
+		this.numbRented = this.numbRented + i;
+		
+	}
+
 //	public int[] getTitleRented() {
 //		return titleRented;
 //	}
