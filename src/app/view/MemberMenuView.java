@@ -43,7 +43,7 @@ public class MemberMenuView extends GuiView {
 	private Date[] dates;
 	private JButton rent;
 	private JButton searchTitle;
-	private JButton release;
+	private JButton returnBtn;
 	private JTextField searchTitleName;
 	private JButton freeRentalBtn;
 	
@@ -62,8 +62,26 @@ public class MemberMenuView extends GuiView {
 	}
 	
 	//GETTER AND SETTERS
+	
+	
 	public String getTitlesRentedDataStr(int a, int b) {
 		return this.titlesRentedData[a][b];
+	}
+
+	public JButton getReturnBtn() {
+		return returnBtn;
+	}
+
+	public void setReturnBtn(JButton returnBtn) {
+		this.returnBtn = returnBtn;
+	}
+
+	public JButton getRent() {
+		return rent;
+	}
+
+	public void setRent(JButton rent) {
+		this.rent = rent;
 	}
 
 	public boolean isFreeRentalFlag() {
@@ -171,6 +189,7 @@ public class MemberMenuView extends GuiView {
 		
 		JPanel myBtnRentRealasePanel = new JPanel();
 		this.rent = this.addButtonAll("Rent", "Rent", myBtnRentRealasePanel, this.myController);
+		this.rent.setEnabled(false);
 		this.freeRentalBtn = this.addButtonAll("FREE RENTAL", "FREE", myBtnRentRealasePanel, this.myController);
 		this.myCustomer.getMyMemberCard().setRentAllowed();
 		if (!this.myCustomer.getMyMemberCard().isfreeRentAllowed()) {
@@ -183,7 +202,8 @@ public class MemberMenuView extends GuiView {
 	public void setBtnRented(JPanel myPanel) {
 		
 		JPanel myBtnRentRelease = new JPanel();
-		this.release = this.addButtonAll("Return", "Return", myBtnRentRelease, this.myController);
+		this.returnBtn = this.addButtonAll("Return", "Return", myBtnRentRelease, this.myController);
+		this.returnBtn.setEnabled(false);
 		this.addButtonAll("Go back", "Go back", myBtnRentRelease, this.myController);
 		myPanel.add(myBtnRentRelease);
 		
