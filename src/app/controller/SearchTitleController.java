@@ -73,24 +73,11 @@ public class SearchTitleController implements ActionListener, ListSelectionListe
 			this.database = new Database();
 			this.memberMenuModel = new MemberMenuModel(this.database, this.searchTitleView, this.memberMenuView);
 			
-			int slotForRented = -1;
-			boolean titlesRentedFull = false;
-			
-			if(this.memberMenuView.getMyCustomer().getTitleRentedInt(0) == 0) {
-				slotForRented = 0;
-			}else if (this.memberMenuView.getMyCustomer().getTitleRentedInt(1) == 0) {
-				slotForRented = 1;
-			}else if (this.memberMenuView.getMyCustomer().getTitleRentedInt(2) == 0) {
-				slotForRented = 2;
-			}else if (this.memberMenuView.getMyCustomer().getTitleRentedInt(3) == 0) {
-				slotForRented = 3;
-			}else {
-				titlesRentedFull = true;
-			}
-			
-			if (!titlesRentedFull) {
-			//this.memberMenuModel.setRent(TitleID, custID, slotForRented, isFormatDB, true);
-			this.memberMenuView.UpdateFrame(true);
+			if (this.memberMenuView.getMyCustomer().getNumbRented() <= 3) {
+				
+				this.memberMenuModel.setRent(TitleID, custID, isFormatDB, true);
+				this.memberMenuView.UpdateFrame(true);
+				
 			}else {
 				JOptionPane.showMessageDialog(this.memberMenuView, 
 											  "More than 4 titles have been rented by Member", 

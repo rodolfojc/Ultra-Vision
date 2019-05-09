@@ -96,8 +96,6 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 				refTitle = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 13);
 			}
 						
-			//String TitleID = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0);
-			//int custID = this.memberMenuView.getMyCustomer().getId();
 			this.database = new Database();
 			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
 			Date titleDate = this.memberMenuModel.getTitleDate(refTitle);
@@ -170,10 +168,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			this.mainView.setVisible(true);
 			
 		}
-		
-		
-		
-		
+			
 	}
 	
 		
