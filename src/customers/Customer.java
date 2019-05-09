@@ -13,7 +13,7 @@ public abstract class Customer {
 	private String email;
 	private int numbRented;
 	private int id;
-	private int[] titleRented;
+	//private int[] titleRented;
 	private MembershipCard myMemberCard;
 	private DebitCreditCard myCard;
 	
@@ -28,7 +28,7 @@ public abstract class Customer {
 		this.myMemberCard = myMemberCard;
 		this.myCard = myCard;
 		this.numbRented = 0;
-		this.titleRented = new int[4];
+		//this.titleRented = new int[4];
 	}
 
 	//GETTERS AND SETTERS
@@ -102,17 +102,17 @@ public abstract class Customer {
 		return "Customer";
 	}
 
-	public int[] getTitleRented() {
-		return titleRented;
-	}
-	
-	public int getTitleRentedInt(int a) {
-		return titleRented[a];
-	}
-
-	public void setTitleRented(int a, int titleRented) {
-		this.titleRented[a] = titleRented;
-	}
+//	public int[] getTitleRented() {
+//		return titleRented;
+//	}
+//	
+//	public int getTitleRentedInt(int a) {
+//		return titleRented[a];
+//	}
+//
+//	public void setTitleRented(int a, int titleRented) {
+//		this.titleRented[a] = titleRented;
+//	}
 
 	
 
