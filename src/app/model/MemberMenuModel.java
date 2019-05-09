@@ -96,11 +96,10 @@ public class MemberMenuModel {
 		}
 			
 		String queryTwo = "SELECT id, title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
-						+ "FROM titles "
-						+ "WHERE id = "+idOne+" "
-						+ "OR id = "+idTwo+" "
-						+ "OR id = "+idThree+" "
-						+ "OR id = "+idFour+";";
+						+ "FROM titles ti "
+						+ "INNER JOIN rented re ON re.title_id = ti.id "
+						+ "INNER JOIN customers cu ON cu.mem_numb = re.mem_numb "
+						+ "WHERE cu.mem_numb = "+this.memberMenuView.getMyCustomer().getId()+";";
 		
 		try {
 			
