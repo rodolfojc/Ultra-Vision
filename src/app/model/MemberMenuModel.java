@@ -417,73 +417,73 @@ public class MemberMenuModel {
 		
 		if (!isFormatDB.equals("No Available")) {
 		
-		if (slotForRented == 0) {
-			titleSlot = "title_one";
-			titleRefDate = "one_date";
-		} else if (slotForRented == 1) {
-			titleSlot = "title_two";
-			titleRefDate = "two_date";
-		} else if (slotForRented == 2) {
-			titleSlot = "title_three";
-			titleRefDate = "three_date";
-		} else {
-			titleSlot = "title_four";
-			titleRefDate = "four_date";
-		} 
+			if (slotForRented == 0) {
+				titleSlot = "title_one";
+				titleRefDate = "one_date";
+			} else if (slotForRented == 1) {
+				titleSlot = "title_two";
+				titleRefDate = "two_date";
+			} else if (slotForRented == 2) {
+				titleSlot = "title_three";
+				titleRefDate = "three_date";
+			} else {
+				titleSlot = "title_four";
+				titleRefDate = "four_date";
+			} 
 		
-		String custIDStr = Integer.toString(id);
-		int titleInt = Integer.parseInt(titlesStr);
+			String custIDStr = Integer.toString(id);
+			int titleInt = Integer.parseInt(titlesStr);
 		
-		try {
+			try {
 
-			String query = "UPDATE titles SET "+isFormatDB+"='"+custIDStr+"' WHERE id='"+titlesStr+"';";
+				String query = "UPDATE titles SET "+isFormatDB+"='"+custIDStr+"' WHERE id='"+titlesStr+"';";
 
-			PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
-			preparedStmt.execute();
+				PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
+				preparedStmt.execute();
 			
-			String queryTwo= "UPDATE customers SET "+titleSlot+" = "+titleInt+", "+titleRefDate+" = CURDATE() WHERE mem_numb = "+id+" ";
-			PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
-			preparedStmtTwo.execute();
+				String queryTwo= "UPDATE customers SET "+titleSlot+" = "+titleInt+", "+titleRefDate+" = CURDATE() WHERE mem_numb = "+id+" ";
+				PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
+				preparedStmtTwo.execute();
 			
 //			String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
 //			PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
 //			preparedStmtThree.execute();
-			if(freeRent == false) {
-				this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(10);
-				String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
-				PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
-				preparedStmtThree.execute();
+				if(freeRent == false) {
+					this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(10);
+					String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
+					PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
+					preparedStmtThree.execute();
 			
-			}else if (freeRent == true && this.memberMenuView.isFreeRentalFlag() == true) {
-				this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(-100);
-				String queryThree= "UPDATE customers SET points = (points-100) WHERE mem_numb = "+id+" ";
-				PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
-				preparedStmtThree.execute();
-			}
-			
-			this.memberMenuView.getMyCustomer().setTitleRented(slotForRented, titleInt);
-			
-			this.myDB.getConn().close();
-
-		} catch (Exception e) {
-
-			System.err.println("Got an exception!");
-			System.err.println(e.getMessage());
-		}
-		
-			if (!freeRent) {
-				JOptionPane.showMessageDialog(this.memberMenuView, 
-									  "The title have been rented, TOTAL = €2.50 (Direct debit - Card) ", 
-									  "Confirm", 
-									  JOptionPane.INFORMATION_MESSAGE);
-			}else {
-				JOptionPane.showMessageDialog(this.searchTitleView, 
-						  "The title have been rented for FREE", 
-						  "Confirm", 
-						  JOptionPane.INFORMATION_MESSAGE);
-				this.searchTitleView.dispose();
+				}else if (freeRent == true && this.memberMenuView.isFreeRentalFlag() == true) {
+					this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(-100);
+					String queryThree= "UPDATE customers SET points = (points-100) WHERE mem_numb = "+id+" ";
+					PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
+					preparedStmtThree.execute();
+				}
 				
+				this.memberMenuView.getMyCustomer().setTitleRented(slotForRented, titleInt);
+				
+				this.myDB.getConn().close();
+	
+			} catch (Exception e) {
+	
+				System.err.println("Got an exception!");
+				System.err.println(e.getMessage());
 			}
+		
+				if (!freeRent) {
+					JOptionPane.showMessageDialog(this.memberMenuView, 
+										  "The title have been rented, TOTAL = €2.50 (Direct debit - Card) ", 
+										  "Confirm", 
+										  JOptionPane.INFORMATION_MESSAGE);
+				}else {
+					JOptionPane.showMessageDialog(this.searchTitleView, 
+							  "The title have been rented for FREE", 
+							  "Confirm", 
+							  JOptionPane.INFORMATION_MESSAGE);
+					this.searchTitleView.dispose();
+					
+				}
 		
 		}else {
 			JOptionPane.showMessageDialog(this.memberMenuView, 
