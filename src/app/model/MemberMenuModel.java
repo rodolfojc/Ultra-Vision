@@ -64,7 +64,7 @@ public class MemberMenuModel {
 		// LOCAL DATA STORAGE
 		String[][] tempData = new String[1000][9];
 		String[][] tempDataRented = new String[4][9];
-		Date[] dates = new Date[4];
+		//Date[] dates = new Date[4];
 				
 		String query = "SELECT id, title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
 						+ "FROM titles "
@@ -95,11 +95,12 @@ public class MemberMenuModel {
 			e.printStackTrace();
 		}
 			
-		String queryTwo = "SELECT id, title_name, year_rel, album, band, genre, cd, dvd, blue_ray "
+		String queryTwo = "SELECT id, title_name, year_rel, album, band, genre, cd, dvd, blue_ray, ref "
 						+ "FROM titles ti "
 						+ "INNER JOIN rented re ON re.title_id = ti.id "
 						+ "INNER JOIN customers cu ON cu.mem_numb = re.mem_numb "
-						+ "WHERE cu.mem_numb = "+this.memberMenuView.getMyCustomer().getId()+";";
+						+ "WHERE cu.mem_numb = "+this.memberMenuView.getMyCustomer().getId()+" "
+						+ "AND re.status = 'Rented';";
 		
 		try {
 			
@@ -122,30 +123,30 @@ public class MemberMenuModel {
 			}
 			
 
-			} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			}
+//			} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//			}
 
 		//QUERY THREE
-		String queryThree = "SELECT one_date, two_date, three_date, four_date "
-						  + "FROM customers WHERE mem_numb = "+this.memberMenuView.getMyCustomer().getId()+";";
-						
-		
-		try {
-			
-			this.myDB.setRs(this.myDB.getStmt().executeQuery(queryThree));
-
-			int j = 0;
-
-			while (this.myDB.getRs().next()) {
-				
-				dates[0] = this.myDB.getRs().getDate("one_date");
-				dates[1] = this.myDB.getRs().getDate("two_date");
-				dates[2] = this.myDB.getRs().getDate("three_date");
-				dates[3] = this.myDB.getRs().getDate("four_date");
-			
-			}
+//		String queryThree = "SELECT one_date, two_date, three_date, four_date "
+//						  + "FROM customers WHERE mem_numb = "+this.memberMenuView.getMyCustomer().getId()+";";
+//						
+//		
+//		try {
+//			
+//			this.myDB.setRs(this.myDB.getStmt().executeQuery(queryThree));
+//
+//			int j = 0;
+//
+//			while (this.myDB.getRs().next()) {
+//				
+//				dates[0] = this.myDB.getRs().getDate("one_date");
+//				dates[1] = this.myDB.getRs().getDate("two_date");
+//				dates[2] = this.myDB.getRs().getDate("three_date");
+//				dates[3] = this.myDB.getRs().getDate("four_date");
+//			
+//			}
 			
 			this.myDB.getRs().close();
 			this.myDB.getStmt().close();
@@ -155,7 +156,7 @@ public class MemberMenuModel {
 			// THIS CREATE A COPY OF THE LOCAL DATA TO THE ARRAY[][] SETTER IN MEMBER MENU
 			this.memberMenuView.setTitles(tempData);
 			this.memberMenuView.setTitlesRentedData(tempDataRented);
-			this.memberMenuView.setDates(dates);
+			//this.memberMenuView.setDates(dates);
 			
 			} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -416,19 +417,19 @@ public class MemberMenuModel {
 		
 		if (!isFormatDB.equals("No Available")) {
 		
-			if (slotForRented == 0) {
-				titleSlot = "title_one";
-				titleRefDate = "one_date";
-			} else if (slotForRented == 1) {
-				titleSlot = "title_two";
-				titleRefDate = "two_date";
-			} else if (slotForRented == 2) {
-				titleSlot = "title_three";
-				titleRefDate = "three_date";
-			} else {
-				titleSlot = "title_four";
-				titleRefDate = "four_date";
-			} 
+//			if (slotForRented == 0) {
+//				titleSlot = "title_one";
+//				titleRefDate = "one_date";
+//			} else if (slotForRented == 1) {
+//				titleSlot = "title_two";
+//				titleRefDate = "two_date";
+//			} else if (slotForRented == 2) {
+//				titleSlot = "title_three";
+//				titleRefDate = "three_date";
+//			} else {
+//				titleSlot = "title_four";
+//				titleRefDate = "four_date";
+//			} 
 		
 			String custIDStr = Integer.toString(id);
 			int titleInt = Integer.parseInt(titlesStr);
@@ -439,14 +440,34 @@ public class MemberMenuModel {
 
 				PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
 				preparedStmt.execute();
+				
+				String queryTwo = "INSERT INTO rented (mem_numb, title_id, title_format, date, status) "
+							 	 + "VALUES (?, ?, ?, CURDATE(), ?)";
+
+						
+						// PREPARATION
+						PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
+						preparedStmtTwo.setInt(1, id);
+						preparedStmtTwo.setInt(2, titleInt);
+						preparedStmtTwo.setString(3, isFormatDB);
+						//preparedStmtTwo.setDate(4, null);
+						preparedStmtTwo.setString(4, "Rented");
+																		
+						preparedStmtTwo.execute();
+						
+
+							
+//				String queryTwo= "UPDATE customers SET "+titleSlot+" = "+titleInt+", "+titleRefDate+" = CURDATE() WHERE mem_numb = "+id+" ";
+//				PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
+//				preparedStmtTwo.execute();
 			
-				String queryTwo= "UPDATE customers SET "+titleSlot+" = "+titleInt+", "+titleRefDate+" = CURDATE() WHERE mem_numb = "+id+" ";
-				PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
-				preparedStmtTwo.execute();
-			
-//			String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
-//			PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
-//			preparedStmtThree.execute();
+//				String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
+//				PreparedStatement preparedStmtThree = this.myDB.getConn().prepareStatement(queryThree);
+//				preparedStmtThree.execute();
+				
+				
+				
+				
 				if(freeRent == false) {
 					this.memberMenuView.getMyCustomer().getMyMemberCard().addPoints(10);
 					String queryThree= "UPDATE customers SET points = (points+10) WHERE mem_numb = "+id+" ";
@@ -460,12 +481,15 @@ public class MemberMenuModel {
 					preparedStmtThree.execute();
 				}
 				
-				this.memberMenuView.getMyCustomer().setTitleRented(slotForRented, titleInt);
-				
+				//this.memberMenuView.getMyCustomer().setTitleRented(slotForRented, titleInt);
+				this.myDB.getRs().close();
+				this.myDB.getStmt().close();
 				this.myDB.getConn().close();
 	
 			} catch (Exception e) {
-	
+				// ERROR MESSAGES
+				JOptionPane.showMessageDialog(this.memberMenuView, "Ups, there is a problem, try again!");
+				//flag = false;
 				System.err.println("Got an exception!");
 				System.err.println(e.getMessage());
 			}
@@ -493,28 +517,9 @@ public class MemberMenuModel {
 		
 	}
 
-	public void setReturn(String titleID, String format, int custID, int selectedRow) {
+	public void setReturn(String titleID, String format, int custID, int paid) {
 		
-		String slotRented;
-		String titleRefDate;
-		
-		//String titleIDTwo = String.valueOf(this.memberMenuView.getMyCustomer().getTitleRentedInt(0));
-		
-		if(titleID.equals(String.valueOf(this.memberMenuView.getMyCustomer().getTitleRentedInt(0)))) {
-			slotRented = "title_one";
-			titleRefDate = "one_date";
-		} else if (titleID.equals(String.valueOf(this.memberMenuView.getMyCustomer().getTitleRentedInt(2)))) {
-			slotRented = "title_two";
-			titleRefDate = "two_date";
-		} else if (titleID.equals(String.valueOf(this.memberMenuView.getMyCustomer().getTitleRentedInt(3)))) {
-			slotRented = "title_three";
-			titleRefDate = "three_date";
-		} else {
-			slotRented = "title_four";
-			titleRefDate = "four_date";
-		}
-		
-		
+				
 		try {
 
 			String query = "UPDATE titles SET "+format+"='Yes' WHERE id='"+titleID+"';";
@@ -522,11 +527,17 @@ public class MemberMenuModel {
 			PreparedStatement preparedStmt = this.myDB.getConn().prepareStatement(query);
 			preparedStmt.execute();
 			
-			String queryTwo= "UPDATE customers SET "+slotRented+" = 0 , "+titleRefDate+" = NULL WHERE mem_numb = "+custID+" ";
+			String queryTwo = "UPDATE rented SET status = 'Returned', "
+							+ "paid_eur = (paid_eur + "+paid+") "
+							+ "WHERE mem_numb = "+custID+" "
+							+ "AND title_id = "+titleID+" "
+							+ "AND title_format = '"+format+"';";
+			
+//			String queryTwo= "UPDATE customers SET "+slotRented+" = 0 , "+titleRefDate+" = NULL WHERE mem_numb = "+custID+" ";
 			PreparedStatement preparedStmtTwo = this.myDB.getConn().prepareStatement(queryTwo);
 			preparedStmtTwo.execute();
 			
-			this.memberMenuView.getMyCustomer().setTitleRented(selectedRow, 0);
+			//this.memberMenuView.getMyCustomer().setTitleRented(selectedRow, 0);
 			
 			this.myDB.getConn().close();
 
@@ -541,6 +552,57 @@ public class MemberMenuModel {
 									  "Confirm", 
 									  JOptionPane.INFORMATION_MESSAGE);
 		
+	}
+
+	public Date getTitleDate(String titleID, int custID, String isFormatDB) {
+		
+		if (isFormatDB.equals("CD")) {
+			isFormatDB = "cd";
+		}else if(isFormatDB.equals("DVD")) {
+			isFormatDB = "dvd";
+		}else if(isFormatDB.equals("BlueRay")){
+			isFormatDB = "blue_ray";
+		}else {
+			isFormatDB = "No Available";
+		}
+		
+		Date myDate = new Date();
+		
+		String queryThree = "SELECT date "
+						  + "FROM rented "
+						  + "WHERE mem_numb = "+custID+" "
+						  + "AND title_id = "+titleID+" "
+						  + "AND title_format = "+isFormatDB+""
+						  + "AND status = 'Rented' ;";
+				
+
+				try {
+					
+					this.myDB.setRs(this.myDB.getStmt().executeQuery(queryThree));
+				
+					int j = 0;
+				
+					while (this.myDB.getRs().next()) {
+						
+						myDate = this.myDB.getRs().getDate("one_date");
+											
+					}
+					
+					this.myDB.getRs().close();
+					this.myDB.getStmt().close();
+					this.myDB.getConn().close();
+				
+					
+					// THIS CREATE A COPY OF THE LOCAL DATA TO THE ARRAY[][] SETTER IN MEMBER MENU
+					
+				} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				}
+		
+		
+		
+		return myDate;
 	}
 	
 		

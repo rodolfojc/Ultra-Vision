@@ -96,8 +96,14 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			} catch (ParseException e1) {
 				e1.printStackTrace();
 			}
-						
-			long diff = dataTwo.getTime() - this.memberMenuView.getDatesDate(this.memberMenuView.getSelectedRowRented()).getTime();
+			
+			String TitleID = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0);
+			int custID = this.memberMenuView.getMyCustomer().getId();
+			this.database = new Database();
+			this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
+			Date titleDate = this.memberMenuModel.getTitleDate(TitleID, custID, this.isFormatDB);
+			
+			long diff = dataTwo.getTime() - titleDate.getTime();
 			int diffDays = (int) (diff / (24 * 60 * 60 * 1000));
 
 			if (diffDays >3) {
@@ -129,8 +135,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 					isBlueRay = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 9);
 				}else {
 					isCD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 10);
-					isDVD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 11);
-					isBlueRay = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 12);
+					isDVD = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 11);					isBlueRay = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 12);
 				}
 				
 				if(isCD.equals(String.valueOf(this.memberMenuView.getMyCustomer().getId()))) {
@@ -142,11 +147,11 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 				}
 				
 				int selectedRow = this.memberMenuView.getSelectedRowRented();
-				String TitleID = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0);
-				int custID = this.memberMenuView.getMyCustomer().getId();
+				//String TitleID = this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0);
+				//int custID = this.memberMenuView.getMyCustomer().getId();
 				this.database = new Database();
 				this.memberMenuModel = new MemberMenuModel(this.database, this.memberMenuView);
-				this.memberMenuModel.setReturn(TitleID, format, custID, selectedRow);
+				this.memberMenuModel.setReturn(TitleID, format, custID, penalty);
 				this.memberMenuView.UpdateFrame(true);
 			}
 			
