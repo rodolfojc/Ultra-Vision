@@ -5,24 +5,25 @@ import titles.interfaces.DVD;
 
 public class ConcertVideos extends Music implements DVD, BlueRay {
 
-	//ATTRIBUTES
+	// ATTRIBUTES
 	private final String _TYPE = "ConcertVideo";
 	private String dvd;
 	private String blueray;
-	
-	public ConcertVideos(String title, String yearRelease, String genre, String album, String band, String dvd, String blueray) {
+
+	public ConcertVideos(String title, String yearRelease, String genre, String album, String band, String dvd,
+			String blueray) {
 		super(title, yearRelease, genre, album, band);
 		this.dvd = dvd;
 		this.blueray = blueray;
 	}
-	
-	//SUPER CLASS METHODS
+
+	// SUPER CLASS METHODS
 	@Override
 	public String getType() {
-		return this._TYPE ;
+		return this._TYPE;
 	}
 
-	//IMPLEMENTATIONS METHODS
+	// IMPLEMENTATIONS METHODS
 	@Override
 	public String isBlueRayFormat() {
 		return this.blueray;
@@ -33,7 +34,7 @@ public class ConcertVideos extends Music implements DVD, BlueRay {
 		return this.dvd;
 	}
 
-	//FOR TESTING
+	// FOR TESTING
 	@Override
 	public String toString() {
 		return "ConcertVideos [dvd=" + dvd + ", blueray=" + blueray + ", getAlbum()=" + getAlbum() + ", getBand()="
@@ -41,6 +42,4 @@ public class ConcertVideos extends Music implements DVD, BlueRay {
 				+ getGenre() + "]";
 	}
 
-	
-	
 }

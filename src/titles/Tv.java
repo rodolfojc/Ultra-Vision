@@ -1,18 +1,18 @@
 package titles;
 
-public abstract class Tv extends Title{
+public abstract class Tv extends Title {
 
-	//ATTRIBUTES
+	// ATTRIBUTES
 	private String director;
 	private String runningTime;
 	private String languages;
 	private String country;
 	private String blueRay;
 	private String dvd;
-	
-	//CONSTRUCTOR
-	public Tv(String title, String yearRelease, String genre, String director, String runningTime, 
-			String languages, String country, String blueRay, String dvd) {
+
+	// CONSTRUCTOR
+	public Tv(String title, String yearRelease, String genre, String director, String runningTime, String languages,
+			String country, String blueRay, String dvd) {
 		super(title, yearRelease, genre);
 		this.director = director;
 		this.runningTime = runningTime;
@@ -22,9 +22,9 @@ public abstract class Tv extends Title{
 		this.setDvd(dvd);
 	}
 
-	//GETTER AND SETTERS
-	
-	//DIRECTOR NAME
+	// GETTER AND SETTERS
+
+	// DIRECTOR NAME
 	public String getDirector() {
 		return director;
 	}
@@ -33,7 +33,7 @@ public abstract class Tv extends Title{
 		this.director = director;
 	}
 
-	//RUNNING TIME
+	// RUNNING TIME
 	public String getRunningTime() {
 		return runningTime;
 	}
@@ -42,7 +42,7 @@ public abstract class Tv extends Title{
 		this.runningTime = runningTime;
 	}
 
-	//LANGUAGES
+	// LANGUAGES
 	public String getLanguages() {
 		return languages;
 	}
@@ -51,7 +51,7 @@ public abstract class Tv extends Title{
 		this.languages = languages;
 	}
 
-	//COUNTRY
+	// COUNTRY
 	public String getCountry() {
 		return country;
 	}
@@ -60,7 +60,7 @@ public abstract class Tv extends Title{
 		this.country = country;
 	}
 
-	//BLUERAY
+	// BLUERAY
 	public String isBlueRay() {
 		return this.blueRay;
 	}
@@ -69,7 +69,7 @@ public abstract class Tv extends Title{
 		this.blueRay = blueRay;
 	}
 
-	//DVD
+	// DVD
 	public String isDvd() {
 		return this.dvd;
 	}
@@ -77,6 +77,5 @@ public abstract class Tv extends Title{
 	public void setDvd(String dvd) {
 		this.dvd = dvd;
 	}
-	
-	
+
 }

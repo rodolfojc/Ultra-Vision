@@ -4,34 +4,32 @@ import titles.interfaces.CD;
 
 public class AudioMusic extends Music implements CD {
 
-	//ATTRIBUTE
+	// ATTRIBUTE
 	private final String _TYPE = "AudioMusic";
-	
-	//CONSTRUCTOR
+
+	// CONSTRUCTOR
 	public AudioMusic(String title, String yearRelease, String genre, String album, String band) {
 		super(title, yearRelease, genre, album, band);
-		
+
 	}
-	
-	//SUPER CLASS METHODS 
+
+	// SUPER CLASS METHODS
 	@Override
 	public String getType() {
 		return this._TYPE;
 	}
 
-	//IMPLEMENTATIONS MATHODS
+	// IMPLEMENTATIONS MATHODS
 	@Override
 	public boolean isCDFormat() {
 		return true;
 	}
 
-	//FOR TESTING
+	// FOR TESTING
 	@Override
 	public String toString() {
 		return "AudioMusic [getAlbum()=" + getAlbum() + ", getBand()=" + getBand() + ", getTitle()=" + getTitle()
 				+ ", getYearRelease()=" + getYearRelease() + ", getGenre()=" + getGenre() + "]";
 	}
-
-	
 
 }

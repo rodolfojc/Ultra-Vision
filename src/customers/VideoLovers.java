@@ -4,30 +4,30 @@ import customer.admin.DebitCreditCard;
 import customer.admin.MembershipCard;
 import customer.interfaces.Movies;
 
-public class VideoLovers extends Customer implements Movies{
+public class VideoLovers extends Customer implements Movies {
 
 	private final String TYPE_SUB = "VideoLovers";
-	
-	//CONSTRUCTOR - FIELDS
+
+	// CONSTRUCTOR
 	public VideoLovers(String custName, String custSurname, String birthday, String email, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
 		super(custName, custSurname, birthday, email, myMemberCard, myCard);
-		
+
 	}
 
-	//SUPER CLASS METHODS
+	// SUPER CLASS METHODS
 	@Override
 	public String getType() {
 		return this.TYPE_SUB;
 	}
 
-	//IMPLEMENTATIONS METHODS
+	// IMPLEMENTATIONS METHODS
 	@Override
 	public String getTitles() {
-		return "get titles for "+this.TYPE_SUB;
+		return "get titles for " + this.TYPE_SUB;
 	}
 
-	//FOR TESTING
+	// FOR TESTING
 	@Override
 	public String toString() {
 		return "VideoLovers [TYPE_SUB=" + TYPE_SUB + ", getId()=" + getId() + ", getCustName()=" + getCustName()
@@ -37,6 +37,4 @@ public class VideoLovers extends Customer implements Movies{
 				+ ", toString()=" + super.toString() + "]";
 	}
 
-	
-	
 }

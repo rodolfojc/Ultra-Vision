@@ -2,15 +2,14 @@ package customer.admin;
 
 public class DebitCreditCard {
 
-	//ATTRIBUTES
+	// ATTRIBUTES
 	private String cardNumber;
 	private String cardHolderName;
 	private String expDate;
 	private String type;
 	private String cvvCode;
-	
-	
-	//CONTRUCTOR - FIELDS
+
+	// CONTRUCTOR - FIELDS
 	public DebitCreditCard(String type, String cardNumber, String cardHolderName, String expDate, String cvvCode) {
 		this.setType(type);
 		this.cardNumber = cardNumber;
@@ -19,17 +18,17 @@ public class DebitCreditCard {
 		this.cvvCode = cvvCode;
 	}
 
-	//GETTERS AND SETTERS
+	// GETTERS AND SETTERS
 	public String getCardNumber() {
 		return cardNumber;
 	}
 
-	//CARD NUMBER
+	// CARD NUMBER
 	public void setCardNumber(String cardNumber) {
 		this.cardNumber = cardNumber;
 	}
 
-	//CARDHOLDER NAME
+	// CARDHOLDER NAME
 	public String getCardHolderName() {
 		return cardHolderName;
 	}
@@ -37,8 +36,8 @@ public class DebitCreditCard {
 	public void setCardHolderName(String cardHolderName) {
 		this.cardHolderName = cardHolderName;
 	}
-	
-	//EXPIRED CARD DATE
+
+	// EXPIRED CARD DATE
 	public String getExpDate() {
 		return expDate;
 	}
@@ -47,7 +46,7 @@ public class DebitCreditCard {
 		this.expDate = expDate;
 	}
 
-	//CVV CARD CODE
+	// CVV CARD CODE
 	public String getCvvCode() {
 		return cvvCode;
 	}
@@ -64,17 +63,11 @@ public class DebitCreditCard {
 		this.type = type;
 	}
 
-	//FOR TESTING 
+	// FOR TESTING
 	@Override
 	public String toString() {
 		return "DebitCreditCard [cardNumber=" + cardNumber + ", cardHolderName=" + cardHolderName + ", expDate="
 				+ expDate + ", type=" + type + ", cvvCode=" + cvvCode + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }

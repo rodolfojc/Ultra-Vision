@@ -7,30 +7,30 @@ import customer.interfaces.LiveConcert;
 import customer.interfaces.Movies;
 import customer.interfaces.MusicCds;
 
-public class PremiunLovers extends Customer implements MusicCds, LiveConcert, Movies, BoxSets{
+public class PremiunLovers extends Customer implements MusicCds, LiveConcert, Movies, BoxSets {
 
 	private final String TYPE_SUB = "Premiun";
-	
-	//CONSTRUCTOR - FIELDS
-	public PremiunLovers(String custName, String custSurname, String birthday, String email, MembershipCard myMemberCard,
-			DebitCreditCard myCard) {
+
+	// CONSTRUCTOR
+	public PremiunLovers(String custName, String custSurname, String birthday, String email,
+			MembershipCard myMemberCard, DebitCreditCard myCard) {
 		super(custName, custSurname, birthday, email, myMemberCard, myCard);
-		
+
 	}
-	
-	//SUPER CLASS METHOD
+
+	// SUPER CLASS METHOD
 	@Override
 	public String getType() {
 		return this.TYPE_SUB;
 	}
 
-	//IMPLEMENTATIONS METHODS
+	// IMPLEMENTATIONS METHODS
 	@Override
 	public String getTitles() {
-		return "get titles for "+this.TYPE_SUB;
+		return "get titles for " + this.TYPE_SUB;
 	}
 
-	//FOR TESTING
+	// FOR TESTING
 	@Override
 	public String toString() {
 		return "PremiunLovers [TYPE_SUB=" + TYPE_SUB + ", getId()=" + getId() + ", getCustName()=" + getCustName()
@@ -39,8 +39,5 @@ public class PremiunLovers extends Customer implements MusicCds, LiveConcert, Mo
 				+ ", getEmail()=" + getEmail() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
 				+ ", toString()=" + super.toString() + "]";
 	}
-	
-	
-	
 
 }

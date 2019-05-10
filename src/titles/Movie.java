@@ -5,24 +5,24 @@ import titles.interfaces.DVD;
 
 public class Movie extends Tv implements DVD, BlueRay {
 
-	//ATTRIBUTES
+	// ATTRIBUTES
 	private final String _TYPE = "Movie";
-	
-	//CONSTRUCTOR
+
+	// CONSTRUCTOR
 	public Movie(String title, String yearRelease, String genre, String director, String runningTime, String languages,
 			String country, String blueRay, String dvd) {
 		super(title, yearRelease, genre, director, runningTime, languages, country, blueRay, dvd);
-			this.setBlueRay(blueRay);
-			this.setDvd(dvd);
+		this.setBlueRay(blueRay);
+		this.setDvd(dvd);
 	}
 
-	//SUPER CLASS METHODS
+	// SUPER CLASS METHODS
 	@Override
 	public String getType() {
-		return this._TYPE ;
+		return this._TYPE;
 	}
 
-	//IMPLEMENTATIONS METHODS
+	// IMPLEMENTATIONS METHODS
 	@Override
 	public String isBlueRayFormat() {
 		return this.isBlueRay();
@@ -33,7 +33,7 @@ public class Movie extends Tv implements DVD, BlueRay {
 		return this.isDvd();
 	}
 
-	//FOR TESTING
+	// FOR TESTING
 	@Override
 	public String toString() {
 		return "Movie [getDirector()=" + getDirector() + ", getRunningTime()=" + getRunningTime() + ", getLanguages()="
@@ -42,5 +42,4 @@ public class Movie extends Tv implements DVD, BlueRay {
 				+ getGenre() + "]";
 	}
 
-	
 }

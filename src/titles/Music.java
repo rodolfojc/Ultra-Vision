@@ -2,18 +2,18 @@ package titles;
 
 public abstract class Music extends Title {
 
-	//ATTRIBUTES
+	// ATTRIBUTES
 	private String album;
 	private String band;
-	
-	//CONSTRUCTOR
+
+	// CONSTRUCTOR
 	public Music(String title, String yearRelease, String genre, String album, String band) {
 		super(title, yearRelease, genre);
 		this.album = album;
 		this.band = band;
 	}
-	
-	//GETTERS AND SETTERS
+
+	// GETTERS AND SETTERS
 	public String getAlbum() {
 		return album;
 	}
@@ -30,5 +30,4 @@ public abstract class Music extends Title {
 		this.band = band;
 	}
 
-	
 }

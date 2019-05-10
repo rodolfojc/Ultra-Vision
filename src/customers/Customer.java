@@ -7,7 +7,7 @@ import titles.Title;
 //SUPER CLASS FOR CUSTOMERS
 public abstract class Customer {
 
-	//ATTRIBUTES
+	// ATTRIBUTES
 	private String custName;
 	private String custSurname;
 	private String birthday;
@@ -16,9 +16,8 @@ public abstract class Customer {
 	private int id;
 	private MembershipCard myMemberCard;
 	private DebitCreditCard myCard;
-	
-	
-	//CONSTRUCTOR
+
+	// CONSTRUCTOR
 	public Customer(String custName, String custSurname, String birthday, String email, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
 		this.custName = custName;
@@ -30,9 +29,9 @@ public abstract class Customer {
 		this.numbRented = 0;
 	}
 
-	//GETTERS AND SETTERS
-	
-	//ID
+	// GETTERS AND SETTERS
+
+	// ID
 	public int getId() {
 		return id;
 	}
@@ -40,8 +39,8 @@ public abstract class Customer {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	//NAME
+
+	// NAME
 	public String getCustName() {
 		return custName;
 	}
@@ -50,7 +49,7 @@ public abstract class Customer {
 		this.custName = custName;
 	}
 
-	//SURNAME
+	// SURNAME
 	public String getCustSurname() {
 		return custSurname;
 	}
@@ -59,7 +58,7 @@ public abstract class Customer {
 		this.custSurname = custSurname;
 	}
 
-	//DAY OF BIRTH
+	// DAY OF BIRTH
 	public String getBirthday() {
 		return birthday;
 	}
@@ -68,7 +67,7 @@ public abstract class Customer {
 		this.birthday = birthday;
 	}
 
-	//MEMBERSHIPCARD
+	// MEMBERSHIPCARD
 	public MembershipCard getMyMemberCard() {
 		return myMemberCard;
 	}
@@ -77,7 +76,7 @@ public abstract class Customer {
 		this.myMemberCard = myMemberCard;
 	}
 
-	//DEBIT - CREDIT CARD
+	// DEBIT - CREDIT CARD
 	public DebitCreditCard getMyCard() {
 		return myCard;
 	}
@@ -86,7 +85,7 @@ public abstract class Customer {
 		this.myCard = myCard;
 	}
 
-	//NUMBER OF TITLES RENTED
+	// NUMBER OF TITLES RENTED
 	public int getNumbRented() {
 		return numbRented;
 	}
@@ -95,7 +94,6 @@ public abstract class Customer {
 		this.numbRented = numbRented;
 	}
 
-		
 	public String getEmail() {
 		return email;
 	}
@@ -103,26 +101,15 @@ public abstract class Customer {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	//METHODS
+
+	// METHODS
 	public String getType() {
 		return "Customer";
 	}
-	
+
 	public void addNumbRented(int i) {
 		this.numbRented = this.numbRented + i;
-		
+
 	}
-	
 
-
-	
-
-	
-
-	
-	
-	
-	
-	
 }

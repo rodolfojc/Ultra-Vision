@@ -3,24 +3,24 @@ package titles;
 // SUPER CLASS TITLE
 public abstract class Title {
 
-	//ATTRIBUTES
+	// ATTRIBUTES
 	private String title;
 	private String yearRelease;
 	private String genre;
 	private String id;
 	private String type = "Title";
-	
-	//CONSTRUCTOR
+
+	// CONSTRUCTOR
 	public Title(String title, String yearRelease, String genre) {
 		this.title = title;
 		this.yearRelease = yearRelease;
 		this.genre = genre;
-		
+
 	}
-	
-	//GETTERS AND SETTERS
-	
-	//TITLE NAME
+
+	// GETTERS AND SETTERS
+
+	// TITLE NAME
 	public String getTitle() {
 		return title;
 	}
@@ -29,7 +29,7 @@ public abstract class Title {
 		this.title = title;
 	}
 
-	//YEAR OF RELEASE
+	// YEAR OF RELEASE
 	public String getYearRelease() {
 		return yearRelease;
 	}
@@ -38,7 +38,7 @@ public abstract class Title {
 		this.yearRelease = yearRelease;
 	}
 
-	//GENRE
+	// GENRE
 	public String getGenre() {
 		return genre;
 	}
@@ -47,7 +47,7 @@ public abstract class Title {
 		this.genre = genre;
 	}
 
-	//ID
+	// ID
 	public String getId() {
 		return id;
 	}
@@ -56,7 +56,7 @@ public abstract class Title {
 		this.id = id;
 	}
 
-	//TYPE
+	// TYPE
 	public String getType() {
 		return type;
 	}
@@ -64,8 +64,5 @@ public abstract class Title {
 	public void setType(String type) {
 		this.type = type;
 	}
-	
-	
-	
-		
+
 }
