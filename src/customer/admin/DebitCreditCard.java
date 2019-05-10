@@ -2,7 +2,7 @@ package customer.admin;
 
 public class DebitCreditCard {
 
-	//ADDING ATTRIBUTES
+	//ATTRIBUTES
 	private String cardNumber;
 	private String cardHolderName;
 	private String expDate;
@@ -24,10 +24,12 @@ public class DebitCreditCard {
 		return cardNumber;
 	}
 
+	//CARD NUMBER
 	public void setCardNumber(String cardNumber) {
 		this.cardNumber = cardNumber;
 	}
 
+	//CARDHOLDER NAME
 	public String getCardHolderName() {
 		return cardHolderName;
 	}
@@ -35,7 +37,8 @@ public class DebitCreditCard {
 	public void setCardHolderName(String cardHolderName) {
 		this.cardHolderName = cardHolderName;
 	}
-
+	
+	//EXPIRED CARD DATE
 	public String getExpDate() {
 		return expDate;
 	}
@@ -44,6 +47,7 @@ public class DebitCreditCard {
 		this.expDate = expDate;
 	}
 
+	//CVV CARD CODE
 	public String getCvvCode() {
 		return cvvCode;
 	}
@@ -60,6 +64,7 @@ public class DebitCreditCard {
 		this.type = type;
 	}
 
+	//FOR TESTING 
 	@Override
 	public String toString() {
 		return "DebitCreditCard [cardNumber=" + cardNumber + ", cardHolderName=" + cardHolderName + ", expDate="

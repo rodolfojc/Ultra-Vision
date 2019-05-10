@@ -25,24 +25,26 @@ public class Database {
 	}
 	
 	
-
+	//SETTERS
+	
+	//CONNECTION
 	public void setConn(Connection conn) {
 		this.conn = conn;
 	}
 
 
-
+	//STATEMENT
 	public void setStmt(Statement stmt) {
 		this.stmt = stmt;
 	}
 
 
-
+	//RESULT
 	public void setRs(ResultSet rs) {
 		this.rs = rs;
 	}
 
-
+	//GETTERS
 
 	public Connection getConn() {
 		return conn;
@@ -69,7 +71,7 @@ public class Database {
 			// Load the database driver
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-			String dbServer = "jdbc:mysql://localhost:3306/ultravision"; //ADD NAME OF DATABASE
+			String dbServer = "jdbc:mysql://localhost:3306/ultravision"; 
 			String user = "root";
 			String password = "";
 
@@ -94,5 +96,5 @@ public class Database {
 			System.out.println(e);
 		}
 
-		}
+	}
 }
