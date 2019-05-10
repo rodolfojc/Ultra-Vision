@@ -4,6 +4,7 @@ import customer.admin.DebitCreditCard;
 import customer.admin.MembershipCard;
 import titles.Title;
 
+//SUPER CLASS FOR CUSTOMERS
 public abstract class Customer {
 
 	//ATTRIBUTES
@@ -13,12 +14,11 @@ public abstract class Customer {
 	private String email;
 	private int numbRented;
 	private int id;
-	//private int[] titleRented;
 	private MembershipCard myMemberCard;
 	private DebitCreditCard myCard;
 	
 	
-	//COSTRUCTOR - FIELDS
+	//CONSTRUCTOR
 	public Customer(String custName, String custSurname, String birthday, String email, MembershipCard myMemberCard,
 			DebitCreditCard myCard) {
 		this.custName = custName;
@@ -28,18 +28,20 @@ public abstract class Customer {
 		this.myMemberCard = myMemberCard;
 		this.myCard = myCard;
 		this.numbRented = 0;
-		//this.titleRented = new int[4];
 	}
 
 	//GETTERS AND SETTERS
+	
+	//ID
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
-	}	
+	}
 	
+	//NAME
 	public String getCustName() {
 		return custName;
 	}
@@ -48,6 +50,7 @@ public abstract class Customer {
 		this.custName = custName;
 	}
 
+	//SURNAME
 	public String getCustSurname() {
 		return custSurname;
 	}
@@ -56,6 +59,7 @@ public abstract class Customer {
 		this.custSurname = custSurname;
 	}
 
+	//DAY OF BIRTH
 	public String getBirthday() {
 		return birthday;
 	}
@@ -64,6 +68,7 @@ public abstract class Customer {
 		this.birthday = birthday;
 	}
 
+	//MEMBERSHIPCARD
 	public MembershipCard getMyMemberCard() {
 		return myMemberCard;
 	}
@@ -72,6 +77,7 @@ public abstract class Customer {
 		this.myMemberCard = myMemberCard;
 	}
 
+	//DEBIT - CREDIT CARD
 	public DebitCreditCard getMyCard() {
 		return myCard;
 	}
@@ -80,6 +86,7 @@ public abstract class Customer {
 		this.myCard = myCard;
 	}
 
+	//NUMBER OF TITLES RENTED
 	public int getNumbRented() {
 		return numbRented;
 	}
@@ -97,27 +104,17 @@ public abstract class Customer {
 		this.email = email;
 	}
 	
-	//METHOD
+	//METHODS
 	public String getType() {
 		return "Customer";
 	}
-
+	
 	public void addNumbRented(int i) {
 		this.numbRented = this.numbRented + i;
 		
 	}
+	
 
-//	public int[] getTitleRented() {
-//		return titleRented;
-//	}
-//	
-//	public int getTitleRentedInt(int a) {
-//		return titleRented[a];
-//	}
-//
-//	public void setTitleRented(int a, int titleRented) {
-//		this.titleRented[a] = titleRented;
-//	}
 
 	
 
