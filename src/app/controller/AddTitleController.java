@@ -140,6 +140,15 @@ public class AddTitleController implements ActionListener{
 			valFlag = false;
 			
 		}
+		
+		else if (!this.addTitleView.getTvRunningTime().getText().toLowerCase().contains("min")) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The running time must contains 'min', it is not correct or it is empty, " + "try again",
+					"Running time name Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+			
+		}
 				
 		//COUNTRY
 		else if (!this.addTitleView.getCountry().getText().matches(regexGeneral)) {
