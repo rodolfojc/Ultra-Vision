@@ -5,8 +5,10 @@ import titles.interfaces.DVD;
 
 public class BoxSet extends Tv implements DVD, BlueRay {
 
+	//ATTRIBUTES
 	private final String _TYPE = "BoxSet";
 	
+	//CONSTRUCTOR
 	public BoxSet(String title, String yearRelease, String genre, String director, String runningTime, String languages,
 			String country, String blueRay, String dvd) {
 		super(title, yearRelease, genre, director, runningTime, languages, country, blueRay, dvd);
@@ -15,12 +17,13 @@ public class BoxSet extends Tv implements DVD, BlueRay {
 	}
 	
 	
-
+	//SUPER CLASS METHODS
 	@Override
 	public String getType() {
 		return this._TYPE;
 	}
 
+	//IMPLEMENTATIONS METHODS
 	@Override
 	public String isBlueRayFormat() {
 		return this.isBlueRay();
@@ -31,6 +34,7 @@ public class BoxSet extends Tv implements DVD, BlueRay {
 		return this.isDvd();
 	}
 
+	//FOR TESTING
 	@Override
 	public String toString() {
 		return "BoxSet [getDirector()=" + getDirector() + ", getRunningTime()=" + getRunningTime() + ", getLanguages()="
