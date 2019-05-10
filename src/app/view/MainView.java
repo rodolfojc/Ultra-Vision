@@ -1,6 +1,5 @@
 package app.view;
 
-
 import java.awt.Font;
 import java.awt.Insets;
 
@@ -10,13 +9,14 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import app.controller.Controller;
 import app.controller.MainViewController;
 
 public class MainView extends GuiView {
 	
-		private MainViewController myController;
+	//CONTROLLER
+	private MainViewController myController;
 
+	//CONSTRUCTOR
 	public MainView(String name, int width, int height, boolean Resizable) {
 		super(name, width, height, Resizable);
 		this.myController = new MainViewController(this);
@@ -31,7 +31,7 @@ public class MainView extends GuiView {
 		return myButton;
 	}
 
-
+	//SET FRAME
 	public void setFrame() {
 		
 		this.setGrid(17, 1, this.panel);
@@ -46,7 +46,6 @@ public class MainView extends GuiView {
 		myLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		myLabel.setFont(new Font("SERIF", Font.BOLD, 45));
 		JButton searchTitle = this.addButton("Search - Title", this.panel);
-		//JButton searchTitle = this.addButtonAll("Search Title", "Search Title", this.panel, this.myController);
 		searchTitle.setActionCommand("Search Title");
 		searchTitle.addActionListener(myController);
 		this.addLabel("", this.panel);
