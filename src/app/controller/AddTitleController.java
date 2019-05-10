@@ -3,6 +3,8 @@ package app.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
+
 import app.database.Database;
 import app.model.AddTitleModel;
 import app.view.AddTitleView;
@@ -20,6 +22,11 @@ public class AddTitleController implements ActionListener{
 	private MainView mainView;
 	private Database database;
 	
+	// IT MUST BE LETTER A-Z, NO EMPTY FIELD AND UP TO 24 CHARACTERS
+	private String regexGeneral = "(?i)(^[a-z])((?![ .,'-]$)[a-z .,'-]){0,24}$";
+	//YEARS FROM 1900 TO 2099
+	private String regexYears = "^(19|20)\\d{2}$";
+	
 	
 	
 	public AddTitleController(AddTitleView addTitleView, MainView mainView) {
@@ -28,10 +35,150 @@ public class AddTitleController implements ActionListener{
 		this.mainView = mainView;
 	}
 	
+	public boolean musicValidation() {
+		
+		//VALIDATION FLAG
+		boolean valFlag = true;
+		
+		
+					
+		//TITLE NAME
+		if (!this.addTitleView.getMusicTitleName().getText().matches(regexGeneral)) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The title name is not correct or it is empty, " + "try again",
+					"Title name Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+			
+		}
+		
+		//GENRE
+		else if (!this.addTitleView.getMusicGenre().getText().matches(regexGeneral)) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The genre is not correct or it is empty, " + "try again",
+					"Genre Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+			
+		}
+		
+		//BAND
+		else if (!this.addTitleView.getMusicBand().getText().matches(regexGeneral)) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The band is not correct or it is empty, " + "try again",
+					"Band Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+			
+		}
+		
+		//ALBUM
+		else if (!this.addTitleView.getMusicAlbum().getText().matches(regexGeneral)) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The album is not correct or it is empty, " + "try again",
+					"Album Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+			
+		}
+		
+		//YEAR
+		else if (!this.addTitleView.getMusicYearRelease().getText().matches(regexYears)) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
+					"Year Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+			
+		} 	else {
+			
+			return valFlag;
+		
+		}
+		
+		return valFlag;
+	}
+	
+	public boolean tvValidation() {
+	
+		boolean valFlag = true;
+		
+		//TITLE NAME
+		if (!this.addTitleView.getTvTitleName().getText().matches(regexGeneral)) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The title name is not correct or it is empty, " + "try again",
+					"Title name Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+			
+		}
+		
+		//GENRE
+		else if (!this.addTitleView.getTvGenre().getText().matches(regexGeneral)) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The genre is not correct or it is empty, " + "try again",
+					"Genre Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+			
+		}
+		
+		//DIRECTOR
+		else if (!this.addTitleView.getTvDirector().getText().matches(regexGeneral)) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The director name is not correct or it is empty, " + "try again",
+					"Director name Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+			
+		}
+		
+		//YEAR
+		else if (!this.addTitleView.getMusicYearRelease().getText().matches(regexYears)) {
+					
+			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
+			"Year Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+					
+		}
+		
+		//COUNTRY
+		else if (!this.addTitleView.getCountry().getText().matches(regexGeneral)) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
+			"Year Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+					
+		}
+		
+		//LANGUAGE
+		else if (!this.addTitleView.getLanguage().getText().matches(regexGeneral)) {
+			
+			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
+			"Year Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+					
+		} else {
+		
+			return valFlag;
+			
+		}
+		
+		return valFlag;
+	}
+	
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getActionCommand().equals("Add Music")) {
+			
+			//VALIDATION
+			if (this.musicValidation()) {
+						
 			
 			if(addTitleView.getMusicType().equals("MusicCD")) {
 				AudioMusic tempAudio = new AudioMusic(this.addTitleView.getMusicTitleName().getText(),
@@ -55,10 +202,15 @@ public class AddTitleController implements ActionListener{
 				this.addTitleModel = new AddTitleModel(this.database, tempVideo, this.addTitleView);
 				this.addTitleModel.addVideoMusic();
 			}
-			
+		  }
 		}
 		
 		if(e.getActionCommand().equals("Add Tv")) {
+			
+			
+			if(this.tvValidation()) {
+			
+			
 			
 			if(addTitleView.getTvType().equals("Movie")) {
 				
@@ -94,7 +246,7 @@ public class AddTitleController implements ActionListener{
 				
 			}
 				
-			
+		  }
 			
 		}
 		
