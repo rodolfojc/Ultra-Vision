@@ -30,8 +30,6 @@ public class AddMemberController implements ActionListener{
 	//REGEX
 	//IT MUST BE LETTER A-Z, NO EMPTY FIELD AND UP TO 24 CHARACTERS
 	private String regexGeneral = "(?i)(^[a-z])((?![ .,'-]$)[a-z .,'-]){0,24}$";
-	//YEARS FROM 1900 TO 2099
-	private String regexYears = "^(19|20)\\d{2}$";
 	// EMAIL MUST HAVE A SIMBOL @
 	private String regexEmail = "^(.+)@(.+)$";
 	//CREDIT - DEBIT CARD FOR MASTERCAR, VISA AND OTHERS

@@ -91,7 +91,7 @@ public class AddTitleModel {
 			if (flag == true)
 				JOptionPane.showMessageDialog(this.addTitleView,
 						"The title: "+this.audioMusic.getTitle()+" has been ADDED SUCCESSFUL");
-			this.addTitleView.dispose();
+			
 
 		}
 	
@@ -132,8 +132,7 @@ public class AddTitleModel {
 		if (flag == true)
 			JOptionPane.showMessageDialog(this.addTitleView,
 					"The Title: "+this.concertVideos.getTitle()+" has been ADDED SUCCESSFUL");
-		this.addTitleView.dispose();
-
+		
 	}
 	
 	public void addMovieTv() {
@@ -175,8 +174,7 @@ public class AddTitleModel {
 		if (flag == true)
 			JOptionPane.showMessageDialog(this.addTitleView,
 					"The title: "+this.movie.getTitle()+" has been ADDED SUCCESSFUL");
-		this.addTitleView.dispose();
-
+	
 	}
 	
 	public void addBoxTv() {
@@ -218,8 +216,7 @@ public class AddTitleModel {
 		if (flag == true)
 			JOptionPane.showMessageDialog(this.addTitleView,
 					"The title: "+this.boxSet.getTitle()+" has been ADDED SUCCESSFUL");
-		this.addTitleView.dispose();
-
+		
 	}
 	
 	

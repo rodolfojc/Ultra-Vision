@@ -52,16 +52,6 @@ public class AddTitleController implements ActionListener{
 			
 		}
 		
-		//GENRE
-		else if (!this.addTitleView.getMusicGenre().getText().matches(regexGeneral)) {
-			
-			JOptionPane.showMessageDialog(this.addTitleView, "The genre is not correct or it is empty, " + "try again",
-					"Genre Error", JOptionPane.ERROR_MESSAGE);
-			// IT DOES NOT MATCH, FLAG IS SET FALSE
-			valFlag = false;
-			
-		}
-		
 		//BAND
 		else if (!this.addTitleView.getMusicBand().getText().matches(regexGeneral)) {
 			
@@ -84,13 +74,22 @@ public class AddTitleController implements ActionListener{
 		
 		//YEAR
 		else if (!this.addTitleView.getMusicYearRelease().getText().matches(regexYears)) {
-			
+					
 			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
-					"Year Error", JOptionPane.ERROR_MESSAGE);
+			"Year Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
-			
-		} 	else {
+					
+				}	
+		//GENRE
+		else if (!this.addTitleView.getMusicGenre().getText().matches(regexGeneral)) {
+				
+			JOptionPane.showMessageDialog(this.addTitleView, "The genre is not correct or it is empty, " + "try again",
+			"Genre Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+					
+		}else {
 			
 			return valFlag;
 		
@@ -112,6 +111,15 @@ public class AddTitleController implements ActionListener{
 			valFlag = false;
 			
 		}
+		//YEAR
+		else if (!this.addTitleView.getTvYearRelease().getText().matches(regexYears)) {
+							
+			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
+			"Year Error", JOptionPane.ERROR_MESSAGE);
+			// IT DOES NOT MATCH, FLAG IS SET FALSE
+			valFlag = false;
+							
+				}
 		
 		//GENRE
 		else if (!this.addTitleView.getTvGenre().getText().matches(regexGeneral)) {
@@ -132,21 +140,11 @@ public class AddTitleController implements ActionListener{
 			valFlag = false;
 			
 		}
-		
-		//YEAR
-		else if (!this.addTitleView.getMusicYearRelease().getText().matches(regexYears)) {
-					
-			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
-			"Year Error", JOptionPane.ERROR_MESSAGE);
-			// IT DOES NOT MATCH, FLAG IS SET FALSE
-			valFlag = false;
-					
-		}
-		
+				
 		//COUNTRY
 		else if (!this.addTitleView.getCountry().getText().matches(regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
+			JOptionPane.showMessageDialog(this.addTitleView, "The country is not correct or it is empty, " + "try again",
 			"Year Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
@@ -156,7 +154,7 @@ public class AddTitleController implements ActionListener{
 		//LANGUAGE
 		else if (!this.addTitleView.getLanguage().getText().matches(regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
+			JOptionPane.showMessageDialog(this.addTitleView, "The language is not correct or it is empty, " + "try again",
 			"Year Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
@@ -190,6 +188,8 @@ public class AddTitleController implements ActionListener{
 				this.database = new Database();
 				this.addTitleModel = new AddTitleModel(this.database, tempAudio, this.addTitleView);
 				this.addTitleModel.addAudioMusic();
+				this.addTitleView.dispose();
+				this.mainView.setVisible(true);
 			}else {
 				ConcertVideos tempVideo = new ConcertVideos(this.addTitleView.getMusicTitleName().getText(),
 															this.addTitleView.getMusicYearRelease().getText(),
@@ -201,6 +201,8 @@ public class AddTitleController implements ActionListener{
 				this.database = new Database();
 				this.addTitleModel = new AddTitleModel(this.database, tempVideo, this.addTitleView);
 				this.addTitleModel.addVideoMusic();
+				this.addTitleView.dispose();
+				this.mainView.setVisible(true);
 			}
 		  }
 		}
@@ -226,6 +228,8 @@ public class AddTitleController implements ActionListener{
 				this.database = new Database();
 				this.addTitleModel = new AddTitleModel(this.database, tempMovie, this.addTitleView);
 				this.addTitleModel.addMovieTv();
+				this.addTitleView.dispose();
+				this.mainView.setVisible(true);
 			
 			}else {
 				
@@ -242,6 +246,8 @@ public class AddTitleController implements ActionListener{
 				this.database = new Database();
 				this.addTitleModel = new AddTitleModel(this.database, tempBox, this.addTitleView);
 				this.addTitleModel.addBoxTv();
+				this.addTitleView.dispose();
+				this.mainView.setVisible(true);
 				
 				
 			}
