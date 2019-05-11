@@ -12,61 +12,62 @@ import customers.Customer;
 
 public class FindMemberController implements ActionListener {
 
+	// ATTRIBUTES
 	private FindMemberView findMemberView;
 	private FindMemberModel findMemberModel;
-	private MemberMenuView memberMenuView;
 	private Customer customer;
 	private MainView mainView;
 	private Database myDB;
-	
+
+	// CONSTRUCOR
 	public FindMemberController(FindMemberView findMemberView, MainView mainView) {
-		
+
 		this.findMemberView = findMemberView;
 		this.mainView = mainView;
-		
+
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+
+		// SEARCH MEMBER
 		if (e.getActionCommand().equals("Search")) {
-			
+
 			this.myDB = new Database();
 			this.findMemberModel = new FindMemberModel(this.myDB);
 			int id = Integer.parseInt(this.findMemberView.getFindId().getText());
-			
-			if(this.findMemberModel.checkId(id)) {
-				
+
+			if (this.findMemberModel.checkId(id)) {
+
 				this.customer = this.findMemberModel.findId(id);
-				this.findMemberView.setUser(id + ": "+this.customer.getCustName()+" "+this.customer.getCustSurname());
+				this.findMemberView
+						.setUser(id + ": " + this.customer.getCustName() + " " + this.customer.getCustSurname());
 				this.findMemberView.setButtonFlag(false);
 				this.findMemberView.UpdateFrame();
-				
-			}else {
+
+			} else {
 				this.findMemberView.setUser("Member " + id + " is not valid, try again!");
 				this.findMemberView.setButtonFlag(true);
 				this.findMemberView.UpdateFrame();
 			}
-			
-			
+
 		}
-		
+
+		// GO AFTER MEMBER IS FOUND
 		if (e.getActionCommand().equals("Go")) {
-			
-			
-			this.memberMenuView = new MemberMenuView("Member Manager", 900, 900, true, this.mainView, this.customer);
+
+			new MemberMenuView("Member Manager", 900, 900, true, this.mainView, this.customer);
 			this.findMemberView.dispose();
-			
+
 		}
-		
+
+		// GO BACK TO MAIN MENU
 		if (e.getActionCommand().equals("Go back")) {
-			
+
 			this.findMemberView.dispose();
 			this.mainView.setVisible(true);
-			
+
 		}
-		
-		
 
 	}
 
