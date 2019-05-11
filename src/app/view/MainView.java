@@ -1,5 +1,6 @@
 package app.view;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Insets;
 
@@ -26,7 +27,11 @@ public class MainView extends GuiView {
 	@Override
 	public JButton addButton(String name, JPanel panel) {
 		JButton myButton= new JButton(name);
-		myButton.setFont(new Font("SERIF", Font.PLAIN, 28));
+		//myButton.setFont(new Font("SERIF", Font.PLAIN, 28));
+		myButton.setBackground(new Color(59, 89, 182));
+		myButton.setForeground(Color.WHITE);
+		myButton.setFocusPainted(false);
+		myButton.setFont(new Font("Tahoma", Font.BOLD, 28));
 		panel.add(myButton);
 		return myButton;
 	}
@@ -37,14 +42,14 @@ public class MainView extends GuiView {
 		this.setGrid(17, 1, this.panel);
 		
 		JLabel mainLabel = this.addLabel("Ultra-Vision", this.panel);
-		mainLabel.setFont(new Font("SERIF", Font.BOLD, 45));
+		mainLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 50));
 		mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		this.addLabel("", this.panel);
 		JLabel myLabel = this.addLabel("MAIN MENU", this.panel);
 		this.addLabel("", this.panel);
 		this.addLabel("", this.panel);
 		myLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		myLabel.setFont(new Font("SERIF", Font.BOLD, 45));
+		myLabel.setFont(new Font("Tahoma", Font.BOLD, 35));
 		JButton searchTitle = this.addButton("Search - Title", this.panel);
 		searchTitle.setActionCommand("Search Title");
 		searchTitle.addActionListener(myController);
