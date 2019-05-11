@@ -97,7 +97,9 @@ public class GuiView extends JFrame {
 	public JTextField addTextField(int a, JPanel panel) {
 
 		JTextField myText = new JTextField(a);
-		myText.setFont(new Font("SERIF", Font.PLAIN, 20));
+		myText.setFont(new Font("Tahoma", Font.BOLD, 20));
+		myText.setBackground(new Color(59, 89, 182));
+		myText.setForeground(Color.WHITE);
 		panel.add(myText);
 		return myText;
 
@@ -115,11 +117,6 @@ public class GuiView extends JFrame {
 	public JButton addButton(String name, JPanel panel) {
 
 		JButton myButton = new JButton(name);
-
-		///////// TO SET COLOR TO BUTTONS ///////////
-		// myButton.setBackground(Color.getHSBColor(229, 162, 61));
-		// myButton.setContentAreaFilled(false);
-		// myButton.setOpaque(true);
 		panel.add(myButton);
 		return myButton;
 	}
@@ -128,7 +125,10 @@ public class GuiView extends JFrame {
 	public JButton addButtonAll(String name, String command, JPanel panel, ActionListener controller) {
 
 		JButton myButton = new JButton(name);
-		myButton.setFont(new Font("SERIF", Font.PLAIN, 20));
+		myButton.setBackground(new Color(59, 89, 182));
+		myButton.setForeground(Color.WHITE);
+		myButton.setFocusPainted(false);
+		myButton.setFont(new Font("Tahoma", Font.BOLD, 20));
 		myButton.setActionCommand(command);
 		myButton.addActionListener(controller);
 		panel.add(myButton);
@@ -140,7 +140,8 @@ public class GuiView extends JFrame {
 	public JLabel addLabel(String text, JPanel panel) {
 
 		JLabel myLabel = new JLabel(text);
-		myLabel.setFont(new Font("SERIF", Font.BOLD, 20));
+		myLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
+		myLabel.setForeground(Color.WHITE);
 		panel.add(myLabel);
 		return myLabel;
 	}
@@ -149,7 +150,8 @@ public class GuiView extends JFrame {
 	public JComboBox addComboB(String[] options, JPanel panel) {
 
 		JComboBox myComboBox = new JComboBox(options);
-		myComboBox.setFont(new Font("Serif", Font.PLAIN, 20));
+		myComboBox.setFont(new Font("Tahoma", Font.BOLD, 20));
+		myComboBox.setBackground(new Color(59, 89, 182));
 		panel.add(myComboBox);
 		return myComboBox;
 	}
@@ -157,9 +159,9 @@ public class GuiView extends JFrame {
 	// CREATE A JCALENDAR - JDATECHOOSER WITH SIZE AND ADD TO A PANEL
 	public JDateChooser addCalen(JPanel panel) {
 		JDateChooser myDateChooser = new JDateChooser();
-		// myDateChooser.setBounds(20, 20, 200, 20);
+		myDateChooser.setForeground(new Color(59, 89, 182));
 		myDateChooser.setDateFormatString("dd/MM/yyyy");
-		myDateChooser.setFont(new Font("Serif", Font.PLAIN, 20));
+		myDateChooser.setFont(new Font("Tahoma", Font.BOLD, 20));
 		panel.add(myDateChooser);
 		return myDateChooser;
 	}
@@ -171,14 +173,14 @@ public class GuiView extends JFrame {
 
 		myTable[tableNum] = new JTable(data, columnsName);
 		myTable[tableNum].setSize(100, 200);
-		myTable[tableNum].setFont(new Font("SERIF", Font.PLAIN, 20));
+		myTable[tableNum].setFont(new Font("Tahoma", Font.BOLD, 20));
 		myTable[tableNum].setRowHeight(30);
-		myTable[tableNum].getTableHeader().setFont(new Font("SERIF", Font.BOLD, 20));
+		myTable[tableNum].getTableHeader().setFont(new Font("Tahoma", Font.BOLD, 20));
 		JScrollPane myScroll = new JScrollPane(myTable[tableNum]);
-		myScroll.setFont(new Font("SERIF", Font.PLAIN, 20));
+		myScroll.setFont(new Font("Tahoma", Font.BOLD, 20));
 
 		panel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), title, TitledBorder.CENTER,
-				TitledBorder.TOP, new Font("Serif", Font.BOLD, 20), Color.BLACK));
+				TitledBorder.TOP, new Font("Tahoma", Font.BOLD, 20), Color.WHITE));
 
 		panel.add(myScroll);
 		return myScroll;

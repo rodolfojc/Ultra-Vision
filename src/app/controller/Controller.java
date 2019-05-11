@@ -11,7 +11,7 @@ public class Controller implements ActionListener {
 	public Controller() {
 
 		// NEW INSTANCE OF MAIN VIEW
-		new MainView("Welcome to Ultravision Management System", 700, 900, true);
+		new MainView("Welcome to Ultravision Management System", 800, 900, true);
 
 	}
 

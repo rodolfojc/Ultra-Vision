@@ -1,5 +1,6 @@
 package app.view;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Insets;
 
@@ -83,7 +84,8 @@ public class FindMemberView extends GuiView {
 
 		JLabel title = this.addLabel("Membership Number", this.panel);
 		title.setHorizontalAlignment(SwingConstants.CENTER);
-		title.setFont(new Font("Serif", Font.BOLD, 25));
+		title.setFont(new Font("Tahoma", Font.BOLD, 20));
+		title.setForeground(Color.WHITE);
 		this.findId = this.addTextField(20, search);
 		this.addButtonAll("Search", "Search", search, this.myController);
 		this.panel.add(search);
