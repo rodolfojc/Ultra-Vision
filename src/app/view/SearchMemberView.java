@@ -89,15 +89,18 @@ public class SearchMemberView extends GuiView {
 
 		this.panel.add(titleTop);
 		this.panel.add(top);
-
-		this.addTableS(0, this.data, columns, this.panel, "Customers");
+		
+		JPanel tablePanel = new JPanel();
+		this.setGrid(1, 0, tablePanel);
+		this.addTableS(0, this.data, columns, tablePanel, "Members");
 		this.myTable[0].getTableHeader().setReorderingAllowed(false);
 		this.myTable[0].getTableHeader().setEnabled(false);
 		this.myTable[0].getColumnModel().getColumn(0).setPreferredWidth(30);
 		this.myTable[0].setEnabled(false);
-		this.addLabel("", this.panel);
-		this.addLabel("", this.panel);
-		this.goBack = this.addButtonAll("Go back", "Go back", this.panel, myController);
+		JPanel btnPanel = new JPanel();
+		this.goBack = this.addButtonAll("Go back", "Go back", btnPanel, myController);
+		this.panel.add(tablePanel);
+		this.panel.add(btnPanel);
 		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 100, 65)));
 		
 		this.repaint();

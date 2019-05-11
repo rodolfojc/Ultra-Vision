@@ -114,22 +114,30 @@ public class SearchTitleView extends GuiView {
 		this.setSearchTitle(this.addTextField(20, top));
 		this.search = this.addButtonAll("Search", "Search", top, myController);
 		titleTop.setBorder(new EmptyBorder(new Insets(40, 0, 0, 0)));
+		
 		this.panel.add(titleTop);
 		this.panel.add(top);
+		
+		JPanel tablePanel = new JPanel();
+		JPanel btnPanel = new JPanel();
+		this.setGrid(1, 0, tablePanel);
 
 		if (!this.memberFlag) {
-			this.addTableS(0, this.data, columnsNameTitles, this.panel, "Titles");
-			this.addButtonAll("Go back", "Go back", this.panel, myController);
+			this.addTableS(0, this.data, columnsNameTitles, tablePanel, "Titles");
 			this.myTable[0].getTableHeader().setReorderingAllowed(false);
 			this.myTable[0].getColumnModel().getColumn(0).setPreferredWidth(30);
 			this.myTable[0].setEnabled(false);
+			this.addButtonAll("Go back", "Go back", btnPanel, myController);
 
 		} else {
-			this.addTableS(0, this.data, columnsNameTitles, this.panel, "Titles");
+			this.addTableS(0, this.data, columnsNameTitles, tablePanel, "Titles");
 			this.myTableModel = this.myTable[0].getSelectionModel();
 			this.myTableModel.addListSelectionListener(this.myController);
-			this.addButtonAll("Rent", "Rent", this.panel, myController);
+			this.addButtonAll("Rent", "Rent", btnPanel, myController);
 		}
+		
+		this.panel.add(tablePanel);
+		this.panel.add(btnPanel);
 
 		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 100, 65)));
 
