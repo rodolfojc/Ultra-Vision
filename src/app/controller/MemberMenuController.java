@@ -180,12 +180,13 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		String isDVD="";
 		String isBlueRay="";
 		
-		
+			
 		//RENTED TABLE LISTENER
 		if (!this.memberMenuView.getMyTableModelRented().isSelectionEmpty()) {
 			this.memberMenuView.setSelectedRowRented(this.memberMenuView.getMyTableModelRented().getMinSelectionIndex());
 			this.memberMenuView.getReturnBtn().setEnabled(true);
-			
+			this.memberMenuView.getMyTableModelTitles().clearSelection();
+						
 			JOptionPane.showMessageDialog(this.memberMenuView,
 					"Title selected: " + this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0) + ", " + ""
 							+ this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 1) + " " 
@@ -198,6 +199,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 		if (!this.memberMenuView.getMyTableModelTitles().isSelectionEmpty()) {
 			this.memberMenuView.setSelectedRowTitles(this.memberMenuView.getMyTableModelTitles().getMinSelectionIndex());
 			this.memberMenuView.getRent().setEnabled(true);
+			this.memberMenuView.getMyTableModelRented().clearSelection();
 			
 			if (this.memberMenuView.getMyCustomer().getType().equals("MusicLovers")) {
 				isCD = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 6);

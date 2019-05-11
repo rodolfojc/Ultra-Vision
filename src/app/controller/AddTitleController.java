@@ -141,6 +141,7 @@ public class AddTitleController implements ActionListener{
 			
 		}
 		
+		//RUNNING TIME
 		else if (!this.addTitleView.getTvRunningTime().getText().toLowerCase().contains("min")) {
 			
 			JOptionPane.showMessageDialog(this.addTitleView, "The running time must contains 'min', it is not correct or it is empty, " + "try again",
@@ -188,7 +189,7 @@ public class AddTitleController implements ActionListener{
 						
 			
 			if(addTitleView.getMusicType().equals("MusicCD")) {
-				AudioMusic tempAudio = new AudioMusic(this.addTitleView.getMusicTitleName().getText(),
+				Title tempAudio = new AudioMusic(this.addTitleView.getMusicTitleName().getText(),
 														this.addTitleView.getMusicYearRelease().getText(),
 														this.addTitleView.getMusicGenre().getText(),
 														this.addTitleView.getMusicAlbum().getText(),
@@ -200,7 +201,7 @@ public class AddTitleController implements ActionListener{
 				this.addTitleView.dispose();
 				this.mainView.setVisible(true);
 			}else {
-				ConcertVideos tempVideo = new ConcertVideos(this.addTitleView.getMusicTitleName().getText(),
+				Title tempVideo = new ConcertVideos(this.addTitleView.getMusicTitleName().getText(),
 															this.addTitleView.getMusicYearRelease().getText(),
 															this.addTitleView.getMusicGenre().getText(),
 															this.addTitleView.getMusicAlbum().getText(),
@@ -225,7 +226,7 @@ public class AddTitleController implements ActionListener{
 			
 			if(addTitleView.getTvType().equals("Movie")) {
 				
-				Movie tempMovie = new Movie(this.addTitleView.getTvTitleName().getText(), 
+				Title tempMovie = new Movie(this.addTitleView.getTvTitleName().getText(), 
 											this.addTitleView.getTvYearRelease().getText(), 
 											this.addTitleView.getTvGenre().getText(), 
 											this.addTitleView.getTvDirector().getText(), 
@@ -242,7 +243,7 @@ public class AddTitleController implements ActionListener{
 			
 			}else {
 				
-				BoxSet tempBox = new BoxSet(this.addTitleView.getTvTitleName().getText(), 
+				Title tempBox = new BoxSet(this.addTitleView.getTvTitleName().getText(), 
 						this.addTitleView.getTvYearRelease().getText(), 
 						this.addTitleView.getTvGenre().getText(), 
 						this.addTitleView.getTvDirector().getText(), 

@@ -38,78 +38,78 @@
     </display>  
   </class>  
   <association id="5">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="6" name="addTitleModel">        
-        <position height="19" width="85" x="429" y="143"/>      
+    <bendpoint x="645" y="242"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="6" name="myDB">        
+        <position height="19" width="41" x="825" y="219"/>      
       </attribute>      
       <multiplicity id="7" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="8">    
-    <bendpoint x="723" y="226"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="9" name="addTitleView">        
+    <bendpoint x="566" y="217"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="9" name="myController">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="10" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="11">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="12" name="addTitleView">        
-        <position height="0" width="0" x="0" y="0"/>      
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="12" name="database">        
+        <position height="19" width="60" x="848" y="172"/>      
       </attribute>      
       <multiplicity id="13" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="14">    
-    <bendpoint x="645" y="242"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="15" name="myDB">        
-        <position height="19" width="41" x="825" y="219"/>      
-      </attribute>      
-      <multiplicity id="16" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="14">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="15" name="addTitleModel">        
+        <position height="19" width="85" x="429" y="143"/>      
+      </attribute>      
+      <multiplicity id="16" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <association id="17">    
-    <bendpoint x="566" y="217"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="18" name="myController">        
+    <bendpoint x="723" y="226"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="18" name="addTitleView">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="19" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="20">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="21" name="database">        
-        <position height="19" width="60" x="848" y="172"/>      
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="21" name="addTitleView">        
+        <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="22" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
