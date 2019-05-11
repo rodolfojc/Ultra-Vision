@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -68,7 +69,7 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			}
 
 			else {
-				JOptionPane.showMessageDialog(this.memberMenuView, "More than 4 titles have been rented by Member",
+				JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("More than 4 titles have been rented by Member"),
 						"Error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
@@ -115,8 +116,9 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			}
 
 			String[] options = { "Pay by Card", "Cancel" };
+						
 			int opt = JOptionPane.showOptionDialog(this.memberMenuView,
-					"The title is with = " + daysPenalty + " days penalty, TOTAL EXTRAS = €" + penalty + " ", "Confirm",
+					this.memberMenuView.addLabelOpt("The title is with = " + daysPenalty + " days penalty, TOTAL EXTRAS = €" + penalty + " "), "Confirm",
 					JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 
 			if (opt == 0) {
@@ -192,12 +194,12 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			this.memberMenuView.getReturnBtn().setEnabled(true);
 			this.memberMenuView.getMyTableModelTitles().clearSelection();
 
-			JOptionPane.showMessageDialog(this.memberMenuView, "Title selected: "
+			JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("Title selected: "
 					+ this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 0) + ", "
 					+ "" + this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 1)
 					+ " " + ""
 					+ this.memberMenuView.getTitlesRentedDataStr(this.memberMenuView.getSelectedRowRented(), 2) + " "
-					+ ". If you want to release it, press Return to continue");
+					+ ". If you want to release it, press Return to continue"));
 
 		}
 
@@ -222,12 +224,11 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 				isBlueRay = this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 12);
 			}
 
-			JOptionPane.showMessageDialog(this.memberMenuView,
-					"Title selected: ID "
+			JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("Title selected: ID "
 							+ this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 0) + ", "
 							+ "" + this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 1) + " "
 							+ "" + this.memberMenuView.getTitlesStr(this.memberMenuView.getSelectedRowTitles(), 2) + " "
-							+ ". Please press ok to continue");
+							+ ". Please press ok to continue"));
 
 			// FORMAT
 			List<String> optionsList = new ArrayList<>();
@@ -251,8 +252,8 @@ public class MemberMenuController implements ActionListener, ListSelectionListen
 			}
 
 			Object[] optionArray = optionsList.toArray();
-
-			int format = JOptionPane.showOptionDialog(this.memberMenuView, "Select a FORMAT", "Format",
+			
+			int format = JOptionPane.showOptionDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("Select a FORMAT"), "Format",
 					JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, optionArray, optionArray[0]);
 
 			this.isFormatDB = optionArray[format].toString();

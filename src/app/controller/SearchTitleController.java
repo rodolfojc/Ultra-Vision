@@ -82,7 +82,7 @@ public class SearchTitleController implements ActionListener, ListSelectionListe
 				this.memberMenuView.UpdateFrame(true);
 
 			} else {
-				JOptionPane.showMessageDialog(this.memberMenuView, "More than 4 titles have been rented by Member",
+				JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("More than 4 titles have been rented by Member"),
 						"Error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
@@ -104,10 +104,10 @@ public class SearchTitleController implements ActionListener, ListSelectionListe
 			isBlueRay = this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 13);
 
 			JOptionPane.showMessageDialog(this.searchTitleView,
-					"Title selected: ID " + this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 0)
+					this.memberMenuView.addLabelOpt("Title selected: ID " + this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 0)
 							+ ", " + "" + this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 1)
 							+ " " + "" + this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 2)
-							+ " " + ". Please press ok to continue");
+							+ " " + ". Please press ok to continue"));
 
 			List<String> optionsList = new ArrayList<>();
 			List<String> optionsListDB = new ArrayList<>();
@@ -131,7 +131,7 @@ public class SearchTitleController implements ActionListener, ListSelectionListe
 
 			Object[] optionArray = optionsList.toArray();
 
-			int format = JOptionPane.showOptionDialog(this.searchTitleView, "Select a FORMAT", "Format",
+			int format = JOptionPane.showOptionDialog(this.searchTitleView, this.memberMenuView.addLabelOpt("Select a FORMAT"), "Format",
 					JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, optionArray, optionArray[0]);
 
 			this.isFormatDB = optionArray[format].toString();

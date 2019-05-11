@@ -325,7 +325,7 @@ public class MemberMenuModel {
 
 			} catch (Exception e) {
 				// ERROR MESSAGES
-				JOptionPane.showMessageDialog(this.memberMenuView, "Ups, there is a problem, try again!");
+				JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("Ups, there is a problem, try again!"));
 				System.err.println("Got an exception!");
 				System.out.println("I am in sentRent() - query ");
 				System.err.println(e.getMessage());
@@ -347,7 +347,7 @@ public class MemberMenuModel {
 
 			} catch (Exception e) {
 				// ERROR MESSAGES
-				JOptionPane.showMessageDialog(this.memberMenuView, "Ups, there is a problem, try again!");
+				JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("Ups, there is a problem, try again!"));
 				System.err.println("Got an exception!");
 				System.out.println("I am in sentRent() - queryTwo ");
 				System.err.println(e.getMessage());
@@ -372,7 +372,7 @@ public class MemberMenuModel {
 
 			} catch (Exception e) {
 				// ERROR MESSAGES
-				JOptionPane.showMessageDialog(this.memberMenuView, "Ups, there is a problem, try again!");
+				JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("Ups, there is a problem, try again!"));
 				System.err.println("Got an exception!");
 				System.out.println("I am in sentRent() - queryThree ");
 				System.err.println(e.getMessage());
@@ -389,7 +389,7 @@ public class MemberMenuModel {
 
 			} catch (Exception e) {
 				// ERROR MESSAGES
-				JOptionPane.showMessageDialog(this.memberMenuView, "Ups, there is a problem, try again!");
+				JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("Ups, there is a problem, try again!"));
 				System.err.println("Got an exception!");
 				System.out.println("I am in sentRent() - queryFour ");
 				System.err.println(e.getMessage());
@@ -397,17 +397,17 @@ public class MemberMenuModel {
 
 			if (!freeRent) {
 				JOptionPane.showMessageDialog(this.memberMenuView,
-						"The title have been rented, TOTAL = €2 (Direct debit - Card) ", "Confirm",
+						this.memberMenuView.addLabelOpt("The title have been rented, TOTAL = €2 (Direct debit - Card) "), "Confirm",
 						JOptionPane.INFORMATION_MESSAGE);
 			} else {
-				JOptionPane.showMessageDialog(this.searchTitleView, "The title have been rented for FREE", "Confirm",
+				JOptionPane.showMessageDialog(this.searchTitleView, this.memberMenuView.addLabelOpt("The title have been rented for FREE"), "Confirm",
 						JOptionPane.INFORMATION_MESSAGE);
 				this.searchTitleView.dispose();
 
 			}
 
 		} else {
-			JOptionPane.showMessageDialog(this.memberMenuView, "The title is not Available ", "Confirm",
+			JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("The title is not Available "), "Confirm",
 					JOptionPane.INFORMATION_MESSAGE);
 		}
 
@@ -457,7 +457,7 @@ public class MemberMenuModel {
 			System.err.println(e.getMessage());
 		}
 
-		JOptionPane.showMessageDialog(this.memberMenuView, "The title have been set Returned ", "Confirm",
+		JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("The title have been set Returned "), "Confirm",
 				JOptionPane.INFORMATION_MESSAGE);
 
 	}
