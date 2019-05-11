@@ -2,6 +2,7 @@ package app.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
@@ -15,6 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JScrollPane;
@@ -181,6 +183,24 @@ public class GuiView extends JFrame {
 		panel.add(myScroll);
 		return myScroll;
 
+	}
+	
+//	public void showJOptPane(Component view, String message, String title, String type) {
+//					
+//		JOptionPane jopt = new JOptionPane();
+//	    JLabel labels = new JLabel(message);
+//	    labels.setFont(new Font("SERIF", Font.PLAIN, 20));
+//	    jopt.showMessageDialog(view, labels, "Results", JOptionPane.PLAIN_MESSAGE );
+//		
+//		
+//	}
+	
+	public JLabel addLabelOpt(String label) {
+		
+		JLabel myLabel = new JLabel(label);
+		myLabel.setFont(new Font("SERIF", Font.BOLD, 20));
+		return myLabel;
+	
 	}
 
 }

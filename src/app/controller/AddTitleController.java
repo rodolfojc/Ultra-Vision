@@ -45,8 +45,8 @@ public class AddTitleController implements ActionListener{
 		//TITLE NAME
 		if (!this.addTitleView.getMusicTitleName().getText().matches(regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The title name is not correct or it is empty, " + "try again",
-					"Title name Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The title name is not correct or it is empty, try again"),
+					"Title name - Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
 			
@@ -55,8 +55,8 @@ public class AddTitleController implements ActionListener{
 		//BAND
 		else if (!this.addTitleView.getMusicBand().getText().matches(regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The band is not correct or it is empty, " + "try again",
-					"Band Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The band is not correct or it is empty, try again"),
+					"Band - Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
 			
@@ -65,7 +65,7 @@ public class AddTitleController implements ActionListener{
 		//ALBUM
 		else if (!this.addTitleView.getMusicAlbum().getText().matches(regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The album is not correct or it is empty, " + "try again",
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The album is not correct or it is empty, try again"),
 					"Album Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
@@ -75,8 +75,8 @@ public class AddTitleController implements ActionListener{
 		//YEAR
 		else if (!this.addTitleView.getMusicYearRelease().getText().matches(regexYears)) {
 					
-			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
-			"Year Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The year is not correct or it is empty, try again"),
+			"Year - Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
 					
@@ -84,8 +84,8 @@ public class AddTitleController implements ActionListener{
 		//GENRE
 		else if (!this.addTitleView.getMusicGenre().getText().matches(regexGeneral)) {
 				
-			JOptionPane.showMessageDialog(this.addTitleView, "The genre is not correct or it is empty, " + "try again",
-			"Genre Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The genre is not correct or it is empty, try again"),
+			"Genre - Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
 					
@@ -105,7 +105,7 @@ public class AddTitleController implements ActionListener{
 		//TITLE NAME
 		if (!this.addTitleView.getTvTitleName().getText().matches(regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The title name is not correct or it is empty, " + "try again",
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The title name is not correct or it is empty, try again"),
 					"Title name Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
@@ -114,7 +114,7 @@ public class AddTitleController implements ActionListener{
 		//YEAR
 		else if (!this.addTitleView.getTvYearRelease().getText().matches(regexYears)) {
 							
-			JOptionPane.showMessageDialog(this.addTitleView, "The year is not correct or it is empty, " + "try again",
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The year is not correct or it is empty, try again"),
 			"Year Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
@@ -124,7 +124,7 @@ public class AddTitleController implements ActionListener{
 		//GENRE
 		else if (!this.addTitleView.getTvGenre().getText().matches(regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The genre is not correct or it is empty, " + "try again",
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The genre is not correct or it is empty, " + "try again"),
 					"Genre Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
@@ -134,7 +134,7 @@ public class AddTitleController implements ActionListener{
 		//DIRECTOR
 		else if (!this.addTitleView.getTvDirector().getText().matches(regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The director name is not correct or it is empty, " + "try again",
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The director name is not correct or it is empty, try again"),
 					"Director name Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
@@ -144,7 +144,7 @@ public class AddTitleController implements ActionListener{
 		//RUNNING TIME
 		else if (!this.addTitleView.getTvRunningTime().getText().toLowerCase().contains("min")) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The running time must contains 'min', it is not correct or it is empty, " + "try again",
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The running time must contains 'min', it is not correct or it is empty, try again"),
 					"Running time name Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
@@ -154,7 +154,7 @@ public class AddTitleController implements ActionListener{
 		//COUNTRY
 		else if (!this.addTitleView.getCountry().getText().matches(regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The country is not correct or it is empty, " + "try again",
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The country is not correct or it is empty, " + "try again"),
 			"Year Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
@@ -164,7 +164,7 @@ public class AddTitleController implements ActionListener{
 		//LANGUAGE
 		else if (!this.addTitleView.getLanguage().getText().matches(regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addTitleView, "The language is not correct or it is empty, " + "try again",
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("The language is not correct or it is empty, try again"),
 			"Year Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;

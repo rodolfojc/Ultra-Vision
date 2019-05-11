@@ -56,7 +56,8 @@ public class AddTitleModel {
 
 		} catch (Exception e) {
 			// ERROR MESSAGES
-			JOptionPane.showMessageDialog(this.addTitleView, "Ups, there is a problem, try again!");
+			
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("Ups, there is a problem, try again!"));
 			flag = false;
 			System.err.println("Got an exception!");
 			System.err.println(e.getMessage());
@@ -65,7 +66,7 @@ public class AddTitleModel {
 		// NO ERRORS
 		if (flag == true)
 			JOptionPane.showMessageDialog(this.addTitleView,
-					"The title: " + myTemp.getTitle() + " has been ADDED SUCCESSFUL");
+					this.addTitleView.addLabelOpt("The title: " + myTemp.getTitle() + " has been ADDED SUCCESSFUL"));
 
 	}
 
@@ -98,7 +99,7 @@ public class AddTitleModel {
 
 		} catch (Exception e) {
 			// ERROR MESSAGES
-			JOptionPane.showMessageDialog(this.addTitleView, "Ups, there is a problem, try again!");
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("Ups, there is a problem, try again!"));
 			flag = false;
 			System.err.println("Got an exception!");
 			System.err.println(e.getMessage());
@@ -107,7 +108,7 @@ public class AddTitleModel {
 		// NO ERRORS
 		if (flag == true)
 			JOptionPane.showMessageDialog(this.addTitleView,
-					"The Title: " + myTemp.getTitle() + " has been ADDED SUCCESSFUL");
+					this.addTitleView.addLabelOpt("The Title: " + myTemp.getTitle() + " has been ADDED SUCCESSFUL"));
 
 	}
 
@@ -141,7 +142,7 @@ public class AddTitleModel {
 
 		} catch (Exception e) {
 			// ERROR MESSAGES
-			JOptionPane.showMessageDialog(this.addTitleView, "Ups, there is a problem, try again!");
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("Ups, there is a problem, try again!"));
 			flag = false;
 			System.err.println("Got an exception!");
 			System.err.println(e.getMessage());
@@ -150,7 +151,7 @@ public class AddTitleModel {
 		// NO ERRORS
 		if (flag == true)
 			JOptionPane.showMessageDialog(this.addTitleView,
-					"The title: " + myTemp.getTitle() + " has been ADDED SUCCESSFUL");
+					this.addTitleView.addLabelOpt("The title: " + myTemp.getTitle() + " has been ADDED SUCCESSFUL"));
 
 	}
 	
@@ -184,7 +185,7 @@ public class AddTitleModel {
 
 		} catch (Exception e) {
 			// ERROR MESSAGES
-			JOptionPane.showMessageDialog(this.addTitleView, "Ups, there is a problem, try again!");
+			JOptionPane.showMessageDialog(this.addTitleView, this.addTitleView.addLabelOpt("Ups, there is a problem, try again!"));
 			flag = false;
 			System.err.println("Got an exception!");
 			System.err.println(e.getMessage());
@@ -193,7 +194,7 @@ public class AddTitleModel {
 		// NO ERRORS
 		if (flag == true)
 			JOptionPane.showMessageDialog(this.addTitleView,
-					"The title: " + myTemp.getTitle() + " has been ADDED SUCCESSFUL");
+					this.addTitleView.addLabelOpt("The title: " + myTemp.getTitle() + " has been ADDED SUCCESSFUL"));
 
 	}
 

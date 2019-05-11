@@ -2,7 +2,6 @@ package customers;
 
 import customer.admin.DebitCreditCard;
 import customer.admin.MembershipCard;
-import titles.Title;
 
 //SUPER CLASS FOR CUSTOMERS
 public abstract class Customer {
