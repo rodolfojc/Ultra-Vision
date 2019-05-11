@@ -74,8 +74,8 @@ public class AddMemberController implements ActionListener{
 		//NAME
 		if(!this.addMemberView.getCustName().getText().matches(this.regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addMemberView, "The name is not correct or it is empty, " + "try again",
-					"Name Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this.addMemberView, this.addMemberView.addLabelOpt("The name is not correct or it is empty, try again"),
+					"Name - Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
 		}
@@ -83,8 +83,8 @@ public class AddMemberController implements ActionListener{
 		// SURNAME 
 		else if(!this.addMemberView.getCustSurname().getText().matches(this.regexGeneral)) {
 			
-			JOptionPane.showMessageDialog(this.addMemberView, "The surname is not correct or empty, " + "try again",
-					"Surname Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this.addMemberView, this.addMemberView.addLabelOpt("The surname is not correct or empty, try again"),
+					"Surname - Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
 			
@@ -93,8 +93,8 @@ public class AddMemberController implements ActionListener{
 		// EMAIL
 		else if(!this.addMemberView.getEmail().getText().matches(this.regexEmail)) {
 			
-			JOptionPane.showMessageDialog(this.addMemberView, "The email is not correct or it is empty, " + "try again",
-					"Email Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this.addMemberView, this.addMemberView.addLabelOpt("The email is not correct or it is empty, try again"),
+					"Email - Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
 		}
@@ -102,8 +102,8 @@ public class AddMemberController implements ActionListener{
 		//CARD		
 		else if (!this.addMemberView.getCardNumber().getText().matches(this.regexCard)) {
 			
-			JOptionPane.showMessageDialog(this.addMemberView, "The card is not correct or it is empty, " + "try again",
-					"Card Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this.addMemberView, this.addMemberView.addLabelOpt("The card is not correct or it is empty, try again"),
+					"Card - Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
 			
@@ -114,8 +114,8 @@ public class AddMemberController implements ActionListener{
 		else if (!this.addMemberView.getCardHolder().getText().toLowerCase().matches(this.regexGeneral) || 
 				(!this.addMemberView.getCardHolder().getText().toLowerCase().contains(this.addMemberView.getCustSurname().getText().toLowerCase()))) {
 			
-			JOptionPane.showMessageDialog(this.addMemberView, "The cardholder is not correct (must be titular) or it is empty, " + "try again",
-					"Cardholder Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this.addMemberView, this.addMemberView.addLabelOpt("The cardholder is not correct (must be titular) or it is empty, " + "try again"),
+					"Cardholder - Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
 			
@@ -123,8 +123,8 @@ public class AddMemberController implements ActionListener{
 		//CVV 3 - 4 DIGITS 0 - 9
 		else if(!this.addMemberView.getCardCVV().getText().matches(this.regexCVV)) {
 			
-			JOptionPane.showMessageDialog(this.addMemberView, "The CVV number is not correct or it is empty, " + "try again",
-					"CVV Error", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this.addMemberView, this.addMemberView.addLabelOpt("The CVV number is not correct or it is empty, " + "try again"),
+					"CVV - Error", JOptionPane.ERROR_MESSAGE);
 			// IT DOES NOT MATCH, FLAG IS SET FALSE
 			valFlag = false;
 			

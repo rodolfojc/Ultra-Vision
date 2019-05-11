@@ -53,7 +53,7 @@ public class AddMemberModel {
 
 		} catch (Exception e) {
 			// ERROR MESSAGES
-			JOptionPane.showMessageDialog(this.addMemberView, "Ups, there is a problem, try again!");
+			JOptionPane.showMessageDialog(this.addMemberView, this.addMemberView.addLabelOpt("Ups, there is a problem, try again!"));
 			flag = false;
 			System.err.println("Got an exception!");
 			System.err.println(e.getMessage());
@@ -61,8 +61,8 @@ public class AddMemberModel {
 
 		// NO ERRORS
 		if (flag == true)
-			JOptionPane.showMessageDialog(this.addMemberView, "The Member: " + this.customer.getCustName() + " "
-					+ this.customer.getCustSurname() + " has been ADDED SUCCESSFUL");
+			JOptionPane.showMessageDialog(this.addMemberView, this.addMemberView.addLabelOpt("The Member: " + this.customer.getCustName() + " "
+					+ this.customer.getCustSurname() + " has been ADDED SUCCESSFUL"));
 
 	}
 
