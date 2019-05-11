@@ -80,8 +80,8 @@ public class SearchMemberView extends GuiView {
 
 		JPanel titleTop = new JPanel();
 		JPanel top = new JPanel();
-		JLabel title = this.addLabel("Members", titleTop);
-		title.setFont(new Font("Serif", Font.BOLD, 40));
+		JLabel title = this.addLabel("Members Manager", titleTop);
+		title.setFont(new Font("Tahoma", Font.BOLD, 45));
 		this.addLabel("By Name ", top);
 		this.setSearchName(this.addTextField(20, top));
 		this.search = this.addButtonAll("Search", "Search", top, myController);
@@ -95,6 +95,8 @@ public class SearchMemberView extends GuiView {
 		this.myTable[0].getTableHeader().setEnabled(false);
 		this.myTable[0].getColumnModel().getColumn(0).setPreferredWidth(30);
 		this.myTable[0].setEnabled(false);
+		this.addLabel("", this.panel);
+		this.addLabel("", this.panel);
 		this.goBack = this.addButtonAll("Go back", "Go back", this.panel, myController);
 		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 100, 65)));
 		

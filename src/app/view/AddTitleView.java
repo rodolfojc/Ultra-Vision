@@ -4,6 +4,7 @@ import java.awt.Font;
 import java.awt.Insets;
 
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -47,6 +48,7 @@ public class AddTitleView extends GuiView {
 	public AddTitleView(String name, int width, int height, boolean Resizable, MainView mainView) {
 		super(name, width, height, Resizable);
 		this.myController = new AddTitleController(this, mainView);
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setFrame();
 	}
 	
@@ -204,7 +206,7 @@ public class AddTitleView extends GuiView {
 		JPanel type = new JPanel();
 		this.setGrid(20, 0, type);
 		JLabel musicTitle = this.addLabel("Music (Type)", type);
-		musicTitle.setFont(new Font("Serif", Font.BOLD, 30));
+		musicTitle.setFont(new Font("Tahoma", Font.BOLD, 30));
 		musicTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		this.musicType = this.addComboB(myOpts, type);
 		this.addLabel("Title name", type);
@@ -237,7 +239,7 @@ public class AddTitleView extends GuiView {
 		JPanel typeTwo = new JPanel();
 		this.setGrid(21, 0, typeTwo);
 		JLabel tvTypeTitle = this.addLabel("TV (Type)", typeTwo);
-		tvTypeTitle.setFont(new Font("Serif", Font.BOLD, 30));
+		tvTypeTitle.setFont(new Font("Tahoma", Font.BOLD, 30));
 		tvTypeTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		this.tvType = this.addComboB(myOptsTwo, typeTwo);
 		this.addLabel("Title name", typeTwo);

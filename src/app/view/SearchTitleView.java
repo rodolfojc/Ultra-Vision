@@ -108,8 +108,8 @@ public class SearchTitleView extends GuiView {
 
 		JPanel titleTop = new JPanel();
 		JPanel top = new JPanel();
-		JLabel title = this.addLabel("Titles ", titleTop);
-		title.setFont(new Font("Serif", Font.BOLD, 40));
+		JLabel title = this.addLabel("Titles Manager ", titleTop);
+		title.setFont(new Font("Tahoma", Font.BOLD, 45));
 		this.addLabel("By name: ", top);
 		this.setSearchTitle(this.addTextField(20, top));
 		this.search = this.addButtonAll("Search", "Search", top, myController);

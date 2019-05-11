@@ -21,16 +21,16 @@ public class Main {
 			  UIManager.setLookAndFeel("com.jgoodies.looks.plastic.PlasticLookAndFeel");
 	    } 
 	    catch (UnsupportedLookAndFeelException e) {
-	       // handle exception
+	       System.out.println(e.getStackTrace());
 	    }
 	    catch (ClassNotFoundException e) {
-	       // handle exception
+	    	System.out.println(e.getStackTrace());
 	    }
 	    catch (InstantiationException e) {
-	       // handle exception
+	    	System.out.println(e.getStackTrace());
 	    }
 	    catch (IllegalAccessException e) {
-	       // handle exception
+	    	System.out.println(e.getStackTrace());
 	    }
 	        
 	    // MAIN CONTROLLER

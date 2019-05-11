@@ -132,7 +132,7 @@ public class AddMemberView extends GuiView {
 		this.setGrid(14, 0, left);
 		JLabel personalDetails = this.addLabel("Personal details", left);
 		personalDetails.setHorizontalAlignment(SwingConstants.CENTER);
-		personalDetails.setFont(new Font("Serif", Font.BOLD, 35));
+		personalDetails.setFont(new Font("Tahoma", Font.BOLD, 35));
 		this.addLabel("", left);
 		this.addLabel("Name ", left);
 		this.custName = this.addTextField(20, left);
@@ -160,7 +160,7 @@ public class AddMemberView extends GuiView {
 		this.setGrid(14, 0, center);
 		JLabel paymentDetails = this.addLabel("Payment details", center);
 		paymentDetails.setHorizontalAlignment(SwingConstants.CENTER);
-		paymentDetails.setFont(new Font("Serif", Font.BOLD, 35));
+		paymentDetails.setFont(new Font("Tahoma", Font.BOLD, 35));
 		this.addLabel("", center);
 		this.addLabel("Type ", center);
 		this.cardType = this.addComboB(cardTypeOpt, center);
