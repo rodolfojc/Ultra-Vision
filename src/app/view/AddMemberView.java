@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -45,6 +46,7 @@ public class AddMemberView extends GuiView {
 	public AddMemberView(String name, int width, int height, boolean Resizable, MainView mainView) {
 		super(name, width, height, Resizable);
 		this.myController = new AddMemberController(this, mainView);
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setFrame();
 	}
 

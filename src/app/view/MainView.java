@@ -4,7 +4,9 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Insets;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
@@ -21,13 +23,13 @@ public class MainView extends GuiView {
 	public MainView(String name, int width, int height, boolean Resizable) {
 		super(name, width, height, Resizable);
 		this.myController = new MainViewController(this);
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setFrame();
 	}
 	
 	@Override
 	public JButton addButton(String name, JPanel panel) {
 		JButton myButton= new JButton(name);
-		//myButton.setFont(new Font("SERIF", Font.PLAIN, 28));
 		myButton.setBackground(new Color(59, 89, 182));
 		myButton.setForeground(Color.WHITE);
 		myButton.setFocusPainted(false);
@@ -39,15 +41,16 @@ public class MainView extends GuiView {
 	//SET FRAME
 	public void setFrame() {
 		
-		this.setGrid(17, 1, this.panel);
+		this.setGrid(16, 1, this.panel);
 		
-		JLabel mainLabel = this.addLabel("Ultra-Vision", this.panel);
-		mainLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 50));
+		String PicURL = "sources/Ultravision2.PNG";
+		ImageIcon imgThisImg = new ImageIcon(PicURL);
+		JLabel mainLabel = new JLabel();
+		mainLabel.setIcon(imgThisImg);
+		this.panel.add(mainLabel);
 		mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		this.addLabel("", this.panel);
 		JLabel myLabel = this.addLabel("MAIN MENU", this.panel);
-		this.addLabel("", this.panel);
-		this.addLabel("", this.panel);
 		myLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		myLabel.setFont(new Font("Tahoma", Font.BOLD, 35));
 		JButton searchTitle = this.addButton("Search - Title", this.panel);
@@ -74,7 +77,7 @@ public class MainView extends GuiView {
 		JButton exit = this.addButton("EXIT", this.panel);
 		exit.setActionCommand("EXIT");
 		exit.addActionListener(myController);
-		this.panel.setBorder(new EmptyBorder(new Insets(50, 200, 100, 200)));
+		this.panel.setBorder(new EmptyBorder(new Insets(50, 550, 50, 550)));
 		
 		this.repaint();
 		this.validate();

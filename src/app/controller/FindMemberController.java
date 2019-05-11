@@ -56,7 +56,7 @@ public class FindMemberController implements ActionListener {
 		// GO AFTER MEMBER IS FOUND
 		if (e.getActionCommand().equals("Go")) {
 
-			new MemberMenuView("Member Manager", 900, 900, true, this.mainView, this.customer);
+			new MemberMenuView("Member Manager", 1400, 1000, true, this.mainView, this.customer);
 			this.findMemberView.dispose();
 
 		}

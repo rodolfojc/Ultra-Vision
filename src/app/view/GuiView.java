@@ -159,7 +159,6 @@ public class GuiView extends JFrame {
 	// CREATE A JCALENDAR - JDATECHOOSER WITH SIZE AND ADD TO A PANEL
 	public JDateChooser addCalen(JPanel panel) {
 		JDateChooser myDateChooser = new JDateChooser();
-		myDateChooser.set(new Color(59, 89, 182));
 		myDateChooser.setDateFormatString("dd/MM/yyyy");
 		myDateChooser.setFont(new Font("Tahoma", Font.BOLD, 20));
 		panel.add(myDateChooser);

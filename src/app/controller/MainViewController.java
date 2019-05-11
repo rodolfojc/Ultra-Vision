@@ -28,20 +28,20 @@ public class MainViewController implements ActionListener {
 		// MAIN MENU ACTTIONS
 		if (e.getActionCommand().equals("Search Title")) {
 
-			new SearchTitleView("Search a Title", 500, 800, true, this.mainView);
+			new SearchTitleView("Search a Title", 1400, 1000, true, this.mainView);
 			this.mainView.setVisible(false);
 
 		}
 
 		if (e.getActionCommand().equals("Search Customer")) {
 
-			new SearchMemberView("Search a Customer", 500, 800, true, this.mainView);
+			new SearchMemberView("Search a Customer", 1400, 1000, true, this.mainView);
 			this.mainView.setVisible(false);
 		}
 
 		if (e.getActionCommand().equals("Add Title")) {
 
-			new AddTitleView("Add Title Manager", 1200, 1000, true, this.mainView);
+			new AddTitleView("Add Title Manager", 1400, 1000, true, this.mainView);
 			this.mainView.setVisible(false);
 
 		}
