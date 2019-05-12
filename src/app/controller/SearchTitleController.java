@@ -82,8 +82,9 @@ public class SearchTitleController implements ActionListener, ListSelectionListe
 				this.memberMenuView.UpdateFrame(true);
 
 			} else {
-				JOptionPane.showMessageDialog(this.memberMenuView, this.memberMenuView.addLabelOpt("More than 4 titles have been rented by Member"),
-						"Error", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(this.memberMenuView,
+						this.memberMenuView.addLabelOpt("More than 4 titles have been rented by Member"), "Error",
+						JOptionPane.ERROR_MESSAGE);
 			}
 		}
 
@@ -98,44 +99,63 @@ public class SearchTitleController implements ActionListener, ListSelectionListe
 
 		if (!this.searchTitleView.getMyTableModel().isSelectionEmpty()) {
 			this.searchTitleView.setSelectedRow(this.searchTitleView.getMyTableModel().getMinSelectionIndex());
+			this.searchTitleView.getRentFreeBtn().setEnabled(true);
 
 			isCD = this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 11);
 			isDVD = this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 12);
 			isBlueRay = this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 13);
 
 			JOptionPane.showMessageDialog(this.searchTitleView,
-					this.memberMenuView.addLabelOpt("Title selected: ID " + this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 0)
-							+ ", " + "" + this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 1)
-							+ " " + "" + this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 2)
-							+ " " + ". Please press ok to continue"));
+					this.memberMenuView.addLabelOpt("Title selected: ID "
+							+ this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 0) + ", " + ""
+							+ this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 1) + " " + ""
+							+ this.searchTitleView.getTitlesStr(this.searchTitleView.getSelectedRow(), 2) + " "
+							+ ". Please press ok to continue"));
 
 			List<String> optionsList = new ArrayList<>();
 			List<String> optionsListDB = new ArrayList<>();
 
 			optionsList.add("No availale");
 
-			if (isCD.equals("Yes")) {
-				optionsList.add("CD");
-				optionsListDB.add("cd");
+			boolean noTitle = false;
+
+			try {
+
+				if (isCD.equals("Yes")) {
+					optionsList.add("CD");
+					optionsListDB.add("cd");
+				}
+
+				if (isDVD.equals("Yes")) {
+					optionsList.add("DVD");
+					optionsListDB.add("dvd");
+				}
+
+				if (isBlueRay.equals("Yes")) {
+					optionsList.add("BlueRay");
+					optionsListDB.add("blue_ray");
+				}
+
+			} catch (Exception exc) {
+
+				JOptionPane.showMessageDialog(this.searchTitleView,
+						this.searchTitleView.addLabelOpt("There is not title there, try again"), "Error",
+						JOptionPane.ERROR_MESSAGE);
+				noTitle = true;
+				this.searchTitleView.getRentFreeBtn().setEnabled(false);
+
 			}
 
-			if (isDVD.equals("Yes")) {
-				optionsList.add("DVD");
-				optionsListDB.add("dvd");
+			if (!noTitle) {
+
+				Object[] optionArray = optionsList.toArray();
+
+				int format = JOptionPane.showOptionDialog(this.searchTitleView,
+						this.searchTitleView.addLabelOpt("Select a FORMAT"), "Format", JOptionPane.DEFAULT_OPTION,
+						JOptionPane.PLAIN_MESSAGE, null, optionArray, optionArray[0]);
+
+				this.isFormatDB = optionArray[format].toString();
 			}
-
-			if (isBlueRay.equals("Yes")) {
-				optionsList.add("BlueRay");
-				optionsListDB.add("blue_ray");
-			}
-
-			Object[] optionArray = optionsList.toArray();
-
-			int format = JOptionPane.showOptionDialog(this.searchTitleView, this.memberMenuView.addLabelOpt("Select a FORMAT"), "Format",
-					JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, optionArray, optionArray[0]);
-
-			this.isFormatDB = optionArray[format].toString();
-
 		}
 
 	}

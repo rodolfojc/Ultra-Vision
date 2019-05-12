@@ -22,6 +22,7 @@ public class SearchTitleView extends GuiView {
 	private JButton search;
 	private JTextField searchTitle;
 	private boolean memberFlag = false;
+	private JButton rentFreeBtn;
 
 	// CONTROLLER
 	private SearchTitleController myController;
@@ -33,7 +34,7 @@ public class SearchTitleView extends GuiView {
 	private ListSelectionModel myTableModel;
 	private int selectedRow;
 
-	//CONSTRUCTORS
+	// CONSTRUCTORS
 	public SearchTitleView(String name, int width, int height, boolean Resizable, MainView mainView) {
 		super(name, width, height, Resizable);
 		this.myController = new SearchTitleController(this, mainView);
@@ -51,7 +52,7 @@ public class SearchTitleView extends GuiView {
 		setFrame();
 	}
 
-	//LOAD DATE
+	// LOAD DATE
 	public void getStartingData() {
 
 		String query = "SELECT * FROM titles";
@@ -61,8 +62,13 @@ public class SearchTitleView extends GuiView {
 	}
 
 	// GETTERS AND SETTERS
+
 	public String getTitlesStr(int a, int b) {
 		return this.data[a][b];
+	}
+
+	public JButton getRentFreeBtn() {
+		return rentFreeBtn;
 	}
 
 	public JTextField getSearchTitle() {
@@ -98,7 +104,7 @@ public class SearchTitleView extends GuiView {
 		;
 	}
 
-	//SET FRAME
+	// SET FRAME
 	public void setFrame() {
 
 		String[] columnsNameTitles = { "Type", "ID", "Title", "Year", "Album", "Band", "Genre", "Director",
@@ -114,10 +120,10 @@ public class SearchTitleView extends GuiView {
 		this.setSearchTitle(this.addTextField(20, top));
 		this.search = this.addButtonAll("Search", "Search", top, myController);
 		titleTop.setBorder(new EmptyBorder(new Insets(40, 0, 0, 0)));
-		
+
 		this.panel.add(titleTop);
 		this.panel.add(top);
-		
+
 		JPanel tablePanel = new JPanel();
 		JPanel btnPanel = new JPanel();
 		this.setGrid(1, 0, tablePanel);
@@ -133,9 +139,12 @@ public class SearchTitleView extends GuiView {
 			this.addTableS(0, this.data, columnsNameTitles, tablePanel, "Titles");
 			this.myTableModel = this.myTable[0].getSelectionModel();
 			this.myTableModel.addListSelectionListener(this.myController);
-			this.addButtonAll("Rent", "Rent", btnPanel, myController);
+			this.rentFreeBtn = this.addButtonAll("Rent", "Rent", btnPanel, myController);
+			this.rentFreeBtn.setEnabled(false);
+			this.addButtonAll("Go back", "Go back", btnPanel, myController);
+
 		}
-		
+
 		this.panel.add(tablePanel);
 		this.panel.add(btnPanel);
 

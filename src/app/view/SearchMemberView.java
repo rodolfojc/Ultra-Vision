@@ -39,8 +39,8 @@ public class SearchMemberView extends GuiView {
 		getStartingData();
 		setFrame();
 	}
-	
-	//LOAD DATA
+
+	// LOAD DATA
 	public void getStartingData() {
 
 		String query = "SELECT mem_numb, mem_type, cust_name, cust_surname FROM customers";
@@ -71,7 +71,7 @@ public class SearchMemberView extends GuiView {
 		this.searchID = searchName;
 	}
 
-	//SET FRAME
+	// SET FRAME
 	public void setFrame() {
 
 		String[] columns = { "Memberchip", "Account Type", "Name", "Surname" };
@@ -89,7 +89,7 @@ public class SearchMemberView extends GuiView {
 
 		this.panel.add(titleTop);
 		this.panel.add(top);
-		
+
 		JPanel tablePanel = new JPanel();
 		this.setGrid(1, 0, tablePanel);
 		this.addTableS(0, this.data, columns, tablePanel, "Members");
@@ -102,7 +102,7 @@ public class SearchMemberView extends GuiView {
 		this.panel.add(tablePanel);
 		this.panel.add(btnPanel);
 		this.panel.setBorder(new EmptyBorder(new Insets(35, 65, 100, 65)));
-		
+
 		this.repaint();
 		this.validate();
 
