@@ -71,12 +71,69 @@
 
 # Database Structure
 
-## ER (Entity Relation) digram
+## ER (Entity Relation) diagram
 
 <div align="center">
 <a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Database/ER%20Diagram.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Database/ER%20Diagram.png" title="datab" alt="datab" ></a>
 </div>
 
+# Class diagrams
+
+## Main
+
+<div align="center">
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/Main%20Total.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/Main%20Total.png" title="main" alt="main" ></a>
+</div>
+
+## GUI
+
+<div align="center">
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/GUI.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/GUI.png" title="gui" alt="gui" ></a>
+</div>
+
+## Customers (Memberships)
+
+<div align="center">
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/Customers.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/Customers.png" title="main" alt="main" ></a>
+</div>
+
+## Titles
+
+<div align="center">
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/Titles.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/Titles.png" title="titles" alt="titles" ></a>
+</div>
+
+## MVC - Clases
+
+## Search Title
+
+<div align="center">
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/MSV%20-%20Search%20Title.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/MSV%20-%20Search%20Title.png" title="mvctitle" alt="mvctitle" ></a>
+</div>
+
+## Search Member
+
+<div align="center">
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/Search%20Member.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/Search%20Member.png" title="searchm" alt="searchm" ></a>
+</div>
+
+## Add Title
+
+<div align="center">
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/MVC%20-%20Add%20title.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/MVC%20-%20Add%20title.png" title="addT" alt="addT" ></a>
+</div>
+
+## Add Member
+
+<div align="center">
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/MVC%20-%20Add%20Member.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/MVC%20-%20Add%20Member.png" title="addM" alt="ddM" ></a>
+</div>
+
+## Menu for Member
+
+<div align="center">
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/MVC%20-%20Menu%20Member.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/MVC%20-%20Menu%20Member.png" title="menuM" alt="menuM" ></a>
+</div>
 
 
 
