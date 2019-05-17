@@ -50,3 +50,17 @@
 <a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/member%20id.JPG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/member%20id.JPG" title="memberID" alt="memberID" ></a>
 <a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/member%20no%20id.JPG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/member%20no%20id.JPG" title="memberNoID" alt="memberNoID" ></a>
 </div>
+
+## Sequence diagram 
+
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Secuence%20diagram.JPG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Secuence%20diagram.JPG" title="sequence" alt="sequence" ></a>
+
+## State diagram - Loyalty Point State
+
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/State%20diagram.JPG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/State%20diagram.JPG" title="state" alt="state" ></a>
+
+## Activity diagram
+
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Activity%20diagram.JPG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Activity%20diagram.JPG" title="activity" alt="activity" ></a>
+
+
