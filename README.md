@@ -35,3 +35,18 @@
 <div align="center">
 <a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Screenshots/MemberMenuView.PNG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Screenshots/MemberMenuView.PNG" title="MemberMenu" alt="MemberMenu" ></a>
 </div>
+
+# Diagrams
+
+## User cases
+### - Add Member
+### - Search Title
+### - Member with ID
+### - Member without ID
+
+<div align="center">
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Add%20member.JPG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Add%20member.JPG" title="addmember" alt="addmember" ></a>
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Search%20Title.JPG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Search%20Title.JPG" title="searchTitle" alt="searchTitle" ></a>
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/member%20id.JPG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/member%20id.JPG" title="memberID" alt="memberID" ></a>
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/member%20no%20id.JPG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/member%20no%20id.JPG" title="memberNoID" alt="memberNoID" ></a>
+</div>
