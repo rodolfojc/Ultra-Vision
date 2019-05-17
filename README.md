@@ -63,4 +63,16 @@
 
 <a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Activity%20diagram.JPG"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Activity%20diagram.JPG" title="activity" alt="activity" ></a>
 
+# Database Structure
+
+## ER (Entity Relation) digram
+
+<a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Database/ER%20Diagram.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Database/ER%20Diagram.png" title="datab" alt="datab" ></a>
+
+
+
+
+
+
+
 
