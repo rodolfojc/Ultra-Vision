@@ -103,7 +103,7 @@
 <a href="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/Titles.png"><img src="https://github.com/rodolfojc/Ultra-Vision/blob/master/Diagrams/Class%20diagrams/Titles.png" title="titles" alt="titles" ></a>
 </div>
 
-## MVC - Clases
+## MVC - Classes
 
 ## Search Title
 
